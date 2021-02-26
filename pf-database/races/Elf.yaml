@@ -1,0 +1,6 @@
+id: Elf
+name: 精灵
+ability:
+  dex: 2
+  con: -2
+  int: 2

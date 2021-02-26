@@ -1,0 +1,222 @@
+id: Swashbuckler
+name: 游荡剑客
+desc:
+  描述: 和许多穿着铁罐头一样的厚重装甲并且拿着巨大沉重兵器才有胆走上战场的战士不同，游荡剑客依赖的是速度、迅捷和派头。游荡剑客飞奔着进出战团，依靠着恼人的突刺和虚招使敌人精疲力竭，用手腕的弹动和剑刃的闪光架开凶猛的攻击，然后用艺术性的方式做出致命的还击。他们可能自大、自恋或是无所顾忌（Devil-may-care），但在轻浮的表象下是深深投入于剑技的专注者。游荡剑客将大部分时间用来训练步伐、架势和精准的刺击。那些小体型种族尤其自豪于这个结合了训练和勇气的职业，他们认为这正是对体形和力量的完美回应。他们最爱的事就是放倒那些笨重的蠢货大个子坏蛋。
+
+  角色定位: 游荡剑客使用梦幻般的步伐和快而精准的突刺，进出战场扰乱和阻碍敌人。这个快速而敏捷的战士是施法者的护卫，也是盗贼和杀手的好战友，在有机会展示自己的勇气并对那些大笨蠢物进行最后一击之前，游荡剑客会用幽默的态度直面死亡，并且用自己的智慧狠狠地进行还击。
+
+alignment: any
+hd: 10
+classSkills:
+  - acrobatics
+  - bluff
+  - climb
+  - craft
+  - diplomacy
+  - escape artist
+  - intimidate
+  - knowledge(local)
+  - knowledge(nobility)
+  - perception
+  - perform
+  - profession
+  - ride
+  - sense motive
+  - sleight of hand
+  - swim
+skillPoints: 4
+
+proficiencies:
+  weapon:
+    - simple
+    - martial
+  armor:
+    - light
+    - proficiency(Buckler)
+
+feats:
+  - id: Panache
+    name: 派头
+    type: ex
+    desc: |-
+      游荡剑客不仅仅是一个穿着轻甲的战士，她还是个有派头的战斗者。游荡剑客使用时髦值作战：这是一种表示游荡剑客在战斗中完成惊人动作的能力的指标。在每天开始时，游荡剑客在时髦值上获得等于其魅力调整值的点数（至少为1）。时髦值在一天当中不停上下浮动，但一般不能高于游荡剑客的魅力调整值（至少为1），不过一些专长和魔法物品可能会影响这一最大值。游荡剑客花费时髦值来完成壮举（见下文），并通过下述方式恢复时髦值。
+      轻型或单手穿刺近战武器重击：每当游荡剑客在战斗中使用轻型或单手穿刺武器重击并成功确认时，她恢复1点时髦值。对无助或无知觉的生物、或对生命骰数低于游荡剑客人物等级一半的生物造成重击，并不会恢复时髦值。
+      使用轻型或单手穿刺近战武器做出致命一击：每当游荡剑客在战斗中使用轻型或单手穿刺武器将一个生物的生命值降至0或更低时，她恢复1点时髦值。破坏一个目标或其他无主物品，击杀无助、无知觉、或者生命骰数低于游荡剑客人物等级一半的生物，并不会恢复时髦值。
+  - id: Deeds
+    name: 炫技
+    desc: 游荡剑客花费时髦值来实现炫技。大多数炫技使游荡剑客获得一些短暂的加值或效果，但也有一些提供更长时间的持续性效果。一些炫技在游荡剑客拥有至少1点时髦值下持续生效。下面列出了游荡剑客的基本炫技。游荡剑客只能使用等于或低于她等级的炫技。除非特别说明，炫技通常都可以连续多次使用，只要花费对应该动作的适当时髦值即可。
+  - id: Swashbuckler Finesse
+    name: 巧手游荡剑客
+    type: ex
+    desc: 1级时，游荡剑客在使用轻型或单手穿刺类近战武器时获得武器娴熟专长的效果。除此之外，游荡剑客可以用魅力属性代替智力满足战斗专长的前提。这个职业能力在满足其他专长的前提条件时视作“武器娴熟”专长。
+  - id: Charmed Life
+    name: 快乐人生
+    type: ex
+    desc: 2级时，游荡剑客学会了怎么避免麻烦。每天3次，在尝试进行一次豁免检定前，用一个直觉动作，游荡剑客可以将自己的魅力加值加到豁免结果上。她必须在投骰之前决定使用这个能力，并且每次进行豁免只能使用一次这种能力。在6级和之后的每4级，游荡剑客会获得1次额外的该能力使用次数（18级时最大每天7次）
+  - id: Nimble
+    name: 机敏
+    type: ex
+    desc: 3级起，当游荡剑客穿着轻甲或无甲时AC获得+1闪避加值。任何使游荡剑客无法将敏捷加至AC的效果均会令本能力无效。此加值在3级后的每4级再+1，19级时为最大的+5。
+  - id: Bonus Feat
+    name: 额外专长
+    desc: |
+      4级以及之后每4级，游荡剑客在正常提升之外获得一项额外专长。这些额外专长必须为战斗专长。
+      每当在4级及之后每4级获得新的额外专长时，一名游荡剑客可以选择一个新的额外专长替代已有的一个额外专长。作为结果，游荡剑客会失去原有的专长并获得一个新专长。被替换的专长不能是被用于满足另一个专长、进阶职业或其他能力的前提条件的专长。每次到达新的指定级别时，游荡剑客只能选择一个新的专长来替换原有的专长，并且不能选择替换本级获得的新额外专长。在选择战斗专长时，游荡剑客等级可以作为战士等级满足专长的前提条件。
+  - id: Swashbuckler Weapon Training
+    name: 游荡剑客武器训练
+    type: ex
+    desc: 5级时，游荡剑客在使用单手或轻型穿刺近战武器时在攻击和伤害检定时获得+1加值。除此以外，当使用单手或轻型近战武器时，游荡剑客还会获得对应的精通重击专长效果。这个加值在5级后的每4级会额外加1（最大在17级时达到+4）。
+  - id: Swashbuckler Weapon Mastery
+    name: 游荡剑客武器大师
+    type: ex
+    desc: 20级时，当游荡剑客在使用单手或轻型穿刺近战武器造成重击威胁时，重击确认自动成功。额外地，游荡剑客重击时的伤害倍数将会额外加1（如X2会变为X3）。
+
+levels:
+  - level: 1
+    bab: [1]
+    fortitude: 0
+    reflex: 2
+    will: 0
+    special:
+      - Deeds
+      - Panache
+      - Swashbuckler Finesse
+  - level: 2
+    bab: [2]
+    fortitude: 0
+    reflex: 3
+    will: 0
+    special:
+      - Charmed Life 3/day
+  - level: 3
+    bab: [3]
+    fortitude: 1
+    reflex: 3
+    will: 1
+    special:
+      - Deeds
+      - Nimble +1
+  - level: 4
+    bab: [4]
+    fortitude: 1
+    reflex: 4
+    will: 1
+    special:
+      - Bonus Feat
+  - level: 5
+    bab: [5]
+    fortitude: 1
+    reflex: 4
+    will: 1
+    special:
+      - Swashbuckler Weapon Training +1
+  - level: 6
+    bab: [6, 1]
+    fortitude: 2
+    reflex: 5
+    will: 2
+    special:
+      - Charmed Life 4/day
+  - level: 7
+    bab: [7, 2]
+    fortitude: 2
+    reflex: 5
+    will: 2
+    special:
+      - Deeds
+      - Nimble +2
+  - level: 8
+    bab: [8, 3]
+    fortitude: 2
+    reflex: 6
+    will: 2
+    special:
+      - Bonus Feat
+  - level: 9
+    bab: [9, 4]
+    fortitude: 3
+    reflex: 6
+    will: 3
+    special:
+      - Swashbuckler Weapon Training +2
+  - level: 10
+    bab: [10, 5]
+    fortitude: 3
+    reflex: 7
+    will: 3
+    special:
+      - Charmed Life 5/day
+  - level: 11
+    bab: [11, 6, 1]
+    fortitude: 3
+    reflex: 7
+    will: 3
+    special:
+      - Deeds
+      - Nimble +3
+  - level: 12
+    bab: [12, 7, 2]
+    fortitude: 4
+    reflex: 8
+    will: 4
+    special:
+      - Bonus Feat
+  - level: 13
+    bab: [13, 8, 3]
+    fortitude: 4
+    reflex: 8
+    will: 4
+    special:
+      - Swashbuckler Weapon Training +3
+  - level: 14
+    bab: [14, 9, 4]
+    fortitude: 4
+    reflex: 9
+    will: 4
+    special:
+      - Charmed Life 6/day
+  - level: 15
+    bab: [15, 10, 5]
+    fortitude: 5
+    reflex: 9
+    will: 5
+    special:
+      - Deeds
+      - Nimble +4
+  - level: 16
+    bab: [16, 11, 6, 1]
+    fortitude: 5
+    reflex: 10
+    will: 5
+    special:
+      - Bonus Feat
+  - level: 17
+    bab: [17, 12, 7, 2]
+    fortitude: 5
+    reflex: 10
+    will: 5
+    special:
+      - Swashbuckler Weapon Training +4
+  - level: 18
+    bab: [18, 13, 8, 3]
+    fortitude: 6
+    reflex: 11
+    will: 6
+    special:
+      - Charmed Life 7/day
+  - level: 19
+    bab: [19, 14, 9, 4]
+    fortitude: 6
+    reflex: 11
+    will: 6
+    special:
+      - Deeds
+      - Nimble +5
+  - level: 20
+    bab: [20, 15, 10, 5]
+    fortitude: 6
+    reflex: 12
+    will: 6
+    special:
+      - Bonus Feat
+      - Swashbuckler Weapon Mastery

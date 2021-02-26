@@ -1,0 +1,122 @@
+- id: acrobatics
+  ability: dex
+  name: 特技
+- id: appraise
+  ability: int
+  name: 估价
+- id: bluff
+  ability: cha
+  name: 唬骗
+- id: climb
+  ability: str
+  name: 攀爬
+- id: craft
+  ability: int
+  category: true
+  name: 工艺
+- id: diplomacy
+  ability: cha
+  name: 交涉
+- id: disable device
+  ability: dex
+  name: 解除装置
+- id: disguise
+  ability: cha
+  name: 易容
+- id: escape artist
+  ability: dex
+  name: 逃脱
+- id: fly
+  ability: dex
+  name: 飞行
+- id: handle animal
+  ability: cha
+  name: 驯养动物
+- id: heal
+  ability: wis
+  name: 医疗
+- id: intimidate
+  ability: cha
+  name: 威吓
+- id: knowledge
+  ability: int
+  category: true
+  name: 知识
+  subs:
+    - id: arcana
+      name: 奥秘
+    - id: dungeoneering
+      name: 地城
+    - id: engineering
+      name: 工程
+    - id: geography
+      name: 地理
+    - id: history
+      name: 历史
+    - id: local
+      name: 地方
+    - id: nature
+      name: 自然
+    - id: nobility
+      name: 贵族
+    - id: planes
+      name: 位面
+    - id: religion
+      name: 宗教
+- id: linguistics
+  ability: int
+  name: 语言学
+- id: perception
+  ability: wis
+  name: 察觉
+- id: perform
+  ability: cha
+  category: true
+  name: 表演
+  subs:
+    - id: act
+      name: 戏剧
+    - id: comedy
+      name: 喜剧
+    - id: dance
+      name: 舞蹈
+    - id: keyboard instruments
+      name: 键盘
+    - id: oratory
+      name: 朗诵
+    - id: percussion instruments
+      name: 打击
+    - id: string instruments
+      name: 弦乐
+    - id: wind instruments
+      name: 吹奏
+    - id: sing
+      name: 演唱
+- id: profession
+  ability: wis
+  category: true
+  name: 专业
+- id: ride
+  ability: dex
+  name: 骑术
+- id: sense motive
+  ability: wis
+  name: 察言观色
+- id: sleight of hand
+  ability: dex
+  name: 巧手
+- id: spellcraft
+  ability: int
+  name: 法术识别
+- id: stealth
+  ability: dex
+  name: 隐匿
+- id: survival
+  ability: wis
+  name: 生存
+- id: swim
+  ability: str
+  name: 游泳
+- id: use magic device
+  ability: cha
+  name: 使用魔法装置

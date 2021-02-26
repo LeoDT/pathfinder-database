@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Level Table</title>
+  </head>
+  <body>
+    <div>
+      转换职业等级数据, <a href="https://www.d20pfsrd.com/classes/">d20pfsrd</a>, 请复制完整table
+    </div>
+    <textarea id="input" cols="60" rows="20" placeholder="input"></textarea>
+    <textarea id="output" cols="60" rows="20" placeholder="output"></textarea>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script>
+      function removeNewlines(text) {
+        return text.replace(/(\r\n|\n|\r)/g, '').trim();
+      }
+
+      function removeSpaces(text) {
+        return text.replace(/\s+/g, ' ').trim();
+      }
+
+      function special(text) {
+        return text
+          .split(',')
+          .map((s) =>
+            s
+              .split(' ')
+              .map((s) => {
+                if (/^[a-zA-Z]/.test(s)) {
+                  return _.startCase(s);
+                }
+
+                return s;
+              })
+              .join(' ')
+          )
+          .map((s) => `    - ${s.trim()}`)
+          .join('\n');
+      }
+
+      const input = document.getElementById('input');
+      const output = document.getElementById('output');
+
+      input.addEventListener('input', () => {
+        const text = input.value;
+        const root = document.createElement('div');
+        root.innerHTML = text;
+
+        const html = Array.from(root.querySelectorAll('tbody tr'))
+          .map((tr) => {
+            const tds = Array.from(tr.querySelectorAll('td'));
+
+            function get(n) {
+              return removeNewlines(removeSpaces(tds[n].textContent));
+            }
+
+            return `- level: ${get(0).replace(/[a-z]+/, '')}
+  bab: [${get(1).replace(/\+/g, '').split('/').join(', ')}]
+  fortitude: ${get(2).replace('+', '')}
+  reflex: ${get(3).replace('+', '')}
+  will: ${get(4).replace('+', '')}
+  special:
+${special(get(5))}`;
+          })
+          .join('\n');
+
+        output.value = html;
+      });
+
+      output.addEventListener('focus', () => {
+        output.select();
+        navigator.clipboard.writeText(output.value);
+      });
+    </script>
+  </body>
+</html>

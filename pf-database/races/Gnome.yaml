@@ -1,0 +1,6 @@
+id: Gnome
+name: 侏儒
+ability:
+  str: -2
+  con: 2
+  cha: 2

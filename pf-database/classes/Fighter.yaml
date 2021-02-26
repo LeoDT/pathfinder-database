@@ -1,0 +1,200 @@
+id: Fighter
+name: 战士
+desc:
+  描述: 有些人为荣耀、财富或复仇而拿起武器。有些人为证明自己、守护他人或仅仅出于别无所长而投入战斗。还有些人通过学习武道来锻炼筋骨、或在血肉横飞的战场上证明自己的勇气。作为战阵的主角，战士们风格各异：受训于多种或唯一一件武器；将盔甲的防护性发挥到极致；精研异乡的新奇战技，以及磨练格斗之道等等——一切都是为了将自己化身为活着的武器。远超寻常暴徒，这些训练精熟的斗士展示了手中武器真正的致命之处，将凡铁化为足以征服王国的利刃，斩妖除魔或是振奋军心。士兵、骑士、猎人、策士……身为多面手的战士，正是任何敢于挡路者可怖的强敌。
+
+  角色定位: 战士是战斗中的精英——打垮敌人、扭转战局、从死地中杀出生天。各异的武器和招式使战士的战术多变，少有人能与其并肩。
+
+alignment: any
+hd: 10
+classSkills:
+  - climb
+  - craft
+  - handle animal
+  - intimidate
+  - knowledge(engineer)
+  - knowledge(dungeon)
+  - profession
+  - ride
+  - survival
+  - swim
+skillPoints: 2
+
+proficiencies:
+  weapon:
+    - simple
+    - martial
+  armor:
+    - light
+    - medium
+    - heavy
+    - shield
+    - Tower Shield Proficiency
+
+feats:
+  - id: Bonus Feat
+    name: 奖励专长
+    desc: 1级以及之后的每个偶数等级，战士获得一项奖励专长，该额外专长独立于角色升级时获得的（意味着战士每级都可获得专长）。这些专长必须在战斗专长列表中，有时也被称为“战士奖励专长”。当战士达到4级以及随后的每4级（8级，12级，以此类推），它还可以选择学习一个新的额外专长来取代先前获得的一项奖励专长。实际效果相当于以旧换新。被取代的旧专长不能是其他专长、进阶职业或能力的先决条件。战士只能在到达特定等级时决定是否要置换专长，且每个特定等级时只能置换一项专长。
+  - id: Bravery
+    name: 英勇
+    desc: 2级时，战士在进行对抗恐惧效果的意志检定时会获得+1加值。这个加值在之后的每4级会再+1。
+  - id: Armor Training
+    name: 盔甲训练
+    desc: 3级时，战士学会在穿戴盔甲时获得更灵活的机动性。当他穿甲时，盔甲防具检定减值减少1点（最小为0）且敏捷上限增加1点。在这之后的每4级（7、11、15级），上述修正再提高1点，最大达到防具检定减值减少4点，敏捷上限增加4点。此外，战士能够在装备中型盔甲时以正常速度移动。7级时战士能够在装备重型盔甲时以正常速度移动。
+  - id: Weapon Training
+    name: 武器训练
+    desc: 5级时，战士可以选择一个下面所标注的武器类组。当他使用该类组的武器时，他在命中与伤害上获得+1加值。在这之后的每4级（9、13跟17），战士可以选择一个新的武器类组来进行更多的训练。他同样在该武器类组的命中与伤害上获得+1加值，并且，当他使用先前所选择训练的类组武器时，他的命中跟伤害加值会额外+1。例如说，有一位战士升到了9级，他在一个武器类组的命中与伤害上获得+1加值，并在另外一个（他5级时选择的那个）武器类组的命中与伤害上获得+2加值。如果两个武器类组同时包含了一个武器，那么加值并非叠加，而是取两个类组中加值较高的那一个。
+  - id: Armor Mastery
+    name: 盔甲宗师
+    desc: 在第19级，当一名战士穿戴盔甲或手持盾牌时，他获得伤害减免“5/-”。
+  - id: Weapon Mastery
+    name: 武器宗师
+    desc: 在第20级，战士可以选择一种武器——例如长剑、巨斧或长弓——任何由此武器做出的攻击，重击确认自动成功，并且重击时的伤害倍率将会额外加1。并且，当他手持此类武器时不会被卸武。
+
+levels:
+  - level: 1
+    bab: [1]
+    fortitude: 2
+    reflex: 0
+    will: 0
+    special:
+      - Bonus Feat
+  - level: 2
+    bab: [2]
+    fortitude: 3
+    reflex: 0
+    will: 0
+    special:
+      - Bonus Feat
+      - Bravery +1
+  - level: 3
+    bab: [3]
+    fortitude: 3
+    reflex: 1
+    will: 1
+    special:
+      - Armor Training
+  - level: 4
+    bab: [4]
+    fortitude: 4
+    reflex: 1
+    will: 1
+    special:
+      - Bonus Feat
+  - level: 5
+    bab: [5]
+    fortitude: 4
+    reflex: 1
+    will: 1
+    special:
+      - Weapon Training
+  - level: 6
+    bab: [6, 1]
+    fortitude: 5
+    reflex: 2
+    will: 2
+    special:
+      - Bonus Feat
+      - Bravery +2
+  - level: 7
+    bab: [7, 2]
+    fortitude: 5
+    reflex: 2
+    will: 2
+    special:
+      - Armor Training
+  - level: 8
+    bab: [8, 3]
+    fortitude: 6
+    reflex: 2
+    will: 2
+    special:
+      - Bonus Feat
+  - level: 9
+    bab: [9, 4]
+    fortitude: 6
+    reflex: 3
+    will: 3
+    special:
+      - Weapon Training
+  - level: 10
+    bab: [10, 5]
+    fortitude: 7
+    reflex: 3
+    will: 3
+    special:
+      - Bonus Feat
+      - Bravery +3
+  - level: 11
+    bab: [11, 6, 1]
+    fortitude: 7
+    reflex: 3
+    will: 3
+    special:
+      - Armor Training
+  - level: 12
+    bab: [12, 7, 2]
+    fortitude: 8
+    reflex: 4
+    will: 4
+    special:
+      - Bonus Feat
+  - level: 13
+    bab: [13, 8, 3]
+    fortitude: 8
+    reflex: 4
+    will: 4
+    special:
+      - Weapon Training
+  - level: 14
+    bab: [14, 9, 4]
+    fortitude: 9
+    reflex: 4
+    will: 4
+    special:
+      - Bonus Feat
+      - Bravery +4
+  - level: 15
+    bab: [15, 10, 5]
+    fortitude: 9
+    reflex: 5
+    will: 5
+    special:
+      - Armor Training
+  - level: 16
+    bab: [16, 11, 6, 1]
+    fortitude: 10
+    reflex: 5
+    will: 5
+    special:
+      - Bonus Feat
+  - level: 17
+    bab: [17, 12, 7, 2]
+    fortitude: 10
+    reflex: 5
+    will: 5
+    special:
+      - Weapon Training
+  - level: 18
+    bab: [18, 13, 8, 3]
+    fortitude: 11
+    reflex: 6
+    will: 6
+    special:
+      - Bonus Feat
+      - Bravery +5
+  - level: 19
+    bab: [19, 14, 9, 4]
+    fortitude: 11
+    reflex: 6
+    will: 6
+    special:
+      - Armor Mastery
+  - level: 20
+    bab: [20, 15, 10, 5]
+    fortitude: 12
+    reflex: 6
+    will: 6
+    special:
+      - Bonus Feat
+      - Weapon Mastery

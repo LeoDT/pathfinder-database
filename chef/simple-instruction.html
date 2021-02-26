@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Instruction Chef</title>
+  </head>
+  <body>
+    <div>
+      粘贴chm典型描述
+      <!-- prettier-ignore -->
+      <code>
+        <pre>长柄逆刃刀（Rhomphaia）：这件青铜时代的早期长兵器是将一把长长的单面刃加装在坚固木杖上制成的，有时刀身会微微弯曲。这件兵器能斩能搠。
+三节棍（Sansetsukon）：这支武器由三节2尺长、以链条互相连接的短杖组成，使用起来极具灵活性，在高速挥舞时能很好地防护持用者。</pre>
+    </code>
+
+      变成
+
+      <!-- prettier-ignore -->
+      <code><pre>- id: Rhomphaia
+  name: 长柄逆刃刀
+  desc: 这件青铜时代的早期长兵器是将一把长长的单面刃加装在坚固木杖上制成的，有时刀身会微微弯曲。这件兵器能斩能搠。
+- id: Sansetsukon
+  name: 三节棍
+  desc: 这支武器由三节2尺长、以链条互相连接的短杖组成，使用起来极具灵活性，在高速挥舞时能很好地防护持用者。
+      </pre></code>
+    </div>
+    <textarea id="input" cols="60" rows="20" placeholder="input"></textarea>
+    <textarea id="output" cols="60" rows="20" placeholder="output"></textarea>
+
+    <script>
+      const textarea = document.getElementById('input');
+      const output = document.getElementById('output');
+
+      textarea.addEventListener('input', () => {
+        const text = textarea.value;
+        const lines = text
+          .split(/(\r\n|\n|\r)/gi)
+          .filter((s) => Boolean(s.trim()))
+          .map((s) => s.trim());
+
+        const results = [];
+        lines.forEach((l) => {
+          const [nameAndId, desc] = l.split('：', 2);
+
+          if (nameAndId && desc) {
+            const [name, id] = nameAndId.replace(/(.*?)（(.*?)）/, '$1+$2').split('+');
+
+            if (name && id) {
+              results.push(`- id: ${id}
+  name: ${name}
+  desc: ${desc}`);
+              return;
+            }
+          }
+
+          results.push(l);
+        });
+
+        output.value = results.join('\r\n');
+      });
+
+      output.addEventListener('focus', () => {
+        output.select();
+        navigator.clipboard.writeText(output.value);
+      });
+    </script>
+  </body>
+</html>

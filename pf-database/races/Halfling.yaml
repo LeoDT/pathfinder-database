@@ -1,0 +1,6 @@
+id: Halfling
+name: 半身人
+ability:
+  str: -2
+  dex: 2
+  cha: 2
