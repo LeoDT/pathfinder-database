@@ -1,0 +1,193 @@
+id: Witch
+name: 女巫
+desc:
+  描述: 有些人经由学习，有些通过奉献，还有些依赖于血统获取力量。对女巫来讲，她们的力量来源于同未知的沟通。与异界的存在结下契约，并以此获取魔力——而这，也是让她们常常被误解或惧怕的原因之一。女巫将使魔作为同‘源’交流的桥梁，通过它获取施展法术的魔力，以及被称为巫术的一系列奇异能力。随着力量逐渐增强，她们中的一部分开始研究自己魔力的来源，另一些则满足于现状而不愿深究，更有一些，在惧怕着‘源’——为其真实面目，或隐藏于深处的真正目的。
+
+  角色定位: 尽管许多的女巫都隐居于文明的边缘，有一些还是选择生活在社会当中——无论是否揭露真正的身份。女巫法术的多样性，令她们能够适应从预言家到治疗师的多种角色，而她们的巫术也包含了许多在战斗中实用的能力。有时候，女巫会外出旅行，寻求更多的知识，以便更好的理解那引导着她们的神秘力量。
+
+alignment: any
+hd: 6
+classSkills:
+  - craft
+  - fly
+  - heal
+  - intimidate
+  - knowledge(arcana)
+  - knowledge(history)
+  - knowledge(nature)
+  - knowledge(planes)
+  - profession
+  - spellcraft
+  - use magic device
+skillPoints: 2
+
+proficiencies:
+  weapon:
+    - simple
+
+feats:
+  - id: Spells
+    name: 法术
+    desc: 女巫施展女巫法术列表中的奥术。女巫必须预先选择并准备法术。要学习、准备或施放法术，女巫的智力属性必须达到“10+法术环级”。女巫法术的豁免DC为“10+法术环级+女巫智力修正”。女巫每天在每个法术环级上只能施展一定数量的法术。她的每日法术数量参见上表。此外，她还能因较高的智力属性而获得一些额外的法术使用次数。女巫可以知晓任意数量的法术，她必须通过8小时睡眠并同她的魔宠交流1小时以准备法术。女巫在与魔宠交流时决定要准备的法术。
+  - id: Cantrips
+    name: 戏法
+    desc: 女巫可以准备一定数量的戏法，或称0环法术，每日数量参见上表。这些法术施展时与其他法术无异，但在施展后不会消耗法术位并且可以被再次使用。占用着其它法术位，例如因为附加超魔专长而提升环级的戏法，会在使用后被正常消耗掉。
+  - id: Hex
+    name: 巫术
+    desc: 每个女巫都能学到一些被称为巫术的魔法技巧，给予她们力量或削弱其敌人。1级时，女巫选择并获得一项巫术。2级和之后每2级，她能够额外获得一项巫术。女巫不能选择同一项巫术多于1次。若无特别说明，使用巫术是一个不会引发藉机攻击的标准动作。巫术豁免DC为“10+1/2女巫等级+智力修正”。
+  - id: Witch's Familiar, Ex
+    name: 女巫魔宠
+    desc: 1级时，女巫同一只魔宠——教导她魔法并帮助她在此道路上前行的伙伴——建立起紧密的联系。魔宠还能给予女巫某些技能上的加值、额外法术、以及作为施展某些魔法时的助手。这类似法师【奥术连结】职业能力，除了标注在女巫魔宠的部分。女巫每天必须同她的魔宠交流以准备法术。魔宠储存着女巫所知的全部法术，且女巫无法准备尚未存储在魔宠里的法术。在游戏开始时，魔宠储存着所有的0环女巫法术，以及数量为“3+女巫智力修正”的1环法术，由女巫选定。女巫每获得1个新的等级，就可以在她当前所能施展的法术环级中（按照升级后的等级判定）任选2个新法术，加入魔宠的法术贮藏。女巫也可以通过一种特殊的仪式，将额外的法术存入她的魔宠（见下文）。
+  - id: Major Hex
+    name: 强力巫术
+    desc: 在10级以及之后的每2级，女巫巫术的选择范围将包括强力巫术。
+  - id: Grand Hex
+    name: 高等巫术
+    desc: 在18级以及之后的每2级，女巫选择巫术的范围还将包括高等巫术。
+
+levels:
+  - level: 1
+    bab: [0]
+    fortitude: 0
+    reflex: 0
+    will: 2
+    special:
+      - Cantrips
+      - Hex
+      - Patron Spells
+      - Witchs Familiar
+  - level: 2
+    bab: [1]
+    fortitude: 0
+    reflex: 0
+    will: 3
+    special:
+      - Hex
+  - level: 3
+    bab: [1]
+    fortitude: 1
+    reflex: 1
+    will: 3
+    special:
+      - 
+  - level: 4
+    bab: [2]
+    fortitude: 1
+    reflex: 1
+    will: 4
+    special:
+      - Hex
+  - level: 5
+    bab: [2]
+    fortitude: 1
+    reflex: 1
+    will: 4
+    special:
+      - 
+  - level: 6
+    bab: [3]
+    fortitude: 2
+    reflex: 2
+    will: 5
+    special:
+      - Hex
+  - level: 7
+    bab: [3]
+    fortitude: 2
+    reflex: 2
+    will: 5
+    special:
+      - 
+  - level: 8
+    bab: [4]
+    fortitude: 2
+    reflex: 2
+    will: 6
+    special:
+      - Hex
+  - level: 9
+    bab: [4]
+    fortitude: 3
+    reflex: 3
+    will: 6
+    special:
+      - 
+  - level: 10
+    bab: [5]
+    fortitude: 3
+    reflex: 3
+    will: 7
+    special:
+      - Hex
+      - Major Hex
+  - level: 11
+    bab: [5]
+    fortitude: 3
+    reflex: 3
+    will: 7
+    special:
+      - 
+  - level: 12
+    bab: [6, 1]
+    fortitude: 4
+    reflex: 4
+    will: 8
+    special:
+      - Hex
+  - level: 13
+    bab: [6, 1]
+    fortitude: 4
+    reflex: 4
+    will: 8
+    special:
+      - 
+  - level: 14
+    bab: [7, 2]
+    fortitude: 4
+    reflex: 4
+    will: 9
+    special:
+      - Hex
+  - level: 15
+    bab: [7, 2]
+    fortitude: 5
+    reflex: 5
+    will: 9
+    special:
+      - 
+  - level: 16
+    bab: [8, 3]
+    fortitude: 5
+    reflex: 5
+    will: 10
+    special:
+      - Hex
+  - level: 17
+    bab: [8, 3]
+    fortitude: 5
+    reflex: 5
+    will: 10
+    special:
+      - 
+  - level: 18
+    bab: [9, 4]
+    fortitude: 6
+    reflex: 6
+    will: 11
+    special:
+      - Hex
+      - Grand Hex
+  - level: 19
+    bab: [9, 4]
+    fortitude: 6
+    reflex: 6
+    will: 11
+    special:
+      - 
+  - level: 20
+    bab: [10, 5]
+    fortitude: 6
+    reflex: 6
+    will: 12
+    special:
+      - Hex
