@@ -5,7 +5,7 @@ desc:
 
   角色定位: 审判者通常都处于奔波之中，追捕敌人，同时调查潜在的威胁。他们常常和其他人一起旅行，不为别的，只为隐藏自己的存在。审判者会利用任何机会与同样信仰的人合作，但即使这样的盟友也无法免受审判者的怀疑。
 
-alignment: 审判者的阵营必须与他信仰的神祉在秩序混乱或善恶轴上相差一阶之内。
+alignment: any
 hd: 8
 classSkills:
   - bluff
@@ -42,7 +42,7 @@ proficiencies:
     - light
     - medium
     - shields (except tower shields)
-    
+
 feats:
   - id: Spells
     name: 法术
@@ -55,33 +55,34 @@ feats:
   - id: Judgment, Su
     name: 审判
     desc: 从1级开始，审判者可以用一个迅捷动作对她的敌人进行审判。当审判开始时，审判者根据使用的审判类型获得加值或者特殊能力。1级时审判者每天可以使用这个能力1次。在4级及之后每3级，审判者每天可以获得额外1次使用次数。一旦启动，这个能力持续到战斗结束，然后所有优势马上消失。审判者必须参与战斗才能获得这些优势。如果她陷入惊惧、恐慌、麻痹、震慑、昏迷，或者其他不能参与战斗的状态，该能力不会结束，但她失去审判带来的优势、直到回归到战斗中。当审判者使用该能力时，她必须选择一种审判效果。以一个迅捷动作，她可以改变审判种类。如果审判者是邪恶阵营，她得到的是亵渎加值而非神圣加值。中立阵营的审判者必须选择获得神圣加值或亵渎加值，一旦选定将无法改变。
-    - id: Destruction
-      name: 惩戒
-      desc: 审判者充满了神圣的怒火，在所有武器伤害上获得+1神圣加值。这个加值每3级审判者等级额外+1。
-    - id: Healing
-      name: 治疗
-      desc: 审判者被治疗之光包围，获得1点快速医疗。只要审判者依然存活并且审判未结束，她就可以每轮获得1点治疗。每轮治疗量每3级审判者等级额外+1。
-    - id: Justice
-      name: 正义
-      desc: 这个审判促使审判者寻求正义，在所有攻击上获得+1神圣加值。这个加值每5级审判者等级额外+1。10级时，当确认重击威胁时该加值加倍。
-    - id: Piercing
-      name: 锐刺
-      desc: 这个审判让审判者强大的集中力并且让他的法术更加强大。这个审判给予专注检定及穿透法术抗力的施法者等级检定+1神圣加值。这个加值每3级审判者等级额外+1。
-    - id: Protection
-      name: 保护
-      desc: 审判者身旁环绕着保护的光环，给予防御等级+1神圣加值。这个加值每5级审判者等级额外+1。10级时，当确认对你造成的重击威胁时该加值加倍。
-    - id: Purity
-      name: 纯净
-      desc: 审判者对敌人的卑劣侵害获得保护，在所有豁免检定上获得+1神圣加值。这个加值每5级审判者等级额外+1。10级时，这个加值对抗诅咒、疾病和毒素时加倍。
-    - id: Resiliency
-      name: 坚韧
-      desc: 审判者更能对抗伤害，获得伤害减免“1/魔法”。这个伤害减免每5级审判者等级额外+1。10级时，伤害减免从魔法变为审判者的对立阵营（混乱、邪恶、善良、秩序）。如果她是中立阵营，审判者不会得到该提升。
-    - id: Resistance
-      name: 抗力
-      desc: 审判者受到一层闪烁的光环防护，获得2点能量抗力，对应的能量类型在审判开始时选择决定（强酸、寒冷、电击、火焰、音波）。这个防护每3级审判者等级额外+2。
-    - id: Smiting
-      name: 制裁
-      desc: 审判为审判者的武器浸染神圣的光芒。审判者的武器在穿透伤害减免时视为魔法武器。6级时，审判者的武器在穿透伤害减免时同时被视为一个阵营武器（混乱、邪恶、善良、秩序）。阵营种类取决于审判者的阵营。如果审判者是中立阵营，她不会得到这个好处。10级时，审判者的武器在穿透伤害减免时视为精金武器（但不会额外减少硬度）。
+    subs:
+      - id: Destruction
+        name: 惩戒
+        desc: 审判者充满了神圣的怒火，在所有武器伤害上获得+1神圣加值。这个加值每3级审判者等级额外+1。
+      - id: Healing
+        name: 治疗
+        desc: 审判者被治疗之光包围，获得1点快速医疗。只要审判者依然存活并且审判未结束，她就可以每轮获得1点治疗。每轮治疗量每3级审判者等级额外+1。
+      - id: Justice
+        name: 正义
+        desc: 这个审判促使审判者寻求正义，在所有攻击上获得+1神圣加值。这个加值每5级审判者等级额外+1。10级时，当确认重击威胁时该加值加倍。
+      - id: Piercing
+        name: 锐刺
+        desc: 这个审判让审判者强大的集中力并且让他的法术更加强大。这个审判给予专注检定及穿透法术抗力的施法者等级检定+1神圣加值。这个加值每3级审判者等级额外+1。
+      - id: Protection
+        name: 保护
+        desc: 审判者身旁环绕着保护的光环，给予防御等级+1神圣加值。这个加值每5级审判者等级额外+1。10级时，当确认对你造成的重击威胁时该加值加倍。
+      - id: Purity
+        name: 纯净
+        desc: 审判者对敌人的卑劣侵害获得保护，在所有豁免检定上获得+1神圣加值。这个加值每5级审判者等级额外+1。10级时，这个加值对抗诅咒、疾病和毒素时加倍。
+      - id: Resiliency
+        name: 坚韧
+        desc: 审判者更能对抗伤害，获得伤害减免“1/魔法”。这个伤害减免每5级审判者等级额外+1。10级时，伤害减免从魔法变为审判者的对立阵营（混乱、邪恶、善良、秩序）。如果她是中立阵营，审判者不会得到该提升。
+      - id: Resistance
+        name: 抗力
+        desc: 审判者受到一层闪烁的光环防护，获得2点能量抗力，对应的能量类型在审判开始时选择决定（强酸、寒冷、电击、火焰、音波）。这个防护每3级审判者等级额外+2。
+      - id: Smiting
+        name: 制裁
+        desc: 审判为审判者的武器浸染神圣的光芒。审判者的武器在穿透伤害减免时视为魔法武器。6级时，审判者的武器在穿透伤害减免时同时被视为一个阵营武器（混乱、邪恶、善良、秩序）。阵营种类取决于审判者的阵营。如果审判者是中立阵营，她不会得到这个好处。10级时，审判者的武器在穿透伤害减免时视为精金武器（但不会额外减少硬度）。
   - id: Monster Lore, Ex
     name: 怪物学识
     desc: 当判定生物的能力及弱点时，审判者在智力修正之外，额外将她的感知修正加在知识技能检定上。
@@ -152,6 +153,7 @@ levels:
       - Monster Lore
       - Orisons
       - Stern Gaze
+    spellsPerDay: [0, 1, 0, 0, 0, 0, 0]
   - level: 2
     bab: [1]
     fortitude: 3
@@ -161,6 +163,7 @@ levels:
       - Cunning Initiative
       - Detect Alignment
       - Track
+    spellsPerDay: [0, 2, 0, 0, 0, 0, 0]
   - level: 3
     bab: [2]
     fortitude: 3
@@ -169,6 +172,7 @@ levels:
     special:
       - Solo Tactics
       - Teamwork Feat
+    spellsPerDay: [0, 3, 0, 0, 0, 0, 0]
   - level: 4
     bab: [3]
     fortitude: 4
@@ -176,6 +180,7 @@ levels:
     will: 4
     special:
       - Judgment 2/day
+    spellsPerDay: [0, 3, 1, 0, 0, 0, 0]
   - level: 5
     bab: [3]
     fortitude: 4
@@ -184,6 +189,7 @@ levels:
     special:
       - Bane
       - Discern Lies
+    spellsPerDay: [0, 4, 2, 0, 0, 0, 0]
   - level: 6
     bab: [4]
     fortitude: 5
@@ -191,6 +197,7 @@ levels:
     will: 5
     special:
       - Teamwork Feat
+    spellsPerDay: [0, 4, 3, 0, 0, 0, 0]
   - level: 7
     bab: [5]
     fortitude: 5
@@ -198,6 +205,7 @@ levels:
     will: 5
     special:
       - Judgment 3/day
+    spellsPerDay: [0, 4, 3, 1, 0, 0, 0]
   - level: 8
     bab: [6, 1]
     fortitude: 6
@@ -205,6 +213,7 @@ levels:
     will: 6
     special:
       - Second Judgment
+    spellsPerDay: [0, 4, 4, 2, 0, 0, 0]
   - level: 9
     bab: [6, 1]
     fortitude: 6
@@ -212,6 +221,7 @@ levels:
     will: 6
     special:
       - Teamwork Feat
+    spellsPerDay: [0, 5, 4, 3, 0, 0, 0]
   - level: 10
     bab: [7, 2]
     fortitude: 7
@@ -219,6 +229,7 @@ levels:
     will: 7
     special:
       - Judgment 4/day
+    spellsPerDay: [0, 5, 4, 3, 1, 0, 0]
   - level: 11
     bab: [8, 3]
     fortitude: 7
@@ -226,6 +237,7 @@ levels:
     will: 7
     special:
       - Stalwart
+    spellsPerDay: [0, 5, 4, 4, 2, 0, 0]
   - level: 12
     bab: [9, 4]
     fortitude: 8
@@ -234,6 +246,7 @@ levels:
     special:
       - Greater Bane
       - Teamwork Feat
+    spellsPerDay: [0, 5, 5, 4, 3, 0, 0]
   - level: 13
     bab: [9, 4]
     fortitude: 8
@@ -241,6 +254,7 @@ levels:
     will: 8
     special:
       - Judgment 5/day
+    spellsPerDay: [0, 5, 5, 4, 3, 1, 0]
   - level: 14
     bab: [10, 5]
     fortitude: 9
@@ -248,6 +262,7 @@ levels:
     will: 9
     special:
       - Exploit Weakness
+    spellsPerDay: [0, 5, 5, 4, 4, 2, 0]
   - level: 15
     bab: [11, 6, 1]
     fortitude: 9
@@ -255,6 +270,7 @@ levels:
     will: 9
     special:
       - Teamwork Feat
+    spellsPerDay: [0, 5, 5, 5, 4, 3, 0]
   - level: 16
     bab: [12, 7, 2]
     fortitude: 10
@@ -263,6 +279,7 @@ levels:
     special:
       - Judgment 6/day
       - Third Judgment
+    spellsPerDay: [0, 5, 5, 5, 4, 3, 1]
   - level: 17
     bab: [12, 7, 2]
     fortitude: 10
@@ -270,6 +287,7 @@ levels:
     will: 10
     special:
       - Slayer
+    spellsPerDay: [0, 5, 5, 5, 4, 4, 2]
   - level: 18
     bab: [13, 8, 3]
     fortitude: 11
@@ -277,6 +295,7 @@ levels:
     will: 11
     special:
       - Teamwork Feat
+    spellsPerDay: [0, 5, 5, 5, 5, 4, 3]
   - level: 19
     bab: [14, 9, 4]
     fortitude: 11
@@ -284,6 +303,7 @@ levels:
     will: 11
     special:
       - Judgment 7/day
+    spellsPerDay: [0, 5, 5, 5, 5, 5, 4]
   - level: 20
     bab: [15, 10, 5]
     fortitude: 12
@@ -291,3 +311,4 @@ levels:
     will: 12
     special:
       - True Judgment
+    spellsPerDay: [0, 5, 5, 5, 5, 5, 5]

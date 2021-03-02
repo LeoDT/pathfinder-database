@@ -56,6 +56,7 @@ levels:
       - Hex
       - Patron Spells
       - Witchs Familiar
+    spellsPerDay: [0, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0]
   - level: 2
     bab: [1]
     fortitude: 0
@@ -63,13 +64,13 @@ levels:
     will: 3
     special:
       - Hex
+    spellsPerDay: [0, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0]
   - level: 3
     bab: [1]
     fortitude: 1
     reflex: 1
     will: 3
-    special:
-      - 
+    spellsPerDay: [0, 4, 2, 1, 0, 0, 0, 0, 0, 0, 0]
   - level: 4
     bab: [2]
     fortitude: 1
@@ -77,13 +78,13 @@ levels:
     will: 4
     special:
       - Hex
+    spellsPerDay: [0, 4, 3, 2, 0, 0, 0, 0, 0, 0, 0]
   - level: 5
     bab: [2]
     fortitude: 1
     reflex: 1
     will: 4
-    special:
-      - 
+    spellsPerDay: [0, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0]
   - level: 6
     bab: [3]
     fortitude: 2
@@ -91,13 +92,13 @@ levels:
     will: 5
     special:
       - Hex
+    spellsPerDay: [0, 4, 3, 3, 2, 0, 0, 0, 0, 0, 0]
   - level: 7
     bab: [3]
     fortitude: 2
     reflex: 2
     will: 5
-    special:
-      - 
+    spellsPerDay: [0, 4, 4, 3, 2, 1, 0, 0, 0, 0, 0]
   - level: 8
     bab: [4]
     fortitude: 2
@@ -105,13 +106,13 @@ levels:
     will: 6
     special:
       - Hex
+    spellsPerDay: [0, 4, 4, 3, 3, 2, 0, 0, 0, 0, 0]
   - level: 9
     bab: [4]
     fortitude: 3
     reflex: 3
     will: 6
-    special:
-      - 
+    spellsPerDay: [0, 4, 4, 4, 3, 2, 1, 0, 0, 0, 0]
   - level: 10
     bab: [5]
     fortitude: 3
@@ -120,13 +121,13 @@ levels:
     special:
       - Hex
       - Major Hex
+    spellsPerDay: [0, 4, 4, 4, 3, 3, 2, 0, 0, 0, 0]
   - level: 11
     bab: [5]
     fortitude: 3
     reflex: 3
     will: 7
-    special:
-      - 
+    spellsPerDay: [0, 4, 4, 4, 4, 3, 2, 1, 0, 0, 0]
   - level: 12
     bab: [6, 1]
     fortitude: 4
@@ -134,13 +135,13 @@ levels:
     will: 8
     special:
       - Hex
+    spellsPerDay: [0, 4, 4, 4, 4, 3, 3, 2, 0, 0, 0]
   - level: 13
     bab: [6, 1]
     fortitude: 4
     reflex: 4
     will: 8
-    special:
-      - 
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 3, 2, 1, 0, 0]
   - level: 14
     bab: [7, 2]
     fortitude: 4
@@ -148,13 +149,13 @@ levels:
     will: 9
     special:
       - Hex
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 3, 3, 2, 0, 0]
   - level: 15
     bab: [7, 2]
     fortitude: 5
     reflex: 5
     will: 9
-    special:
-      - 
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 3, 2, 1, 0]
   - level: 16
     bab: [8, 3]
     fortitude: 5
@@ -162,13 +163,13 @@ levels:
     will: 10
     special:
       - Hex
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 3, 3, 2, 0]
   - level: 17
     bab: [8, 3]
     fortitude: 5
     reflex: 5
     will: 10
-    special:
-      - 
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 4, 3, 2, 1]
   - level: 18
     bab: [9, 4]
     fortitude: 6
@@ -177,13 +178,13 @@ levels:
     special:
       - Hex
       - Grand Hex
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 4, 3, 3, 2]
   - level: 19
     bab: [9, 4]
     fortitude: 6
     reflex: 6
     will: 11
-    special:
-      - 
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3]
   - level: 20
     bab: [10, 5]
     fortitude: 6
@@ -191,3 +192,4 @@ levels:
     will: 12
     special:
       - Hex
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]

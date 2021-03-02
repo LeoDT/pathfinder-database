@@ -50,22 +50,65 @@
         const root = document.createElement('div');
         root.innerHTML = text;
 
+        let hasSpell = false;
+        let spellStartFromZero = false;
+        Array.from(root.querySelectorAll('thead th')).forEach((th) => {
+          const text = th.textContent.toLowerCase();
+          if (text.search('spells per day') !== -1) {
+            hasSpell = true;
+          }
+
+          if (text === '0th') {
+            spellStartFromZero = true;
+          }
+        });
+
         const html = Array.from(root.querySelectorAll('tbody tr'))
           .map((tr) => {
             const tds = Array.from(tr.querySelectorAll('td'));
+
+            if (tds.length < 5) {
+              return;
+            }
 
             function get(n) {
               return removeNewlines(removeSpaces(tds[n].textContent));
             }
 
-            return `- level: ${get(0).replace(/[a-z]+/, '')}
+            let yaml = `- level: ${get(0).replace(/[a-z]+/, '')}
   bab: [${get(1).replace(/\+/g, '').split('/').join(', ')}]
   fortitude: ${get(2).replace('+', '')}
   reflex: ${get(3).replace('+', '')}
-  will: ${get(4).replace('+', '')}
+  will: ${get(4).replace('+', '')}`;
+
+            const specialText = get(5);
+
+            if (specialText || specialText !== '-') {
+              yaml += `
   special:
-${special(get(5))}`;
+${special(specialText)}`;
+            }
+
+            if (hasSpell) {
+              const spells = _.range(6, tds.length).map((i) => {
+                const t = get(i);
+                if (t === '—') return 0;
+                if (t.indexOf('+')) return t.charAt(0);
+
+                return t;
+              });
+
+              if (!spellStartFromZero) {
+                spells.unshift('0');
+              }
+
+              yaml += `
+  spellsPerDay: [${spells.join(', ')}]`;
+            }
+
+            return yaml;
           })
+          .filter((t) => t)
           .join('\n');
 
         output.value = html;

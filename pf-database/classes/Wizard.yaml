@@ -62,7 +62,6 @@ feats:
     name: 法术书
     desc: 法师必须每天研习他的法术书来准备法术。他不能准备任何没有记录在他法术书内的法术，除了‘阅读魔法’——任何法师都可以凭记忆准备这个法术。在开始游戏的时候法师会带有一本法术书，该法术书内记录了所有的0环法术（除了他的对立学派法术），再加上3个玩家选择的1环法术。法师的每1点智力加值可以让起始法术书内多获得1个1环法术。每获得1个新的法师等级，法师都可以获得2个法术添加在法术书中，这2个法术可以是任何他能施展的法术环级上的法术（基于他新的法师等级）。无论何时，法师都可以将其他法师法术书上的法术加入自己的法术书。
 
-
 levels:
   - level: 1
     bab: [0]
@@ -73,6 +72,8 @@ levels:
       - Arcane Bond
       - Arcane School
       - Cantrips
+      - Scribe Scroll
+    spellsPerDay: [3, 1, 0, 0, 0, 0, 0, 0, 0, 0]
   - level: 2
     bab: [1]
     fortitude: 0
@@ -80,6 +81,7 @@ levels:
     will: 3
     special:
       - —
+    spellsPerDay: [4, 2, 0, 0, 0, 0, 0, 0, 0, 0]
   - level: 3
     bab: [1]
     fortitude: 1
@@ -87,6 +89,7 @@ levels:
     will: 3
     special:
       - —
+    spellsPerDay: [4, 2, 1, 0, 0, 0, 0, 0, 0, 0]
   - level: 4
     bab: [2]
     fortitude: 1
@@ -94,6 +97,7 @@ levels:
     will: 4
     special:
       - —
+    spellsPerDay: [4, 3, 2, 0, 0, 0, 0, 0, 0, 0]
   - level: 5
     bab: [2]
     fortitude: 1
@@ -101,6 +105,7 @@ levels:
     will: 4
     special:
       - Bonus Feat
+    spellsPerDay: [4, 3, 2, 1, 0, 0, 0, 0, 0, 0]
   - level: 6
     bab: [3]
     fortitude: 2
@@ -108,6 +113,7 @@ levels:
     will: 5
     special:
       - —
+    spellsPerDay: [4, 3, 3, 2, 0, 0, 0, 0, 0, 0]
   - level: 7
     bab: [3]
     fortitude: 2
@@ -115,6 +121,7 @@ levels:
     will: 5
     special:
       - —
+    spellsPerDay: [4, 4, 3, 2, 1, 0, 0, 0, 0, 0]
   - level: 8
     bab: [4]
     fortitude: 2
@@ -122,6 +129,7 @@ levels:
     will: 6
     special:
       - —
+    spellsPerDay: [4, 4, 3, 3, 2, 0, 0, 0, 0, 0]
   - level: 9
     bab: [4]
     fortitude: 3
@@ -129,6 +137,7 @@ levels:
     will: 6
     special:
       - —
+    spellsPerDay: [4, 4, 4, 3, 2, 1, 0, 0, 0, 0]
   - level: 10
     bab: [5]
     fortitude: 3
@@ -136,6 +145,7 @@ levels:
     will: 7
     special:
       - Bonus Feat
+    spellsPerDay: [4, 4, 4, 3, 3, 2, 0, 0, 0, 0]
   - level: 11
     bab: [5]
     fortitude: 3
@@ -143,6 +153,7 @@ levels:
     will: 7
     special:
       - —
+    spellsPerDay: [4, 4, 4, 4, 3, 2, 1, 0, 0, 0]
   - level: 12
     bab: [6, 1]
     fortitude: 4
@@ -150,6 +161,7 @@ levels:
     will: 8
     special:
       - —
+    spellsPerDay: [4, 4, 4, 4, 3, 3, 2, 0, 0, 0]
   - level: 13
     bab: [6, 1]
     fortitude: 4
@@ -157,6 +169,7 @@ levels:
     will: 8
     special:
       - —
+    spellsPerDay: [4, 4, 4, 4, 4, 3, 2, 1, 0, 0]
   - level: 14
     bab: [7, 2]
     fortitude: 4
@@ -164,6 +177,7 @@ levels:
     will: 9
     special:
       - —
+    spellsPerDay: [4, 4, 4, 4, 4, 3, 3, 2, 0, 0]
   - level: 15
     bab: [7, 2]
     fortitude: 5
@@ -171,6 +185,7 @@ levels:
     will: 9
     special:
       - Bonus Feat
+    spellsPerDay: [4, 4, 4, 4, 4, 4, 3, 2, 1, 0]
   - level: 16
     bab: [8, 3]
     fortitude: 5
@@ -178,6 +193,7 @@ levels:
     will: 10
     special:
       - —
+    spellsPerDay: [4, 4, 4, 4, 4, 4, 3, 3, 2, 0]
   - level: 17
     bab: [8, 3]
     fortitude: 5
@@ -185,6 +201,7 @@ levels:
     will: 10
     special:
       - —
+    spellsPerDay: [4, 4, 4, 4, 4, 4, 4, 3, 2, 1]
   - level: 18
     bab: [9, 4]
     fortitude: 6
@@ -192,6 +209,7 @@ levels:
     will: 11
     special:
       - —
+    spellsPerDay: [4, 4, 4, 4, 4, 4, 4, 3, 3, 2]
   - level: 19
     bab: [9, 4]
     fortitude: 6
@@ -199,6 +217,7 @@ levels:
     will: 11
     special:
       - —
+    spellsPerDay: [4, 4, 4, 4, 4, 4, 4, 4, 3, 3]
   - level: 20
     bab: [10, 5]
     fortitude: 6
@@ -206,3 +225,4 @@ levels:
     will: 12
     special:
       - Bonus Feat
+    spellsPerDay: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]

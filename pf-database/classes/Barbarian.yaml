@@ -5,7 +5,7 @@ desc:
 
   角色定位: 野蛮人在战斗中独当一面，能够用非凡的格斗技巧和刚健身躯摞倒那些看上去强过自己的对手。以狂暴之力超越多数其他战士，野蛮人凶猛地冲锋陷阵，并削翻一切敢挡道的敌人。
 
-alignment: any non-lawful
+alignment: non-lawful
 hd: 12
 classSkills:
   - acrobatics
