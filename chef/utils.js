@@ -15,3 +15,9 @@ export function removeNewlines(text) {
 export function removeSpaces(text) {
   return text.replace(/\s+/g, ' ').trim();
 }
+
+export function compose(...fns) {
+  const compose2 = (f, g) => (...args) => f(g(...args));
+
+  return fns.reduce(compose2);
+}

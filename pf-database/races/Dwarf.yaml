@@ -25,6 +25,7 @@ ability:
   cha: -2
 
 size: medium
+speed: 20
 
 language:
   - 通用语

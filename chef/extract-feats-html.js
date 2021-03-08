@@ -111,7 +111,7 @@ for (const [bookName, bookHTML] of Object.entries(books)) {
     };
 
     if (description) {
-      feat.description = description;
+      feat.desc = description;
     }
 
     const altNameIndex = feat.id.indexOf('，又译');

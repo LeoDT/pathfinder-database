@@ -95,7 +95,7 @@ for (const book of books) {
         );
       }
     }
-    const description = descriptionRows.join('\n').trim();
+    const desc = descriptionRows.join('\n').trim();
 
     const [name, id] = nameAndId
       .replace(/(\r\n|\n|\r)/gi, '')
@@ -106,7 +106,7 @@ for (const book of books) {
       id,
       name,
       meta: spellMetaFromTexts(meta),
-      description,
+      desc,
     });
   }
 

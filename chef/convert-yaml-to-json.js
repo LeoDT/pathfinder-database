@@ -4,6 +4,22 @@ import {
   basename as pathBasename,
 } from 'https://deno.land/std@0.85.0/path/mod.ts';
 
+import { compose } from './utils.js';
+
+function featPatchMap(items) {
+  return items.filter((item) => {
+    if (item.book === 'crb') {
+      return !['Rapid Reload', 'Extra Channel'].includes(item.id);
+    }
+
+    if (item.book === 'apg') {
+      return !['Extra Hex'].includes(item.id);
+    }
+
+    return true;
+  });
+}
+
 function mergeMap(items, file) {
   const book = pathBasename(file, '.yaml');
 
@@ -27,8 +43,38 @@ const converters = [
   },
   {
     dir: 'feats',
-    map: mergeMap,
+    map: compose(featPatchMap, mergeMap),
     done: mergeDone,
+  },
+  {
+    file: 'skills',
+    done: (skills) => {
+      const converted = [];
+
+      skills.forEach((s) => {
+        if (s.category) {
+          converted.push({
+            id: s.id,
+            name: s.name,
+            category: true,
+            ability: s.ability,
+          });
+
+          s.subs?.forEach((sub) => {
+            converted.push({
+              id: `${s.id}(${sub.id})`,
+              name: `${s.name}(${sub.name})`,
+              ability: s.ability,
+              parent: s.id,
+            });
+          });
+        } else {
+          converted.push(s);
+        }
+      });
+
+      return converted;
+    },
   },
 ];
 

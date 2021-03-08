@@ -14,6 +14,15 @@
   ability: int
   category: true
   name: 工艺
+  subs:
+    - id: alchemy
+      name: 炼金术
+    - id: armors
+      name: 打造护甲
+    - id: weapons
+      name: 锻造武器
+    - id: traps
+      name: 布设陷阱
 - id: diplomacy
   ability: cha
   name: 交涉
@@ -96,6 +105,17 @@
   ability: wis
   category: true
   name: 专业
+  subs:
+    - id: architect
+      name: 建筑师
+    - id: brewer
+      name: 酿酒师
+    - id: cook
+      name: 厨师
+    - id: engineer
+      name: 工程师
+    - id: merchant
+      name: 商人
 - id: ride
   ability: dex
   name: 骑术

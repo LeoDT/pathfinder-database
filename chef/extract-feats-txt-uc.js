@@ -34,7 +34,7 @@ function convertToFeat(featTexts) {
   }
 
   if (description) {
-    feat.description = description;
+    feat.desc = description;
   }
 
   return feat;

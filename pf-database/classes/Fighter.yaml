@@ -35,15 +35,52 @@ feats:
   - id: Bonus Feat
     name: 奖励专长
     desc: 1级以及之后的每个偶数等级，战士获得一项奖励专长，该额外专长独立于角色升级时获得的（意味着战士每级都可获得专长）。这些专长必须在战斗专长列表中，有时也被称为“战士奖励专长”。当战士达到4级以及随后的每4级（8级，12级，以此类推），它还可以选择学习一个新的额外专长来取代先前获得的一项奖励专长。实际效果相当于以旧换新。被取代的旧专长不能是其他专长、进阶职业或能力的先决条件。战士只能在到达特定等级时决定是否要置换专长，且每个特定等级时只能置换一项专长。
-  - id: Bravery
-    name: 英勇
+    effects:
+      - type: gainFeat
+        featType: combat
+  - id: Bravery +1
+    name: 英勇 +1
+    type: ex
     desc: 2级时，战士在进行对抗恐惧效果的意志检定时会获得+1加值。这个加值在之后的每4级会再+1。
-  - id: Armor Training
-    name: 盔甲训练
+    grow:
+      - level: 6
+        id: Bravery +2
+        name: 英勇 +2
+      - level: 10
+        id: Bravery +3
+        name: 英勇 +3
+      - level: 14
+        id: Bravery +4
+        name: 英勇 +4
+      - level: 18
+        id: Bravery +5
+        name: 英勇 +5
+  - id: Armor Training 1
+    name: 盔甲训练 1
     desc: 3级时，战士学会在穿戴盔甲时获得更灵活的机动性。当他穿甲时，盔甲防具检定减值减少1点（最小为0）且敏捷上限增加1点。在这之后的每4级（7、11、15级），上述修正再提高1点，最大达到防具检定减值减少4点，敏捷上限增加4点。此外，战士能够在装备中型盔甲时以正常速度移动。7级时战士能够在装备重型盔甲时以正常速度移动。
-  - id: Weapon Training
-    name: 武器训练
+    grow:
+      - level: 7
+        id: Armor Training 2
+        name: 盔甲训练 2
+      - level: 11
+        id: Armor Training 3
+        name: 盔甲训练 3
+      - level: 15
+        id: Armor Training 4
+        name: 盔甲训练 4
+  - id: Weapon Training 1
+    name: 武器训练 1
     desc: 5级时，战士可以选择一个下面所标注的武器类组。当他使用该类组的武器时，他在命中与伤害上获得+1加值。在这之后的每4级（9、13跟17），战士可以选择一个新的武器类组来进行更多的训练。他同样在该武器类组的命中与伤害上获得+1加值，并且，当他使用先前所选择训练的类组武器时，他的命中跟伤害加值会额外+1。例如说，有一位战士升到了9级，他在一个武器类组的命中与伤害上获得+1加值，并在另外一个（他5级时选择的那个）武器类组的命中与伤害上获得+2加值。如果两个武器类组同时包含了一个武器，那么加值并非叠加，而是取两个类组中加值较高的那一个。
+    grow:
+      - level: 9
+        id: Weapon Training 2
+        name: 武器训练 2
+      - level: 13
+        id: Weapon Training 3
+        name: 武器训练 3
+      - level: 17
+        id: Weapon Training 4
+        name: 武器训练 4
   - id: Armor Mastery
     name: 盔甲宗师
     desc: 在第19级，当一名战士穿戴盔甲或手持盾牌时，他获得伤害减免“5/-”。
