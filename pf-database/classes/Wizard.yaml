@@ -32,7 +32,7 @@ feats:
   - id: Bonus Languages
     name: 额外语言
     desc: 法师能以龙语替换他的种族额外语言列表中的一种。
-  - id: Arcane Bond, Ex/Sp
+  - id: Arcane Bond
     name: 奥术联结
     desc: |
       在1级时，法师缔结一个强力的联结物品或是联结生物。此联结可以是两种形式之一
@@ -58,9 +58,6 @@ feats:
     desc: |
       在5，10，15，20级时，法师都可以获得一个奖励专长。在每次获得这些专长时他可以挑选超魔专长、物品制造专长或者“法术掌握”专长。法师依然必须达到这些专长的前提要求，包括最低施法者等级。这些奖励专长是对因角色升级而获得专长的补充。当法师选择角色升级专长时，他不受法师奖励专长的限制。
       【专长速查】法术掌握（Spell Mastery）：可以不用法术书准备某些法术。
-  - id: Spellbooks
-    name: 法术书
-    desc: 法师必须每天研习他的法术书来准备法术。他不能准备任何没有记录在他法术书内的法术，除了‘阅读魔法’——任何法师都可以凭记忆准备这个法术。在开始游戏的时候法师会带有一本法术书，该法术书内记录了所有的0环法术（除了他的对立学派法术），再加上3个玩家选择的1环法术。法师的每1点智力加值可以让起始法术书内多获得1个1环法术。每获得1个新的法师等级，法师都可以获得2个法术添加在法术书中，这2个法术可以是任何他能施展的法术环级上的法术（基于他新的法师等级）。无论何时，法师都可以将其他法师法术书上的法术加入自己的法术书。
 
 levels:
   - level: 1
@@ -72,31 +69,25 @@ levels:
       - Arcane Bond
       - Arcane School
       - Cantrips
-      - Scribe Scroll
+      - Spell Focus
     spellsPerDay: [3, 1, 0, 0, 0, 0, 0, 0, 0, 0]
   - level: 2
     bab: [1]
     fortitude: 0
     reflex: 0
     will: 3
-    special:
-      - —
     spellsPerDay: [4, 2, 0, 0, 0, 0, 0, 0, 0, 0]
   - level: 3
     bab: [1]
     fortitude: 1
     reflex: 1
     will: 3
-    special:
-      - —
     spellsPerDay: [4, 2, 1, 0, 0, 0, 0, 0, 0, 0]
   - level: 4
     bab: [2]
     fortitude: 1
     reflex: 1
     will: 4
-    special:
-      - —
     spellsPerDay: [4, 3, 2, 0, 0, 0, 0, 0, 0, 0]
   - level: 5
     bab: [2]
@@ -111,32 +102,24 @@ levels:
     fortitude: 2
     reflex: 2
     will: 5
-    special:
-      - —
     spellsPerDay: [4, 3, 3, 2, 0, 0, 0, 0, 0, 0]
   - level: 7
     bab: [3]
     fortitude: 2
     reflex: 2
     will: 5
-    special:
-      - —
     spellsPerDay: [4, 4, 3, 2, 1, 0, 0, 0, 0, 0]
   - level: 8
     bab: [4]
     fortitude: 2
     reflex: 2
     will: 6
-    special:
-      - —
     spellsPerDay: [4, 4, 3, 3, 2, 0, 0, 0, 0, 0]
   - level: 9
     bab: [4]
     fortitude: 3
     reflex: 3
     will: 6
-    special:
-      - —
     spellsPerDay: [4, 4, 4, 3, 2, 1, 0, 0, 0, 0]
   - level: 10
     bab: [5]
@@ -151,32 +134,24 @@ levels:
     fortitude: 3
     reflex: 3
     will: 7
-    special:
-      - —
     spellsPerDay: [4, 4, 4, 4, 3, 2, 1, 0, 0, 0]
   - level: 12
     bab: [6, 1]
     fortitude: 4
     reflex: 4
     will: 8
-    special:
-      - —
     spellsPerDay: [4, 4, 4, 4, 3, 3, 2, 0, 0, 0]
   - level: 13
     bab: [6, 1]
     fortitude: 4
     reflex: 4
     will: 8
-    special:
-      - —
     spellsPerDay: [4, 4, 4, 4, 4, 3, 2, 1, 0, 0]
   - level: 14
     bab: [7, 2]
     fortitude: 4
     reflex: 4
     will: 9
-    special:
-      - —
     spellsPerDay: [4, 4, 4, 4, 4, 3, 3, 2, 0, 0]
   - level: 15
     bab: [7, 2]
@@ -191,32 +166,24 @@ levels:
     fortitude: 5
     reflex: 5
     will: 10
-    special:
-      - —
     spellsPerDay: [4, 4, 4, 4, 4, 4, 3, 3, 2, 0]
   - level: 17
     bab: [8, 3]
     fortitude: 5
     reflex: 5
     will: 10
-    special:
-      - —
     spellsPerDay: [4, 4, 4, 4, 4, 4, 4, 3, 2, 1]
   - level: 18
     bab: [9, 4]
     fortitude: 6
     reflex: 6
     will: 11
-    special:
-      - —
     spellsPerDay: [4, 4, 4, 4, 4, 4, 4, 3, 3, 2]
   - level: 19
     bab: [9, 4]
     fortitude: 6
     reflex: 6
     will: 11
-    special:
-      - —
     spellsPerDay: [4, 4, 4, 4, 4, 4, 4, 4, 3, 3]
   - level: 20
     bab: [10, 5]

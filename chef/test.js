@@ -1,3 +1,11 @@
-import { basename } from 'https://deno.land/std@0.85.0/path/mod.ts';
+const f = await Deno.readTextFile('./pathfinder-workbench/src/data/feats.json');
 
-console.log(basename('abc/qbs/aaa.test', '.test'));
+const json = JSON.parse(f);
+
+const set = new Set();
+
+json.forEach(({ type }) => {
+  set.add(type);
+});
+
+console.log(Array.from(set));

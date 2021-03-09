@@ -3,7 +3,7 @@ import { stringify } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
 
 import { removeNewlines, removeSpaces } from './utils.js';
 import { convertTable } from './html-utils.js';
-import { startsWithMetaKey, featMetaFromTexts } from './feat-utils.js';
+import { startsWithMetaKey, featMetaFromTexts, featTypeFromText } from './feat-utils.js';
 
 const books = {
   crb: 'page_195.html',
@@ -75,7 +75,7 @@ for (const [bookName, bookHTML] of Object.entries(books)) {
 
     const nameAndIdAndType = removeNewlines(removeSpaces(nameElWrapper.text())).match(
       bookName === 'acg'
-        ? /^(?<name>\S+?)\s(?<id>[a-zA-Z-,\s`]+)（?(?<type>.*?)）?$/
+        ? /^(?<name>\S+?)\s(?<id>[a-zA-Z-,\s`’]+)（?(?<type>.*?)）?$/
         : /(?<name>.+?)\s?（(?<id>.+?)）〔?(?<type>.*?)〕?$/
     ).groups;
 
@@ -105,7 +105,7 @@ for (const [bookName, bookHTML] of Object.entries(books)) {
 
     const feat = {
       ...nameAndIdAndType,
-      type: nameAndIdAndType.type || 'general',
+      type: nameAndIdAndType.type ? featTypeFromText(nameAndIdAndType.type) : ['general'],
       brief,
       meta,
     };

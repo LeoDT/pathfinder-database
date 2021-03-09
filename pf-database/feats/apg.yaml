@@ -1,40 +1,46 @@
 - name: 额外背景
   id: Additional Traits
-  type: general
+  type:
+    - general
   brief: 你有更多的背景特性。
   meta:
     benefit: 你获得两个自选的角色背景特性。这些背景特性必须从不同的列表中选择，并且无法使用之前已经选取背景特性的列表。你必须满足自行选择的背景特性中，任何额外的先决条件。
 - name: 团队法师
   id: Allied Spellcaster
-  type: 团队
+  type:
+    - teamwork
   brief: 你十分擅长在盟友的帮助下，使用自身的法术突破其他生物的防护。
   meta:
     requirement: 施法者等级1级。
     benefit: 若你邻近一名同样拥有该专长的盟友，那么你在克服法术抗力的施法者等级检定中获得+2表现加值。如果你的盟友准备了相同的法术（或者在盟友为自发施法者的情况下，他的已知法术有这个法术并且还有可用法术位），这个加值会提升至+4，并且在确定所有与CL相关的变量（如持续时间，范围和效果）时，你的CL获得+1加值。
 - name: 奥能爆发
   id: Arcane Blast
-  type: general
+  type:
+    - general
   brief: 你能够将任何法术转化成射线攻击。
   meta:
     requirement: 奥术施法者，施法者等级10级。
     benefit: 以标准动作，你能够牺牲一个1环或更高环级的已准备法术或者未使用法术位，并将其转化为射线，以远程接触攻击将30尺内的任意敌人作为目标。这个攻击造成2d6点伤害，外加每个被牺牲的已准备法术或者未使用法术位环级1d6点伤害。0环法术无法以此方式牺牲。
 - name: 奥能之盾
   id: Arcane Shield
-  type: general
+  type:
+    - general
   brief: 你能够将任何法术转化为护盾。
   meta:
     requirement: 奥术施法者，施法者等级10级。
     benefit: 以直觉动作，你能够牺牲一个1环或更高环级的已准备法术或者未使用法术位，并将其转化为AC上的偏斜加值，数值等同于被牺牲的已准备法术或者未使用法术位环级，持续1轮。0环法术无法以此方式牺牲。
 - name: 奥法天赋
   id: Arcane Talent
-  type: general
+  type:
+    - general
   brief: 魔法流淌在你的血液中，环绕在你的指尖上。
   meta:
     requirement: 魅力10；精灵、半精灵或侏儒。
     benefit: 从术士/法师列表中选择一个0环法术。每日你能够以类法术能力施放3次该法术。CL等同于你的角色等级。该豁免DC为“10+魅力修正”。
 - name: 化兽态
   id: Aspect of the Beast
-  type: general
+  type:
+    - general
   brief: 无论是由于血液中流淌的魔法还是诅咒，你身上的某些部分更像野兽而非人类。
   meta:
     requirement: 【自然变身】职业特性；见特殊说明。
@@ -47,21 +53,24 @@
     野性本能（Wild Instinct, Ex）：你的先攻检定与生存检定获得+2加值。
 - name: 一击扑杀
   id: Bashing Finish
-  type: 战斗
+  type:
+    - combat
   brief: 你能够在用武器进行强有力的攻击后顺势使用盾牌进行打击。
   meta:
     requirement: 精通盾击，盾牌大师，双武器格斗，基本攻击加值+11。
     benefit: 每当你成功使用近战武器进行重击时，就能够以自由动作对相同的目标，使用相同的加值对其进行盾击攻击。
 - name: 血腥强袭
   id: Bloody Assault
-  type: 战斗
+  type:
+    - combat
   brief: 通过牺牲精度，你能够制造出难于愈合的流血伤口。
   meta:
     requirement: 力量13，猛力攻击，基本攻击加值+6。
     benefit: 你可以选择让所有近战攻击检定与战技检定承受-5减值，使你的武器近战攻击在正常能够造成的伤害之外，额外造成1d4点流血伤害。受到流血伤害的生物会在其每行动轮开始时持续遭受这一伤害。通过DC15的医疗检定或者任何魔法治疗均可制止流血伤害。由此专长造成的流血伤害不会相互叠加。你必须在进行攻击检定之前选择使用该专长，并且该效果会持续至你的下一轮为止（不过流血会如常持续，直至被治愈为止）。
 - name: 保镖
   id: Bodyguard
-  type: 战斗
+  type:
+    - combat
   brief: 你的快速攻击能够格挡开敌人对附近盟友的攻击。
   meta:
     requirement: 战斗反射。
@@ -69,20 +78,23 @@
     normal: 协助他人是标准动作。
 - name: 弹性法术
   id: Bouncing Spell
-  type: 超魔
+  type:
+    - metamagic
   brief: 你可以使用本已失败的法术对抗不同的目标。
   meta:
     benefit: 当一个弹性法术选定一个目标生物，却没有对预期目标产生效果的话（无论是由于法术抗力还是成功的豁免），那么你能以迅捷动作将法术重定向到法术范围内的另一个合适生物身上。重定向的法术在所有方面都会将新目标视为最初的目标。能够以任何方式影响目标的法术（包括成功的豁免后会造成较弱效果的），均无法以此方式重新定向。弹性法术占用比法术的实际环级高1环的法术位。
 - name: 生命历练
   id: Breadth of Experience
-  type: general
+  type:
+    - general
   brief: 尽管你在同族中还很年轻，却已经具备了相当程度的训练与知识。
   meta:
     requirement: 矮人，精灵或侏儒；年龄100岁以上。
     benefit: 你的所有知识检定与专业检定获得+2加值，并且可以在未受训的情况下进行这些检定。
 - name: 冲撞重击
   id: Bull Rush Strike
-  type: 战斗
+  type:
+    - combat
   brief: 你的重击能够推开敌人。
   meta:
     requirement: 力量13，精通冲撞，猛力攻击，基本攻击加值+9。
@@ -91,7 +103,8 @@
     special: 你只能将后述专长中的一个应用在一次确认的重击上 冲撞重击，移位重击，破武重击，卸武重击或者绊摔重击。你可以在重击确认检定之后选择使用该专长。
 - name: 闯越冲锋
   id: Charge Through
-  type: 战斗
+  type:
+    - combat
   brief: 你能够在冲锋时进行闯越。
   meta:
     requirement: 力量13，精通闯越，猛力攻击，基本攻击加值+1。
@@ -99,21 +112,24 @@
     normal: 为了冲锋目标，你与目标之间不能有障碍。
 - name: 童颜
   id: Childlike
-  type: general
+  type:
+    - general
   brief: 你那形似人类孩童的外表让大家更易于相信你——如果他们没有识破你的身份的话。
   meta:
     requirement: 魅力13，半身人。
     benefit: 只要你的故事能够显得自己是无辜的，就能够在唬骗检定中取10，用以让别人认为你说的是真话。你还在冒充为人类孩童的易容检定中获得+2加值，并且忽略在这么做时，易容为不同种族和不同年龄层的减值。
 - name: 梯云纵
   id: Cloud Step
-  type: general
+  type:
+    - general
   brief: 你的脚步异常地轻盈。
   meta:
     requirement: 壁虎游墙，武僧等级12。
     benefit: 以移动动作，你能够如法术‘凌空而行（air walk）’一般行走，距离为【轻身坠】的一半，最高为50尺。你必须在你的行动轮结束时到达固体的水平面上，否则将会坠落。
 - name: 金蛇封穴
   id: Cockatrice Strike
-  type: 战斗
+  type:
+    - combat
   brief: 你能够通过一次打击将血肉化为磐石。
   meta:
     requirement: 精通徒手打击，蛇形拳，万蛇出洞，基本攻击加值+16。
@@ -121,39 +137,47 @@
   altName: 蛇鸡兽之突
 - name: 战斗戒备
   id: Combat Patrol
-  type: 战斗
+  type:
+    - combat
   brief: 你的触及范围贯穿全场，威胁着可能在任何位置出现的敌人。
   meta:
     requirement: 战斗反射，灵活移动，基本攻击加值+5。
     benefit: 以整轮动作，你能够进行战斗戒备，每拥有5点BAB，你的威胁范围就能够增加5尺。直至你的下一轮开始为止，你能够对处于威胁范围内并且引起藉机攻击的敌人进行藉机攻击。作为这些攻击的一部分，你能够进行移动，只要到你的下一轮开始之前移动的总距离不超过你的速度即可。任何由你进行的移动会如常引起藉机攻击。
 - name: 协调防御
   id: Coordinated Defense
-  type: 战斗，团队
+  type:
+    - combat
+    - teamwork
   brief: 你擅长与盟友协同抵御绊摔、擒抱以及其他战技的威胁。
   meta:
     benefit: 当与你相邻的盟友也具有该专长时，你的CMD获得+2表现加值。当尝试进行战技的生物比你和你的盟友体型都大时，这个加值提升至+4。
 - name: 协调战技
   id: Coordinated Maneuvers
-  type: 战斗，团队
+  type:
+    - combat
+    - teamwork
   brief: 你擅长与盟友联手进行危险的战技。
   meta:
     benefit: 当与你相邻的盟友也具有该专长时，所有战技检定获得+2表现加值。这个加值在摆脱擒抱时提升至+4。
 - name: 四海为家
   id: Cosmopolitan
-  type: general
+  type:
+    - general
   brief: 在大型异国城市生活的经历使得你与许多不同的文明、文化和种族产生了联系。
   meta:
     benefit: 你可以读写两种额外语言，种类自行选择。此外，选择两种基于智力、感知或者魅力的技能。这两个技能对于你来说视为本职技能。
 - name: 掩护
   id: Covering Defense
-  type: 战斗
+  type:
+    - combat
   brief: 你擅长使用盾牌同时保护自己和盟友。
   meta:
     requirement: 盾牌专攻，基本攻击加值+6。
     benefit: 当你在持用轻型盾牌、重型盾牌或者塔盾进行全防御动作时，能够为盟友的AC提供掩蔽加值用于对抗所有攻击，不过这名盟友必须与你相邻并且体型小于等于你的体型。这个掩蔽加值等同于你的盾牌的盾牌加值，并且持续至你的下一轮开始。你的盾牌不会为反射豁免提供掩蔽加值。
 - name: 致跛重击
   id: Crippling Critical
-  type: 战斗
+  type:
+    - combat
   brief: 你能够让目标残废，使其运动受到阻碍。
   meta:
     requirement: 重击专攻，基本攻击加值+13。
@@ -162,7 +186,8 @@
   desc: 【编注：本专长没有〔重击专长〕标签，这很诡异。】
 - name: 十字弓熟稔
   id: Crossbow Mastery
-  type: 战斗
+  type:
+    - combat
   brief: 你能够以令人目眩的速度装填弩弓，甚至可以在近战中用他们射击而不必担心遭到报复。
   meta:
     requirement: 敏捷15，近距射击，快速装填，快速射击。
@@ -170,7 +195,8 @@
     special: 从6级起，选择【箭术战斗流派】的游侠能够将“十字弓熟稔”作为战斗流派专长进行选取。
 - name: 慈悯终结
   id: Dastardly Finish
-  type: 战斗
+  type:
+    - combat
   brief: 你能够趁着敌人虚弱的时候进行致命一击。
   meta:
     requirement: 偷袭+5d6。
@@ -178,27 +204,31 @@
     normal: 你只能对无助的目标进行致命一击。
 - name: 晕眩强袭
   id: Dazing Assault
-  type: 战斗
+  type:
+    - combat
   brief: 你那狂野的攻击能够使敌人晕眩。
   meta:
     requirement: 力量13，猛力攻击，基本攻击加值+11。
     benefit: 你可以选择让所有近战攻击检定与战技检定承受-5减值，来使你在近战攻击在正常造成伤害之外，使命中的敌人晕眩1轮。成功的强韧豁免可以免受该效果，豁免DC为“10+你的BAB”。你必须在进行攻击检定之前选择是否使用该专长，它的效果会持续至你的下一轮为止。
 - name: 晕眩法术
   id: Dazing Spell
-  type: 超魔
+  type:
+    - metamagic
   brief: 你能够利用法术的力量来使生物晕眩。
   meta:
     benefit: 你能够调整法术，使法术伤害的生物处于晕眩状态。当生物受到该法术的伤害后，会变得晕眩，持续的轮数等同于法术的原始环级。如果法术允许豁免，那么成功的豁免可以免受晕眩效果。如果法术无需豁免，目标则可以进行一次意志豁免来避免晕眩效果。如果法术效果本身可以使目标晕眩，那么这个超魔效果的持续时间与法术效果的持续时间叠加。晕眩法术占用比法术的实际环级高3环的法术位。无法造成伤害的法术无法从该专长获益。
 - name: 豪饮
   id: Deep Drinker
-  type: general
+  type:
+    - general
   brief: 你能够通过饮酒引出更多的真气。
   meta:
     requirement: '体质13，武僧等级11，【醉酒】职业特性。【编注 【醉酒（Drunken Ki）】为醉拳大师（Drunken Master, APG武僧变体）3级能力。】'
     benefit: 当你通过【醉酒】职业特性获得临时气池储量时，你获得2点气来取代原本的1点。
 - name: 增强视觉
   id: Deepsight
-  type: general
+  type:
+    - general
   brief: 你的感官在完全的黑暗中格外敏锐。
   meta:
     requirement: 黑暗视觉60尺。
@@ -206,7 +236,8 @@
     normal: 黑暗视觉通常只有60尺或90尺。
 - name: 卸武重击
   id: Disarming Strike
-  type: 战斗
+  type:
+    - combat
   brief: 你的重击能够缴械敌人。
   meta:
     requirement: 智力13，寓守于攻，精通卸武，基本攻击加值+9。
@@ -215,67 +246,77 @@
     special: 你只能将后述专长中的一个应用在一次确认的重击上 冲撞重击，移位重击，破武重击，卸武重击或者绊摔重击。你可以在重击确认检定之后选择使用该专长。
 - name: 扰乱射击
   id: Disrupting Shot
-  type: 战斗
+  type:
+    - combat
   brief: 通过准确的射击，你能够使近处的敌人更加难以施放法术。
   meta:
     requirement: 敏捷13，近距射击，战士等级6。
     benefit: 如果你进行准备动作射击30尺内施法的敌人，并且成功以远程攻击命中该名敌人，那么该名敌人成功施放法术的专注DC提高4点。
 - name: 扰咒法术
   id: Disruptive Spell
-  type: 超魔
+  type:
+    - metamagic
   brief: 你的魔法能量会附着在敌人身上，以此干扰他们施法。
   meta:
     benefit: 被扰咒法术影响的目标在施法或者使用类法术能力时，必须进行专注检定（DC等同于“扰咒法术DC+将施放法术环级”），这个效果持续1轮。避免法术效果的目标也会避免该专长的效果。扰咒法术占用比法术的实际环级高1环的法术位。
 - name: 揭示预言
   id: Diviner's Delving
-  type: general
+  type:
+    - general
   brief: 你那敏锐的魔法直觉使你在阅读迹象、线索和征兆时更加容易并且更加快捷。
   meta:
     requirement: 法术专攻（预言）。
     benefit: 当你施放预言系法术突破法术抗力，或者阻碍预言系法术的效果（比如‘回避侦测（nondetection）’）时，施法者等级检定获得+2加值。当你使用需要专注的预言系法术时，你获得信息的速度比正常快1轮（因此你在专注的第一轮得到原本第二轮获得的信息，在专注的第二轮获得第三轮的信息）。
 - name: 惧栗屠杀
   id: Dreadful Carnage
-  type: 战斗
+  type:
+    - combat
   brief: 杀死敌人能够挫败附近其他敌人的士气。
   meta:
     requirement: 力量15，猛力攻击，沉着暴怒，基本攻击加值+11。
     benefit: 当你将一名敌人的HP降至0或更低时，你能够以自由动作对30尺内的所有敌人进行一次威吓检定以挫败士气。若敌人无法同时看到你和HP被你降至0或更低的敌人，则不受影响。
 - name: 庇护
   id: Duck and Cover
-  type: 团队
+  type:
+    - teamwork
   brief: 你的盟友能够帮助你免受一些攻击。
   meta:
     benefit: 当与你相邻的盟友也具有该专长，并且你们两人都需要进行反射豁免对抗一个法术或效果时，你可以选择使用你的或者盟友的掷骰结果（无论你选择哪个结果，你的修正仍旧应用于这个检定）。如果你使用你的盟友的结果，那么你会被击倒（若你已经倒地或者无法被倒地，则会在你的下一轮之前处于恍惚状态）。此外，只要你的盟友持用盾牌，你的AC在对抗远程攻击时就会获得+2掩蔽加值。
 - name: 鹰眼
   id: Eagle Eyes
-  type: general
+  type:
+    - general
   brief: 你的视觉格外敏锐。
   meta:
     requirement: 感知13，【敏锐感官】种族特性。
     benefit: 在通过视觉进行察觉检定时，你忽略至多5点距离造成的减值，这使得你比大多数人看得更远更准确。
 - name: 兼容并蓄
   id: Eclectic
-  type: general
+  type:
+    - general
   brief: 天资聪慧的你能够胜任不同的职业。
   meta:
     requirement: 人类。
     benefit: 选择一个额外的天赋职业，只要你获得该职业的等级，就可以获得+1HP或者+1技能点的天赋职业奖励。如果你选择已经拥有等级的职业，那么这一好处可以向前追溯。
 - name: 跨界法术
   id: Ectoplasmic Spell
-  type: 超魔
+  type:
+    - metamagic
   brief: 你的法术能够冲破维度的障壁，将鬼魅般的力量投射入虚空。
   meta:
     benefit: 跨界法术能够对虚体或者灵界生物造成完整的效果。跨界法术占用比法术的实际环级高1环的法术位。
 - name: 奥秘之爪
   id: Eldritch Claws
-  type: 战斗
+  type:
+    - combat
   brief: 谁需要魔法武器？鬼魅的把戏无法阻挡你的兽性之力。
   meta:
     requirement: 力量15，拥有天生武器，基本攻击加值+6。
     benefit: 你的天生武器在克服伤害减免时同时被视为魔法和银。
 - name: 元素之拳
   id: Elemental Fist
-  type: 战斗
+  type:
+    - combat
   brief: 你将元素能量赋到打击之上。
   meta:
     requirement: 体质13，感知13，精通徒手打击，基本攻击加值+8。
@@ -283,35 +324,40 @@
     special: '修验僧（Monk of the Four Winds, APG武僧变体）在1级获得“元素之拳”作为奖励专长，即使他不满足先决条件。武僧每日可以尝试使用元素之拳的次数等同于他的武僧等级，额外加上每4个非武僧职业等级1次。'
 - name: 元素专攻
   id: Elemental Focus
-  type: general
+  type:
+    - general
   brief: 你所施放的某种元素法术会更加难以抵御。
   meta:
     benefit: 选择一种能量类型（强酸，寒冷，闪电或者火焰）。所有造成此类能量伤害的法术，其豁免DC提高1点。
     special: 你可以多次选取该专长。其效果不会叠加。每次选取该专长都会应用到一种新的能量类型上。
 - name: 元素法术
   id: Elemental Spell
-  type: 超魔
+  type:
+    - metamagic
   brief: 你能够操纵自身法术的元素性质。
   meta:
     benefit: 选择一种能量类型 强酸，寒冷，闪电或火焰。你可以使用这种能量类型替代法术原本正常的伤害；或者分裂法术的伤害，使法术所造成伤害的一半为正常伤害，另一半为你所选择的伤害类型。元素法术占用比法术的实际环级高1环的法术位。
     special: 你可以多次选取该专长。每次必须选择不同的能量类型。
 - name: 精灵之眼
   id: Elven Accuracy
-  type: 战斗
+  type:
+    - combat
   brief: 你那敏锐的视觉使得困难的射击变得从容。
   meta:
     requirement: 精灵。
     benefit: 如果你使用长弓或短弓（包括复合弓）进行远程攻击，却由于隐蔽而失手，那么你能够重新投掷一次失手率检定来看看你是否真的命中。
 - name: 胁迫者
   id: Enforcer
-  type: 战斗
+  type:
+    - combat
   brief: 你善于在被你伤害的人心中制造恐惧。
   meta:
     requirement: 威吓1级。
     benefit: 每当你使用近战武器造成非致命伤害，就能够以自由动作进行一次威吓检定，用以挫败攻击目标的士气。若成功，目标会战栗，持续等同于伤害的轮数。如果你的攻击是重击，你的目标会在成功的威吓检定后惊惧1轮，除此之外还会在等同于伤害的轮数中战栗。
 - name: 奥术拓展
   id: Expanded Arcana
-  type: general
+  type:
+    - general
   brief: 你的研究使自身展现出新的法术能力。
   meta:
     requirement: 施法者等级1，见特殊说明。
@@ -319,7 +365,8 @@
     special: 只有在你拥有那些依赖有限的已知法术列表施法的职业等级（如吟游诗人，先知以及术士）时，才能够选择该专长。【编注 就是说获得自发施法职业等级时。】你可以多次选择本专长。
 - name: 额外炼金炸弹
   id: Extra Bombs
-  type: general
+  type:
+    - general
   brief: 你每天可以多投掷几个炸弹。
   meta:
     requirement: 【炼金炸弹】职业特性。
@@ -327,7 +374,8 @@
     special: 你能够多次选择本专长。
 - name: 额外科研发现
   id: Extra Discovery
-  type: general
+  type:
+    - general
   brief: 你完成了一种新的炼金科研发现。
   meta:
     requirement: 【科研发现】职业特性。
@@ -335,7 +383,8 @@
     special: 你能够多次选择本专长。
 - name: 额外巫术
   id: Extra Hex
-  type: general
+  type:
+    - general
   brief: 你学会了一种新的巫术之秘。
   meta:
     requirement: 【巫术】职业特性。
@@ -343,7 +392,8 @@
     special: 你能够多次选择本专长。
 - name: 额外狂暴之力
   id: Extra Rage Power
-  type: general
+  type:
+    - general
   brief: 你解锁了一种狂暴中可以使用的新能力。
   meta:
     requirement: 【狂暴之力】职业特性。
@@ -351,7 +401,8 @@
     special: 你能够多次选择本专长。
 - name: 额外启示
   id: Extra Revelation
-  type: general
+  type:
+    - general
   brief: 你领悟了领域中的一种新的表现方式。
   meta:
     requirement: 【启示】职业特性。
@@ -359,7 +410,8 @@
     special: 你能够多次选择本专长。
 - name: 额外盗贼天赋
   id: Extra Rogue Talent
-  type: general
+  type:
+    - general
   brief: 通过不断练习，你习得了一种新的技法。
   meta:
     requirement: 【盗贼天赋】职业特性。
@@ -367,21 +419,24 @@
     special: 你能够多次选择本专长。
 - name: 快饮
   id: Fast Drinker
-  type: general
+  type:
+    - general
   brief: 你能够通过迅速饮用烈酒引出真气。
   meta:
     requirement: '体质18，【醉酒】职业特性。【编注 【醉酒（Drunken Ki）】为醉拳大师（Drunken Master, APG武僧变体）3级能力。】'
     benefit: 饮用烈酒获得临时气池现在消耗迅捷动作，而非原本的标准动作。
 - name: 快速自疗
   id: Fast Healer
-  type: general
+  type:
+    - general
   brief: 你能够从治疗中获得更大的收益，无论它是来自魔法还是自然地伤口愈合。
   meta:
     requirement: 体质13，顽强，坚忍。
     benefit: 当你通过休息或者魔法治疗恢复HP时，你能够额外恢复HP，数值等同于你的体质修正的一半（最低+1）。
 - name: 防范宿敌
   id: Favored Defense
-  type: general
+  type:
+    - general
   brief: 在对抗猎物的攻击时，你的诡计便成为了自身的盾牌。
   meta:
     requirement: 【宿敌】职业特性。
@@ -389,14 +444,16 @@
     special: 你可以多次选取该专长。它的效果不会叠加。每次你选取该专长，都会应用到一种新的宿敌类型上。
 - name: 挺住再上
   id: Fight On
-  type: general
+  type:
+    - general
   brief: 即使在死后，你也能战斗。
   meta:
     requirement: 体质13，矮人，半兽人或者兽人。
     benefit: 每日1次，你能够获得等同于你的体质修正的临时HP。你能在HP小于等于0时以直觉动作激活该专长。你能够使用该专长预防自身陷入濒死状态。这些暂时HP持续1分钟。如果你的HP由于失去这些暂时HP而低于0，那么你会如常陷入濒死并失去意识。如果你拥有【凶猛】种族特性，则可以在失去来自该专长的暂时HP时使用它。
 - name: 集中射击
   id: Focused Shot
-  type: 战斗
+  type:
+    - combat
   brief: 对结构的洞悉能够使你的射击更加致命。
   meta:
     requirement: 智力13，近距射击，精准射击。
@@ -404,13 +461,15 @@
     special: 从2级起，选择【箭术战斗流派】的游侠能够将“集中射击”作为战斗流派专长进行选取。
 - name: 集中法术
   id: Focused Spell
-  type: 超魔
+  type:
+    - metamagic
   brief: 当你施放影响多名生物的法术时，其中一名敌人会发现自身难以抵御它的影响。
   meta:
     benefit: 当你施放一个会影响多个生物的法术时，可以选择一个目标或者法术效果内的生物。该名生物对抗法术的豁免DC提高2点。你必须在施法之前选择将法术集中至哪个目标身上。集中法术占用比法术的实际环级高1环的法术位。无需豁免的法术无法由此专长获益。
 - name: 咄咄逼人
   id: Following Step
-  type: 战斗
+  type:
+    - combat
   brief: 当敌人试图从你身边逃开时，你能够反覆尝试跟上他而不会妨碍自身的正常移动。
   meta:
     requirement: 敏捷13，快步跟进。
@@ -418,14 +477,16 @@
     normal: 你只能使用“快步跟进”专长进行五尺快步跟上敌人。
 - name: 沉着暴怒
   id: Furious Focus
-  type: 战斗
+  type:
+    - combat
   brief: 即使是在激烈的狂怒攻击中，你仍旧可以专注于眼前的屠杀，使用你那野蛮的攻击切中要害。
   meta:
     requirement: 力量13，猛力攻击，基本攻击加值+1。
     benefit: 当你持用双手武器、或者使用双手持握单手武器并且使用“猛力攻击”专长时，每轮的第一次攻击所进行近战攻击检定不会承受猛力攻击的减值。你仍旧会在其他的攻击中承受减值，包括藉机攻击。
 - name: 一拥而上
   id: Gang Up
-  type: 战斗
+  type:
+    - combat
   brief: 你擅长使用人海战术。
   meta:
     requirement: 智力13，寓守于攻。
@@ -433,21 +494,24 @@
     normal: 你必须处于对角位才能进行夹击。
 - name: 侏儒戏法
   id: Gnome Trickster
-  type: general
+  type:
+    - general
   brief: 你的奥术天赋不光体现在幻术方面上。
   meta:
     requirement: 魅力13，侏儒，【侏儒魔法】种族特性。
     benefit: 除了你的正常侏儒类法术能力之外，你还获得下列类法术能力 每天1次－‘法师之手（mage hand）’以及‘魔法伎俩（prestidigitation）’。
 - name: 瞒天过海
   id: Go Unnoticed
-  type: general
+  type:
+    - general
   brief: 你的较小身形使你能够快速而巧妙地避开别人的视线。
   meta:
     requirement: 敏捷13，体型小型以下。
     benefit: 在战斗的第一回合中，在判断隐匿检定的使用时，措手不及的敌人被视为还没有注意到你，这使得你可以在该轮使用隐匿检定进行躲藏。
 - name: 高等盲斗
   id: Greater Blind-Fight
-  type: 战斗
+  type:
+    - combat
   brief: 你的敌人无法躲藏在你身边。
   meta:
     requirement: 察觉15级，精通盲斗。
@@ -455,7 +519,8 @@
     special: 高等盲斗专长对于‘闪现术（blink）’法术的受术者没有效果。
 - name: 高等阴招
   id: Greater Dirty Trick
-  type: 战斗
+  type:
+    - combat
   brief: 你的敌人会被你的阴招搞得晕头转向。
   meta:
     requirement: 智力13，寓守于攻，精通阴招，基本攻击加值+6。
@@ -463,7 +528,8 @@
     normal: 阴招所赋予的状态持续1轮，你的攻击每比目标的CMD高5点，则再多持续1轮。目标移除状态需要耗费一个移动动作。
 - name: 高等拖拽
   id: Greater Drag
-  type: 战斗
+  type:
+    - combat
   brief: 被你拖拽的敌人会失去平衡。
   meta:
     requirement: 力量13，精通拖拽，猛力攻击，基本攻击加值+6。
@@ -471,7 +537,8 @@
     normal: 被拖拽的生物不会引起藉机攻击。
 - name: 高等元素专攻
   id: Greater Elemental Focus
-  type: general
+  type:
+    - general
   brief: 选择一种已经拥有“元素专攻”专长的能量类型。你所施放的属于该种能量类型的法术更加难以被抵御。
   meta:
     requirement: 元素专攻。
@@ -479,7 +546,8 @@
     special: 你可以多次选取该专长。它的效果不会叠加。每次你选取该专长，会应用在一个新的能量类型上，该种能量类型必须已经选取过相应的“元素专攻”专长。
 - name: 高等移位
   id: Greater Reposition
-  type: 战斗
+  type:
+    - combat
   brief: 当你改变敌人的位置时，他们会变得容易遭受你盟友的攻击。
   meta:
     requirement: 智力13，寓守于攻，精通移位，基本攻击加值+6。
@@ -487,7 +555,8 @@
     normal: 由于移位战技而移动的生物不会引起藉机攻击。
 - name: 高等盾牌专精
   id: Greater Shield Specialization
-  type: 战斗
+  type:
+    - combat
   brief: 你那娴熟的盾牌技巧，能够给自己的要害提供绝佳的保护。
   meta:
     requirement: 擅长盾牌，高等盾牌专攻，盾牌专攻，对应类型盾牌的盾牌专精，战士等级12。
@@ -495,7 +564,8 @@
     special: 你可以多次选取该专长。其效果不会叠加。每一次选取该专长，它都会应用到一类新的盾牌上。
 - name: 高等盗取
   id: Greater Steal
-  type: 战斗
+  type:
+    - combat
   brief: 你懂得在战斗中从敌人那里扒窃道具的敲门。
   meta:
     requirement: 智力13，寓守于攻，精通盗取，基本攻击加值+6。
@@ -503,28 +573,32 @@
     normal: 被盗取战技检定取走物品的生物会自动察觉这点。
 - name: 地底亲和
   id: Groundling
-  type: general
+  type:
+    - general
   brief: 你能够与穴居动物交流。
   meta:
     requirement: 魅力13，侏儒，【侏儒魔法】种族特性。
     benefit: 你能够随意以类法术能力使用‘动物交谈’，但是只能用于与穴居动物交流，如囊地鼠（gophers），鼹鼠（moles）等等。每日1次，你能够正常使用动物交谈与任意种类的动物沟通。
 - name: 英勇气魄
   id: Heroic Defiance
-  type: general
+  type:
+    - general
   brief: 在其他人无法承受的时候，只有你顽勇不屈。
   meta:
     requirement: 顽强，坚忍，基本强韧豁免+8。
     benefit: 每日1次以直觉动作，你能够推迟一个有害状态或者苦难（affliction），比如恐慌，麻痹，震慑等等，包括永久和瞬时的状态。激活这一状态会将状态的发作延迟至你的下一轮结束的时刻，在这之后此状态如常生效。该专长对HP受损或者属性伤害没有影响。
 - name: 英勇自愈
   id: Heroic Recovery
-  type: general
+  type:
+    - general
   brief: 你能够摆脱削弱自己的状态。
   meta:
     requirement: 顽强，坚忍，基本强韧豁免+4。
     benefit: 每日1次以标准动作，你能够尝试针对一个正在影响你，并且需要强韧豁免的有害状态或者苦难（affliction），进行一次新的豁免。如果对抗苦难的豁免失败，那么这不会产生任何效果，但是成功的豁免能够用于治愈诸如毒素或者疾病的苦难。你无法使用该专长恢复瞬时效果、不允许豁免的效果以及不需要强韧豁免的效果。
 - name: 精通盲斗
   id: Improved Blind-Fight
-  type: 战斗
+  type:
+    - combat
   brief: 敏锐的感官引导你的手臂指向藏匿的敌人。
   meta:
     requirement: 察觉10级，盲斗。
@@ -532,7 +606,8 @@
     special: 精通盲斗专长对于‘闪现术（blink）’法术的受术者没有效果。
 - name: 精通阴招
   id: Improved Dirty Trick
-  type: 战斗
+  type:
+    - combat
   brief: 你很擅长对敌人耍一些小伎俩。
   meta:
     requirement: 智力13，寓守于攻。
@@ -540,7 +615,8 @@
     normal: 当你使用阴招战技时会引起藉机攻击。
 - name: 精通拖拽
   id: Improved Drag
-  type: 战斗
+  type:
+    - combat
   brief: 你擅长在战场中拖拽敌人。
   meta:
     requirement: 力量13，猛力攻击，基本攻击加值+1。
@@ -548,7 +624,8 @@
     normal: 当你使用拖拽战技时会引起藉机攻击。
 - name: 精通太极推手
   id: Improved Ki Throw
-  type: 战斗
+  type:
+    - combat
   brief: 敌人在你手中就是活生生的武器。
   meta:
     requirement: 精通冲撞，太极推手。
@@ -556,7 +633,8 @@
     special: 14级起，武僧能够将该专长作为奖励专长选取。
 - name: 精通移位
   id: Improved Reposition
-  type: 战斗
+  type:
+    - combat
   brief: 你习得了如何迫使敌人在战场中移动的技巧。
   meta:
     requirement: 智力13，寓守于攻。
@@ -564,7 +642,8 @@
     normal: 当你使用移位战技时会引起藉机攻击。
 - name: 精通燕归来
   id: Improved Second Chance
-  type: 战斗
+  type:
+    - combat
   brief: 你能够将失手的攻击变为第二次进攻的机会，而不用放弃剩余的后招。
   meta:
     requirement: 智力13，寓守于攻，燕归来，基本攻击加值+11。
@@ -572,7 +651,8 @@
     normal: 当你使用“燕归来”专长时，通常情况下必须放弃该回合内剩下的攻击。
 - name: 精通法术共享
   id: Improved Share Spells
-  type: general
+  type:
+    - general
   brief: 你可以对那些与你有魔法联系的生物共享法术。
   meta:
     requirement: 法术辨识10级，获得动物伙伴、幻灵、魔宠或者特殊坐骑的能力。
@@ -580,7 +660,8 @@
   desc: 你能以此方式分享正常情况下无法影响该类生物的法术。该专长只适用于通过职业特性获得的动物伙伴、幻灵、魔宠或者特殊坐骑。
 - name: 精通滑步
   id: Improved Sidestep
-  type: 战斗
+  type:
+    - combat
   brief: 你善于避开敌人的近战攻击，而这也不会影响你那灵活的动作。
   meta:
     requirement: 敏捷15，闪避，灵活移动，滑步。
@@ -588,7 +669,8 @@
     normal: 如果你使用“滑步”专长，你无法在你的下一轮使用五尺快步。
 - name: 精通盗取
   id: Improved Steal
-  type: 战斗
+  type:
+    - combat
   brief: 你懂得从敌人那里抢夺物品的诀窍。
   meta:
     requirement: 智力13，寓守于攻。
@@ -596,41 +678,47 @@
     normal: 当你使用盗取战技时会引起藉机攻击。
 - name: 精通岩石敏锐
   id: Improved Stonecunning
-  type: general
+  type:
+    - general
   brief: 你对石造物的感知异常敏锐。
   meta:
     requirement: 感知13，矮人，【岩石敏锐】种族特性。
     benefit: 当你使用察觉检定注意到不寻常的石造物时获得+4加值。这个加值会取代【岩石敏锐】种族特性对察觉检定的正常加值。
 - name: 肉盾
   id: In Harm's Way
-  type: 战斗
+  type:
+    - combat
   brief: 为了保护盟友，你将自身置于危险之中。
   meta:
     requirement: 保镖。
     benefit: 当你使用援助他人动作提高相邻盟友的AC时，你能够以直觉动作拦截对抗该名盟友的成功攻击，受到该次攻击的全部伤害以及任何可能的效果（流血，毒素等等）。一名生物从该专长获得的好处不能超过每次攻击一回。【编注 就是说不能由多人同时来为同一人挡刀。】
 - name: 强化法术
   id: Intensified Spell
-  type: 超魔
+  type:
+    - metamagic
   brief: 你的法术能够超越通常的制限。
   meta:
     benefit: 强化法术会使法术的最高伤害骰数增加5级。为了从该专长获益，你必须拥有足够的CL来超过最大值。没有变量的法术不会被影响，不会受CL调整的、造成伤害的法术也不会被该专长影响。强化法术占用比法术的实际环级高1环的法术位。
 - name: 铁胃
   id: Ironguts
-  type: general
+  type:
+    - general
   brief: 你的胃强健如钢铁。
   meta:
     requirement: 体质13，矮人，半兽人或兽人。
     benefit: 在对抗任何会引起反胃或恶心状态的效果，以及对抗所有摄入类毒素（不包括其他毒素）时，豁免检定获得+2种族加值。此外，在使用生存检定为自身寻找食物时，你获得+2加值。
 - name: 铁皮
   id: Ironhide
-  type: general
+  type:
+    - general
   brief: 你的皮肤比大部分同类都更加坚韧厚实。
   meta:
     requirement: 体质13，矮人，半兽人或兽人。
     benefit: 由于你那异常粗糙的皮肤，你获得+1天生防御加值。
 - name: 灵敏嗅觉
   id: Keen Scent
-  type: general
+  type:
+    - general
   brief: 你的鼻子就好像野兽一样灵敏。
   meta:
     requirement: 感知13，半兽人或兽人。
@@ -638,7 +726,8 @@
   desc: '【特性速查】灵敏嗅觉（Scent, Ex）：这种特殊能力可以让生物察觉接近的敌人、嗅出隐藏的对手、或者凭借嗅觉展开追踪。具有灵敏嗅觉能力的生物能够辨识熟悉的气味，就像人类能认出熟悉的画面。凭借嗅觉，生物可以发现30尺以内的敌人。如果对手在上风处，则距离增为60尺；若在下风处，则减为15尺。如果是强烈的气味，比如浓烟或者腐烂的垃圾味道，可在上述距离两倍之内闻到。某些无法抵挡的气味，比如臭鼬或穴居人的恶臭，则可在通常距离的三倍之内闻到。具有灵敏嗅觉的生物无法确定气味来源的具体位置，只知道它存在于嗅觉范围内的某处。生物可以用一个移动动作来觉察到气味来源的方向。只要生物进入气味源的5尺之内，它就能精确确定源头的位置。一个具有追踪专长的灵敏嗅觉生物可以通过气味来追踪，这时它用感知（或生存）检定来找到或追踪气味。新鲜痕迹的通常DC是10（无论气味停留在什么表面）。该DC会因气味来源的强弱、生物的数量和痕迹新旧的差别在此基础上增加或减少。痕迹每经过1小时DC会增加2。除此之外，此能力的判定上都按照追踪专长的规则。地面状况和低能见度不会影响通过嗅觉来展开追踪的生物。'
 - name: 太极推手
   id: Ki Throw
-  type: 战斗
+  type:
+    - combat
   brief: 你的身体控制能力以及对动量的掌握能够将敌人摔飞出去。
   meta:
     requirement: 精通绊摔，精通徒手打击。
@@ -646,54 +735,63 @@
     special: 10级起，武僧能够将“太极推手”作为奖励专长选取。具有该专长的武僧能够影响比自身体型更大的生物，只要他支付每级体型差距1点气即可。
 - name: 绿之歌者
   id: Leaf Singer
-  type: general
+  type:
+    - general
   brief: 你的歌声叙述着同族的玄秘。
   meta:
     requirement: 魅力13，【吟游表演】职业特性，精灵或半精灵。
     benefit: 当你在森林中使用带有听觉成分的【吟游表演】时，那么你所选择的吟游表演的范围或区域加倍。此外，无论你的吟游表演在哪里进行，精类生物在对抗你的吟游表演时，豁免DC提高2点。
 - name: 一苇渡江
   id: Light Step
-  type: general
+  type:
+    - general
   brief: 你有独创的办法，用于快速通过最危险最不平坦的地形。
   meta:
     requirement: 神行步，灵狐步，精灵。
     benefit: 你能够忽略自然环境中，困难地形的效果，就如同它是普通地形一般。
 - name: 余音绕梁
   id: Lingering Performance
-  type: general
+  type:
+    - general
   brief: 即使你停止演奏，你的吟游表演的效果仍旧环绕在周边。
   meta:
     requirement: 【吟游表演】职业特性。
     benefit: 在你停止表演之后，你的【吟游表演】带来的加值与减值仍旧能持续2轮。任何其他先决条件，诸如范围或者特殊条件，必须仍旧满足才能让效果持续下去。如果你在这期间内开始一次新的吟游表演，前一次表演的效果会立刻终止。
 - name: 延续法术
   id: Lingering Spell
-  type: 超魔
+  type:
+    - metamagic
   brief: 你的法术依附于现实，缓慢地在这个世界中腐朽。
   meta:
     benefit: 你能够使一个影响一片区域的立即（instantaneous）法术持续至你的下一回合开始为止。那些已经在范围内的生物不会受到额外伤害，但是其他生物或者物体进入区域后，会遭受法术的效果。带有视觉表现的延续法术会遮挡视野，在5尺外提供隐蔽（20%失手率），在20尺外提供全隐蔽（50%失手率）。延续法术占用比法术的实际环级高1环的法术位。
 - name: 警备
   id: Lookout
-  type: 战斗，团队
+  type:
+    - combat
+    - teamwork
   brief: 你的盟友能够帮助你避免被突袭。
   meta:
     benefit: 若你邻近一名拥有该专长的盟友，只要他能在突袭轮中行动，你就能在突袭轮中行动。如果你在正常情况下不能在突袭轮中行动，且你的先攻高于该盟友，那么你的先攻调整为该盟友的先攻-1。如果你与该盟友不需要本专长的帮助都能在突袭轮中行动，那么你们能各自进行一个标准动作与一个移动动作，或一个整轮动作。
 - name: 矮身迎敌
   id: Low Profile
-  type: 战斗
+  type:
+    - combat
   brief: 你的较小身躯能够帮助自身免受远程攻击。
   meta:
     requirement: 敏捷13，体型小型以下。
     benefit: 在对抗远程攻击时，你的AC获得+1闪避加值。此外，当远程攻击通过你的方格时，你不会给其他生物提供软掩蔽。
 - name: 幸运半身人
   id: Lucky Halfling
-  type: general
+  type:
+    - general
   brief: 你能够将好运带给与你一同旅行的人。
   meta:
     requirement: 半身人。
     benefit: 每日1次，当30尺内的一名盟友进行豁免检定时，你可以进行相同的豁免检定，就如同你也是一名效果的受术者一般。你可以在盟友进行检定之后使用该能力，但是需要在GM宣布检定结果成功或者失败之前使用。你的盟友可以选择使用你的豁免检定取代自身的。
 - name: 高等法术专修
   id: Major Spell Expertise
-  type: general
+  type:
+    - general
   brief: 你能够将一个低等级法术作为类法术能力施放。
   meta:
     requirement: 次等法术专修，能够施放9环法术。
@@ -701,7 +799,8 @@
     special: 你可以多次选取该专长。它的效果不会叠加。每次选取该专长，它都会应用在一个新的法术上。
 - name: 炼金大师
   id: Master Alchemist
-  type: general
+  type:
+    - general
   brief: 你对炼金术掌握的程度近乎神技。
   meta:
     requirement: 工艺（炼金）5级。
@@ -709,13 +808,15 @@
   desc: 【PFS】仅限炼金术师和制毒大师(游荡者变体)使用。
 - name: 慈悯法术
   id: Merciful Spell
-  type: 超魔
+  type:
+    - metamagic
   brief: 你的伤害性法术只会制服敌人，而不会将其杀死。
   meta:
     benefit: 你能够调整法术，使其造成非致命伤害。造成特定类型伤害的法术（如火焰）所造成的非致命伤害也属于相同的类型。慈悯法术不会占用比法术的实际环级高的法术位。
 - name: 次等法术专修
   id: Minor Spell Expertise
-  type: general
+  type:
+    - general
   brief: 你能够以类法术能力施放1级法术。
   meta:
     requirement: 能够施放4环法术。
@@ -723,21 +824,24 @@
     special: 你可以多次选取该专长。它的效果不会叠加。每次选取该专长，它都会应用在一个新的法术上。
 - name: 盾牌辟矢
   id: Missile Shield
-  type: 战斗
+  type:
+    - combat
   brief: 你擅长使用盾牌偏斜远程攻击。
   meta:
     requirement: 敏捷13，盾牌专攻。
     benefit: 你必须使用轻型盾牌，重型盾牌或者塔盾才能使用该专长。每轮1次，当你将要被远程武器做出的一次攻击命中时（不包括法术效果，天生武器或者巨大的远程武器），可以使其偏斜，让自身避免该次伤害，就如同你拥有“拨挡飞箭”专长一般。你必须察觉到攻击，并且不处于措手不及状态。
 - name: 骑乘盾牌防御
   id: Mounted Shield
-  type: 战斗
+  type:
+    - combat
   brief: 你的防御技巧可以同时应用到自身和坐骑上。
   meta:
     requirement: 骑乘战斗，盾牌专攻。
     benefit: 你可以将你的基本盾牌加值（包括由盾牌专攻获得的加值，但是不包括增强加值）加到你的坐骑的AC上。此外，当你使用“骑乘战斗”专长，能够将这个加值加到用于避免你的坐骑受到攻击的骑术检定上。
 - name: 骑乘散兵
   id: Mounted Skirmisher
-  type: 战斗
+  type:
+    - combat
   brief: 你擅长在快速移动的马背上进行攻击。
   meta:
     requirement: 骑术14级，骑乘战斗，骑乘技巧。
@@ -745,27 +849,33 @@
     normal: 如果你的坐骑移动距离超过5尺，那么你就只能进行普通的攻击动作。
 - name: 包抄
   id: Outflank
-  type: 战斗，团队
+  type:
+    - combat
+    - teamwork
   brief: 在夹击敌人时你能够积极寻找任何获得优势的契机。
   meta:
     requirement: 基本攻击加值+4。
     benefit: 每当你和同样拥有该专长的一名盟友夹击相同的生物时，你的攻击检定获得的夹击加值提升至+4。此外，每当你对夹击的生物成功进行重击时，它会引起你的盟友的藉机攻击。
 - name: 双重藉机
   id: Paired Opportunists
-  type: 战斗，团队
+  type:
+    - combat
+    - teamwork
   brief: 你明白如何让敌人为了懈怠的防守而付出代价。
   meta:
     benefit: 每当你邻近一名拥有该专长的盟友，那么在对抗同时处于你们威胁范围内的生物时，你们的藉机攻击都会获得+4环境加值。若敌人处于你的威胁范围，那么只要他引起你的盟友的藉机攻击，就也会引起你的藉机攻击（即使由于某些能力或者环境，导致正常情况下不会引起你的藉机攻击）。在对抗一名生物的一次特定动作时，该专长不会允许你获得超过一次的藉机攻击机会。
 - name: 回击法术
   id: Parry Spell
-  type: general
+  type:
+    - general
   brief: 你能够将敌人的法术反射回它的施法者。
   meta:
     requirement: 法术辨识15级，精通法术反制。
     benefit: 当你成功反制法术时，它会被反转至其施法者处。该专长与‘法术反转（spell turning）’法术完全一致。
 - name: 牵制射击
   id: Parting Shot
-  type: 战斗
+  type:
+    - combat
   brief: 你是散兵中的能手，无论是在前进还是撤退中都可以将箭雨洒向敌人。
   meta:
     requirement: 敏捷13，闪避，灵活移动，近距射击，移动射击，基本攻击加值+6。
@@ -774,7 +884,8 @@
     special: 从6级起，选择【箭术战斗流派】的游侠能够将“牵制射击”作为战斗流派专长进行选取。
 - name: 人类之证
   id: Pass For Human
-  type: general
+  type:
+    - general
   brief: 你很容易被误认为是人类，而非你的同族。
   meta:
     requirement: 半精灵，半兽人或者半身人（见特殊说明）。
@@ -782,7 +893,8 @@
     special: 半身人可以选择该专长，但是必须拥有“童颜”专长作为先决条件。这两个专长的好处叠加。
 - name: 完美打击
   id: Perfect Strike
-  type: 战斗
+  type:
+    - combat
   brief: 当你使用武僧武器时，攻击会变得异常精准。
   meta:
     requirement: 敏捷13，感知13，精通徒手打击，基本攻击加值+8。
@@ -790,13 +902,15 @@
     special: '执械僧（Weapon Adept, APG武僧变体）或者禅宗射手（Zen Archer, APG武僧变体）会在1级获得“完美打击”作为奖励专长，即使他并不满足专长的先决条件。武僧每日可以尝试使用完美打击的次数等同于他的武僧等级，额外加上每4个非武僧职业等级1次。'
 - name: 顽强法术
   id: Persistent Spell
-  type: 超魔
+  type:
+    - metamagic
   brief: 你可以调整一个法术，使其更加难以被抵御。
   meta:
     benefit: 每当一名生物成为顽强法术的目标或者处于法术范围内，并且成功豁免该法术，那么他必须进行另一次豁免检定对抗法术效果。如果该名生物在第二次豁免中失败，那么他会受到法术的全部效果影响，就如同他在第一次豁免中失败一样。顽强法术占用比法术的实际环级高2环的法术位。不需要进行豁免来抵抗或减免效果的法术不会由该专长受益。
 - name: 贴身射击
   id: Point Blank Master
-  type: 战斗
+  type:
+    - combat
   brief: 你擅长使用远程武器在极近的距离攻击。
   meta:
     requirement: 某种远程武器的武器专精。
@@ -805,7 +919,8 @@
     special: 从6级起，选择【箭术战斗流派】的游侠能够将“贴身射击”作为战斗流派专长进行选取。但是他必须拥有对应武器的“武器专攻”专长来取代“武器专精”专长来满足先决条件。
 - name: 战术熟练
   id: Practiced Tactician
-  type: general
+  type:
+    - general
   brief: 通过简单的手势与指令，你能够在战斗中指挥他人。
   meta:
     requirement: 【战术】职业特性。
@@ -813,14 +928,17 @@
     special: 你可以多次选取本专长，它的效果叠加。
 - name: 精准打击
   id: Precise Strike
-  type: 战斗，团队
+  type:
+    - combat
+    - teamwork
   brief: 你很擅长进行精确的攻击，不过前提是敌人的注意力被盟友所分散。
   meta:
     requirement: 敏捷13，基本攻击加值+1.。
     benefit: 每当你和同样拥有该专长的一名盟友夹击相同的生物时，你们的每次成功近战攻击能够额外造成1d6点精准伤害。这个加值与其他来源的精准伤害叠加，比如偷袭。该伤害不会由于重击而增加。
 - name: 偏好法术
   id: Preferred Spell
-  type: general
+  type:
+    - general
   brief: 你发现自己很容易施放某个特定的法术。
   meta:
     requirement: 法术辨识5级，法术升阶。
@@ -828,7 +946,8 @@
     special: 你能够多次选取该专长。它的效果不会叠加。每次选取该专长，它都会应用在不同的法术上。
 - name: 扫堂腿
   id: Punishing Kick
-  type: 战斗
+  type:
+    - combat
   brief: 你的踢腿是如此有力，以至于可以用来踢开或者踢倒敌人。
   meta:
     requirement: 体质13，感知13，精通徒手打击，基本攻击加值+8。
@@ -836,55 +955,63 @@
     special: '般若僧（Hungry Ghost Monk, APG武僧变体）会在1级获得“扫堂腿”作为奖励专长，即使他并不满足专长的先决条件。武僧每日可以尝试使用扫堂腿的次数等同于他的武僧等级，额外加上每4个非武僧职业等级1次。'
 - name: 推进强袭
   id: Pushing Assault
-  type: 战斗
+  type:
+    - combat
   brief: 你使用双手武器攻击能够将小体型的敌人打退。
   meta:
     requirement: 力量15，猛力攻击，基本攻击加值+1。
     benefit: 当你使用双手武器进行攻击不大于你的体型的生物，并且应用了猛力攻击专长时，你可以选择将目标推开5尺来替代猛力攻击带来的额外伤害。如果你成功造成重击，则能够将目标推开10尺。这个移动不会引发藉机攻击，并且目标必须在移动结束时处于能够站立的安全空间。你可以在进行攻击检定之后选择产生何种效果，但是必须在进行伤害检定之前选择。
 - name: 远古血脉
   id: Racial Heritage
-  type: general
+  type:
+    - general
   brief: 除了人类之外，还有其他先祖的血脉在你体内流淌。
   meta:
     requirement: 人类。
     benefit: 选择一种其他的类人种族。在判断任何与种族相关的效果时，你被同时时为该种族和人类。例如，如果你选择矮人，那么在选择背景特性，专长，法术与魔法物品对你的作用等等内容时，同时被认为是人类和矮人。
 - name: 狂暴活性
   id: Raging Vitality
-  type: general
+  type:
+    - general
   brief: 你在狂暴的时候更加有活力。
   meta:
     requirement: 体质15，【狂暴】职业特性。
     benefit: 每当你狂暴的时候，你的体质获得士气加值提高2点。你的狂暴并不会在你失去意识时结束。不过当你失去意识时，仍然必须花费每日狂暴轮数。
 - name: 盾牌反射
   id: Ray Shield
-  type: 战斗
+  type:
+    - combat
   brief: 你甚至可以使用盾牌偏转射线。
   meta:
     requirement: 敏捷15，盾牌辟矢，破法者。
     benefit: 你必须使用轻型盾牌，重型盾牌或者塔盾才能使用该专长。每轮1次，当你将要被远程接触攻击命中时（包括射线以及类似的魔法效果），你可以使其偏斜，并且不会因其而受到伤害。如果该效果适用的话，你的盾牌会遭受完整的法术或效果的影响。
 - name: 利牙突变
   id: Razortusk
-  type: general
+  type:
+    - general
   brief: 你那强有力的下颚和钢铁般的牙齿已经足够致命，可以用来进行啮咬攻击。
   meta:
     requirement: 半兽人。
     benefit: 你可以进行啮咬攻击，造成1d4点伤害外加你的力量修正。你被视为擅长这种攻击，并且能够将适用于天生武器的效果与专长应用于你的啮咬攻击。如果你将其应用于全力攻击动作的一部分，啮咬攻击被视为次要攻击，并且使用你的完整BAB-5进行攻击，伤害只增加你的力量修正的一半。
 - name: 及远法术
   id: Reach Spell
-  type: 超魔
+  type:
+    - metamagic
   brief: 你的法术射程比正常情况更远。
   meta:
     benefit: 你能够调整范围为接触，近距或者中距的法术，使其范围按照后述次序提升为更远的类别 接触，近距，中距和远距。每提高1级范围类别，及远法术就会占用比法术的实际环级高1环的法术位。比如，将原本范围为接触的法术提升至远距，会占用比法术的实际环级高3环的法术位。需要近战接触攻击的法术若被本专长所调整，那么会改为需要远程接触攻击。法术范围不属于接触、近距和中距的法术无法由此专长受益。
 - name: 撕扯之爪
   id: Rending Claws
-  type: 战斗
+  type:
+    - combat
   brief: 你的利爪攻击能够对敌人造成更高的伤害。
   meta:
     requirement: 力量13，拥有2爪抓天生武器，基本攻击加值+6。
     benefit: 如果你在同一轮内成功使用2爪抓命中一名生物，第二次爪抓攻击会额外造成1d6点伤害。这个伤害是精准伤害，不会受到重击的影响。每轮你只能使用该专长1次。
 - name: 移位重击
   id: Repositioning Strike
-  type: 战斗
+  type:
+    - combat
   brief: 你的重击能够让你任意挪动敌人。
   meta:
     requirement: 智力13，寓守于攻，精通移位，基本攻击加值+9。
@@ -893,42 +1020,48 @@
     special: 你只能将后述专长中的一个应用在一次确认的重击上 冲撞重击，移位重击，破武重击，卸武重击或者绊摔重击。你可以在重击确认检定之后选择使用该专长。
 - name: 盾牌掩护
   id: Saving Shield
-  type: 战斗
+  type:
+    - combat
   brief: 你能够偏转可能意味着盟友死亡的攻击。
   meta:
     requirement: 擅长盾牌。
     benefit: 当你邻近的一名盟友成为一次攻击的目标，你能够以直觉动作使这位相邻盟友的AC获得+2盾牌加值。你必须持用轻型盾牌、重型盾牌或者塔盾才能使用该专长。
 - name: 燕归来
   id: Second Chance
-  type: 战斗
+  type:
+    - combat
   brief: 快速的反应能力能够使失手的攻击获得第二次机会。
   meta:
     requirement: 智力13，寓守于攻，基本攻击加值+6。
     benefit: 当你进行全力攻击时，如果你的第一次攻击失手，你能够放弃进行本轮剩下的其他攻击，来使用你最高的BAB重掷该次攻击。
 - name: 甄选法术
   id: Selective Spell
-  type: 超魔
+  type:
+    - metamagic
   brief: 你的盟友不用担心被误伤。
   meta:
     requirement: 法术辨识10级。
     benefit: 当你施放持续时间为立即（instantaneous）并且影响一片区域的甄选法术时，你可以选择在这片区域中一定数量的目标。目标的数量等同于施法关键属性修正（对于吟游诗人、先知、圣骑士、术士以及召唤师来说是魅力；对于女巫以及法师来说是智力；对于牧师、德鲁伊、审判者和游侠来说是感知）。这些目标会从你的法术效果中排除出来。甄选法术会占用比法术的实际环级高1环的法术位。不会影响一片区域的法术不会由此专长获益。
 - name: 阴影奇袭
   id: Shadow Strike
-  type: 战斗
+  type:
+    - combat
   brief: 你能在看不清的情况下进行精确打击。
   meta:
     requirement: 基本攻击加值+1。
     benefit: 你可以对具有隐蔽的目标造成精准伤害（但是不能是全隐蔽），比如偷袭伤害。
 - name: 感官共享
   id: Shared Insight
-  type: general
+  type:
+    - general
   brief: 你能够熟练地让他人注意到你希望他们注意的地方。
   meta:
     requirement: 感知13，半精灵。
     benefit: 以移动动作，你能够使30尺内并且能够看到或听到你的盟友在察觉检定上获得+2加值，持续轮数等同于你的感知修正（最低1轮）。
 - name: 精确感官
   id: Sharp Senses
-  type: general
+  type:
+    - general
   brief: 即使与你的同族相比，你的感官都更为敏锐。
   meta:
     requirement: 【敏锐感官】种族特性。
@@ -936,14 +1069,16 @@
     normal: 正常情况下，【敏锐感官】种族特性会使察觉检定获得+2种族加值。
 - name: 剑刃屏障
   id: Shield of Swings
-  type: 战斗
+  type:
+    - combat
   brief: 疯狂而又狂野的攻击能够加强你的防御。
   meta:
     requirement: 力量13，猛力攻击，基本攻击加值+1。
     benefit: 当你持用双手武器进行全力攻击动作时，能够选择减少1/2的伤害，来使AC和CMD获得+4盾牌加值，直至你的下一轮开始为止。伤害减少也会持续至你的下一轮开始。
 - name: 盾牌专精
   id: Shield Specialization
-  type: 战斗
+  type:
+    - combat
   brief: 你已经精通一类盾牌的使用方法。
   meta:
     requirement: 擅长所选的盾牌，盾牌专攻，战士等级4。
@@ -951,33 +1086,39 @@
     special: 你能够多次选取该专长。它的效果不会叠加。每次选取该专长，它都会应用到新的一类盾牌上。
 - name: 盾墙
   id: Shield Wall
-  type: 战斗，团队
+  type:
+    - combat
+    - teamwork
   brief: 你与身边的人形成联合的防御。
   meta:
     requirement: 擅长盾牌。
     benefit: 每当你持用盾牌，邻近一名拥有该专长且持用盾牌盟友时，你通过盾牌获得的AC加值会提高，具体取决于你的盟友所持有的盾牌。如果你的盟友持用小圆盾或者轻型盾牌，你的盾牌加值增加1点；如果你的盟友持用重型盾牌或者塔盾，你的盾牌加值增加2点。即使你的盟友由于进行盾击而失去他的盾牌加值，你也能保有这些加值。如果一名相邻的盟友拥有该专长，并且使用塔盾来获得全掩蔽，那么对于穿过塔盾边缘并且以你为目标的攻击，你也获得全掩蔽的好处。
 - name: 持盾施法
   id: Shielded Caster
-  type: 团队
+  type:
+    - teamwork
   brief: 你的盟友能够掩护你完成法术。
   meta:
     benefit: 每当你邻近一名拥有该专长的盟友，你的专注检定就会获得+4表现加值。如果该盟友持用小圆盾或者轻型盾牌，这个加值增加1点；如果你的盟友持用重盾或者塔盾，这个加值增加2点。最后，如果你和你的盟友处在一名敌人的威胁范围内，并且这名敌人拥有“扰法者”专长或者其他增加专注检定的DC的能力，那么这个DC增加量减半。
 - name: 感染法术
   id: Sickening Spell
-  type: 超魔
+  type:
+    - metamagic
   brief: 你能够使用法术让生物感到恶心。
   meta:
     benefit: 你能够调整一个法术，使其能够让被法术伤害的生物恶心。当一名生物被这个法术伤害时，他会在等同于法术原始等级的轮数内恶心。如果法术允许豁免，成功的豁免也可以使恶心效果无效。如果法术不允许豁免，那么目标能够进行一次强韧豁免来使恶心效果无效。如果法术效果会使生物恶心，那么超魔效果的持续时间会加到法术的持续时间之上。感染法术占用比法术的实际环级高2环的法术位。不造成伤害的法术无法由该专长获益。
 - name: 滑步
   id: Sidestep
-  type: 战斗
+  type:
+    - combat
   brief: 你能够在敌人挥空之后重新改变自己的位置。
   meta:
     requirement: 敏捷13，闪避，灵活移动。
     benefit: 每当一名敌人对你进行的近战攻击失手时，你能够以直觉动作移动五尺，但是你只能在该名敌人的威胁范围内移动。这次移动不会引起藉机攻击。如果你采取这一行动，那么你无法在下一回合内进行五尺快步。如果你在下一回合进行移动，那么你的总移动距离减少5尺。
 - name: 粉碎击
   id: Smash
-  type: 战斗
+  type:
+    - combat
   brief: 你能够通过破坏来扫清障碍物。
   meta:
     requirement: 猛力攻击，半兽人。
@@ -985,42 +1126,48 @@
     special: 该专长的好处并不适用于击破武器的尝试，或者对抗构装体的攻击，只对无生命的无主物体有效。
 - name: 恐惧气味
   id: Smell Fear
-  type: general
+  type:
+    - general
   brief: 你能够捕捉到风中飘散的恐惧气味。
   meta:
     requirement: 【灵敏嗅觉】，半兽人或兽人。
     benefit: 你使用【灵敏嗅觉】来侦测处于战栗，惊惧以及恐慌状态的生物时，察觉检定获得+4加值。若目标正处于上述状态中的一种，或者尝试以某种方式掩盖他们的恐惧的话，那么你就能够使用察觉技能来替代察言观色技能检定。
 - name: 社交性
   id: Sociable
-  type: general
+  type:
+    - general
   brief: 你懂得帮助别人相处的方法。
   meta:
     requirement: 魅力13，半精灵。
     benefit: 以移动动作，你能够使所有30尺范围内能够看到或者听到你（包括你自己）的友善生物，在交涉检定中获得+2加值，持续的轮数等同于你的魅力修正（最低1轮）。
 - name: 完全法术
   id: Spell Perfection
-  type: general
+  type:
+    - general
   brief: 当你施放某个特定法术时，效果拔群。
   meta:
     requirement: 法术辨识15级，至少3项超魔专长。
     benefit: 选择一个你能够施放的法术。每当你施放这个法术时，只要法术总的调整等级不会使用超过9环的法术位，你就能够将一个你拥有的超魔专长应用到这个法术上，而不会改变它的环级和施放时间。此外，如果你拥有其他专长，这些专长的效果允许你将一些数据加值应用到法术的任意方面（比如“法术专攻”，“法术穿透”，“武器专攻（射线）”等等），那么当应用于这个法术时，这些专长带来的加值加倍。
 - name: 壁虎游墙
   id: Spider Step
-  type: general
+  type:
+    - general
   brief: 你对身体的掌控力使得你获得了难以置信的身法。
   meta:
     requirement: 特技6级，攀爬6级，武僧等级6。
     benefit: 以移动动作，你能够在墙壁、天花板、绳子、树枝、甚至是水面或者其他无法支撑你重量的表面上移动，距离至多为【轻身坠】距离的一半。在你的行动轮结束时，你必须到达坚实的水平表面上，否则将会跌落。
 - name: 迫退射击
   id: Stabbing Shot
-  type: 战斗
+  type:
+    - combat
   brief: 你能够清除阻碍之后继续使用弓箭射击。
   meta:
     requirement: 快速射击，精灵。
     benefit: 当你与一名敌人相邻，并且使用长弓或短弓（包括复合弓）进行全力攻击动作时，你可以选择拔出一根箭矢来对其进行近战攻击，而不是向他射击。如果攻击命中——无论是否造成伤害——你的目标都会被向着远离你的方向推开5尺。你能够在之后如常使用你的弓进行射击，对抗原本的目标，或者其他在射程内的目标。这次近战攻击会取代“快速射击”专长带来的额外攻击，并且该轮的所有攻击检定（近战攻击与远程攻击）都会受到-2减值。如果你的最初攻击能够使你不再处于任何敌人的威胁范围内，你就能够进行后续的远程攻击而不会引起藉机攻击。
 - name: 钢铁之魂
   id: Steel Soul
-  type: general
+  type:
+    - general
   brief: 你抵御魔法的能力很强。
   meta:
     requirement: 矮人，【坚韧】种族特性。
@@ -1028,7 +1175,8 @@
     normal: 正常情况下，矮人在对抗法术以及类法术能力时，豁免获得+2种族加值。
 - name: 飞步进击
   id: Step Up and Strike
-  type: 战斗
+  type:
+    - combat
   brief: 当地人试图移开的时候，你能够追上他并且进行一次攻击。
   meta:
     requirement: 敏捷13，咄咄逼人，快步跟进，基本攻击加值+6。
@@ -1036,7 +1184,8 @@
     normal: 正常情况下你只能进行一次标准动作和一次五尺快步。
 - name: 岩石感官
   id: Stone Sense
-  type: general
+  type:
+    - general
   brief: 你可以感觉到周围的泥土与岩石的运动。
   meta:
     requirement: 精通岩石敏锐，察觉10级。
@@ -1044,35 +1193,40 @@
   desc: '【特性速查】颤动感知（Tremorsense, Ex）：具有颤动感知能力的生物能够感觉到地面的震颤，它们可以自动辨别出到任何接触地面的东西的位置。具有颤动感知能力的水栖生物亦可感觉出在水中移动的生物的位置。此能力的有效范围在生物的描述中给出。'
 - name: 岩之歌者
   id: Stone Singer
-  type: general
+  type:
+    - general
   brief: 你的歌声与自己的人民的行为方式和谐一致。
   meta:
     requirement: 魅力13，【吟游表演】职业特性，矮人。
     benefit: 当你在地下使用带有听觉成分的吟游表演时，那么你所选择的吟游表演的范围或区域加倍，并且你可以影响处于新范围内，耳聋但是拥有颤动感知的生物。此外，无论你的吟游表演在哪里进行，土系亚种的生物在对抗你的吟游表演时，豁免DC提高2点。
 - name: 岩石面容
   id: Stone-Faced
-  type: general
+  type:
+    - general
   brief: 岩石的裂纹都比你的表情丰富。
   meta:
     requirement: 矮人。
     benefit: 当你说谎或者隐藏你的情感或真正的动机时，唬骗检定获得+4加值，但是这个加值无法用于在战斗中进行虚招或者传递密语。此外，使用察言观色检定获取关于你的直觉的DC为25，而非20。
 - name: 震慑强袭
   id: Stunning Assault
-  type: 战斗
+  type:
+    - combat
   brief: 你那强大却又不太精准的攻击能够震慑你的敌人。
   meta:
     requirement: 力量13，猛力攻击，基本攻击加值+16。
     benefit: 你可以选择所有攻击检定与战技检定受到-5减值，来使得你的近战攻击命中的目标震慑1轮。成功的强韧豁免能够避免该效果，豁免DC为“10+你的BAB”。你必须在进行攻击检定之前选择使用这个专长，并且它的效果会持续至你的下一轮为止。
 - name: 召唤师呼唤
   id: Summoner's Call
-  type: general
+  type:
+    - general
   brief: 每当你召唤自己的幻灵，它会在短时间内变得更为强大。
   meta:
     requirement: 【幻灵】职业特性。
     benefit: 每当你召唤你的幻灵，你能够使其的力量，敏捷或者体质获得+2增强加值。这个加值会在召唤仪式完成后持续10分钟。
 - name: 破武重击
   id: Sundering Strike
-  type: 战斗
+  type:
+    - combat
   brief: 你的重击能够击破敌人的武器。
   meta:
     requirement: 力量13，精通破武，猛力攻击，基本攻击加值+9。
@@ -1081,13 +1235,16 @@
     special: 你只能将后述专长中的一个应用在一次确认的重击上 冲撞重击，移位重击，破武重击，卸武重击或者绊摔重击。你可以在重击确认检定之后选择使用该专长。
 - name: 换位
   id: Swap Places
-  type: 战斗，团队
+  type:
+    - combat
+    - teamwork
   brief: 你很擅长与盟友在混乱的近战格斗中交换位置。
   meta:
     benefit: 每当你邻近一名拥有该专长的盟友，你就能够将移入盟友所在的方格作为正常移动的一部分进行。与此同时，你的盟友会以直觉动作移入你原本的空间。你们两人必须都是自愿这么做，并且能够利用该专长进行移动。你的盟友必须与你体型相同才能利用该专长。你的盟友不会因这次移动而引起藉机攻击，但是你会如常引发。这个移动不会计算入盟友的下一轮总移动距离内。
 - name: 迅捷协助
   id: Swift Aid
-  type: 战斗
+  type:
+    - combat
   brief: 通过迅捷却又无害的一击，你能够对盟友的攻击进行协助。
   meta:
     requirement: 智力13，寓守于攻，基本攻击加值+6。
@@ -1095,14 +1252,16 @@
     normal: 协助他人是一个标准动作。
 - name: 毒舌讽刺
   id: Taunt
-  type: general
+  type:
+    - general
   brief: 你可能块头小，但是你的话语会让敌人威严扫地。
   meta:
     requirement: 魅力13，体型小型以下。
     benefit: 你能够使用唬骗检定取代威吓检定来挫败敌人的士气（见威吓技能的详述），并且不会因为体型小于你的目标而受到技能减值。
 - name: 团队进击
   id: Team Up
-  type: 战斗
+  type:
+    - combat
   brief: 当你们联合起来对抗一名敌人时，你能够以快速的假动作帮助盟友。
   meta:
     requirement: 智力13，寓守于攻，一拥而上，基本攻击加值+6。
@@ -1110,27 +1269,31 @@
     normal: 协助他人是一个标准动作。
 - name: 传送抗击
   id: Teleport Tactician
-  type: 战斗
+  type:
+    - combat
   brief: 你高度警惕那些使用传送来靠近或逃离你的敌人。
   meta:
     requirement: 战斗反射，扰法者，破法者。
     benefit: 任何使用传送效果进入或离开你所威胁的方格时，会引起你的藉机攻击，即使他进行防御式施法或者使用超自然能力也一样。
 - name: 强固变化
   id: Tenacious Transmutation
-  type: general
+  type:
+    - general
   brief: 你对变化类魔法的精研是的你的变化系法术更为持久。
   meta:
     requirement: 法术专攻（变化）。
     benefit: 解除或移除你的变化系效果的施法者等级检定DC提高2点；即使法术被取消，它的效果也会在消散之前额外存留1轮。
 - name: 暴雷法术
   id: Thundering Spell
-  type: 超魔
+  type:
+    - metamagic
   brief: 你可以将轰鸣的雷声与可怕的尖叫声混入法术之中，使那些被法术伤害的生物耳聋。
   meta:
     benefit: 你能够调整一个法术，使其能够让被法术伤害的生物耳聋。当一名生物被这个法术伤害时，他会在等同于法术原始等级的轮数内耳聋。如果法术允许豁免，成功的豁免也可以使耳聋效果无效。如果法术不允许豁免，那么目标能够进行一次强韧豁免来使耳聋效果无效。如果法术效果会使生物耳聋，那么超魔效果的持续时间会加到法术的持续时间之上。暴雷法术占用比法术的实际环级高2环的法术位。不造成伤害的法术无法由该专长获益。
 - name: 点血截脉
   id: Touch of Serenity
-  type: 战斗
+  type:
+    - combat
   brief: 通过简单的触摸，你甚至能够让最野蛮的敌人放弃攻击。
   meta:
     requirement: 感知18，精通徒手打击，基本攻击加值+8。
@@ -1138,14 +1301,16 @@
     special: '涅磐僧（Monk of the Lotus, APG武僧变体）会在1级获得“点血截脉”作为奖励专长，即使他并不满足专长的先决条件。武僧每日可以尝试使用点血截脉的次数等同于他的武僧等级，额外加上每4个非武僧职业等级1次。'
 - name: 骑乘技巧
   id: Trick Riding
-  type: 战斗
+  type:
+    - combat
   brief: 你不仅仅善于在战斗中控制马匹；甚至将其看起来就像一种艺术。
   meta:
     requirement: 骑术9级，骑乘战斗。
     benefit: 当你身着轻甲或不穿甲时，就不需要为了进行骑术技能中列出的任何DC为15或更低的项目而进行技能检定。当你骑乘无马鞍的坐骑时，骑术检定不会受到-5减值。你可以每轮使用“骑乘战斗”专长进行检定、忽略2次对你的坐骑的攻击而非原本的1次。
 - name: 绊摔重击
   id: Tripping Strike
-  type: 战斗
+  type:
+    - combat
   brief: 你的重击中所蕴含的力量能够将敌人击倒在地。
   meta:
     requirement: 智力13，寓守于攻，精通绊摔，基本攻击加值+9。
@@ -1154,35 +1319,40 @@
     special: 你只能将后述专长中的一个应用在一次确认的重击上 冲撞重击，移位重击，破武重击，卸武重击或者绊摔重击。你可以在重击确认检定之后选择使用该专长。
 - name: 过犹不及
   id: Under and Over
-  type: 战斗
+  type:
+    - combat
   brief: 你可以从尝试抓你的敌人身旁滑过，让他摔个趔趄。
   meta:
     requirement: 灵巧武艺，体型小型以下。
     benefit: 如果一个比你大的敌人尝试擒抱你却失败了，你能以直觉动作对该名目标进行绊摔攻击，并且在这次攻击中获得+2加值。这不会引发藉机攻击。
 - name: 钻胯而过
   id: Underfoot
-  type: 战斗
+  type:
+    - combat
   brief: 你可以在敌人的身体下方和周围腾挪翻转。
   meta:
     requirement: 闪避，灵活移动，体型小型以下。
     benefit: 只要敌人的体型比你大，那么当你进行尝试穿过这些敌人而不受藉机攻击的特技检定时，检定获得+4闪避加值。此外，当你在比你体型更大的敌人的威胁范围内移动，你的AC在对抗由此动作引起的藉机攻击时获得+2闪避加值（这个加值与灵活移动提供的+4加值叠加，总计为+6）。
 - name: 毒虫之心
   id: Vermin Heart
-  type: general
+  type:
+    - general
   brief: 你与那些蠕动、爬行、飞掠和蜇人的东西有着特殊的联系。
   meta:
     requirement: 【野性认同】职业特性。
     benefit: 你能以虫类生物为目标，施放那些只影响动物的法术和特殊能力（它们仍旧受到以虫类为目标的法术影响）。你可以使用【野性认同】改善虫类的态度，就如同你影响动物一般。
 - name: 战之歌者
   id: War Singer
-  type: general
+  type:
+    - general
   brief: 你的歌声使用野蛮和残暴的方式呼唤你的人民，激励着周围的人，使他们的暴力程度达到新的高度。
   meta:
     requirement: 魅力13，【吟游表演】职业特性，半兽人或兽人。
     benefit: 当你在战场（任何超过10个人进行战斗的场所）中使用带有听觉成分的【吟游表演】时，那么你所选择的吟游表演的范围或区域加倍。此外，无论你的吟游表演在哪里进行，兽人亚种的生物在对抗你的吟游表演时，豁免DC提高2点。
 - name: 百宝袋
   id: Well-Prepared
-  type: general
+  type:
+    - general
   brief: 不知为何，你似乎总是有趁手的工具或者粮食储备在手边。
   meta:
     requirement: 半身人。

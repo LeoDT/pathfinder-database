@@ -52,8 +52,9 @@ feats:
   - id: Domain
     name: 领域
     desc: 如同牧师，审判者信仰的神祉影响到她的阵营、她可使用的魔法以及她的价值观。尽管审判者不像牧师那样严守神祉的戒律，事实上如果能更好地为她的信仰服务她会乐意违反它们，但是她还是需要对这些规条表示尊重。审判者可以选择一个她信仰的神祉所包含的领域。审判者只有阵营符合才可以选择阵营领域。如果你的GM许可，审判者也可以为一个理念服务而非一个特定神祉，并选择一个象征她个人理想和能力的领域。对此阵营领域的约束依然生效。每个领域根据审判者等级给予一些神授力量。审判者不会获得领域奖励的法术列表，也不会得到奖励的领域法术位。审判者用他的等级决定神授力量的强度和效果如同牧师等级一样。如果审判者拥有牧师等级，她的两个领域之一必须与审判者等级所选择的领域相同。决定这个领域神授力量的强度和效果时牧师等级和审判者等级叠加，但是决定奖励法术时不会叠加。
-  - id: Judgment, Su
-    name: 审判
+  - id: Judgment 1/day
+    type: su
+    name: 审判 1/日
     desc: 从1级开始，审判者可以用一个迅捷动作对她的敌人进行审判。当审判开始时，审判者根据使用的审判类型获得加值或者特殊能力。1级时审判者每天可以使用这个能力1次。在4级及之后每3级，审判者每天可以获得额外1次使用次数。一旦启动，这个能力持续到战斗结束，然后所有优势马上消失。审判者必须参与战斗才能获得这些优势。如果她陷入惊惧、恐慌、麻痹、震慑、昏迷，或者其他不能参与战斗的状态，该能力不会结束，但她失去审判带来的优势、直到回归到战斗中。当审判者使用该能力时，她必须选择一种审判效果。以一个迅捷动作，她可以改变审判种类。如果审判者是邪恶阵营，她得到的是亵渎加值而非神圣加值。中立阵营的审判者必须选择获得神圣加值或亵渎加值，一旦选定将无法改变。
     subs:
       - id: Destruction
@@ -83,25 +84,50 @@ feats:
       - id: Smiting
         name: 制裁
         desc: 审判为审判者的武器浸染神圣的光芒。审判者的武器在穿透伤害减免时视为魔法武器。6级时，审判者的武器在穿透伤害减免时同时被视为一个阵营武器（混乱、邪恶、善良、秩序）。阵营种类取决于审判者的阵营。如果审判者是中立阵营，她不会得到这个好处。10级时，审判者的武器在穿透伤害减免时视为精金武器（但不会额外减少硬度）。
-  - id: Monster Lore, Ex
+    grow:
+      - level: 4
+        id: Judgment 2/day
+        name: 审判 2/日
+      - level: 7
+        id: Judgment 3/day
+        name: 审判 3/日
+      - level: 10
+        id: Judgment 3/day
+        name: 审判 3/日
+      - level: 13
+        id: Judgment 4/day
+        name: 审判 4/日
+      - level: 16
+        id: Judgment 5/day
+        name: 审判 5/日
+      - level: 19
+        id: Judgment 6/day
+        name: 审判 6/日
+  - id: Monster Lore
+    type: ex
     name: 怪物学识
     desc: 当判定生物的能力及弱点时，审判者在智力修正之外，额外将她的感知修正加在知识技能检定上。
   - id: Orisons
     name: 祷念
     desc: 审判者获得一定量的祷念，即0环法术，根据上表所示。这些法术如同其他法术一般施展，但施展时它们不会被消耗，可以再次使用。使用其他法术位准备的祷念，比如经过超魔的，将会如常消耗。
-  - id: Stern Gaze, Ex
+  - id: Stern Gaze
+    type: ex
     name: 严苛凝视
     desc: 审判者擅长于察觉她们敌人的诡计并威吓他们。审判者在所有威吓及察言观色上得到审判者等级一半（最少+1）的士气加值。
-  - id: Cunning Initiative, Ex
+  - id: Cunning Initiative
+    type: ex
     name: 巧夺先攻
     desc: 在2级时，审判者在敏捷修正之外，额外将她的感知修正加在先攻检定上。
-  - id: Detect Alignment, Sp
+  - id: Detect Alignment
+    type: sp
     name: 侦测阵营
     desc: 审判者可以随意使用‘侦测混乱’、‘侦测邪恶’、‘侦测善良’或‘侦测秩序’。在同一时间内她只能使用其中一个。
-  - id: Track, Ex
+  - id: Track
+    type: ex
     name: 追踪
     desc: 在2级，当审判者进行追踪或发现痕迹的生存检定时，可将她一半职业等级加入检定。
-  - id: Solo Tactics, Ex
+  - id: Solo Tactics
+    type: ex
     name: 独行战术
     desc: 到了3级，审判者所有的盟友都可以如同具有相同团队专长一般，为审判者提供团队专长的好处。她的盟友不会获得团队专长的效果，除非他们本身确实具有这个专长。盟友的站位或行动依然必须符合团队专长的先决条件，审判者才能获得对应的奖励。
   - id: Teamwork Feat
@@ -110,34 +136,40 @@ feats:
     effects:
       - type: gainFeat
         featType: teamwork
-  - id: Bane, Su
+  - id: Bane
+    type: su
     name: 破敌
     desc: 到了5级，审判者可以用迅捷动作将她的一件武器强化获得〈破敌〉附魔。她在使用该能力时必须选择一个生物类型（如果是类人生物或异界生物，还必须选择一个子类）。选定后，这个类型可以随时以迅捷动作更换。这个能力只在审判者使用该武器时有效。如果武器掉落或者被拿走，武器将失去该能力、直到被归还到审判者手上或者持续时间结束。这个能力每天可使用轮数等于审判者等级，这些轮数不必连续。
-  - id: Discern Lies, Sp
+  - id: Discern Lies
+    type: sp
     name: 辨识谎言
     desc: 到了5级，审判者可以如同同名法术一般使用‘辨识谎言’，持续轮数等于她的审判者等级。这些轮数不必连续。激活这个能力是一个直觉动作。
-  - id: Second Judgment, Ex
+  - id: Second Judgment
+    type: ex
     name: 双重审判
     desc: 在8级时，当审判者使用她的【审判】能力，她可以选择两种不同的审判而不是一种。这个能力只会消耗1次每日使用次数。以一个迅捷动作，她可以改变其中一个审判。
-  - id: Stalwart, Ex
+  - id: Stalwart
+    type: ex
     name: 坚定
     desc: 在11级，审判者结合精神与肉体去化解特定的攻击。当她成功通过强韧或意志豁免避免一次原本成功豁免也会有次要效果的攻击，她将完全避免这个效果。这个能力仅能在审判者身着轻甲、中甲或未着甲时使用。一个无助的审判者不会得到这个能力。
-  - id: Greater Bane, Ex
+  - id: Greater Bane
+    type: ex
     name: 高等破敌
     desc: 到了12级，当审判者使用【破敌】能力时，武器对抗特定生物所获得的额外伤害增加为4d6。
-  - id: Exploit Weakness, Ex
+  - id: Exploit Weakness
+    type: ex
     name: 洞悉弱点
     desc: 在14级，审判者学会利用所有出现的机会。当审判者造成一次重击，她忽略目标所有伤害减免。另外，如果目标拥有【再生】特性，它会在受到重击的下一轮内失去再生特性，而且可以被正常杀死。拥有总是生效的再生特性的生物免疫这个能力。最后，如果审判者对具有某种能量脆弱的生物造成对应种类的能量伤害，她将造成每骰额外+1的伤害。
-  - id: Regeneration, Ex
-    name: 【特性速查】再生
-    desc: 具有这种能力的生物难以被杀死。该生物的非致命伤害会以每轮一定的速度自动得到恢复，但是当他们死亡后就不具备再生能力（他们在生命值低于0时还是具有再生能力）。特定的攻击方式，通常是火焰或强酸，使该生物在接下来的一轮里停止再生。在这一轮里，生物不会治疗任何伤害并且可以以通常情况死亡。在怪物描述中详细介绍了再生。再生对于不造成生命值伤害的攻击类型无效。它也不能恢复由饥饿、口渴或窒息造成的生命值减少。再生生物可以重新长出失去的部分肢体，或者在将断肢连接在伤口上1小时后将撕裂的肢体重新接合。被截断的肢体若未接合到躯体上则会正常坏死。
-  - id: Third Judgment, Ex
+  - id: Third Judgment
+    type: ex
     name: 三重审判
     desc: 在16级时，当审判者使用她的【审判】能力，她可以选择三种不同的审判而不是两种。这个能力只会消耗1次每日使用次数。以一个迅捷动作，她可以改变其中一个审判。
-  - id: Slayer, Ex
+  - id: Slayer
+    type: ex
     name: 屠戮者
     desc: 在17级时，审判者更进一步专注于他的审判。当审判者使用【审判】能力时，她选择一种审判。这个审判的优势视作她比正常高5级的审判者。不同于其他的审判能力，在一次审判中这个强化能力不能被更换到其他审判上。
-  - id: True Judgment, Su
+  - id: True Judgment
+    type: su
     name: 最终审判
     desc: 在20级时，当审判者使用【审判】能力，可以用迅捷动作对一个敌人造成最终审判。当她宣告进行最终审判时，审判者对目标进行一次单独的近战攻击（或远程攻击，只要敌人在30尺内）。如果攻击命中，造成正常伤害，并且目标必须通过一成功的强韧豁免，否则死亡。豁免DC等于“10+1/2审判者等级+感知修正”。无论是否通过豁免，目标生物都将对审判者的最终审判免疫24小时。一旦使用这个能力，在1d4轮内审判者不能再次使用。
   - id: Chaotic, Evil, Good, and Lawful Spells
@@ -157,6 +189,7 @@ levels:
       - Orisons
       - Stern Gaze
     spellsPerDay: [0, 1, 0, 0, 0, 0, 0]
+    spellsKnown: [4, 2, 0, 0, 0, 0, 0]
   - level: 2
     bab: [1]
     fortitude: 3
@@ -167,6 +200,7 @@ levels:
       - Detect Alignment
       - Track
     spellsPerDay: [0, 2, 0, 0, 0, 0, 0]
+    spellsKnown: [5, 3, 0, 0, 0, 0, 0]
   - level: 3
     bab: [2]
     fortitude: 3
@@ -176,6 +210,7 @@ levels:
       - Solo Tactics
       - Teamwork Feat
     spellsPerDay: [0, 3, 0, 0, 0, 0, 0]
+    spellsKnown: [6, 4, 0, 0, 0, 0, 0]
   - level: 4
     bab: [3]
     fortitude: 4
@@ -184,6 +219,7 @@ levels:
     special:
       - Judgment 2/day
     spellsPerDay: [0, 3, 1, 0, 0, 0, 0]
+    spellsKnown: [6, 4, 2, 0, 0, 0, 0]
   - level: 5
     bab: [3]
     fortitude: 4
@@ -193,6 +229,7 @@ levels:
       - Bane
       - Discern Lies
     spellsPerDay: [0, 4, 2, 0, 0, 0, 0]
+    spellsKnown: [6, 4, 3, 0, 0, 0, 0]
   - level: 6
     bab: [4]
     fortitude: 5
@@ -201,6 +238,7 @@ levels:
     special:
       - Teamwork Feat
     spellsPerDay: [0, 4, 3, 0, 0, 0, 0]
+    spellsKnown: [6, 4, 4, 0, 0, 0, 0]
   - level: 7
     bab: [5]
     fortitude: 5
@@ -209,6 +247,7 @@ levels:
     special:
       - Judgment 3/day
     spellsPerDay: [0, 4, 3, 1, 0, 0, 0]
+    spellsKnown: [6, 5, 4, 2, 0, 0, 0]
   - level: 8
     bab: [6, 1]
     fortitude: 6
@@ -217,6 +256,7 @@ levels:
     special:
       - Second Judgment
     spellsPerDay: [0, 4, 4, 2, 0, 0, 0]
+    spellsKnown: [6, 5, 4, 3, 0, 0, 0]
   - level: 9
     bab: [6, 1]
     fortitude: 6
@@ -225,6 +265,7 @@ levels:
     special:
       - Teamwork Feat
     spellsPerDay: [0, 5, 4, 3, 0, 0, 0]
+    spellsKnown: [6, 5, 4, 4, 0, 0, 0]
   - level: 10
     bab: [7, 2]
     fortitude: 7
@@ -233,6 +274,7 @@ levels:
     special:
       - Judgment 4/day
     spellsPerDay: [0, 5, 4, 3, 1, 0, 0]
+    spellsKnown: [6, 5, 5, 4, 2, 0, 0]
   - level: 11
     bab: [8, 3]
     fortitude: 7
@@ -241,6 +283,7 @@ levels:
     special:
       - Stalwart
     spellsPerDay: [0, 5, 4, 4, 2, 0, 0]
+    spellsKnown: [6, 5, 5, 4, 3, 0, 0]
   - level: 12
     bab: [9, 4]
     fortitude: 8
@@ -250,6 +293,7 @@ levels:
       - Greater Bane
       - Teamwork Feat
     spellsPerDay: [0, 5, 5, 4, 3, 0, 0]
+    spellsKnown: [6, 5, 5, 4, 4, 0, 0]
   - level: 13
     bab: [9, 4]
     fortitude: 8
@@ -258,6 +302,7 @@ levels:
     special:
       - Judgment 5/day
     spellsPerDay: [0, 5, 5, 4, 3, 1, 0]
+    spellsKnown: [6, 6, 5, 5, 4, 2, 0]
   - level: 14
     bab: [10, 5]
     fortitude: 9
@@ -266,6 +311,7 @@ levels:
     special:
       - Exploit Weakness
     spellsPerDay: [0, 5, 5, 4, 4, 2, 0]
+    spellsKnown: [6, 6, 5, 5, 4, 3, 0]
   - level: 15
     bab: [11, 6, 1]
     fortitude: 9
@@ -274,6 +320,7 @@ levels:
     special:
       - Teamwork Feat
     spellsPerDay: [0, 5, 5, 5, 4, 3, 0]
+    spellsKnown: [6, 6, 5, 5, 4, 4, 0]
   - level: 16
     bab: [12, 7, 2]
     fortitude: 10
@@ -283,6 +330,7 @@ levels:
       - Judgment 6/day
       - Third Judgment
     spellsPerDay: [0, 5, 5, 5, 4, 3, 1]
+    spellsKnown: [6, 6, 6, 5, 5, 4, 2]
   - level: 17
     bab: [12, 7, 2]
     fortitude: 10
@@ -291,6 +339,7 @@ levels:
     special:
       - Slayer
     spellsPerDay: [0, 5, 5, 5, 4, 4, 2]
+    spellsKnown: [6, 6, 6, 6, 5, 4, 3]
   - level: 18
     bab: [13, 8, 3]
     fortitude: 11
@@ -299,6 +348,7 @@ levels:
     special:
       - Teamwork Feat
     spellsPerDay: [0, 5, 5, 5, 5, 4, 3]
+    spellsKnown: [6, 6, 6, 6, 5, 4, 4]
   - level: 19
     bab: [14, 9, 4]
     fortitude: 11
@@ -307,6 +357,7 @@ levels:
     special:
       - Judgment 7/day
     spellsPerDay: [0, 5, 5, 5, 5, 5, 4]
+    spellsKnown: [6, 6, 6, 6, 5, 5, 4]
   - level: 20
     bab: [15, 10, 5]
     fortitude: 12
@@ -315,3 +366,4 @@ levels:
     special:
       - True Judgment
     spellsPerDay: [0, 5, 5, 5, 5, 5, 5]
+    spellsKnown: [6, 6, 6, 6, 5, 5, 5]

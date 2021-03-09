@@ -35,7 +35,8 @@ feats:
   - id: Hex
     name: 巫术
     desc: 每个女巫都能学到一些被称为巫术的魔法技巧，给予她们力量或削弱其敌人。1级时，女巫选择并获得一项巫术。2级和之后每2级，她能够额外获得一项巫术。女巫不能选择同一项巫术多于1次。若无特别说明，使用巫术是一个不会引发藉机攻击的标准动作。巫术豁免DC为“10+1/2女巫等级+智力修正”。
-  - id: Witch's Familiar, Ex
+  - id: Witch's Familiar
+    type: ex
     name: 女巫魔宠
     desc: 1级时，女巫同一只魔宠——教导她魔法并帮助她在此道路上前行的伙伴——建立起紧密的联系。魔宠还能给予女巫某些技能上的加值、额外法术、以及作为施展某些魔法时的助手。这类似法师【奥术连结】职业能力，除了标注在女巫魔宠的部分。女巫每天必须同她的魔宠交流以准备法术。魔宠储存着女巫所知的全部法术，且女巫无法准备尚未存储在魔宠里的法术。在游戏开始时，魔宠储存着所有的0环女巫法术，以及数量为“3+女巫智力修正”的1环法术，由女巫选定。女巫每获得1个新的等级，就可以在她当前所能施展的法术环级中（按照升级后的等级判定）任选2个新法术，加入魔宠的法术贮藏。女巫也可以通过一种特殊的仪式，将额外的法术存入她的魔宠（见下文）。
   - id: Major Hex
@@ -55,8 +56,8 @@ levels:
       - Cantrips
       - Hex
       - Patron Spells
-      - Witchs Familiar
-    spellsPerDay: [0, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+      - Witch's Familiar
+    spellsPerDay: [3, 1, 0, 0, 0, 0, 0, 0, 0, 0]
   - level: 2
     bab: [1]
     fortitude: 0
@@ -64,13 +65,13 @@ levels:
     will: 3
     special:
       - Hex
-    spellsPerDay: [0, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0]
+    spellsPerDay: [4, 2, 0, 0, 0, 0, 0, 0, 0, 0]
   - level: 3
     bab: [1]
     fortitude: 1
     reflex: 1
     will: 3
-    spellsPerDay: [0, 4, 2, 1, 0, 0, 0, 0, 0, 0, 0]
+    spellsPerDay: [4, 2, 1, 0, 0, 0, 0, 0, 0, 0]
   - level: 4
     bab: [2]
     fortitude: 1
@@ -78,13 +79,13 @@ levels:
     will: 4
     special:
       - Hex
-    spellsPerDay: [0, 4, 3, 2, 0, 0, 0, 0, 0, 0, 0]
+    spellsPerDay: [4, 3, 2, 0, 0, 0, 0, 0, 0, 0]
   - level: 5
     bab: [2]
     fortitude: 1
     reflex: 1
     will: 4
-    spellsPerDay: [0, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0]
+    spellsPerDay: [4, 3, 2, 1, 0, 0, 0, 0, 0, 0]
   - level: 6
     bab: [3]
     fortitude: 2
@@ -92,13 +93,13 @@ levels:
     will: 5
     special:
       - Hex
-    spellsPerDay: [0, 4, 3, 3, 2, 0, 0, 0, 0, 0, 0]
+    spellsPerDay: [4, 3, 3, 2, 0, 0, 0, 0, 0, 0]
   - level: 7
     bab: [3]
     fortitude: 2
     reflex: 2
     will: 5
-    spellsPerDay: [0, 4, 4, 3, 2, 1, 0, 0, 0, 0, 0]
+    spellsPerDay: [4, 4, 3, 2, 1, 0, 0, 0, 0, 0]
   - level: 8
     bab: [4]
     fortitude: 2
@@ -106,13 +107,13 @@ levels:
     will: 6
     special:
       - Hex
-    spellsPerDay: [0, 4, 4, 3, 3, 2, 0, 0, 0, 0, 0]
+    spellsPerDay: [4, 4, 3, 3, 2, 0, 0, 0, 0, 0]
   - level: 9
     bab: [4]
     fortitude: 3
     reflex: 3
     will: 6
-    spellsPerDay: [0, 4, 4, 4, 3, 2, 1, 0, 0, 0, 0]
+    spellsPerDay: [4, 4, 4, 3, 2, 1, 0, 0, 0, 0]
   - level: 10
     bab: [5]
     fortitude: 3
@@ -121,13 +122,13 @@ levels:
     special:
       - Hex
       - Major Hex
-    spellsPerDay: [0, 4, 4, 4, 3, 3, 2, 0, 0, 0, 0]
+    spellsPerDay: [4, 4, 4, 3, 3, 2, 0, 0, 0, 0]
   - level: 11
     bab: [5]
     fortitude: 3
     reflex: 3
     will: 7
-    spellsPerDay: [0, 4, 4, 4, 4, 3, 2, 1, 0, 0, 0]
+    spellsPerDay: [4, 4, 4, 4, 3, 2, 1, 0, 0, 0]
   - level: 12
     bab: [6, 1]
     fortitude: 4
@@ -135,13 +136,13 @@ levels:
     will: 8
     special:
       - Hex
-    spellsPerDay: [0, 4, 4, 4, 4, 3, 3, 2, 0, 0, 0]
+    spellsPerDay: [4, 4, 4, 4, 3, 3, 2, 0, 0, 0]
   - level: 13
     bab: [6, 1]
     fortitude: 4
     reflex: 4
     will: 8
-    spellsPerDay: [0, 4, 4, 4, 4, 4, 3, 2, 1, 0, 0]
+    spellsPerDay: [4, 4, 4, 4, 4, 3, 2, 1, 0, 0]
   - level: 14
     bab: [7, 2]
     fortitude: 4
@@ -149,13 +150,13 @@ levels:
     will: 9
     special:
       - Hex
-    spellsPerDay: [0, 4, 4, 4, 4, 4, 3, 3, 2, 0, 0]
+    spellsPerDay: [4, 4, 4, 4, 4, 3, 3, 2, 0, 0]
   - level: 15
     bab: [7, 2]
     fortitude: 5
     reflex: 5
     will: 9
-    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 3, 2, 1, 0]
+    spellsPerDay: [4, 4, 4, 4, 4, 4, 3, 2, 1, 0]
   - level: 16
     bab: [8, 3]
     fortitude: 5
@@ -163,13 +164,13 @@ levels:
     will: 10
     special:
       - Hex
-    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 3, 3, 2, 0]
+    spellsPerDay: [4, 4, 4, 4, 4, 4, 3, 3, 2, 0]
   - level: 17
     bab: [8, 3]
     fortitude: 5
     reflex: 5
     will: 10
-    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 4, 3, 2, 1]
+    spellsPerDay: [4, 4, 4, 4, 4, 4, 4, 3, 2, 1]
   - level: 18
     bab: [9, 4]
     fortitude: 6
@@ -178,13 +179,13 @@ levels:
     special:
       - Hex
       - Grand Hex
-    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 4, 3, 3, 2]
+    spellsPerDay: [4, 4, 4, 4, 4, 4, 4, 3, 3, 2]
   - level: 19
     bab: [9, 4]
     fortitude: 6
     reflex: 6
     will: 11
-    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3]
+    spellsPerDay: [4, 4, 4, 4, 4, 4, 4, 4, 3, 3]
   - level: 20
     bab: [10, 5]
     fortitude: 6
@@ -192,4 +193,4 @@ levels:
     will: 12
     special:
       - Hex
-    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+    spellsPerDay: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
