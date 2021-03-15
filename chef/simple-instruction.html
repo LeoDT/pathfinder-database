@@ -44,12 +44,27 @@
           const [nameAndId, desc] = l.split('：', 2);
 
           if (nameAndId && desc) {
-            const [name, id] = nameAndId.replace(/(.*?)（(.*?)）/, '$1+$2').split('+');
+            let [name, id] = nameAndId.replace(/(.*?)（(.*?)）/, '$1+$2').split('+');
 
             if (name && id) {
-              results.push(`- id: ${id}
-  name: ${name}
-  desc: ${desc}`);
+              let type;
+              if (id.search(/,\s(ex|su|sp)/i) !== -1) {
+                [id, type] = id.split(', ');
+              }
+
+              let r = `- id: ${id}
+  name: ${name}`;
+
+              if (type) {
+                r += `
+  type: ${type.toLowerCase()}`;
+              }
+
+              r += `
+  desc: ${desc}`;
+
+              results.push(r);
+
               return;
             }
           }
@@ -60,7 +75,10 @@
         output.value = results.join('\r\n');
       });
 
-      output.addEventListener('focus', () => {
+      input.addEventListener('click', () => {
+        input.select();
+      });
+      output.addEventListener('click', () => {
         output.select();
         navigator.clipboard.writeText(output.value);
       });

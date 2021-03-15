@@ -1,11 +1,5 @@
-const f = await Deno.readTextFile('./pathfinder-workbench/src/data/feats.json');
+import { initSpellIndex } from './spell-utils.js';
 
-const json = JSON.parse(f);
+const index = await initSpellIndex();
 
-const set = new Set();
-
-json.forEach(({ type }) => {
-  set.add(type);
-});
-
-console.log(Array.from(set));
+console.log(index.get('groundswell'));

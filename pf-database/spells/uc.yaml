@@ -1,8 +1,10 @@
 - id: Ablative Barrier
   name: 超越之障
   meta:
-    school: '咒法系 (创造) [力场]'
-    level: '炼金术师 2, 魔战士 2, 术士/法师 3, 召唤师 2'
+    school: conjuration
+    subschool: creation
+    level: 'alchemist 2, magus 2, sorcerer/wizard 3, summoner 2, bloodrager 2, occultist 2, psychic 3, unchained summoner 3'
+    descriptor: force
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一片取自盾牌的金属)'
     area: 接触
@@ -18,8 +20,8 @@
 - id: Absorb Toxicity
   name: 汲取苦难
   meta:
-    school: 死灵系
-    level: '炼金术师 3, 德鲁伊 4, 术士/法师 5, 女巫 4'
+    school: necromancy
+    level: 'alchemist 3, druid 4, sorcerer/wizard 5, witch 4, psychic 5'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一根有毒植物的棘刺)'
     area: 个人
@@ -37,8 +39,9 @@
 - id: Abundant Ammunition
   name: 弹药补给
   meta:
-    school: 咒法系 (召唤)
-    level: '吟游诗人 1, 牧师/先知 1, 游侠 1, 术士/法师 1'
+    school: conjuration
+    subschool: summoning
+    level: 'bard 1, cleric/oracle 1, ranger 1, sorcerer/wizard 1, psychic 1'
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (一枚弹药)'
     target: 一个接触到的容器
@@ -51,8 +54,9 @@
 - id: Adjuring Step
   name: 谨慎步伐
   meta:
-    school: '防护系 [力场]'
-    level: '炼金术师 1, 吟游诗人 1, 魔战士 1, 术士/法师 1'
+    school: abjuration
+    level: 'alchemist 1, bard 1, magus 1, sorcerer/wizard 1, occultist 1, psychic 1'
+    descriptor: force
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一只兔脚)'
     area: 个人
@@ -66,8 +70,9 @@
 - id: Adoration
   name: 魅力四射
   meta:
-    school: 变化系
-    level: '吟游诗人 1, 术士/法师 2, 女巫 2'
+    school: enchantment
+    level: 'bard 1, sorcerer/wizard 2, witch 2, psychic 2, mesmerist 1'
+    descriptor: 'emotion, mind-affecting'
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 近距
@@ -79,8 +84,9 @@
 - id: Air Bubble
   name: 气泡术
   meta:
-    school: 咒法系
-    level: '牧师/先知 1, 德鲁伊 1, 游侠 1, 术士/法师 1, 女巫 1'
+    school: conjuration
+    subschool: creation
+    level: 'cleric/oracle 1, druid 1, ranger 1, sorcerer/wizard 1, witch 1, psychic 1'
     castingTime: 标准动作
     components: '姿势, 材料/法器 (一个小气囊)'
     area: 接触
@@ -97,14 +103,17 @@
 - id: 'Air Walk, Communal'
   name: 共用凌空而行
   meta:
-    level: '炼金术师 4, 牧师/先知 5, 德鲁伊 5'
+    school: transmutation
+    level: 'alchemist 5, cleric/oracle 5, druid 5, occultist 5'
+    descriptor: air
     target: 接触到的复数生物
   desc: 这个法术工作方式如同凌空而行 (Air Walk)，不过你可以将持续时间以10分钟为单位分配给复数生物。
 - id: Animal Aspect
   name: 动物形态
   meta:
-    school: 变化系 (变形)
-    level: '炼金术师 2, 魔战士 2, 德鲁伊 2, 游侠 2, 术士/法师 2'
+    school: transmutation
+    subschool: polymorph
+    level: 'alchemist 2, magus 2, druid 2, ranger 2, sorcerer/wizard 2, bloodrager 2, psychic 2'
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (动物的一部分)'
     area: 个人
@@ -125,8 +134,9 @@
 - id: 'Animal Aspect, Greater'
   name: 高等动物形态
   meta:
-    school: 变化系 (变形)
-    level: '炼金术师 3, 魔战士 3, 德鲁伊 3, 游侠 3, 术士/法师 4'
+    school: transmutation
+    subschool: polymorph
+    level: 'alchemist 3, magus 3, druid 3, ranger 3, sorcerer/wizard 4, bloodrager 3, psychic 4'
   desc: |-
     这个法术工作方式如同动物形态 (Animal Aspect)，不过你可以一次得到两种动物形态的能力或者获得给一种动物形态增加下述的新增能力：
     －青蛙：你获得你基础速度一半的游泳速度，并且享受所有拥有游泳速度带来的优势。
@@ -139,14 +149,15 @@
 - id: 'Ant Haul, Communal'
   name: 共用重负术
   meta:
-    level: '炼金术师 2, 牧师/先知 2, 德鲁伊 2, 游侠 2, 术士/法师 2, 召唤师 2'
+    school: transmutation
+    level: 'alchemist 2, cleric/oracle 2, druid 2, ranger 2, sorcerer/wizard 2, summoner/unchained summoner 2, occultist 2, psychic 2'
     target: 接触到的复数生物
   desc: 这个法术工作方式如同重负术 (Ant Haul)，不过你可以把持续时间以2小时为单位分配给接触到的复数生物。
 - id: Arcane Cannon
   name: 奥术大炮
   meta:
-    school: 变化系
-    level: 术士/法师 7
+    school: transmutation
+    level: sorcerer/wizard 7
     castingTime: 1轮
     components: '语言, 姿势，器材 (一个华丽的大炮模型，价值5000GP，需滴上你的鲜血)'
     area: 近距
@@ -167,8 +178,10 @@
 - id: Bestow Weapon Proficiency
   name: 赋予武器熟练
   meta:
-    school: 惑控系 (胁迫)
-    level: '炼金术师 2, 反圣骑士 2, 牧师/先知 2, 魔战士 2, 审判者 2, 圣骑士 2, 术士/法师 2, 女巫 2'
+    school: enchantment
+    subschool: compulsion
+    level: 'alchemist 2, antipaladin 2, cleric/oracle 2, magus 2, inquisitor 2, paladin 2, sorcerer/wizard 2, witch 2, occultist 2, psychic 2, medium 2'
+    descriptor: mind-affecting
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一片光滑金属)'
     area: 近距
@@ -180,8 +193,9 @@
 - id: Blistering Invective
   name: 酷烈苛责
   meta:
-    school: '塑能系 [火，依赖语言]'
-    level: '炼金术师 2, 吟游诗人 2, 审判者 2'
+    school: evocation
+    level: 'alchemist 2, bard 2, inquisitor 2, mesmerist 2'
+    descriptor: 'fire, language-dependent'
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人30尺半径范围
@@ -196,8 +210,8 @@
 - id: Bowstaff
   name: 弓杖
   meta:
-    school: 变化系
-    level: '审判者 1, 圣骑士 1, 游侠 1'
+    school: transmutation
+    level: 'inquisitor 1, paladin 1, ranger 1, occultist 2'
     castingTime: 迅捷动作
     components: 语言
     area: 个人
@@ -211,8 +225,8 @@
 - id: Brow Gasher
   name: 血流满面
   meta:
-    school: 死灵系
-    level: '审判者 2, 魔战士 2, 游侠 2, 术士/法师 2'
+    school: necromancy
+    level: 'inquisitor 2, magus 2, ranger 2, sorcerer/wizard 2, bloodrager 2, occultist 2'
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 接触
@@ -228,8 +242,8 @@
 - id: Bullet Shield
   name: 防弹护盾
   meta:
-    school: 防护系
-    level: '炼金术师 2, 术士/法师 2'
+    school: abjuration
+    level: 'alchemist 2, sorcerer/wizard 2, bloodrager 2, occultist 2, psychic 2'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一颗子弹)'
     area: 接触
@@ -243,8 +257,8 @@
 - id: Burst of Speed
   name: 速度爆发
   meta:
-    school: 变化系
-    level: '炼金术师 3, 反圣骑士 3, 魔战士 3, 审判者 3, 圣骑士 3, 游侠 3'
+    school: transmutation
+    level: 'alchemist 3, antipaladin 3, magus 3, inquisitor 3, paladin 3, ranger 3, bloodrager 3, psychic 3, medium 3'
     castingTime: 迅捷动作
     components: 语言
     area: 个人
@@ -256,8 +270,9 @@
 - id: Caging Bomb Admixture
   name: 禁锢炸弹添加剂
   meta:
-    school: '塑能系 [力场]'
-    level: 炼金术师 6
+    school: evocation
+    level: alchemist 6
+    descriptor: force
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人
@@ -272,8 +287,8 @@
 - id: Certain Grip
   name: 稳固抓握
   meta:
-    school: 变化系
-    level: '炼金术师 2, 德鲁伊 2, 术士/法师 2'
+    school: transmutation
+    level: 'alchemist 2, druid 2, sorcerer/wizard 2, bloodrager 2, occultist 2'
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (一颗沥青球)'
     area: (原文缺失，目测为‘接触’)
@@ -287,8 +302,9 @@
 - id: Chain of Perdition
   name: 星云锁链
   meta:
-    school: '塑能系 [力场]'
-    level: '牧师/先知 3, 术士/法师 3'
+    school: evocation
+    level: 'cleric/oracle 3, sorcerer/wizard 3, bloodrager 3, psychic 3'
+    descriptor: force
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (一颗锁链扣环)'
     area: 近距
@@ -305,8 +321,10 @@
 - id: Companion Mind Link
   name: 友伴心桥
   meta:
-    school: 惑控系 (魅惑)
-    level: '德鲁伊 3, 游侠 3'
+    school: enchantment
+    subschool: charm
+    level: 'druid 3, ranger 3'
+    descriptor: mind-affecting
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 近距
@@ -316,8 +334,10 @@
 - id: Compel Hostility
   name: 强迫敌对
   meta:
-    school: '惑控系 (胁迫) [影响心灵]'
-    level: '吟游诗人 1, 牧师/先知 1, 审判者 1, 圣骑士 1, 游侠 1, 召唤师 1, 女巫 1'
+    school: enchantment
+    subschool: compulsion
+    level: 'bard 1, cleric/oracle 1, inquisitor 1, paladin 1, ranger 1, summoner/unchained summoner 1, witch 1, psychic 1, mesmerist 1, medium 1'
+    descriptor: mind-affecting
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一滴你的血)'
     area: 个人
@@ -332,8 +352,8 @@
 - id: Damp Powder
   name: 弹药受潮
   meta:
-    school: 变化系
-    level: '德鲁伊 1, 术士/法师 1, 女巫 1'
+    school: transmutation
+    level: 'druid 1, sorcerer/wizard 1, witch 1'
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (一团潮湿的棉花)'
     area: 近距
@@ -348,14 +368,16 @@
 - id: 'Darkvision, Communal'
   name: 共用黑暗视觉
   meta:
-    level: '炼金术师 3, 反圣骑士 3, 游侠 4, 术士/法师 3'
+    school: transmutation
+    level: 'alchemist 3, antipaladin 3, ranger 4, sorcerer/wizard 3, occultist 3, psychic 3'
     target: 接触到的复数生物
   desc: 这个法术工作方式如同黑暗视觉 (Darkvision)，不过你可以将持续时间以1小时为单位分配给接触到的复数生物。
 - id: Daybreak Arrow
   name: 破晓之箭
   meta:
-    school: '塑能系 [光亮]'
-    level: '牧师/先知 3, 审判者 3, 圣骑士 3'
+    school: evocation
+    level: 'cleric/oracle 3, inquisitor 3, paladin 3, occultist 3'
+    descriptor: light
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 接触
@@ -371,8 +393,8 @@
 - id: Deadeye's Lore
   name: 神射手传奇
   meta:
-    school: 预言系
-    level: '吟游诗人 1, 牧师/先知 1, 德鲁伊 1, 审判者 1, 游侠 1'
+    school: divination
+    level: 'bard 1, cleric/oracle 1, druid 1, inquisitor 1, ranger 1'
     castingTime: 1轮
     components: '语言, 姿势'
     area: 个人
@@ -384,8 +406,9 @@
 - id: Deadly Juggernaut
   name: 死亡化身
   meta:
-    school: '死灵系 [死亡]'
-    level: '反圣骑士 3, 牧师/先知 3, 审判者 3, 圣骑士 3'
+    school: necromancy
+    level: 'antipaladin 3, cleric/oracle 3, inquisitor 3, paladin 3'
+    descriptor: death
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人
@@ -398,8 +421,10 @@
 - id: Debilitating Portent
   name: 衰弱预兆
   meta:
-    school: 惑控系 (胁迫)
-    level: '牧师/先知 4, 女巫 4'
+    school: enchantment
+    subschool: compulsion
+    level: 'cleric/oracle 4, witch 4, psychic 4, spiritualist 4'
+    descriptor: mind-affecting
     castingTime: 标准动作
     components: '语言, 姿势, 法器'
     area: 中距
@@ -415,14 +440,16 @@
 - id: 'Delay Poison, Communal'
   name: 共用延迟毒发
   meta:
-    level: 炼金术士3，吟游诗人3，牧师/先知3，德鲁伊3，猎人3，审判者3，调查员3，圣骑士3，游侠3，歌者 3，战斗祭司3，女巫3
+    school: conjuration
+    subschool: healing
+    level: 'alchemist 3, bard 3, cleric/oracle 3, druid 3, inquisitor 3, paladin 3, ranger 3, witch 3'
     target: 接触到的复数生物
   desc: 这个法术工作方式如同黑暗视觉 (Darkvision)，不过你可以将持续时间以1小时为单位分配给接触到的复数生物。
 - id: Destabilize Powder
   name: 失衡火药
   meta:
-    school: 变化系
-    level: '术士/法师 2, 女巫 2'
+    school: transmutation
+    level: 'sorcerer/wizard 2, witch 2'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一些烈酒)'
     area: 近距
@@ -437,8 +464,9 @@
 - id: Discovery Torch
   name: 探索之触
   meta:
-    school: '塑能系 [光亮]'
-    level: '吟游诗人 2, 牧师/先知 3, 审判者 2'
+    school: evocation
+    level: 'bard 2, cleric/oracle 3, inquisitor 2'
+    descriptor: light
     castingTime: 1轮
     components: '语言, 姿势'
     area: 接触20尺半径或者40尺半径扩散，视施法者而定 (见下文)
@@ -454,8 +482,9 @@
 - id: Divine Arrow
   name: 神箭术
   meta:
-    school: '变化系 [善良]'
-    level: 圣骑士 2
+    school: transmutation
+    level: paladin 2
+    descriptor: good
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 接触
@@ -467,8 +496,9 @@
 - id: Dust Form
   name: 沙化形态
   meta:
-    school: 变化系 (变形)
-    level: '炼金术师 5, 牧师/先知 6, 德鲁伊 6, 女巫 6'
+    school: transmutation
+    subschool: polymorph
+    level: 'alchemist 5, cleric/oracle 6, druid 6, witch 6, psychic 6'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (少量墓碑或圣坛的上灰尘)'
     area: 个人
@@ -482,8 +512,8 @@
 - id: Effortless Armor
   name: 轻便盔甲
   meta:
-    school: 变化系
-    level: '牧师/先知 2, 审判者 2, 魔战士 2, 圣骑士 2, 游侠 2'
+    school: transmutation
+    level: 'cleric/oracle 2, inquisitor 2, magus 2, paladin 2, ranger 2, occultist 2, psychic 2'
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人
@@ -493,14 +523,16 @@
 - id: 'Endure Elements, Communal'
   name: 共用忍受环境
   meta:
-    level: '炼金术师 3, 牧师/先知 2, 德鲁伊 2, 圣骑士 2, 游侠 2, 术士/法师 2'
+    school: abjuration
+    level: 'alchemist 3, cleric/oracle 2, druid 2, paladin 2, ranger 2, sorcerer/wizard 2, psychic 2'
     target: 接触到的复数生物
   desc: 这个法术如同忍受环境 (Endure Elements) 一样工作，不过你可以以1小时为单位将持续时间分配给接触到的复数生物。
 - id: Energy Siege Shot
   name: 能量炮击
   meta:
-    school: '变化系 [可变]'
-    level: '术士/法师 5, 召唤师 5'
+    school: transmutation
+    level: 'sorcerer/wizard 5, summoner/unchained summoner 5, occultist 5'
+    descriptor: variable
     castingTime: 10分钟
     components: '语言, 姿势, 材料 (一颗沥青球)'
     area: 近距
@@ -522,16 +554,17 @@
 - id: 'Energy Siege Shot, Greater'
   name: 高等能量炮击
   meta:
-    school: '变化系 [可变]'
-    level: '术士/法师 6, 召唤师 6'
+    school: transmutation
+    level: 'sorcerer/wizard 6, summoner/unchained summoner 6, occultist 6'
+    descriptor: variable
     area: 近距
     target: 一台任何大小的攻城器械
   desc: 这个法术工作方式如同能量炮击 (Energy Siege Shot)，不过它可以作用于任何体积的攻城器械，而不只是大型的。
 - id: Fabricate Bullets
   name: 造弹术
   meta:
-    school: 变化系
-    level: 术士/法师 1
+    school: transmutation
+    level: sorcerer/wizard 1
     castingTime: 1轮
     components: '语言, 姿势, 材料 (价值2GP的一磅铅或其他软金属)'
     area: 接触
@@ -546,8 +579,10 @@
 - id: Fiery Shuriken
   name: 爆炎手里剑
   meta:
-    school: '咒法系 (创造) [火]'
-    level: 术士/法师 2
+    school: conjuration
+    subschool: creation
+    level: sorcerer/wizard 2
+    descriptor: fire
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一撮硫磺和一把价值2SP的手里剑)'
     area: 近距
@@ -564,8 +599,8 @@
 - id: Find Quarry
   name: 追寻猎物
   meta:
-    school: 预言系
-    level: '审判者 4, 游侠 4'
+    school: divination
+    level: 'inquisitor 4, ranger 4'
     castingTime: 标准动作
     components: '语言, 姿势, 法器'
     area: 个人
@@ -577,8 +612,8 @@
 - id: Flash Fire
   name: 闪光弹
   meta:
-    school: 变化系
-    level: '术士/法师 3, 女巫 3'
+    school: transmutation
+    level: 'sorcerer/wizard 3, witch 3'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一撮黄铁矿粉末)'
     area: 近距
@@ -593,8 +628,8 @@
 - id: Forest Friend
   name: 丛林之友
   meta:
-    school: 防护系
-    level: '德鲁伊 2, 游侠 2'
+    school: abjuration
+    level: 'druid 2, ranger 2'
     castingTime: 1轮
     components: '语言, 姿势, 材料 (少许粪便)'
     area: 近距
@@ -608,8 +643,9 @@
 - id: Frightful Aspect
   name: 骇人外形
   meta:
-    school: 变化系 (变形)
-    level: '牧师/先知 8, 德鲁伊 8, 术士/法师 8, 女巫 8'
+    school: transmutation
+    subschool: polymorph
+    level: 'cleric/oracle 8, druid 8, sorcerer/wizard 8, witch 8, psychic 8'
     castingTime: (原文没有，疑似为标动)
     components: '语言, 姿势, 材料 (一块蟾蜍皮)'
     area: 个人
@@ -623,8 +659,9 @@
 - id: Frost Fall
   name: 冰河瀑布
   meta:
-    school: 塑能系 (寒冷)
-    level: '德鲁伊 2, 术士/法师 2, 女巫 2'
+    school: evocation
+    level: 'druid 2, sorcerer/wizard 2, witch 2, occultist 2'
+    descriptor: cold
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 近距5尺半径爆发范围
@@ -637,8 +674,9 @@
 - id: Haunted Fey Aspect
   name: 精怪之相
   meta:
-    school: 幻术系 (五官幻觉)
-    level: '吟游诗人 0, 术士/法师 0'
+    school: illusion
+    subschool: glamer
+    level: 'bard 0, sorcerer/wizard 0, psychic 0, mesmerist 0, medium 0'
     castingTime: 标准动作
     components: 姿势
     area: 个人
@@ -650,8 +688,8 @@
 - id: Healing Thief
   name: 治疗窃取
   meta:
-    school: 死灵系
-    level: '术士/法师 3, 女巫 3'
+    school: necromancy
+    level: 'sorcerer/wizard 3, witch 3, occultist 3, psychic 3, mesmerist 1'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一小块被泪水沾湿的海绵)'
     area: 接触
@@ -668,8 +706,10 @@
 - id: Heroic Invocation
   name: 英雄祈祷
   meta:
-    school: '惑控系 (胁迫) [影响心灵]'
-    level: '术士/法师 9, 女巫 9'
+    school: enchantment
+    subschool: compulsion
+    level: 'sorcerer/wizard 9, witch 9, psychic 9'
+    descriptor: mind-affecting
     castingTime: 10分钟
     components: '语言, 姿势'
     area: 近距
@@ -684,8 +724,9 @@
 - id: Hostile Juxtaposition
   name: 恶意换位
   meta:
-    school: 咒法系 (传送)
-    level: '术士/法师 5, 召唤师 4, 女巫 5'
+    school: conjuration
+    subschool: teleportation
+    level: 'sorcerer/wizard 5, summoner 4, witch 5, psychic 5, unchained summoner 5'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一枚硬币)'
     area: 近距
@@ -701,7 +742,9 @@
 - id: 'Hostile Juxtaposition, Greater'
   name: 高等恶意换位
   meta:
-    level: '术士/法师 7, 召唤师 6, 女巫 7'
+    school: conjuration
+    subschool: teleportation
+    level: 'sorcerer/wizard 7, summoner/unchained summoner 6, witch 7, psychic 7, mesmerist 4'
     target: 每4等级一个生物
   desc: |-
     这个法术工作方式如同恶意换位 (Hostile Juxtaposition)，不过你可以每4施法者等级设定一个目标，或者你可以将一个体积比你大的生物设为目标。
@@ -710,8 +753,8 @@
 - id: Hostile Levitation
   name: 恶意浮空
   meta:
-    school: 变化系
-    level: '术士/法师 3, 女巫 3'
+    school: transmutation
+    level: 'sorcerer/wizard 3, witch 3, bloodrager 3, occultist 3, psychic 3, mesmerist 3, spiritualist 3, medium 2'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一块镶有磁石的皮革)'
     area: 近距
@@ -727,8 +770,9 @@
 - id: Illusion of Calm
   name: 平静幻象
   meta:
-    school: 幻术系 (虚假幻觉)
-    level: '炼金术师 1, 魔战士 1, 术士/法师 1'
+    school: illusion
+    subschool: figment
+    level: 'alchemist 1, magus 1, sorcerer/wizard 1, occultist 1, psychic 1, mesmerist 1'
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人
@@ -743,8 +787,8 @@
 - id: Instrument of Agony
   name: 痛苦刑具
   meta:
-    school: 变化系
-    level: '牧师/先知 2, 审判者 2'
+    school: transmutation
+    level: 'cleric/oracle 2, inquisitor 2'
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 接触
@@ -759,8 +803,9 @@
 - id: Jolting Portent
   name: 动荡征兆
   meta:
-    school: 塑能系 (电)
-    level: 牧师/先知 7
+    school: evocation
+    level: cleric/oracle 7
+    descriptor: electricity
     castingTime: 标准动作
     components: '语言, 姿势, 法器'
     area: 中距
@@ -776,8 +821,9 @@
 - id: Judgment Light
   name: 审判之光
   meta:
-    school: '塑能系 [光亮]'
-    level: 审判者 4
+    school: evocation
+    level: inquisitor 4
+    descriptor: light
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人半径30尺爆发范围
@@ -790,8 +836,8 @@
 - id: Jury-Rig
   name: 应急措施
   meta:
-    school: 变化系
-    level: '吟游诗人 1, 魔战士 1, 术士/法师 1, 召唤师 1, 女巫 1'
+    school: transmutation
+    level: 'bard 1, magus 1, sorcerer/wizard 1, summoner/unchained summoner 1, witch 1, occultist 1, psychic 1'
     castingTime: 标准动作
     components: (原味未注明)
     area: 接触
@@ -806,8 +852,8 @@
 - id: Kinetic Reverberation
   name: 反作用力
   meta:
-    school: 变化系
-    level: '炼金术师 2, 术士/法师 2'
+    school: transmutation
+    level: 'alchemist 2, sorcerer/wizard 2, psychic 2'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (橡树树液)'
     area: 接触
@@ -822,8 +868,10 @@
 - id: Languid Bomb Admixture
   name: 呆滞炸弹添加剂
   meta:
-    school: '惑控系 (胁迫) [影响心灵]'
-    level: 炼金术师 5
+    school: enchantment
+    subschool: compulsion
+    level: alchemist 5
+    descriptor: mind-affecting
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人
@@ -837,8 +885,8 @@
 - id: Liberating Command
   name: 脱困指令
   meta:
-    school: 变化系
-    level: '吟游诗人 1, 牧师/先知 1, 德鲁伊 1, 圣骑士 1, 游侠 1, 术士/法师 1'
+    school: transmutation
+    level: 'bard 1, cleric/oracle 1, druid 1, paladin 1, ranger 1, sorcerer/wizard 1, occultist 1, psychic 1, medium 1'
     castingTime: 直觉动作
     components: 语言
     area: 近距
@@ -853,8 +901,9 @@
 - id: Life Conduit
   name: 生命通道
   meta:
-    school: 咒法系 (医疗)
-    level: 召唤师 1
+    school: conjuration
+    subschool: healing
+    level: summoner/unchained summoner 1
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人
@@ -864,18 +913,23 @@
 - id: 'Life Conduit, Greater'
   name: 高等生命通道
   meta:
-    level: 召唤师 5
+    school: conjuration
+    subschool: healing
+    level: summoner/unchained summoner 5
   desc: 该法术如同生命通道 (Life Conduit) 一般作用，不过你可以以迅捷动作转移3d6点生命值。
 - id: 'Life Conduit, Improved'
   name: 进阶生命通道
   meta:
-    school: 召唤师 3
+    school: conjuration
+    subschool: healing
+    level: summoner/unchained summoner 3
   desc: 该法术如同生命通道 (Life Conduit) 一般作用，不过你可以以迅捷动作转移2d6点生命值。
 - id: Lightning Lash Bomb Admixture
   name: 电笞炸弹添加剂
   meta:
-    school: '塑能系 [闪电]'
-    level: 炼金术师 3
+    school: evocation
+    level: alchemist 3
+    descriptor: electricity
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人
@@ -889,8 +943,8 @@
 - id: Litany of Defense
   name: 防御祷言
   meta:
-    school: 变化系
-    level: '反圣骑士 2, 审判者 2, 圣骑士 2'
+    school: transmutation
+    level: 'antipaladin 2, inquisitor 2, paladin 2'
     castingTime: 迅捷动作
     components: '语言, 姿势, 法器'
     area: 个人
@@ -903,8 +957,10 @@
 - id: Litany of Eloquence
   name: 口才祷言
   meta:
-    school: '惑控系 (魅惑) [依赖语言]'
-    level: '反圣骑士 2, 审判者 3, 圣骑士 2'
+    school: enchantment
+    subschool: charm
+    level: 'antipaladin 2, inquisitor 3, paladin 2'
+    descriptor: 'language-dependent, mind-affecting'
     castingTime: 迅捷动作
     components: '语言, 姿势, 法器'
     area: 近距
@@ -918,8 +974,10 @@
 - id: Litany of Entanglement
   name: 纠缠祷言
   meta:
-    school: '咒法系 (召唤) [依赖语言]'
-    level: '反圣骑士 2, 审判者 3, 圣骑士 2'
+    school: conjuration
+    subschool: calling
+    level: 'antipaladin 2, inquisitor 3, paladin 2'
+    descriptor: language-dependent
     castingTime: 迅捷动作
     components: '语言, 姿势, 法器'
     area: 近距
@@ -934,8 +992,10 @@
 - id: Litany of Escape
   name: 脱逃祷言
   meta:
-    school: '咒法系 (传送) [依赖语言]'
-    level: '反圣骑士 3, 审判者 4, 圣骑士 3'
+    school: conjuration
+    subschool: teleportation
+    level: 'antipaladin 3, inquisitor 4, paladin 3'
+    descriptor: language-dependent
     castingTime: 迅捷动作
     components: '语言, 姿势, 法器'
     area: 近距
@@ -949,8 +1009,10 @@
 - id: Litany of Madness
   name: 疯狂祷言
   meta:
-    school: '惑控系 (魅惑) [依赖语言]'
-    level: '反圣骑士 4, 审判者 6'
+    school: enchantment
+    subschool: charm
+    level: 'antipaladin 4, inquisitor 6'
+    descriptor: 'language-dependent, mind-affecting'
     castingTime: 迅捷动作
     components: '语言, 姿势, 法器'
     area: 近距
@@ -964,8 +1026,9 @@
 - id: Litany of Righteousness
   name: 正义祷言
   meta:
-    school: '塑能系 [善良，依赖语言]'
-    level: '审判者 3, 圣骑士 2'
+    school: evocation
+    level: 'inquisitor 3, paladin 2'
+    descriptor: 'good, language-dependent'
     castingTime: 迅捷动作
     components: '语言, 姿势, 法器'
     area: 近距
@@ -981,8 +1044,8 @@
 - id: Litany of Sight
   name: 视野祷言
   meta:
-    school: 预言系
-    level: '反圣骑士 3, 审判者 4, 圣骑士 3'
+    school: divination
+    level: 'antipaladin 3, inquisitor 4, paladin 3'
     castingTime: 迅捷动作
     components: '语言, 姿势, 法器'
     area: 个人
@@ -995,8 +1058,10 @@
 - id: Litany of Sloth
   name: 怠惰祷言
   meta:
-    school: '惑控系 (胁迫) [依赖语言，影响心灵]'
-    level: '反圣骑士 1, 审判者 1, 圣骑士 1'
+    school: enchantment
+    subschool: compulsion
+    level: 'antipaladin 1, inquisitor 1, paladin 1'
+    descriptor: 'language-dependent, mind-affecting'
     castingTime: 迅捷动作
     components: '语言, 姿势, 法器'
     area: 近距
@@ -1010,8 +1075,9 @@
 - id: Litany of Thunder
   name: 雷霆祷言
   meta:
-    school: '塑能系 [依赖语言，音波]'
-    level: '反圣骑士 4, 审判者 5, 圣骑士 4'
+    school: evocation
+    level: 'antipaladin 4, inquisitor 5, paladin 4'
+    descriptor: 'language-dependent, sonic'
     castingTime: 迅捷动作
     components: '语言, 姿势, 法器'
     area: 近距
@@ -1025,8 +1091,9 @@
 - id: Litany of Vengeance
   name: 复仇祷言
   meta:
-    school: '变化系 [依赖语言]'
-    level: '反圣骑士 4, 审判者 5, 圣骑士 4'
+    school: transmutation
+    level: 'antipaladin 4, inquisitor 5, paladin 4'
+    descriptor: language-dependent
     castingTime: 迅捷动作
     components: '语言, 姿势, 法器'
     area: 近距
@@ -1040,8 +1107,8 @@
 - id: Litany of Warding
   name: 戒卫祷言
   meta:
-    school: 变化系
-    level: '反圣骑士 2, 审判者 3, 圣骑士 2'
+    school: transmutation
+    level: 'antipaladin 2, inquisitor 3, paladin 2'
     castingTime: 迅捷动作
     components: '语言, 姿势, 法器'
     area: 个人
@@ -1054,8 +1121,9 @@
 - id: Litany of Weakness
   name: 虚弱祷言
   meta:
-    school: '死灵系 [依赖语言]'
-    level: '反圣骑士 1, 审判者 1'
+    school: necromancy
+    level: 'antipaladin 1, inquisitor 1'
+    descriptor: language-dependent
     castingTime: 迅捷动作
     components: '语言, 姿势, 法器'
     area: 近距
@@ -1069,8 +1137,8 @@
 - id: Locate Weakness
   name: 弱点感知
   meta:
-    school: 预言系
-    level: '审判者 3, 魔战士 3, 游侠 2, 术士/法师 3, 女巫 3'
+    school: divination
+    level: 'inquisitor 3, magus 3, ranger 2, sorcerer/wizard 3, witch 3, bloodrager 3, occultist 3, psychic 3'
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (一颗风干的肉食动物眼球)'
     area: 个人
@@ -1082,8 +1150,10 @@
 - id: Lock Gaze
   name: 强迫凝视
   meta:
-    school: '惑控系 (胁迫) [影响心灵]'
-    level: '吟游诗人 1, 审判者 1, 魔战士 1, 术士/法师 1, 女巫 1'
+    school: enchantment
+    subschool: compulsion
+    level: 'bard 1, inquisitor 1, magus 1, sorcerer/wizard 1, witch 1, psychic 1, mesmerist 1'
+    descriptor: mind-affecting
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 近距
@@ -1100,8 +1170,8 @@
 - id: Longshot
   name: 长距射击
   meta:
-    school: 变化系
-    level: '炼金术师 1, 反圣骑士 1, 审判者 1, 魔战士 1, 圣骑士 1, 游侠 1, 术士/法师 1'
+    school: transmutation
+    level: 'alchemist 1, antipaladin 1, inquisitor 1, magus 1, paladin 1, ranger 1, sorcerer/wizard 1, occultist 1, psychic 1'
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (一小片箭羽)'
     area: 个人
@@ -1111,8 +1181,8 @@
 - id: Magic Siege Engine
   name: 魔化攻城器械
   meta:
-    school: 变化系
-    level: '反圣骑士 2, 牧师/先知 2, 审判者 2, 圣骑士 2, 术士/法师 2'
+    school: transmutation
+    level: 'antipaladin 2, cleric/oracle 2, inquisitor 2, paladin 2, sorcerer/wizard 2, occultist 2'
     castingTime: 标准动作
     components: '语言, 姿势, 法器'
     area: 接触
@@ -1127,8 +1197,8 @@
 - id: 'Magic Siege Engine, Greater'
   name: 高等魔化攻城器械
   meta:
-    school: 变化系
-    level: '反圣骑士 4, 牧师/先知 5, 审判者 5, 圣骑士 4, 术士/法师 4'
+    school: transmutation
+    level: 'antipaladin 4, cleric/oracle 5, inquisitor 4, paladin 4, sorcerer/wizard 4, occultist 4'
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (黑色粉末)'
     area: 近距
@@ -1142,20 +1212,23 @@
 - id: 'Mask Dweomer, Communal'
   name: 共用掩饰魔力
   meta:
-    level: 女巫 2
+    school: illusion
+    subschool: glamer
+    level: 'witch 2, occultist 2, psychic 2'
     target: 接触到的多名生物或多个物体
   desc: 该法术如同掩饰魔力 (Mask Dweomer) 一般作用，不过你可以将法术持续时间以1天为单位分给每个接触到的生物或物体。
 - id: 'Mind Blank, Communal'
   name: 共用心灵屏障
   meta:
-    level: '术士/法师 9, 女巫 9'
+    school: abjuration
+    level: 'sorcerer/wizard 9, witch 9, psychic 8'
     target: 接触到的复数生物
   desc: 这个法术工作方式如同心灵屏障 (Mind Blank)，不过你可以将持续时间以1小时为单位分配给接触到的复数生物。
 - id: Mirror Strike
   name: 镜像打击
   meta:
-    school: 变化系
-    level: '魔战士 1, 术士/法师 1'
+    school: transmutation
+    level: 'magus 1, sorcerer/wizard 1, bloodrager 1, psychic 1'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一片镜子碎片)'
     area: 个人
@@ -1170,8 +1243,10 @@
 - id: Moment of Greatness
   name: 光荣时刻
   meta:
-    school: '惑控系 (胁迫) [影响心灵]'
-    level: '吟游诗人 1, 牧师/先知 1, 术士/法师 1'
+    school: enchantment
+    subschool: compulsion
+    level: 'bard 1, cleric/oracle 1, sorcerer/wizard 1, psychic 1'
+    descriptor: mind-affecting
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (兔毛)'
     area: 50尺
@@ -1186,14 +1261,16 @@
 - id: 'Mount, Communal'
   name: 共用召唤坐骑
   meta:
-    school: '魔战士 2, 术士/法师 2, 召唤师 2, 女巫 2'
+    school: conjuration
+    subschool: summoning
+    level: 'magus 2, sorcerer/wizard 2, summoner/unchained summoner 2, witch 2, occultist 2'
     effect: 最多6匹坐骑
   desc: 这个法术工作方式如同召唤坐骑 (Mount)，不过你可以召唤最多6匹轻型马或矮种马，然后你可以将法术持续时间以2小时为单位分配给每一只召唤物。
 - id: Mutagenic Touch
   name: 突变之触
   meta:
-    school: 变化系
-    level: 炼金术师 4
+    school: transmutation
+    level: alchemist 4
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一整块指甲)'
     area: 接触
@@ -1205,8 +1282,8 @@
 - id: Named Bullet
   name: 指名狙杀
   meta:
-    school: 预言系
-    level: '审判者 4, 游侠 3, 术士/法师 4, 女巫 4'
+    school: divination
+    level: 'inquisitor 4, ranger 3, sorcerer/wizard 4, witch 4, psychic 4'
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (一件来自选定生物或生物类型的物品)'
     area: 接触
@@ -1222,13 +1299,15 @@
 - id: 'Named Bullet, Greater'
   name: 高等指名狙杀
   meta:
-    level: '审判者 6, 游侠 4, 术士/法师 6, 女巫 6'
+    school: divination
+    level: 'inquisitor 6, ranger 4, sorcerer/wizard 6, witch 6, psychic 6'
   desc: 这个法术工作方式如同指名狙杀 (Named Bullet)，但是它会造成每施法者等级2点的额外伤害 (最高40)。
 - id: Negative Reaction
   name: 忽视存在
   meta:
-    school: 幻术系
-    level: '吟游诗人 1, 魔战士 1, 术士/法师 1, 女巫 1'
+    school: illusion
+    subschool: glamer
+    level: 'bard 1, magus 1, sorcerer/wizard 1, witch 1, psychic 1, medium 1'
     castingTime: 标准动作
     components: 姿势
     area: 近距
@@ -1242,15 +1321,17 @@
 - id: 'Nondetection, Communal'
   name: 共用回避侦测
   meta:
-    level: '反圣骑士 4, 术士/法师 4'
+    school: abjuration
+    level: 'antipaladin 4, sorcerer/wizard 4, occultist 4, psychic 4, mesmerist 4'
     components: '语言, 姿势, 材料 (每个目标25GP的钻石尘)'
     target: 接触到的复数生物或物体
   desc: 这个法术工作方式如同回避侦测 (Nondetection)，但是你可以将持续时间以一小时为单位分配给接触到的复数生物或物体。
 - id: Obsidian Flow
   name: 黑曜之流
   meta:
-    school: '变化系 [土，火]'
-    level: '德鲁伊 4, 术士/法师 4, 召唤师 3'
+    school: transmutation
+    level: 'druid 4, sorcerer/wizard 4, summoner 3, unchained summoner 4'
+    descriptor: 'earth, fire'
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (一小片黑曜石)'
     area: 近距20尺半径爆发范围
@@ -1267,8 +1348,8 @@
 - id: Peacebond
   name: 和平条令
   meta:
-    school: 防护系
-    level: '审判者 1, 术士/法师 1, 女巫 1'
+    school: abjuration
+    level: 'inquisitor 1, sorcerer/wizard 1, witch 1, occultist 1, psychic 1'
     castingTime: 标准动作
     components: 姿势
     area: 近距
@@ -1282,8 +1363,9 @@
 - id: Pellet Blast
   name: 散弹爆发
   meta:
-    school: 咒法系 (创造)
-    level: '魔战士 4, 术士/法师 3, 召唤师 3'
+    school: conjuration
+    subschool: creation
+    level: 'magus 4, sorcerer/wizard 3, summoner/unchained summoner 3, bloodrager 4, psychic 3'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一份金属散弹，或寒铁、银、精金散弹；见下文)'
     area: 30尺锥形爆发范围
@@ -1297,8 +1379,9 @@
 - id: Phantom Chariot
   name: 魅影战车
   meta:
-    school: 咒法系 (创造)
-    level: '术士/法师 4, 召唤师 3'
+    school: conjuration
+    subschool: creation
+    level: 'sorcerer/wizard 4, summoner/unchained summoner 3, occultist 4, spiritualist 4'
     castingTime: 10分钟
     components: '语言, 姿势'
     effect: 一辆虚幻的战车以及拉车马队
@@ -1314,8 +1397,9 @@
 - id: Phantom Driver
   name: 幻影车夫
   meta:
-    school: 咒法系 (创造)
-    level: '吟游诗人 3, 术士/法师 3'
+    school: conjuration
+    subschool: creation
+    level: 'bard 3, sorcerer/wizard 3, occultist 3, spiritualist 3'
     castingTime: 10分钟
     components: '语言, 姿势'
     area: 10尺
@@ -1331,15 +1415,18 @@
 - id: 'Phantom Steed, Communal'
   name: 共用魅影驹
   meta:
-    level: '吟游诗人 4, 术士/法师 4, 召唤师 3'
+    school: conjuration
+    subschool: creation
+    level: 'bard 4, sorcerer/wizard 4, summoner/unchained summoner 3, occultist 4, spiritualist 4'
     area: 近距
     effect: 至多6匹半真实的马形生物
   desc: 该法术如同魅影驹 (Phantom Steed) 一般作用，不过你最多能够召唤6匹，并且以1小时为单位将持续时间分给每匹魅影驹。
 - id: Pilfering Hand
   name: 第三只手
   meta:
-    school: '塑能系 [力场]'
-    level: '吟游诗人 2, 牧师/先知 2, 魔战士 2, 术士/法师 2'
+    school: evocation
+    level: 'bard 2, cleric/oracle 2, magus 2, sorcerer/wizard 2, occultist 2, psychic 2, mesmerist 2, spiritualist 2, medium 2'
+    descriptor: force
     castingTime: 标准动作
     components: 姿势
     area: 近距
@@ -1355,7 +1442,8 @@
 - id: 'Protection from Arrows, Communal'
   name: 共用防护箭矢
   meta:
-    level: '炼金术师 3, 术士/法师 3, 召唤师 3'
+    school: abjuration
+    level: 'alchemist 3, sorcerer/wizard 3, summoner/unchained summoner 3, psychic 3'
     target: 接触到的复数生物
   desc: |-
     这个法术工作方式如同防护箭矢 (Protection from Arrows)，不过你可以以一个小时为单位将持续时间分配给接触到的复数生物。
@@ -1363,13 +1451,16 @@
 - id: 'Protection from Chaos, Communal'
   name: 共用防护混乱
   meta:
-    level: '牧师/先知 2, 审判者 2, 圣骑士 2, 术士/法师 2, 召唤师 2'
+    school: abjuration
+    level: 'cleric/oracle 2, inquisitor 2, paladin 2, sorcerer/wizard 2, summoner/unchained summoner 2'
+    descriptor: lawful
     target: 接触到的多个生物
   desc: 这个法术如同防护混乱 (Protection from Chaos) 一样工作，但你可以把持续时间以1分钟为单位划分给多个生物。
 - id: 'Protection from Energy, Communal'
   name: 共用防护能量伤害
   meta:
-    level: '牧师/先知 4, 德鲁伊 4, 审判者 4, 游侠 3, 术士/法师 4, 召唤师 4'
+    school: abjuration
+    level: 'cleric/oracle 4, druid 4, inquisitor 4, ranger 3, sorcerer/wizard 4, summoner/unchained summoner 4, psychic 4'
     target: 接触到的复数生物
   desc: |-
     这个法术工作方式如同防护能量伤害 (Protection from Energy)，不过你可以以10分钟为单位将持续时间分配给接触到的复数生物。
@@ -1377,26 +1468,33 @@
 - id: 'Protection from Evil, Communal'
   name: 共用防护邪恶
   meta:
-    level: '牧师/先知 2, 审判者 2, 圣骑士 2, 术士/法师 2, 召唤师 2'
+    school: abjuration
+    level: 'cleric/oracle 2, inquisitor 2, paladin 2, sorcerer/wizard 2, summoner/unchained summoner 2'
+    descriptor: good
     target: 接触到的多个生物
   desc: 这个法术如同防护邪恶 (Protection from Evil) 一样工作，但你可以把持续时间以1分钟为单位划分给多个生物。
 - id: 'Protection from Good, Communal'
   name: 共用防护善良
   meta:
-    level: '反圣骑士 2, 牧师/先知 2, 审判者 2, 圣骑士 2, 术士/法师 2, 召唤师 2'
+    school: abjuration
+    level: 'antipaladin 2, cleric/oracle 2, inquisitor 2, sorcerer/wizard 2, summoner/unchained summoner 2'
+    descriptor: evil
     target: 接触到的多个生物
   desc: 这个法术如同防护善良 (Protection from Good) 一样工作，但你可以把持续时间以1分钟为单位划分给多个生物。
 - id: 'Protection from Law, Communal'
   name: 共用防护守序
   meta:
-    level: '反圣骑士 2, 牧师/先知 2, 审判者 2, 圣骑士 2, 术士/法师 2, 召唤师 2'
+    school: abjuration
+    level: 'antipaladin 2, cleric/oracle 2, inquisitor 2, sorcerer/wizard 2, summoner/unchained summoner 2'
+    descriptor: evil
     target: 接触到的多个生物
   desc: 这个法术如同防护守序 (Protection from Law) 一样工作，但你可以把持续时间以1分钟为单位划分给多个生物。
 - id: Pup Shape
   name: 动物萌化
   meta:
-    school: 变化系 (变形)
-    level: '德鲁伊 3, 术士/法师 3, 女巫 3'
+    school: transmutation
+    subschool: polymorph
+    level: 'druid 3, sorcerer/wizard 3, witch 3'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一个布偶)'
     area: 近距
@@ -1412,8 +1510,10 @@
 - id: Qualm
   name: 顾虑重重
   meta:
-    school: '惑控系 (胁迫) [影响心灵]'
-    level: '吟游诗人 2, 审判者 2, 术士/法师 2, 女巫 2'
+    school: enchantment
+    subschool: compulsion
+    level: 'bard 2, inquisitor 2, sorcerer/wizard 2, witch 2, psychic 2, mesmerist 2, medium 2'
+    descriptor: mind-affecting
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 近距
@@ -1428,8 +1528,8 @@
 - id: Recoil Fire
   name: 擦枪走火
   meta:
-    school: 变化系
-    level: '术士/法师 2, 女巫 2'
+    school: transmutation
+    level: 'sorcerer/wizard 2, witch 2'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (骡子蹄子)'
     area: 近距
@@ -1444,8 +1544,8 @@
 - id: Reinforce Armaments
   name: 强固武装
   meta:
-    school: 变化系
-    level: '牧师/先知 1, 魔战士 1, 术士/法师 1, 女巫 1'
+    school: transmutation
+    level: 'cleric/oracle 1, magus 1, sorcerer/wizard 1, witch 1, occultist 1'
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (一根金属刺)'
     area: 接触
@@ -1461,14 +1561,16 @@
 - id: 'Reinforce Armaments, Communal'
   name: 共用强固武装
   meta:
-    level: '牧师/先知 2, 魔战士 2, 术士/法师 2, 女巫 2'
+    school: transmutation
+    level: 'cleric/oracle 2, magus 2, sorcerer/wizard 2, witch 2, occultist 2'
     target: 接触到的复数武器或盔甲
   desc: 这个法术工作方式如同强固武装 (Reinforce Armaments)，不过你可以将持续时间以10分钟为单位分配给复数物体。
 - id: Reloading Hands
   name: 自动装填
   meta:
-    school: 咒法系 (创造)
-    level: '魔战士 2, 游侠 2, 术士/法师 2'
+    school: conjuration
+    subschool: creation
+    level: 'magus 2, ranger 2, sorcerer/wizard 2'
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 接触
@@ -1483,8 +1585,8 @@
 - id: Resinous Skin
   name: 树脂皮肤
   meta:
-    school: 变化系
-    level: '炼金术师 3, 德鲁伊 3, 术士/法师 3'
+    school: transmutation
+    level: 'alchemist 3, druid 3, sorcerer/wizard 3, bloodrager 3, psychic 3'
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人
@@ -1500,14 +1602,16 @@
 - id: 'Resist Energy, Communal'
   name: 共用抵抗能量伤害
   meta:
-    level: '炼金术师 3, 牧师/先知 3, 德鲁伊 3, 审判者 3, 圣骑士 3, 游侠 3, 术士/法师 3, 召唤师 3'
+    school: abjuration
+    level: 'alchemist 3, cleric/oracle 3, druid 3, inquisitor 3, paladin 3, ranger 3, sorcerer/wizard 3, summoner/unchained summoner 3, occultist 3, psychic 3'
     target: 接触到的复数生物
   desc: 这个法术的工作方式如同抵抗能量伤害 (resist energy)，不过你可以将持续时间以10分钟为单位分配给接触到的复数生物。
 - id: Returning Weapon
   name: 回力武器
   meta:
-    school: 咒法系 (传送)
-    level: '吟游诗人 2, 牧师/先知 2, 审判者 1, 魔战士 1, 游侠 1, 术士/法师 2, 女巫 2'
+    school: conjuration
+    subschool: teleportation
+    level: 'bard 2, cleric/oracle 2, inquisitor 1, magus 1, ranger 1, sorcerer/wizard 2, witch 2, bloodrager 1, occultist 1, psychic 2'
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 近距
@@ -1519,14 +1623,16 @@
 - id: 'Returning Weapon, Communal'
   name: 共用回力武器
   meta:
-    level: '吟游诗人 3, 牧师/先知 3, 审判者 2, 魔战士 2, 游侠 2, 术士/法师 3, 女巫 3'
+    school: conjuration
+    subschool: teleportation
+    level: 'bard 3, cleric/oracle 3, inquisitor 2, magus 2, ranger 2, sorcerer/wizard 3, witch 3, occultist 2, psychic 3'
     target: 接触到的复数武器
   desc: 这个法术工作方式如同回力武器 (Returning Weapon)，但你可以把持续时间以1分钟为单位划分给多把武器。
 - id: Ricochet Shot
   name: 一箭双雕
   meta:
-    school: 塑能系
-    level: '游侠 2, 术士/法师 2'
+    school: evocation
+    level: 'ranger 2, sorcerer/wizard 2'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一根叉骨)'
     area: 近距
@@ -1544,8 +1650,8 @@
 - id: See Alignment
   name: 检视阵营
   meta:
-    school: 预言系
-    level: '炼金术师 1, 吟游诗人 1, 术士/法师 1'
+    school: divination
+    level: 'alchemist 1, bard 1, sorcerer/wizard 1, psychic 1'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一颗蝾螈眼球)'
     area: 个人
@@ -1558,8 +1664,9 @@
 - id: Shadow Bomb Admixture
   name: 暗影炸弹添加剂
   meta:
-    school: 咒法系 (创造)
-    level: 炼金术师 2
+    school: conjuration
+    subschool: creation
+    level: alchemist 2
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人
@@ -1573,14 +1680,16 @@
 - id: 'Share Language, Communal'
   name: 共用共享语言
   meta:
-    level: '吟游诗人 2, 牧师/先知 3, 术士/法师 3'
+    school: divination
+    level: 'bard 2, cleric/oracle 3, druid 3, sorcerer/wizard 3, occultist 3, psychic 2, mesmerist 2'
     target: 接触到的复数生物
   desc: 这个法术工作方式如同共享语言 (Share Language)，但你可以将持续时间以一小时为单位分配给接触到的复数生物。
 - id: Shock Shield
   name: 冲击屏障
   meta:
-    school: '防护系 [电，力场]'
-    level: '炼金术师 1, 魔战士 1, 术士/法师 1'
+    school: abjuration
+    level: 'alchemist 1, magus 1, sorcerer/wizard 1, bloodrager 1, occultist 1'
+    descriptor: 'electricity, force'
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人
@@ -1593,8 +1702,10 @@
 - id: Shocking Image
   name: 幻影爆碎
   meta:
-    school: '幻术系 (虚假幻觉) [电]'
-    level: '吟游诗人 4, 术士/法师 4'
+    school: illusion
+    subschool: figment
+    level: 'bard 4, sorcerer/wizard 4, bloodrager 4, occultist 4, mesmerist 4'
+    descriptor: electricity
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人
@@ -1609,8 +1720,8 @@
 - id: Siege of Trees
   name: 争战林木
   meta:
-    school: 变化系
-    level: 德鲁伊 7
+    school: transmutation
+    level: druid 7
     castingTime: 10分钟
     area: 近距
     target: 每3个施法者等级1株大型植物
@@ -1621,8 +1732,8 @@
 - id: 'Siege of Trees, Greater'
   name: 高等争战林木
   meta:
-    school: 变化系
-    level: 德鲁伊 9
+    school: transmutation
+    level: druid 9
     target: 每3个施法者等级一株巨型，超大型或大型植物
     duration: 1小时/等级 (可解消)
     saving: 无
@@ -1631,26 +1742,30 @@
 - id: 'Spell Immunity, Communal'
   name: 共用法术免疫
   meta:
-    level: '牧师/先知 5, 审判者 5'
+    school: abjuration
+    level: 'cleric/oracle 5, inquisitor 5, occultist 5, psychic 5'
     target: 接触到的复数生物
   desc: 这个法术工作方式如同法术免疫 (Spell Immunity)，不过你可以将持续时间以10分钟为单位分配给接触到的复数生物。
 - id: 'Spell Immunity, Greater Communal'
   name: 共用高等法术免疫
   meta:
-    level: 牧师/先知 9
+    school: abjuration
+    level: 'cleric/oracle 9, psychic 9'
     target: 接触到的复数生物
   desc: '这个法术工作方式如同高等法术免疫 (Spell Immunity, Greater)，不过你可以将持续时间以10分钟为单位分配给接触到的复数生物。'
 - id: 'Spider Climb, Communal'
   name: 共用蛛行术
   meta:
-    level: '炼金术师 3, 德鲁伊 3, 术士/法师 3, 召唤师 3'
+    school: transmutation
+    level: 'alchemist 3, druid 3, sorcerer/wizard 3, summoner/unchained summoner 3, occultist 3, psychic 3'
     target: 接触到的复数生物
   desc: 这个法术工作方式如同蛛行术 (Spider Climb)，不过你可以将持续时间以10分钟为单位分配给接触到的复数生物。
 - id: Spontaneous Immolation
   name: 献祭
   meta:
-    school: '塑能系 [火]'
-    level: 术士/法师 2
+    school: evocation
+    level: 'sorcerer/wizard 2, psychic 2'
+    descriptor: fire
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一撮硝石)'
     area: 中距
@@ -1664,8 +1779,8 @@
 - id: Stabilize Powder
   name: 火药稳定
   meta:
-    school: 变化系
-    level: '术士/法师 2, 女巫 2'
+    school: transmutation
+    level: 'sorcerer/wizard 2, witch 2'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (少量烈酒)'
     area: 近距
@@ -1679,7 +1794,8 @@
 - id: 'Stoneskin, Communal'
   name: 共用石肤术
   meta:
-    level: '炼金术师 5, 德鲁伊 6, 审判者 5, 术士/法师 5, 召唤师 4'
+    school: abjuration
+    level: 'alchemist 5, druid 6, inquisitor 5, sorcerer/wizard 5, summoner 4, psychic 5, unchained summoner 5'
     components: '语言, 姿势, 材料 (花岗岩和钻石粉尘，每个受影响生物100GP)'
     target: 接触到的生物
   desc: |-
@@ -1688,8 +1804,8 @@
 - id: Summoner Conduit
   name: 灵魂连接
   meta:
-    school: 死灵系
-    level: '牧师/先知 4, 术士/法师 5, 召唤师 4, 女巫 5'
+    school: necromancy
+    level: 'cleric/oracle 4, sorcerer/wizard 5, summoner/unchained summoner 4, witch 5, occultist 4, psychic 5'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (两只苍蝇)'
     area: 近距
@@ -1704,8 +1820,9 @@
 - id: Sun Metal
   name: 阳炎武器
   meta:
-    school: '变化系 [火]'
-    level: '牧师/先知 1, 圣骑士 1, 游侠 1'
+    school: transmutation
+    level: 'cleric/oracle 1, paladin 1, ranger 1'
+    descriptor: fire
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 接触
@@ -1722,8 +1839,9 @@
 - id: Symbol of Striking
   name: 打击徽记
   meta:
-    school: 幻术系 (幽影幻觉)
-    level: '牧师/先知 5, 魔战士 5, 术士/法师 5, 女巫 5'
+    school: illusion
+    subschool: shadow
+    level: 'cleric/oracle 5, magus 5, sorcerer/wizard 5, witch 5'
     components: '语言, 姿势, 材料 (一把价值至少300gp的精制品武器)'
     saving: 意志，通过则减半；见下文
     resistance: 可，见下文
@@ -1740,8 +1858,10 @@
 - id: Tactical Acumen
   name: 战术敏锐
   meta:
-    school: '惑控系 (胁迫) [影响心灵]'
-    level: '吟游诗人 2, 审判者 2, 魔战士 2, 圣骑士 1, 术士/法师 2'
+    school: enchantment
+    subschool: compulsion
+    level: 'bard 2, inquisitor 2, magus 2, paladin 1, sorcerer/wizard 2, occultist 2, psychic 2, medium 2'
+    descriptor: mind-affecting
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (一小片地图)'
     area: 30尺施放者以及以施法者为中心30尺半径爆发范围内的所有盟友
@@ -1752,8 +1872,9 @@
 - id: Tar Pool
   name: 沥青池
   meta:
-    school: '变化系 [土，火]'
-    level: '德鲁伊 6, 术士/法师 6, 召唤师 5'
+    school: transmutation
+    level: 'druid 6, sorcerer/wizard 6, summoner 5, unchained summoner 6'
+    descriptor: 'earth, fire'
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (一颗硬沥青球)'
     area: 近距20尺爆发范围
@@ -1773,8 +1894,8 @@
 - id: Targeted Bomb Admixture
   name: 精确炸弹添加剂
   meta:
-    school: 变化系
-    level: 炼金术师 1
+    school: transmutation
+    level: alchemist 1
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人
@@ -1786,8 +1907,8 @@
 - id: Telekinetic Assembly
   name: 念动拼装
   meta:
-    school: 变化系
-    level: '魔战士 2, 术士/法师 2'
+    school: transmutation
+    level: 'magus 2, sorcerer/wizard 2, occultist 2, psychic 2'
     castingTime: 1分钟
     components: '语言, 姿势，器材 (一架目标攻城器械的迷你模型，价值10GP)'
     area: 近距
@@ -1802,8 +1923,9 @@
 - id: Telekinetic Charge
   name: 念动冲锋
   meta:
-    school: '塑能系 [力场]'
-    level: 术士/法师 4
+    school: evocation
+    level: 'sorcerer/wizard 4, bloodrager 4, psychic 4, spiritualist 4'
+    descriptor: force
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 近距
@@ -1819,8 +1941,10 @@
 - id: Terrain Bond
   name: 地形联结
   meta:
-    school: 惑控系
-    level: 游侠 4
+    school: enchantment
+    subschool: compulsion
+    level: ranger 4
+    descriptor: mind-affecting
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一撮从你最偏好的地形中带来的土壤)'
     area: 个人
@@ -1832,8 +1956,8 @@
 - id: Thunder Fire
   name: 雷鸣枪击
   meta:
-    school: 变化系
-    level: '吟游诗人 2, 术士/法师 2, 女巫 2'
+    school: transmutation
+    level: 'bard 2, sorcerer/wizard 2, witch 2'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一小块黄铁矿)'
     area: 近距
@@ -1848,14 +1972,15 @@
 - id: 'Tongues, Communal'
   name: 共用巧言术
   meta:
-    level: '炼金术师 4, 吟游诗人 3, 牧师/先知 5, 术士/法师 4, 召唤师 4, 女巫 4'
+    school: divination
+    level: 'alchemist 4, bard 3, cleric/oracle 5, sorcerer/wizard 4, summoner/unchained summoner 4, witch 4, psychic 4, mesmerist 3'
     target: 接触到的复数生物
   desc: 这个法术工作方式如同巧言术 (Tongues)，不过你可以将持续时间以10分钟为单位分配给接触到的复数生物。
 - id: Touch Injection
   name: 接触注射
   meta:
-    school: 变化系
-    level: '炼金术师 2, 术士/法师 3'
+    school: transmutation
+    level: 'alchemist 2, sorcerer/wizard 3, psychic 3'
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人
@@ -1869,8 +1994,8 @@
 - id: Twisted Space
   name: 扭曲空间
   meta:
-    school: 变化系
-    level: '魔战士 2, 术士/法师 2, 召唤师 2'
+    school: transmutation
+    level: 'magus 2, sorcerer/wizard 2, summoner/unchained summoner 2, psychic 2'
     castingTime: 标准动作
     components: '语言, 姿势, 材料 (一个铁丝圈)'
     area: 近距
@@ -1884,8 +2009,8 @@
 - id: Unerring Weapon
   name: 精准武器
   meta:
-    school: 变化系
-    level: '审判者 1, 魔战士 1, 术士/法师 1, 女巫 1'
+    school: transmutation
+    level: 'inquisitor 1, magus 1, sorcerer/wizard 1, witch 1, bloodrager 1, occultist 2, psychic 1, medium 1'
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 近距
@@ -1901,8 +2026,9 @@
 - id: Viper Bomb Admixture
   name: 毒蛇炸弹添加剂
   meta:
-    school: 咒法系 (创造)
-    level: 炼金术师 4
+    school: conjuration
+    subschool: creation
+    level: alchemist 4
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 个人
@@ -1914,8 +2040,9 @@
 - id: Walk through Space
   name: 空间跨步
   meta:
-    school: 咒法系 (传送)
-    level: '炼金术师 6, 魔战士 6, 术士/法师 7, 召唤师 6, 女巫 7'
+    school: conjuration
+    subschool: teleportation
+    level: 'alchemist 6, magus 6, sorcerer/wizard 7, summoner/unchained summoner 6, witch 7, psychic 7'
     castingTime: (原文未注明，疑似为标动)
     components: '语言, 姿势, 材料 (一颗鹪鹩鸟的蛋)'
     area: 个人
@@ -1929,8 +2056,8 @@
 - id: Warding Weapon
   name: 戒卫武器
   meta:
-    school: 防护系
-    level: '魔战士 1, 术士/法师 2, 召唤师 2'
+    school: abjuration
+    level: 'magus 1, sorcerer/wizard 2, summoner/unchained summoner 2, bloodrager 1, occultist 1, psychic 2'
     castingTime: 标准动作
     components: '语言, 姿势，器材 (一把你擅长并持有的近战武器)'
     area: 个人
@@ -1944,14 +2071,16 @@
 - id: 'Water Walk, Communal'
   name: 共用水上行走
   meta:
-    level: '牧师/先知 4, 游侠 4'
+    school: transmutation
+    level: 'cleric/oracle 2, ranger 2, psychic 4'
+    descriptor: water
     target: 接触到的复数生物
   desc: 这个法术工作方式如同水上行走 (water walk)，不过你可以将持续时间以10分钟为单位分配给接触到的复数生物。
 - id: Weaken Powder
   name: 弱化火药
   meta:
-    school: 变化系
-    level: '德鲁伊 1, 术士/法师 1, 女巫 1'
+    school: transmutation
+    level: 'druid 1, sorcerer/wizard 1, witch 1'
     castingTime: 标准动作
     components: '语言, 姿势, 材料/法器 (一个空的纸制子弹盒)'
     area: 近距
@@ -1965,8 +2094,8 @@
 - id: Wilderness Soldiers
   name: 荒野兵团
   meta:
-    school: 变化系
-    level: '德鲁伊 2, 游侠 2'
+    school: transmutation
+    level: 'druid 2, ranger 2'
     castingTime: 标准动作
     components: '语言, 姿势'
     area: 30尺以你为中心，30尺半径弥漫范围
@@ -1980,8 +2109,8 @@
 - id: Wreath of Blades
   name: 剑刃花环
   meta:
-    school: 防护系
-    level: '魔战士 4, 术士/法师 5, 召唤师 5, 女巫 5'
+    school: abjuration
+    level: 'magus 4, sorcerer/wizard 5, summoner/unchained summoner 5, witch 5, bloodrager 4, occultist 4, psychic 5'
     castingTime: 标准动作
     components: '语言, 姿势，器材 (四把秘银匕首，每把价值502GP)'
     area: 个人以你为中心5尺弥散范围

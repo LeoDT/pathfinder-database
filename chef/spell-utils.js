@@ -1,3 +1,5 @@
+import { parse } from 'https://deno.land/std@0.85.0/encoding/csv.ts';
+
 export const spellMetaKeyTranslates = {
   学派: 'school',
   环位: 'level',
@@ -18,6 +20,8 @@ export const spellMetaKeyTranslates = {
   豁免: 'saving',
   法术抗力: 'resistance',
 };
+
+const skipMetaFromTexts = ['school', 'level'];
 
 export const metaKeyRegex = new RegExp(
   `^(${Object.keys(spellMetaKeyTranslates).join('|')})(：|\\s)`
@@ -41,6 +45,10 @@ export function spellMetaFromTexts(texts) {
     }
 
     if (key) {
+      if (skipMetaFromTexts.includes(key)) {
+        return;
+      }
+
       if (meta[key]) {
         // very rare case
         meta[key] += moreText;
@@ -55,4 +63,55 @@ export function spellMetaFromTexts(texts) {
   });
 
   return meta;
+}
+
+export async function initSpellIndex() {
+  const f = await Deno.readTextFile('./chef/data/spell_full_20200331.csv');
+  const rows = await parse(f, { skipFirstRow: true });
+
+  const index = new Map();
+  rows.forEach((r) => {
+    index.set(r.name.toLowerCase(), r);
+  });
+
+  return index;
+}
+
+export function spellMetaFromIndex(index, id) {
+  const spell = index.get(id.toLowerCase());
+
+  if (!spell) {
+    throw Error(`no such spell ${id}`);
+  }
+
+  const s = {
+    school: spell.school,
+  };
+
+  if (spell.subschool) {
+    s.subschool = spell.subschool;
+  }
+
+  s.level = spell.spell_level;
+
+  if (spell.descriptor) {
+    s.descriptor = spell.descriptor;
+  }
+
+  return s;
+}
+
+export function spellLevelFromText(text) {
+  return text
+    .split(', ')
+    .map((cl) => {
+      let [clas, level] = cl.split(' ');
+
+      if (clas.indexOf('/') !== -1) {
+        return clas.split('/').map((c) => [c, level]);
+      }
+
+      return [[clas, level]];
+    })
+    .flat();
 }

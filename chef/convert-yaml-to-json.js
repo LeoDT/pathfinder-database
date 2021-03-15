@@ -5,6 +5,7 @@ import {
 } from 'https://deno.land/std@0.85.0/path/mod.ts';
 
 import { compose } from './utils.js';
+import { spellLevelFromText } from './spell-utils.js';
 
 function featPatchMap(items) {
   return items.filter((item) => {
@@ -40,6 +41,22 @@ const converters = [
     dir: 'spells',
     map: mergeMap,
     done: mergeDone,
+    produceMore: (spells) => {
+      const spellByClassLevel = {};
+
+      spells.forEach((s) => {
+        const cls = spellLevelFromText(s.meta.level);
+
+        cls.forEach(([c, l]) => {
+          spellByClassLevel[c] = spellByClassLevel[c] || {};
+          spellByClassLevel[c][l] = spellByClassLevel[c][l] || [];
+
+          spellByClassLevel[c][l].push(s.id);
+        });
+      });
+
+      return [{ name: 'spell-by-class-level', content: spellByClassLevel }];
+    },
   },
   {
     dir: 'feats',
@@ -126,23 +143,33 @@ async function convertFile(fileEntry, converter) {
 const results = [];
 
 for await (const entry of Deno.readDir(baseDir)) {
-  if (entry.isDirectory) {
-    const converter = converters.find((c) => c.dir === entry.name);
+  let converter = null;
+  let name = null;
+  let content = null;
 
-    results.push({
-      name: entry.name,
-      content: await convertDir(entry, converter),
-    });
+  if (entry.isDirectory) {
+    converter = converters.find((c) => c.dir === entry.name);
+    name = entry.name;
+    content = await convertDir(entry, converter);
   }
 
   if (entry.isFile) {
-    const converter = converters.find((c) => c.file === pathBasename(entry.name, '.yaml'));
-
-    results.push({
-      name: pathBasename(entry.name, '.yaml'),
-      content: await convertFile(entry, converter),
-    });
+    converter = converters.find((c) => c.file === pathBasename(entry.name, '.yaml'));
+    name = pathBasename(entry.name, '.yaml');
+    content = await convertFile(entry, converter);
   }
+
+  if (converter?.produceMore) {
+    converter.produceMore(content)?.forEach((r) => results.push(r));
+  }
+
+  if (name && content) {
+    results.push({ name, content });
+  }
+
+  converter = null;
+  name = null;
+  content = null;
 }
 
 try {

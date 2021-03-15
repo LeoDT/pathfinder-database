@@ -3,12 +3,18 @@ import { stringify } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
 
 import { removeNewlines, removeSpaces } from './utils.js';
 import { convertTable } from './html-utils.js';
-import { spellMetaFromTexts, startsWithMetaKey } from './spell-utils.js';
+import {
+  spellMetaFromTexts,
+  startsWithMetaKey,
+  initSpellIndex,
+  spellMetaFromIndex,
+} from './spell-utils.js';
 
 const books = ['crb', 'arg', 'apg', 'uc', 'um', 'acg'];
 
 const spellNameRegex = /^[\S]+?\s?[(|（][a-zA-Z\s',\-\/]+[)）]$/;
 const dumbSpellNameRegex = /^[a-zA-Z\s',`]+$/;
+const spellIndex = await initSpellIndex();
 
 for (const book of books) {
   const contents = await Deno.readTextFile(`converted/Spell ${book.toUpperCase()}.html`);
@@ -76,7 +82,7 @@ for (const book of books) {
     }
 
     const nameAndId = nameElWrapper.text();
-    const meta = metaEl
+    const metaTexts = metaEl
       .map((el) => removeSpaces(removeNewlines($(el).text())).trim())
       .filter((t) => t);
 
@@ -97,15 +103,21 @@ for (const book of books) {
     }
     const desc = descriptionRows.join('\n').trim();
 
-    const [name, id] = nameAndId
+    let [name, id] = nameAndId
       .replace(/(\r\n|\n|\r)/gi, '')
-      .replace(/(.*?)\s?[(|（](.*?)[)）]/, '$1+$2')
+      .replace(/(.*?)\s?[(（](.*?)[)）]/, '$1+$2')
       .split('+');
+
+    // spell name in arg is messed up
+    id = id.replace(/\s?\[.*?\]$/, '').replace(', 又译９命', '');
 
     success.push({
       id,
       name,
-      meta: spellMetaFromTexts(meta),
+      meta: {
+        ...spellMetaFromIndex(spellIndex, id),
+        ...spellMetaFromTexts(metaTexts),
+      },
       desc,
     });
   }
