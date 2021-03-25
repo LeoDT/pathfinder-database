@@ -48,10 +48,19 @@ const converters = [
         const cls = spellLevelFromText(s.meta.level);
 
         cls.forEach(([c, l]) => {
-          spellByClassLevel[c] = spellByClassLevel[c] || {};
-          spellByClassLevel[c][l] = spellByClassLevel[c][l] || [];
+          if (!spellByClassLevel[c]) {
+            spellByClassLevel[c] = Array(10)
+              .fill(1)
+              .map(() => []);
+          }
 
-          spellByClassLevel[c][l].push(s.id);
+          const level = parseInt(l);
+
+          if (!spellByClassLevel[c][level]) {
+            spellByClassLevel[c][level] = [];
+          }
+
+          spellByClassLevel[c][level].push(s.id);
         });
       });
 
