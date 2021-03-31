@@ -8,6 +8,18 @@ export function range(n) {
   return r;
 }
 
+export function pick(obj, keys) {
+  const newObj = {};
+
+  Object.keys(obj).forEach((k) => {
+    if (keys.includes(k)) {
+      newObj[k] = obj[k];
+    }
+  });
+
+  return newObj;
+}
+
 export function removeNewlines(text) {
   return text.replace(/(\r\n|\n|\r)/g, '').trim();
 }

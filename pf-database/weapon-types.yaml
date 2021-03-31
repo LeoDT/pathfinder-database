@@ -1,0 +1,2949 @@
+- id: Gauntlet
+  name: 铁手套
+  desc: 这件铁手套让你在徒手打击时造成致命伤害。铁手套的打击的其他方面则视为徒手攻击。这里的价格和重量是单件的铁手套，中甲和重甲（胸甲除外）自带铁手套。铁手套无法被卸武。
+  meta:
+    training: simple
+    category: unarmed attacks
+    cost: 2 gp
+    damage: 1d3
+    critical: x2
+    weight: 1
+    damageType: B
+- id: Unarmed strike
+  name: 徒手打击
+  desc: 徒手打击是诸如拳击或脚踢等攻击者未使用武器而做出的攻击。中型体型的角色的徒手打击造成1d3点非致命伤害，小型体型则为1d2点。一名武僧或任何拥有“精通徒手打击”专长的角色可以根据自己的选择，以徒手打击造成致命或非致命伤害。徒手打击的伤害在获得加值的效果或状况下，可以视为武器伤害。徒手打击永远被视为轻武器。因此你能通过“武器娴熟”专长在徒手打击的攻击检定中，以敏捷修正取代力量修正。徒手打击不被视为天生武器。徒手打击无法被卸武。
+  meta:
+    training: simple
+    category: unarmed attacks
+    damage: 1d3
+    critical: x2
+    damageType: B
+    special:
+      - nonlethal
+- id: Battle aspergillum
+  name: 圣水花洒
+  desc: 以神职者常用来泼洒圣水的工具为名，这把轻锤前端中空、并有连通其中空间的活塞。武器前端会在锤击生物时从小孔中喷出圣水；会被圣水伤害到的生物将因此而在武器通常效果之外，受到1点额外伤害（非魔法的圣水花洒能以此方式对虚体生物造成圣水伤害，尽管武器本身无法伤害虚体）。5次命中之后，圣水耗尽并需要灌装。灌装圣水是一个标准动作，并会引发藉机攻击（如同饮药）。灌装好的圣水花洒通常竖直持握，避免圣水因武器颤动而漏出。
+  meta:
+    training: simple
+    category: light
+    cost: 5 gp
+    damage: 1d6
+    critical: x2
+    weight: 4
+    damageType: B
+- id: Brass knife
+  name: ''
+  desc: ''
+  meta:
+    training: simple
+    category: light
+    cost: 2 gp
+    damage: 1d4
+    critical: 19-20/x2
+    range: 10
+    weight: 1
+    damageType: P or S
+    special:
+      - fragile
+- id: Brass knuckles
+  name: 黄铜指虎
+  desc: 这件武器紧贴指关节，允许你通过徒手攻击造成致命伤害。你能用装备着黄铜指虎的手抓握但非持用一件武器或其他物品。若成功通过DC为“10+法术环级”的专注检定，你能用装备着黄铜指虎的手来完成施法所需的姿势成分。武僧擅长黄铜指虎。黄铜指虎无法被卸武。
+  meta:
+    training: simple
+    category: light
+    cost: 1 gp
+    damage: 1d3
+    critical: x2
+    weight: 1
+    damageType: B
+    special:
+      - monk
+- id: Cestus
+  name: 拳套
+  desc: 拳套是包裹着持用者前臂直至中指的皮制或粗布手套。这件近身格斗武器用指部附近的金属片加以强化，并常在手背和腕侧加装凶恶的棘刺。装备拳套时你视为有武装，徒手打击造成致命伤害。若你擅长拳套，还能让徒手打击造成钝击或穿刺伤害。武僧擅长拳套。装备拳套时你的手指大部分裸露，因此能持用其他武器或拿取物品，但拳套对你手指灵活性的限制使你用这只手完成各项依赖于准确性的工作时检定-2（譬如开锁）。拳套无法被卸武。
+  meta:
+    training: simple
+    category: light
+    cost: 5 gp
+    damage: 1d4
+    critical: 19-20/x2
+    weight: 1
+    damageType: B or P
+    special:
+      - monk
+- id: Dagger
+  name: 匕首
+  desc: 匕首是一把战斗用小刀。它的锋刃长不及1尺，可曲可直，可单刃可双刃。匕首的设计种类极广，并可能有多种名称（譬如用来戳刺的“刺刃”）。隐藏一把匕首在身上的巧手检定+2。
+  meta:
+    training: simple
+    category: light
+    cost: 2 gp
+    damage: 1d4
+    critical: 19-20/x2
+    range: 10
+    weight: 1
+    damageType: P or S
+- id: 'Dagger, punching'
+  name: 拳刃
+  desc: 拳刃被安装在和握把呈水平方向的柄上，锋刃指向出拳的方向。
+  meta:
+    training: simple
+    category: light
+    cost: 2 gp
+    damage: 1d4
+    critical: x3
+    weight: 1
+    damageType: P
+- id: 'Gauntlet, spiked'
+  name: 带刺铁手套
+  desc: 这是一只在拳头部分装有锋刃、尖刺的金属或硬革手套，使得持用者能够用拳击来捅穿敌人。上表给出的价格和重量是单件带刺铁手套的数据。以带刺铁手套发动的攻击视为武装攻击。带刺铁手套无法被卸武。
+  meta:
+    training: simple
+    category: light
+    cost: 5 gp
+    damage: 1d4
+    critical: x2
+    weight: 1
+    damageType: P
+    special:
+      - attached
+- id: Handwraps
+  name: ''
+  desc: ''
+  meta:
+    training: simple
+    category: light
+    cost: 1 sp
+    special:
+      - see text
+- id: Traveling kettle
+  name: ''
+  desc: ''
+  meta:
+    training: simple
+    category: light
+    cost: 5 gp
+    damage: 1d6
+    critical: ×2
+    weight: 2
+    damageType: B
+    special:
+      - monk
+      - see text
+- id: Hook hand
+  name: ''
+  desc: ''
+  meta:
+    training: simple
+    category: light
+    cost: 10 gp
+    damage: 1d4
+    critical: x2
+    weight: 1
+    damageType: S
+    special:
+      - disarm
+      - attached
+      - see text
+- id: Kunai
+  name: ''
+  desc: ''
+  meta:
+    training: simple
+    category: light
+    cost: 2 gp
+    damage: 1d4
+    critical: x2
+    range: 10
+    weight: 2
+    damageType: B or P
+    special:
+      - tool
+- id: 'Mace, light'
+  name: 轻型硬头锤
+  desc: 轻型硬头锤的头部是一块雕琢精美的金属，被安装在金属或木制的握柄上。硬头锤的头部通常凹凸不平，以造成更大的痛苦和伤害。某些更原始的硬头锤是用皮带将石头固定在木柄上制成的。
+  meta:
+    training: simple
+    category: light
+    cost: 5 gp
+    damage: 1d6
+    critical: x2
+    weight: 4
+    damageType: B
+- id: Sickle
+  name: 镰刀
+  desc: 原型是收割庄稼用的农具，这件单手武器的锋刃是一条大弧线，能够轻易地捕捉对手的肢体或甲胄。锋刃可以平顺、也可以呈锯齿状，某些战阵用的镰刀会在尖端附近两侧开刃，以便轻松钩进对手的血肉。
+  meta:
+    training: simple
+    category: light
+    cost: 6 gp
+    damage: 1d6
+    critical: x2
+    weight: 2
+    damageType: S
+    special:
+      - trip
+- id: Spring blade
+  name: ''
+  desc: ''
+  meta:
+    training: simple
+    category: light
+    cost: 70 gp
+    damage: 1d4
+    critical: x2
+    range: 10
+    weight: 1
+    damageType: P or S
+- id: Wooden stake
+  name: 木桩
+  desc: 这件近战格斗武器仅是一块削尖了的木头。它如同钢刺般造成武器伤害。
+  meta:
+    training: simple
+    category: light
+    damage: 1d4
+    critical: x2
+    range: 10
+    weight: 1
+    damageType: P
+- id: Club
+  name: 木棒
+  desc: 这件武器通常只是削尖了的木头，有时会在上面镶嵌钉子。
+  meta:
+    training: simple
+    category: one-handed
+    damage: 1d6
+    critical: x2
+    range: 10
+    weight: 3
+    damageType: B
+- id: 'Club, mere'
+  name: 石磨棒
+  desc: 这件石器时代的传统武器是石块雕刻而成，边缘平齐、尖端锋锐。
+  meta:
+    training: simple
+    category: one-handed
+    cost: 2 gp
+    damage: 1d4
+    critical: x2
+    weight: 2
+    damageType: B or P
+    special:
+      - fragile
+- id: 'Mace, heavy'
+  name: 重型硬头锤
+  desc: 比起轻型硬头锤，重型硬头锤的头部更加硕大，握柄也更长。
+  meta:
+    training: simple
+    category: one-handed
+    cost: 12 gp
+    damage: 1d8
+    critical: x2
+    weight: 8
+    damageType: B
+- id: Morningstar
+  name: 钉头锤
+  desc: 钉头锤是将铸满尖刺的铁球固定在握柄上制成的。
+  meta:
+    training: simple
+    category: one-handed
+    cost: 8 gp
+    damage: 1d8
+    critical: x2
+    weight: 6
+    damageType: B and P
+- id: Shortspear
+  name: 短矛
+  desc: 短矛长约3尺，这使得它作为投掷武器颇为顺手。
+  meta:
+    training: simple
+    category: one-handed
+    cost: 1 gp
+    damage: 1d6
+    critical: x2
+    range: 20
+    weight: 3
+    damageType: P
+- id: Bayonet
+  name: 刺刀
+  desc: 刺刀是被设计用来装在弩槽和枪口上的近战武器。它允许你用这些武器进行近战攻击，但暂时无法将其作为远程武器。安装和拆卸刺刀是一个移动动作。
+  meta:
+    training: simple
+    category: two-handed
+    cost: 5 gp
+    damage: 1d6
+    critical: x2
+    weight: 1
+    damageType: P
+- id: Boarding pike
+  name: ''
+  desc: ''
+  meta:
+    training: simple
+    category: two-handed
+    cost: 8 gp
+    damage: 1d8
+    critical: x3
+    weight: 9
+    damageType: P
+    special:
+      - brace
+      - reach
+- id: Kumade
+  name: ''
+  desc: ''
+  meta:
+    training: simple
+    category: two-handed
+    cost: 5 gp
+    damage: 1d6
+    critical: x3
+    weight: 4
+    damageType: P
+    special:
+      - grapple
+- id: 'Kumade, collapsible'
+  name: ''
+  desc: ''
+  meta:
+    training: simple
+    category: two-handed
+    cost: 10 gp
+    damage: 1d6
+    critical: x3
+    weight: 4
+    damageType: P
+    special:
+      - grapple
+- id: Lantern staff
+  name: 燃灯杖
+  desc: 这柄长长的金属棍有着用来盛放灯油的容器，其末端有着类似灯笼一样的结构。灌有燃料的燃灯杖可以像附盖提灯一样提供光源。同时以燃灯杖进行攻击时，在正常伤害外还可以造成1点火焰伤害。任何适用于木棍的效果——那些将木棍作为双头武器使用的除外——同样适用于燃灯杖。
+  meta:
+    training: simple
+    category: two-handed
+    cost: 15 gp
+    damage: 1d6
+    critical: ×2
+    weight: 9
+    damageType: B
+- id: Longspear
+  name: 长矛
+  desc: 长矛长约8尺。
+  meta:
+    training: simple
+    category: two-handed
+    cost: 5 gp
+    damage: 1d8
+    critical: x3
+    weight: 9
+    damageType: P
+    special:
+      - brace
+      - reach
+- id: Quarterstaff
+  name: 木棍
+  desc: 木棍是一根简单的木头棍子，长约5尺。战斗时一手握住末端、另一手握在棍身1/4处，能够封挡来袭、迅捷反击。
+  meta:
+    training: simple
+    category: two-handed
+    damage: 1d6/1d6
+    critical: x2
+    weight: 4
+    damageType: B
+    special:
+      - double
+      - monk
+- id: Spear
+  name: 矛
+  desc: 矛长约5尺，可以用于投掷。
+  meta:
+    training: simple
+    category: two-handed
+    cost: 2 gp
+    damage: 1d8
+    critical: x3
+    range: 20
+    weight: 6
+    damageType: P
+    special:
+      - brace
+- id: 'Spear, boar'
+  name: 猎猪矛
+  desc: 这只矛装有十字横枝，防护敌人的突击。若你以准备动作迎击对方冲锋并且命中，你在下轮前针对该目标的AC获得+2盾牌加值。
+  meta:
+    training: simple
+    category: two-handed
+    cost: 5 gp
+    damage: 1d8
+    critical: x2
+    weight: 8
+    damageType: P
+    special:
+      - brace
+      - see text
+- id: 'Spear, weighted'
+  name: ''
+  desc: ''
+  meta:
+    training: simple
+    category: two-handed
+    cost: 10 gp
+    damage: 1d8/1d6
+    critical: x3/x2
+    weight: 8
+    damageType: B or P
+    special:
+      - brace
+      - double
+- id: Blowgun
+  name: 吹箭
+  desc: 吹箭通常用来在远距离传递弱化敌人（而非致命）的毒药。它们发射时几乎无声。合适的毒药搭配请参见毒药相关信息。
+  meta:
+    training: simple
+    category: ranged
+    cost: 2 gp
+    damage: 1d2
+    critical: x2
+    range: 20
+    weight: 1
+    damageType: P
+- id: 'Crossbow, heavy'
+  name: 重弩
+  desc: 你需要通过一个小摇杆拉开重弩。为重弩装填是一个会引发藉机攻击的整轮动作。重弩发射弩矢。操作一把重弩通常需要两只手。不过你能仅用一只手来击发重弩（装填不可），这次攻击将受到-4减值。你还能两只手各持用一把重弩射击，但这样将会受到如同使用两把单手武器的双武器战斗减值。该减值会与单手击发重弩的减值相互叠加。
+  meta:
+    training: simple
+    category: ranged
+    cost: 50 gp
+    damage: 1d10
+    critical: 19-20/x2
+    range: 120
+    weight: 8
+    damageType: P
+- id: 'Crossbow, heavy (underwater)'
+  name: 水下重弩
+  desc: 这件武器在水上和重弩别无二致。你能在水下使用它，此时射程增量为20尺。它在决定武器擅长和其他特性时被视为重弩。
+  meta:
+    training: simple
+    category: ranged
+    cost: 100 gp
+    damage: 1d10
+    critical: 19-20/x2
+    range: 120
+    weight: 8
+    damageType: P
+- id: 'Crossbow, light'
+  name: 轻弩
+  desc: 你需要通过一个小拉杆拉开轻弩。为轻弩装填是一个会引发藉机攻击的移动动作。轻弩发射弩矢。操作一把轻弩通常需要两只手。不过你能仅用一只手来击发轻弩（装填不可），这次攻击将受到-2减值。你还能两只手各持用一把轻弩射击，但这样将会受到如同使用两把轻型武器的双武器战斗减值。该减值会与单手击发轻弩的减值相互叠加。
+  meta:
+    training: simple
+    category: ranged
+    cost: 35 gp
+    damage: 1d8
+    critical: 19-20/x2
+    range: 80
+    weight: 4
+    damageType: P
+- id: 'Crossbow, light (underwater)'
+  name: 水下轻弩
+  desc: 水下轻弩在水上的功能和轻弩相似，并能在水下使用。在水下射击时，这把弩的射程增量为20尺。任何擅长普通轻弩的人都能操作水下轻弩。
+  meta:
+    training: simple
+    category: ranged
+    cost: 70 gp
+    damage: 1d8
+    critical: 19-20/x2
+    range: 80
+    weight: 4
+    damageType: P
+- id: Dart
+  name: 飞镖
+  desc: 这件具有配重的投掷武器比箭矢大，尺寸和射程则较标枪为短。多数飞镖为木柄铁尖。
+  meta:
+    training: simple
+    category: ranged
+    cost: 5 sp
+    damage: 1d4
+    critical: x2
+    range: 20
+    weight: 1
+    damageType: P
+- id: Javelin
+  name: 标枪
+  desc: 标枪是细长的投矛。由于并非为近战而设计，你若把标枪当作近战武器使用，会被视为不擅长该武器并承受攻击-4减值。
+  meta:
+    training: simple
+    category: ranged
+    cost: 1 gp
+    damage: 1d6
+    critical: x2
+    range: 30
+    weight: 2
+    damageType: P
+- id: Sling
+  name: 投石索
+  desc: 投石索仅仅是与一对皮带相连的皮囊。你在使用投石索时能将力量修正添加到伤害检定，如同它是投掷武器。你能单手用它抛石，但不能单手装填弹丸。为投石索装填是一个需要用到两只手、并且会引发藉机攻击的移动动作。投石索发射弹丸。你能用投石索抛掷普通的石块，但石块不如专门的弹丸一样密度均匀、形状圆润。因此这种攻击要受到-1减值，而判断伤害时要将其视为武器型号小于实际一级。
+  meta:
+    training: simple
+    category: ranged
+    damage: 1d4
+    critical: x2
+    range: 50
+    damageType: B
+- id: Stingchuck
+  name: ''
+  desc: ''
+  meta:
+    training: simple
+    category: ranged
+    damage: 1d4
+    critical: x2
+    range: 10
+    weight: 9
+    damageType: B
+- id: Stonebow
+  name: ''
+  desc: ''
+  meta:
+    training: simple
+    category: ranged
+    cost: 35 gp
+    damage: 1d6
+    critical: x2
+    range: 50
+    weight: 4
+    damageType: B
+- id: 'Axe, boarding'
+  name: 登舰斧
+  desc: 登舰斧和手斧类似，但其别致的斧尖让该武器可以造成挥砍或穿刺伤害。手持登舰斧时，其能在攀登木质表面或者其他可刺穿表面——比如冰块——的攀爬检定上提供+2环境加值
+  meta:
+    training: martial
+    category: light
+    cost: 6 gp
+    damage: 1d6
+    critical: x3
+    weight: 3
+    damageType: P or S
+- id: 'Axe, throwing'
+  name: 飞斧
+  desc: 这把单手斧较小，完美的配重平衡使它适于投掷，同时也能作为近战武器。飞斧有很多名字，包括抛斧、投斧等等。使用飞斧时常紧握把手、高举过肩，在空中回旋一圈后咬进目标的身体。
+  meta:
+    training: martial
+    category: light
+    cost: 8 gp
+    damage: 1d6
+    critical: x2
+    range: 10
+    weight: 2
+    damageType: S
+- id: Blade boot
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: light
+    cost: 25 gp
+    damage: 1d4
+    critical: x2
+    weight: 2
+    damageType: P
+- id: Cat-o’-nine-tails
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: light
+    cost: 1 gp
+    damage: 1d4
+    critical: x2
+    weight: 1
+    damageType: S
+    special:
+      - disarm
+      - nonlethal
+- id: Claw blades
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: light
+    cost: 305 gp
+    damage: 1d4
+    critical: x2
+    weight: 2
+    damageType: B or S
+- id: 'Dagger, dueling'
+  name: 决斗匕首
+  desc: 这柄匕首一般用副手握持以格挡攻击。手持决斗匕首使用防御式战斗或者寓守于攻时，使用者获得的AC加值额外增加1。这项加值即使在使用者没有以决斗匕首进行攻击时也能生效。如果使用者不擅长决斗匕首，则其在手中则如同普通的匕首一样，不会享受任何特殊的好处。任何适用于匕首的效果都适用于决斗匕首。
+  meta:
+    training: martial
+    category: light
+    cost: 12 gp
+    damage: 1d4
+    critical: 19–20/×2
+    range: 10
+    weight: 1
+    damageType: P or S
+- id: Dogslicer
+  name: 屠狗刃
+  desc: 这把短弯刀是地精首创的，它们在刀身上钻了无数小洞来减轻武器重量。屠狗刃的武器型号多为小型。
+  meta:
+    training: martial
+    category: light
+    cost: 8 gp
+    damage: 1d6
+    critical: 19-20/x2
+    weight: 1
+    damageType: S
+    special:
+      - fragile
+- id: 'Hammer, light'
+  name: 轻锤
+  desc: 作为战锤的轻量化版本，这件武器的光滑锤头通常有一个打击面。
+  meta:
+    training: martial
+    category: light
+    cost: 1 gp
+    damage: 1d4
+    critical: x2
+    range: 20
+    weight: 2
+    damageType: B
+- id: Gladius
+  name: 阔短剑
+  desc: 较寻常短剑为重的阔短剑是角斗士们的最爱。影响短剑的专长和能力同样作用于阔短剑。
+  meta:
+    training: martial
+    category: light
+    cost: 15 gp
+    damage: 1d6
+    critical: 19-20/x2
+    weight: 3
+    damageType: P or S
+    special:
+      - performance
+- id: Handaxe
+  name: 手斧
+  desc: 这把单手斧较短（长约1尺），被设计为单手使用。与飞斧不同，它的回旋动量不是非常平衡，其头部较为沉重。短斧、斧头之类称呼指的就是手斧。
+  meta:
+    training: martial
+    category: light
+    cost: 6 gp
+    damage: 1d6
+    critical: x3
+    weight: 3
+    damageType: S
+- id: 'Katar, tri-bladed'
+  name: 三刃拳剑
+  desc: 大部分拳刃都是只有单片醒目的厚刃，而三刃拳剑则有着扇形张开的三片利刃。任何适用于拳刃的效果同样适用于三刃拳剑。
+  meta:
+    training: martial
+    category: light
+    cost: 6 gp
+    damage: 1d4
+    critical: ×4
+    weight: 2
+    damageType: P
+- id: 'Knife, switchblade'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: light
+    cost: 5 gp
+    damage: 1d4
+    critical: 19-20/x2
+    range: 10
+    weight: 1
+    damageType: P
+- id: 'Kobold tail attachment, long lash'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: light
+    cost: 15 gp
+    damage: 1d6
+    critical: x2
+    weight: 1
+    damageType: S
+    special:
+      - reach
+- id: 'Kobold tail attachment, (pounder)'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: light
+    cost: 1 gp
+    damage: 1d8
+    critical: x2
+    weight: 4
+    damageType: B
+- id: 'Kobold tail attachment, (razored)'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: light
+    cost: 3 gp
+    damage: 1d8
+    critical: 19-20/x2
+    weight: 2
+    damageType: S
+- id: 'Kobold tail attachment, (spiked)'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: light
+    cost: 3 gp
+    damage: 1d8
+    critical: x3
+    weight: 2
+    damageType: P
+- id: 'Kobold tail attachment, (sweeper)'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: light
+    cost: 7 gp
+    damage: 1d6
+    critical: x2
+    weight: 3
+    damageType: B
+    special:
+      - trip
+- id: Kukri
+  name: 反曲刀
+  desc: 反曲刀是一把长约1尺的曲形剑。
+  meta:
+    training: martial
+    category: light
+    cost: 8 gp
+    damage: 1d4
+    critical: 18–20/x2
+    weight: 2
+    damageType: S
+- id: Machete
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: light
+    cost: 10 gp
+    damage: 1d6
+    critical: 19-20/x2
+    weight: 2
+    damageType: S
+- id: 'Pick, light'
+  name: 轻型镐
+  desc: 这件武器从作为工具的鹤嘴锄演化而来，有着微曲的头部、用来穿甲的尖端和锤状的配重。
+  meta:
+    training: martial
+    category: light
+    cost: 4 gp
+    damage: 1d4
+    critical: x4
+    weight: 3
+    damageType: P
+- id: Ratfolk tailblade
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: light
+    cost: 11 gp
+    damage: 1d3
+    critical: x2
+    weight: 1
+    damageType: S
+- id: Sap
+  name: 闷棍
+  desc: 这件武器在坚硬、沉重的核心外面包裹软材料，通常是皮套铅棍。先端比把手更粗，它有着发散敲击力的设计，使其较不容易见血或断骨。
+  meta:
+    training: martial
+    category: light
+    cost: 1 gp
+    damage: 1d6
+    critical: x2
+    weight: 2
+    damageType: B
+    special:
+      - nonlethal
+- id: Sea-knife
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: light
+    cost: 8 gp
+    damage: 1d4
+    critical: 19-20/x2
+    weight: 1
+    damageType: S
+- id: 'Shield, light'
+  name: 轻型盾牌
+  desc: 除了防御，你还能用轻型盾牌猛砸敌人。
+  meta:
+    training: martial
+    category: light
+    cost: 3 gp/9 gp
+    damage: 1d3
+    critical: x2
+    weight: .nan
+    damageType: B
+- id: Spiked armor
+  name: 甲刺
+  desc: 你能为你的盔甲加装尖刺，在擒抱或单独攻击中造成伤害。详述请查看盔甲部分。甲刺无法被卸武。
+  meta:
+    training: martial
+    category: light
+    cost: special
+    damage: 1d6
+    critical: x2
+    weight: .nan
+    damageType: P
+- id: 'Spiked shield, light'
+  name: 带刺轻盾
+  desc: 除了防御，你还能用带刺轻盾猛砸敌人。带刺轻盾无法被卸武。
+  meta:
+    training: martial
+    category: light
+    cost: 13 gp/19 gp
+    damage: 1d4
+    critical: x2
+    weight: .nan
+    damageType: P
+- id: Starknife
+  name: 星刃
+  desc: 在中央的圆环外，四支向尖端逐渐收拢的锋刃构成了这件形似指南针或玫瑰的武器。通过抓握中央圆环处的十字把手，持用者能将它变成一件致命兵刃。此外，若是抓握住外环本身，星刃的轻巧与符合空气动力学的设计又使它能够作为投掷武器，类似飞轮般地进行短距掷击。
+  meta:
+    training: martial
+    category: light
+    cost: 24 gp
+    damage: 1d4
+    critical: x3
+    range: 20
+    weight: 3
+    damageType: P
+- id: 'Sword, short'
+  name: 短剑
+  desc: 短剑恐怕是任何尚武社会中最为常见的武器，也因此设计花样繁多、因地域和匠人而变。多数长约2尺。它的剑身可直可曲，剑刃可单可双，剑幅可宽可窄。剑柄可能装点精美、也可能朴实无华，或有十字型护手，或有笼状护手，或干脆没有护手。这些武器通常被独立使用，但也有成对持用、或搭配匕首长剑等武器战斗的场合。
+  meta:
+    training: martial
+    category: light
+    cost: 10 gp
+    damage: 1d6
+    critical: 19-20/x2
+    weight: 2
+    damageType: P
+- id: War razor
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: light
+    cost: 8 gp
+    damage: 1d4
+    critical: 19-20/x2
+    weight: 1
+    damageType: S
+- id: Ankus
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: one-handed
+    cost: 8 gp
+    damage: 1d8
+    critical: x2
+    weight: 5
+    damageType: P
+    special:
+      - disarm
+      - trip
+- id: Battleaxe
+  name: 战斧
+  desc: 这把斧子的握柄足够长，你能以单手或双手持握它。斧刃可能开在一侧、也有可能双刃，而锋刃的形状也从半月形到伐木斧一般的方棱形不等。木制握柄可能会以金属套箍加以保护。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 10 gp
+    damage: 1d8
+    critical: x3
+    weight: 6
+    damageType: S
+- id: Combat scabbard
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: one-handed
+    cost: 1 gp
+    damage: 1d6
+    critical: x2
+    weight: 1
+    damageType: B
+    special:
+      - improvised
+      - see text
+- id: Cutlass
+  name: 水兵刀
+  desc: 水手船员们很喜欢用这种有着弯弧刀身的短刀进行白刃战，水兵刀在判断任何适用于弯刀的效果时都视作是弯刀
+  meta:
+    training: martial
+    category: one-handed
+    cost: 15 gp
+    damage: 1d6
+    critical: 18-20/x2
+    weight: 4
+    damageType: S
+- id: 'Flail, light'
+  name: 轻型链枷
+  desc: 轻型链枷包括沉重的打击先端，以及通过锁链与之连接的握柄。虽然常被想像为类似钉头锤一般的铁球，链枷的先端其实可能为多种形状，譬如短杠状。军用链枷是农用链枷的强化版本，后者则是用来敲打谷物以分离谷实和谷壳的工具。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 8 gp
+    damage: 1d8
+    critical: x2
+    weight: 5
+    damageType: B
+    special:
+      - disarm
+      - trip
+- id: Gandasa
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: one-handed
+    cost: 15 gp
+    damage: 2d4
+    critical: x3
+    weight: 4
+    damageType: S
+- id: Klar
+  name: 喀拉尔
+  desc: 这把样式传统的部落武器将金属短刃固定在有角巨蜥的头骨之前，而技艺精湛的铁匠也能够以纯铁打造其整件。典型的喀拉尔被视为加装了盾刺的轻型木盾；金属喀拉尔则被视为加装了盾刺的轻型钢盾。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 12 gp
+    damage: 1d6
+    critical: x2
+    weight: 6
+    damageType: S
+- id: Longsword
+  name: 长剑
+  desc: 长剑长约3英尺半。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 15 gp
+    damage: 1d8
+    critical: 19-20/x2
+    weight: 4
+    damageType: S
+- id: Manople
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: one-handed
+    cost: 17 gp
+    damage: 1d8
+    critical: x2
+    weight: 4
+    damageType: P or S
+    special:
+      - blocking
+      - disarm
+- id: 'Pick, heavy'
+  name: 重型镐
+  desc: 这把轻型镐的加强版把手较长，可以单手或双手使用。便于在马背上使用，因此常被骑兵当作廉价武器。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 8 gp
+    damage: 1d6
+    critical: x4
+    weight: 6
+    damageType: P
+- id: Rapier
+  name: 细剑
+  desc: 你能通过“武器娴熟”专长在持用一把型号与你体型相符的细剑时，在攻击检定中以敏捷修正取代力量修正，即便它并不是轻型武器。你无法通过双手持用细剑的方式来将力量修正的1.5倍加至伤害检定。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 20 gp
+    damage: 1d6
+    critical: 18–20/x2
+    weight: 2
+    damageType: P
+    special:
+      - finesse
+- id: 'Scabbard, combat (sharpened)'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: one-handed
+    cost: 10 gp
+    damage: 1d6
+    critical: x2
+    weight: 1
+    damageType: S
+- id: Scimitar
+  name: 弯刀
+  desc: 这把弯曲的刀剑较长剑为短，而较短剑为长。仅外侧开刃、刀背平钝，使得刀身断面呈三角形。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 15 gp
+    damage: 1d6
+    critical: 18–20/x2
+    weight: 4
+    damageType: S
+- id: Scizore
+  name: 角斗剪
+  desc: 角斗剪是一件恰好包裹前臂、末端加装半月刃的硬管，用来发动凶恶的拳击。角斗剪带来AC盾牌加值+1，但若你用其攻击，你会在这一轮失去其AC加值并在攻击检定中承受-1减值。在装备角斗剪时，你无法用这只手做任何其他事情。角斗剪在抵抗针对其本身的卸武战技时令你的CMD+10。装备上一件角斗剪是一个整轮动作。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 20 gp
+    damage: 1d10
+    critical: x2
+    weight: 3
+    damageType: P
+- id: 'Shield, heavy'
+  name: 重型盾牌
+  desc: 除了防御，你还能用重型盾牌猛砸敌人。
+  meta:
+    training: martial
+    category: one-handed
+    cost: special
+    damage: 1d4
+    critical: x2
+    weight: .nan
+    damageType: B
+- id: 'Spiked shield, heavy'
+  name: 带刺重盾
+  desc: 带刺盾牌是威慑武器，可能拥有一根盾面正中的尖刺、剃刀状的盾缘、或是布满要命的铁钉。除了防御，你还能用带刺重盾猛砸敌人。带刺重盾无法被卸武。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 17 gp/30 gp
+    damage: 1d6
+    critical: x2
+    weight: .nan
+    damageType: P
+- id: Sword cane
+  name: 杖剑
+  desc: 这把细身剑被放置在作为剑鞘和伪装的木柄里。你能以迅捷动作拔剑（若拥有“即时备战”专长则为自由动作）。观察者必须通过DC20的察觉检定才能发现杖剑是一件武器，而非寻常的手杖；若观察者能够把弄杖剑，那么DC降至10。你能通过“武器娴熟”专长在持用一把型号与你体型相符的杖剑时，在攻击检定中以敏捷修正取代力量修正，即便它并不是轻型武器。你无法通过双手持用杖剑的方式来将力量修正的1.5倍加至伤害检定。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 45 gp
+    damage: 1d6
+    critical: x2
+    weight: 4
+    damageType: P
+- id: Terbutje
+  name: 石刃剑
+  desc: 这件石器时代的武器又被称为鲨齿剑，是用一段烘烤退火后的木料制成的。它的全身都镶嵌有黑曜石、琉璃、兽牙或类似材料。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 5 gp
+    damage: 1d8
+    critical: 19-20/x2
+    weight: 2
+    damageType: S
+    special:
+      - fragile
+- id: 'Terbutje, steel'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: one-handed
+    cost: 20 gp
+    damage: 1d8
+    critical: 19-20/x2
+    weight: 4
+    damageType: S
+- id: Trident
+  name: 三叉戟
+  desc: 三叉戟在长约4尺的握柄前段装有三支金属尖刺。三叉戟可以用于投掷。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 15 gp
+    damage: 1d8
+    critical: x2
+    range: 10
+    weight: 4
+    damageType: P
+    special:
+      - brace
+- id: Warhammer
+  name: 战锤
+  desc: 这件武器包括木制的握柄和一个沉重的金属锤头。锤头可能为单侧（像是木工锤）或双侧（像是长柄大锤）。握柄的长度足够你单手或是双手持用。尽管沉重且难以挥舞，战锤是造成效果拔群一击、粉碎铠甲和血肉的理想武器。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 12 gp
+    damage: 1d8
+    critical: x3
+    weight: 5
+    damageType: B
+- id: Bardiche
+  name: 新月战斧
+  desc: 这件长兵器的新月形斧刃通过两点连接在握柄上
+  meta:
+    training: martial
+    category: two-handed
+    cost: 13 gp
+    damage: 1d10
+    critical: 19-20/x2
+    weight: 14
+    damageType: S
+    special:
+      - brace
+      - reach
+      - see text
+- id: Bec de corbin
+  name: 鸦啄战锤
+  desc: 鸦啄战锤是一件很像苜蓿战锤的长兵器，不过锤头略钝、而矛尖则牢固并弯曲。你主要以矛尖来攻击。你持用鸦啄战锤时，击破中型和重型盔甲的破武战技检定+2。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 15 gp
+    damage: 1d10
+    critical: x3
+    weight: 12
+    damageType: B or P
+    special:
+      - brace
+      - reach
+      - see text
+- id: Bill
+  name: 戈刀
+  desc: 这件长兵器的锋刃呈弧形或钩状，并与其背部的长刺紧紧相贴。尖刺主要用来格挡。这件武器在你防御式战斗或完全防御时给予你AC+1盾牌加值。被戈刀击中的骑乘对像用以维持骑乘的骑术检定-1。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 11 gp
+    damage: 1d8
+    critical: x3
+    weight: 11
+    damageType: S
+    special:
+      - brace
+      - disarm
+      - reach
+      - see text
+- id: Earth breaker
+  name: 裂地锤
+  desc: 这把巨锤头部的致命钢铁收拢为数个钝尖，将挥舞的猛恶力道集中于较小的区域，使其能够轻易砸穿铠甲。由于其令人咋舌的尺寸和沉重的锤头，一把裂地锤的平衡很难掌控，需要双手才能恰当地举起和控制。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 40 gp
+    damage: 2d6
+    critical: x3
+    weight: 14
+    damageType: B
+- id: Falchion
+  name: 弯刃大刀
+  desc: 这把兵器有着弯刀一般弯曲和锐利的锋刃，未开锋的刀背则有直有曲。它的重量集中在前端，因此用来切斩要比戳刺来得顺手。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 75 gp
+    damage: 2d4
+    critical: 18–20/x2
+    weight: 8
+    damageType: S
+- id: 'Flail, heavy'
+  name: 重型链枷
+  desc: 类似轻型链枷，重型链枷有着较大的铁球和较长的握柄。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 15 gp
+    damage: 1d10
+    critical: 19-20/x2
+    weight: 10
+    damageType: B
+    special:
+      - disarm
+      - trip
+- id: Glaive
+  name: 大砍刀
+  desc: 大砍刀是把单刀加装在长约7尺的握柄上的武器。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 8 gp
+    damage: 1d10
+    critical: x3
+    weight: 10
+    damageType: S
+    special:
+      - reach
+- id: Glaive-guisarme
+  name: 尖刺大砍刀
+  desc: 这件长兵器组合了大砍刀的锋刃和一只险恶的弯钩。被戈刀击中的骑乘对像用以维持骑乘的骑术检定-2。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 12 gp
+    damage: 1d10
+    critical: x3
+    weight: 10
+    damageType: S
+    special:
+      - brace
+      - reach
+      - see text
+- id: Greataxe
+  name: 巨斧
+  desc: 这把双手战斧沉到你无法单手持用的地步。斧头可能单刃或双刃，为了增加斩击力和协助破盾还可能打成“胡子形”（意即带钩或斧刃底端向外弯曲）。握柄一般长3到4尺。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 20 gp
+    damage: 1d12
+    critical: x3
+    weight: 12
+    damageType: S
+- id: Greatclub
+  name: 巨木棒
+  desc: 这把普通木棒的巨大笨重版沉到你无法单手持用的地步。它可能经过了装饰和雕刻、以金属强化过，也有可能仅是个大树枝。巨木棒和寻常木棒一样有很多名字，譬如大棒、巨棒、棒棒等。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 5 gp
+    damage: 1d10
+    critical: x2
+    weight: 8
+    damageType: B
+- id: Greatsword
+  name: 巨剑
+  desc: 这把巨大的双手剑长约5尺。巨剑可能会在剑身底部有一处未开锋，用来协助抓握。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 50 gp
+    damage: 2d6
+    critical: 19-20/x2
+    weight: 8
+    damageType: S
+- id: Guisarme
+  name: 长勾刀
+  desc: 长钩刀柄长8尺，先端装有刀刃和弯钩。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 9 gp
+    damage: 2d4
+    critical: x3
+    weight: 12
+    damageType: S
+    special:
+      - reach
+      - trip
+- id: Halberd
+  name: 戟
+  desc: 戟像是5尺长的矛，但通常在先端附近装有斧头。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 10 gp
+    damage: 1d10
+    critical: x3
+    weight: 12
+    damageType: P or S
+    special:
+      - brace
+      - trip
+- id: 'Hammer, lucerne'
+  name: 苜蓿战锤
+  desc: 这件长兵器同时有着用来发动粉碎敲击的锤头，以及用来穿刺甲胄的矛尖。长长的握柄允许持用者蓄积令人惊异的力道。你持用苜蓿战锤时，击破中型和重型盔甲的破武战技检定+2。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 15 gp
+    damage: 1d12
+    critical: x2
+    weight: 12
+    damageType: B or P
+    special:
+      - brace
+      - reach
+      - see text
+- id: Horsechopper
+  name: 斩马刀
+  desc: 地精为了战马而发明了这件装有钩刃的长戟。斩马刀的武器型号多为小型。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 10 gp
+    damage: 1d10
+    critical: x3
+    weight: 12
+    damageType: P or S
+    special:
+      - reach
+      - trip
+- id: Lance
+  name: 长枪
+  desc: 在冲锋的坐骑背上使用长枪将造成双倍伤害。你能在骑乘中以单手持用长枪。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 10 gp
+    damage: 1d8
+    critical: x3
+    weight: 10
+    damageType: P
+    special:
+      - reach
+- id: Ogre hook
+  name: 食人魔巨钩
+  desc: 这把锋利金属制成的大钩子能轻易地摔翻和捕获逃窜的敌人。由食人魔发明，食人魔巨钩的武器型号多为大型，并且样式粗糙——常为从受害者身上剥下来的武器或盔甲扭成的。尽管做工差劲，获得一把食人魔巨钩的稀有度和高风险，使其价格不菲。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 24 gp
+    damage: 1d10
+    critical: x3
+    weight: 10
+    damageType: P
+    special:
+      - trip
+- id: Pickaxe
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: two-handed
+    cost: 14 gp
+    damage: 1d8
+    critical: x4
+    weight: 12
+    damageType: P
+- id: Planson
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: two-handed
+    cost: 10 gp
+    damage: 1d10
+    critical: x2
+    weight: 10
+    damageType: B or P
+    special:
+      - brace
+- id: Ranseur
+  name: 刺叉
+  desc: 和三叉戟外观相似，刺叉的一根长刺被两根短刺所夹。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 10 gp
+    damage: 2d4
+    critical: x3
+    weight: 12
+    damageType: P
+    special:
+      - disarm
+      - reach
+- id: Scythe
+  name: 巨镰
+  desc: 这件武器包括一只装有突起握柄的木制长柄，以及与木柄成直角的一把锐利曲刃。演化自用来收割庄稼的农具，一把巨镰需要双手使用，笨拙却能够一击必杀。与“收割”之间的关联使它常被作为死亡的象征符号，这令巨镰也往往被用作威慑武器。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 18 gp
+    damage: 2d4
+    critical: x4
+    weight: 10
+    damageType: P or S
+    special:
+      - trip
+- id: 'Spear, syringe'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: two-handed
+    cost: 100 gp
+    damage: 1d8
+    critical: x3
+    range: 20
+    weight: 6
+    damageType: P
+    special:
+      - brace
+      - see text
+- id: Ammentum
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: ranged
+    damage: 1d6
+    critical: x2
+    range: 50
+    weight: 1
+    damageType: P
+    special:
+      - performance
+- id: Chakram
+  name: 飞轮
+  desc: 飞轮是一件简单、雅致、极为便携的投掷武器。它是一块扁平的环形“铁饼”，周围开刃。你可以持用飞轮作为近战武器，但它的设计并非为此服务；因此你的攻击检定将受-1减值，还要通过DC15的反射豁免以避免割伤自己（伤害减半，无力量修正）。你在装备重甲时无需进行此豁免。
+  meta:
+    training: martial
+    category: ranged
+    cost: 1 gp
+    damage: 1d8
+    critical: x2
+    range: 30
+    weight: 1
+    damageType: S
+- id: 'Dart, jolting'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: ranged
+    cost: 100 gp
+    damage: 1d4
+    critical: x2
+    range: 20
+    weight: 1
+    damageType: P
+- id: Hunga munga
+  name: 多刃飞刀
+  desc: 又被称为“麻痹了（mambele）”、“打你死狗（danisco）”、“搞了哟（goleyo）”、“叽嘎（njiga）”甚至更为稀奇的名字，这把投掷用的多刃匕首也能用于近战。虽然三刃为常见设计，这件武器的实际形式更加多种多样。
+  meta:
+    training: martial
+    category: ranged
+    cost: 4 gp
+    damage: 1d6
+    critical: x2
+    range: 15
+    weight: 3
+    damageType: P
+- id: Hurlbat
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: ranged
+    cost: 8 gp
+    damage: 1d6
+    critical: x3
+    range: 10
+    weight: 2
+    damageType: P and S
+- id: Longbow
+  name: 长弓
+  desc: 长约5尺的长弓是由一整块木料精心雕刻而成的。无论其型号大小，你至少需要两只手来使用一把弓。长弓无法在骑乘时使用。若你的力量修正为负值，你持用长弓的伤害检定亦会受其影响。若你有力量加值，你能在使用复合长弓时把力量修正加至伤害检定，但标准长弓则不可。长弓发射箭矢。
+  meta:
+    training: martial
+    category: ranged
+    cost: 75 gp
+    damage: 1d8
+    critical: x3
+    range: 100
+    weight: 3
+    damageType: P
+- id: 'Longbow, composite'
+  name: 复合长弓
+  desc: 无论其型号大小，你至少需要两只手来使用一把弓。你可以在骑乘中使用复合长弓。所有的复合长弓都以特定的力量级别（即持用者必须达到每把弓的最小力量修正要求才能熟练使用）来制造。如果你的力量修正小于某把复合长弓的力量级别，你将无法自如使用并在攻击检定中承受-2减值。熟练使用一把复合长弓一般需要+0及以上的力量修正。一把复合长弓能以很高的力量级别来制造，使得力量高于一般水准的持用者发挥优势；该特性允许你将力量修正加至伤害检定，最高不超过这把弓的力量级别。每1点力量加值会使弓的价格增加100gp。若你的力量修正为负值，你持用复合长弓的伤害检定亦会受其影响。复合长弓发射箭矢。在决定“武器擅长”及类似专长时，复合长弓被视为长弓。
+  meta:
+    training: martial
+    category: ranged
+    cost: 100 gp
+    damage: 1d8
+    critical: x3
+    range: 110
+    weight: 3
+    damageType: P
+- id: Pilum
+  name: 重标枪
+  desc: 这把重型标枪的尖端被设计用来击穿并嵌入盾牌。类似弹药，一支重标枪在击中目标后损毁。若你以重标枪击中持盾的对象，他在用一个标准动作从盾牌上拔出此物之前失去AC的盾牌加值。
+  meta:
+    training: martial
+    category: ranged
+    cost: 5 gp
+    damage: 1d8
+    critical: x2
+    range: 20
+    weight: 4
+    damageType: P
+- id: Shortbow
+  name: 短弓
+  desc: 长约3尺的短弓是由一整块木料制成的。无论其型号大小，你至少需要两只手来使用一把弓。短弓可以在骑乘时使用。若你的力量修正为负值，你持用短弓的伤害检定亦会受其影响。若你有力量加值，你能在使用复合短弓时把力量修正加至伤害检定，但标准短弓则不可。短弓发射箭矢。
+  meta:
+    training: martial
+    category: ranged
+    cost: 30 gp
+    damage: 1d6
+    critical: x3
+    range: 60
+    weight: 2
+    damageType: P
+- id: 'Shortbow, composite'
+  name: 复合短弓
+  desc: 无论其型号大小，你至少需要两只手来使用一把弓。你可以在骑乘中使用复合短弓。所有的复合短弓都以特定的力量级别（即持用者必须达到每把弓的最小力量修正要求才能熟练使用）来制造。如果你的力量修正小于某把复合短弓的力量级别，你将无法自如使用并在攻击检定中承受-2减值。熟练使用一把复合短弓一般需要+0及以上的力量修正。一把复合短弓能以很高的力量级别来制造，使得力量高于一般水准的持用者发挥优势；该特性允许你将力量修正加至伤害检定，最高不超过这把弓的力量级别。每1点力量加值会使弓的价格增加75gp。若你的力量修正为负值，你持用复合短弓的伤害检定亦会受其影响。复合短弓发射箭矢。在决定“武器擅长”及类似专长时，复合短弓被视为短弓。
+  meta:
+    training: martial
+    category: ranged
+    cost: 75 gp
+    damage: 1d6
+    critical: x3
+    range: 70
+    weight: 2
+    damageType: P
+- id: Spear-sling
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: ranged
+    cost: 50 gp
+    damage: 1d8
+    critical: x3
+    weight: 2
+    damageType: P
+- id: Throwing arrow cord
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: ranged
+    damage: 1d4
+    critical: x2
+    range: 60
+    damageType: P
+- id: Aklys
+  name: 飞钩杖
+  desc: 飞钩杖是一把钩形的投掷用木棒，带有20尺长的编织皮索；你能以移动动作回收投出的飞钩杖。它的弯钩允许你发动远程绊摔。有些飞钩杖上还凿出了孔洞，使得投掷时发出破空回响。
+  meta:
+    training: exotic
+    category: light
+    cost: 5 gp
+    damage: 1d6
+    critical: x2
+    range: 20
+    weight: 2
+    damageType: B
+    special:
+      - performance
+      - trip
+- id: 'Axe-Gauntlet, Dwarven Light'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 16 gp
+    damage: 1d6
+    critical: x3
+    weight: 5
+    damageType: S
+    special:
+      - blocking
+      - disarm
+- id: 'Axe, knuckle'
+  name: 指斧
+  desc: 将形似斧头的锋刃加装在黄铜指虎上，指斧经常被成对使用。你能用装备着指斧的手抓握但非持用一件武器或其他物品。与黄铜指虎不同的是，你无法用装备着指斧的手完成施法的姿势成分。
+  meta:
+    training: exotic
+    category: light
+    cost: 9 gp
+    damage: 1d6
+    critical: x3
+    weight: 2
+    damageType: S
+    special:
+      - monk
+      - performance
+- id: Barbazu beard
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 25 gp
+    damage: 1d4
+    critical: x2
+    weight: 5
+    damageType: S
+- id: Battle poi
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 5 gp
+    damage: 1d4 (fire)
+    critical: x2
+    weight: 2
+    damageType: fire
+- id: 'Dagger, swordbreaker'
+  name: 折剑匕首
+  desc: 你能用这把匕首背侧的豁口咬住敌人的剑刃，并将折剑匕首当作扳手来卸除或破坏对方的武器。若你擅长此武器，持用它时对刃型武器的卸武和破武战技检定+4。
+  meta:
+    training: exotic
+    category: light
+    cost: 10 gp
+    damage: 1d4
+    critical: x2
+    weight: 3
+    damageType: S
+    special:
+      - disarm
+      - sunder
+- id: Flying Talon
+  name: 飞爪
+  desc: 这个武器由一条锁链和末端一枚三叉刺钩所组成。由于武器本身十分笨拙，因此使用者无法通过飞爪进行藉机攻击，同时他也不能对邻近方格造成威胁。
+  meta:
+    training: exotic
+    category: light
+    cost: 15 gp
+    damage: 1d4
+    critical: x2
+    range: 10
+    weight: 5
+    damageType: P
+    special:
+      - disarm
+      - trip
+- id: Gnome pincher
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 10 gp
+    damage: 1d6
+    critical: x2
+    weight: 2
+    damageType: B
+    special:
+      - disarm
+      - see text
+- id: Halfling rope-shot
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 1 gp
+    damage: 1d6
+    critical: x2
+    weight: 1
+    damageType: B
+    special:
+      - disarm
+- id: 'Helmet, dwarven boulder'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 20 gp
+    damage: 1d4
+    critical: x2
+    weight: 10
+    damageType: B
+- id: Kama
+  name: 单镰
+  desc: 类似镰刀——在某些地区甚至还在用来收割庄稼——的单镰是一把短小曲刃连接在简单把手上的武器，把手多为木制。它有时也被称为拐，常常成对地被武道家们选用。
+  meta:
+    training: exotic
+    category: light
+    cost: 2 gp
+    damage: 1d6
+    critical: x2
+    weight: 2
+    damageType: S
+    special:
+      - monk
+      - trip
+- id: 'Knife, butterfly'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 5 gp
+    damage: 1d4
+    critical: 19-20/x2
+    weight: 1
+    damageType: P or S
+- id: 'Knife, deer horn'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 10 gp
+    damage: 1d4
+    critical: x3
+    range: 20
+    weight: 3
+    damageType: P
+    special:
+      - blocking
+      - monk
+- id: 'Maulaxe, dwarven'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 25 gp
+    damage: 1d6
+    critical: x3
+    range: 10
+    weight: 5
+    damageType: B or S
+- id: Nunchaku
+  name: 双节棍
+  desc: 双截棍是由较短的绳索或锁链连结的两只木棒或铁棒。
+  meta:
+    training: exotic
+    category: light
+    cost: 2 gp
+    damage: 1d6
+    critical: x2
+    weight: 2
+    damageType: B
+    special:
+      - disarm
+      - monk
+- id: Quadrens
+  name: 多刃匕首
+  desc: 多刃匕首看上去像是一把加粗的匕首，但有着方形格局的四支尖刺。每当你用多刃匕首造成重击时，它会撕裂创口并造成1点出血伤害。除了用于撕开甲胄的缝隙，它的尖刺还能用来咬住对手的剑刃并将其扭断。
+  meta:
+    training: exotic
+    category: light
+    cost: 8 gp
+    damage: 1d6
+    critical: 19-20/x2
+    weight: 2
+    damageType: P
+    special:
+      - performance
+- id: 'Razor, drow'
+  name: 卓尔锋刃
+  desc: 卓尔锋刃就是为了迅猛的攻击以及疾速的挥砍而诞生，其狭长刀身的刃部锋利异常。卓尔的游荡剑客和刺客尤其喜欢这种武器。如果通过卓尔锋刃成功进行一次重击或是偷袭，则造成的伤害会额外增加2点，该伤害属于精准伤害且无法因为重击而翻倍。有着卓尔的武器熟悉种族特性的角色将卓尔锋刃视作军用武器。
+  meta:
+    training: exotic
+    category: light
+    cost: 25 gp
+    damage: 1d4
+    critical: 18–20/×2
+    weight: 2
+    damageType: S
+- id: Rope gauntlet
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 2 sp
+    damage: 1d4
+    critical: x2
+    weight: 2
+    damageType: B or S
+- id: 'Sabre, sawtoothAA1'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 35 gp
+    damage: 1d8
+    critical: 19-20/x2
+    weight: 2
+    damageType: S
+- id: Sai
+  name: 笔架叉
+  desc: 笔架叉是一支被两根短刺包围的长铁刺，用来锁拿敌人的武器。持用笔架叉时，你对敌人武器的破武战技检定+2。虽然有尖刺，笔架叉并不长用来戳刺。它主要用来以柄部敲打敌人，或用尖刺的缝隙捕捉并卸除敌人的武器。笔架叉常被成对持用。
+  meta:
+    training: exotic
+    category: light
+    cost: 1 gp
+    damage: 1d4
+    critical: x2
+    weight: 1
+    damageType: B
+    special:
+      - disarm
+      - monk
+- id: Sanpkhang
+  name: 注毒刀
+  desc: 这柄精心制作的小刀上雕刻有特殊的倒钩和凹槽，以便将毒素注入到受害者的血液之中。任何通过注毒刀传递的伤口型毒药其DC会额外增加1。如果是通过重击或者偷袭传递的话则是增加2。拥有蝮血裔武器熟悉种族特性的角色擅长注毒刀。
+  meta:
+    training: exotic
+    category: light
+    cost: 60 gp
+    damage: 1d4
+    critical: 19–20/×2
+    weight: 1
+    damageType: P or S
+    special:
+      - monk
+      - see text
+- id: Siangham
+  name: 破魔锥
+  desc: 这件武器的握柄前端是戳刺敌人用的尖刺，它像是一支柄部加粗、用来近战的箭矢。
+  meta:
+    training: exotic
+    category: light
+    cost: 3 gp
+    damage: 1d6
+    critical: x2
+    weight: 1
+    damageType: P
+    special:
+      - monk
+- id: Sica
+  name: 钩刀
+  desc: 这把刀是钩剑的轻量化版本。你在持用钩刀时，对装备有小圆盾、轻盾和重盾的对手的攻击检定+1。
+  meta:
+    training: exotic
+    category: light
+    cost: 10 gp
+    damage: 1d6
+    critical: x2
+    weight: 2
+    damageType: S
+    special:
+      - performance
+- id: Thorn bracer
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 30 gp
+    damage: 1d6
+    critical: x2
+    weight: 3
+    damageType: P
+- id: 'War-shield, dwarven'
+  name: 矮人战盾
+  desc: 矮人战盾其参差不齐的盾沿被打磨得锋利异常。矮人散兵经常在战斗中用手上的成对战盾凶残地把对手剁成碎片，同时一些矮人恶棍也钟爱其威风的外观以及易于上手的特性。如果使用者有双武器格斗专长，并同时双持两面矮人战盾，其两面盾牌中最高的那个盾牌加值额外增加1。若使用者以其中一面或者两面盾牌进行盾击，则他会在该轮内失去这个好处（除非使用者有精通盾击专长或类似好处）。持有矮人战盾的持盾手不能再拿用其他物品。矮人战盾也无法在盾刺上获得任何好处。
+  meta:
+    training: exotic
+    category: light
+    cost: 50 gp
+    damage: 1d6
+    critical: ×2
+    weight: 8
+    damageType: P or S
+- id: Waveblade
+  name: 涛澜刀
+  desc: 这种武器因其尾刺般的独特形状也以“蝎尾”闻名，其短小，双弧型的刀身柄部被一个弓形护指所取代。使用者在对抗意图卸除手中波澜刃的卸武CMD上获得+2加值。
+  meta:
+    training: exotic
+    category: light
+    cost: 5 gp
+    damage: 1d6
+    critical: 18–20/×2
+    weight: 2
+    damageType: P or S
+    special:
+      - monk
+      - see text
+- id: 'Whip, scorpion'
+  name: 蝎尾鞭
+  desc: 这只鞭子上镶嵌着一系列犬牙交错的锋刃。它能造成致命伤害，哪怕是面对AC具有护甲加值的生物。如果你同时擅长蝎尾鞭和鞭子，你可以将蝎尾鞭正常使用（轻型演武武器）或当鞭子使用。当你将蝎尾鞭做鞭子使用时，等同于使用鞭子，但造成致命伤害而无论目标生物是否有护甲AC加值。
+  meta:
+    training: exotic
+    category: light
+    cost: 5 gp
+    damage: 1d4
+    critical: x2
+    weight: 3
+    damageType: S
+    special:
+      - disarm
+      - performance
+      - reach
+      - trip
+- id: 'Axe-Gauntlet, Dwarven Heavy'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 21 gp
+    damage: 1d8
+    critical: x3
+    weight: 5
+    damageType: S
+    special:
+      - blocking
+      - disarm
+- id: 'Axe, hooked'
+  name: 钩斧
+  desc: 这把斧头的钩状末端可以用来卸除武器或让对手失去平衡。钩斧可以被当作军用武器来使用（此时功能如同战斧）。
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 20 gp
+    damage: 1d8
+    critical: x3
+    weight: 7
+    damageType: S
+    special:
+      - disarm
+      - performance
+      - trip
+- id: Broken-back seax
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 40 gp
+    damage: 1d10
+    critical: 19–20/×2
+    weight: 4
+    damageType: P and S
+- id: Estoc
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 50 gp
+    damage: 2d4
+    critical: 18–20/x2
+    weight: 4
+    damageType: P
+- id: Falcata
+  name: 反曲剑
+  desc: 这把沉重的刀剑单侧开刃，锋利的刃侧从底部凹向顶部，并具有钩形的握柄。如同放大版的反曲刀，它的形状使重心靠前，其锋刃的打击动量如同斧头。它的剑柄有时会被刻成马头或鹰头，并可能有连结柄端与护手之间的细链用来保护手部和手指。
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 18 gp
+    damage: 1d8
+    critical: 19-20/x3
+    weight: 4
+    damageType: S
+- id: Flickmace
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 20 gp
+    damage: 1d8
+    critical: x2
+    weight: 10
+    damageType: B
+    special:
+      - reach
+      - trip
+- id: Flindbar
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 9 gp
+    damage: 1d8
+    critical: x2
+    weight: 6
+    damageType: B and P
+    special:
+      - disarm
+      - trip
+- id: Khopesh
+  name: 镰剑
+  desc: 这把沉重的刀剑末端有着鸦喙般的弧线，使其整体造型与战斧相似。典型的镰剑长约20到24寸。弧线设计使持用者能够绕过防御钩击、或绊摔敌人。镰剑的典雅造型驱使很多工匠为其添加精美的装饰。
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 20 gp
+    damage: 1d8
+    critical: 19-20/x2
+    weight: 8
+    damageType: S
+    special:
+      - trip
+- id: Knobkerrie
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 5 gp
+    damage: 1d6
+    critical: x2
+    range: 20
+    weight: 4
+    damageType: B
+- id: 'Ram Hammer, Dwarven'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 25 gp
+    damage: 1d8
+    critical: x3
+    range: 10
+    weight: 5
+    damageType: B
+- id: 'Rapier, spiral'
+  name: 螺旋细剑
+  desc: 这柄类似细剑有着比通常更厚的剑身，其被打造成螺旋形的刃部更是锋利异常。这种武器的剑身能有效地缠住敌寇的武器，使其在卸武或格挡上十分理想。若使用的螺旋细剑尺寸合适，使用者能通过武器娴熟专长以在攻击检定中改为使用敏捷修正，而非力量修正，即使其本身并非轻型武器也是如此。使用者无法通过双手握持螺旋细剑来把1-1/2倍力量修正加到伤害上。任何适用于细剑的效果同样适用于螺旋细剑。
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 80 gp
+    damage: 1d6
+    critical: 18–20/×2
+    weight: 3
+    damageType: P
+    special:
+      - blocking
+      - disarm
+      - see text
+- id: Rhoka
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 5 gp
+    damage: 1d8
+    critical: 18-20/x2
+    weight: 6
+    damageType: S
+- id: 'Sabre, sawtoothAG'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 35 gp
+    damage: 1d8
+    critical: 19-20/x2
+    weight: 2
+    damageType: S
+- id: Shotel
+  name: 钩剑
+  desc: 钩剑是一把向内侧开刃的曲形剑，被设计用来越过盾牌攻击对手。你在持用钩剑时，对装备有小圆盾、轻盾和重盾的对手的攻击检定+1。每把钩剑的弧度都有所不同，有些双面开刃，有些单侧开刃、另一侧可以用来加大破盾的力度。钩剑在把骑乘对像从坐骑上扯下来时效果拔群。
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 30 gp
+    damage: 1d8
+    critical: x3
+    weight: 3
+    damageType: P
+    special:
+      - performance
+- id: Sickle-sword
+  name: 镰剑
+  desc: 这柄异种武器广为依莉森那些没有巫术天赋的居民所喜爱，其奇特的刀刃在1/2到3英尺的地方有着数处弯曲。镰剑的柄部长且弯弧，刃部中间有着一个小的次要握把，使用者能通过空着的一只手以出乎意料的方式迅速扭转剑身。当使用者单手握持镰剑且另一只手空着时，他能通过一次迅捷动作以在本回合结束前的下一次攻击上获得+2加值。
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 20 gp
+    damage: 1d8
+    critical: 19–20/×2
+    weight: 4
+    damageType: S
+    special:
+      - distracting
+      - see text
+- id: Split-blade sword
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 200 gp
+    damage: 2d6
+    critical: ×2
+    weight: 8
+    damageType: S
+    special:
+      - disarm
+      - trip
+      - see text
+- id: 'Sword, dueling'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 20 gp
+    damage: 1d8
+    critical: 19-20/x2
+    weight: 3
+    damageType: S
+- id: 'Sword, bastard'
+  name: 重剑
+  desc: 重剑长约4尺，使得它难以在经受特殊训练之前单手使用；因此这是一件异种武器。你能在双手持用重剑的情况下将其视为军用武器。
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 35 gp
+    damage: 1d10
+    critical: 19-20/x2
+    weight: 6
+    damageType: S
+- id: Tongi
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 18 gp
+    damage: 1d6
+    critical: 19-20/x3
+    weight: 4
+    damageType: P
+- id: 'Waraxe, dwarven'
+  name: 矮人重斧
+  desc: 矮人重斧巨大、装饰华美的斧头安装在粗大的握柄上，使得它难以在经受特殊训练之前单手使用；因此这是一件异种武器。中型体型的角色能在双手持用矮人重斧的情况下将其视为军用武器，大型体型的生物则能类似地单手持用。矮人能将矮人重斧视为军用武器，甚至在单手持用时。
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 30 gp
+    damage: 1d10
+    critical: x3
+    weight: 8
+    damageType: S
+- id: 'Waraxe, dwarven double'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 60 gp
+    damage: 1d10
+    critical: x3
+    weight: 12
+    damageType: S
+- id: Whip
+  name: 长鞭
+  desc: 长鞭无法对任何AC护甲加值+1以上、或天生护甲+3以上的生物造成伤害。长鞭被视为触及范围15尺的近战长兵器，不过你无法威胁能攻击到的区域。此外与多数长兵器不同的是，你能用它对抗触及范围内任何位置的敌人（包括邻接的敌人）。如同使用远程武器，使用长鞭将会引发藉机攻击。你能通过“武器娴熟”专长在持用一把型号与你体型相符的长鞭时，在攻击检定中以敏捷修正取代力量修正，即便它并不是轻型武器。你无法通过双手持用长鞭的方式来将力量修正的1.5倍加至伤害检定。
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 1 gp
+    damage: 1d3
+    critical: x2
+    weight: 2
+    damageType: S
+    special:
+      - disarm
+      - nonlethal
+      - reach
+      - trip
+- id: 'Axe, Orc Double'
+  name: 兽人双头斧
+  desc: 兽人双头斧是长柄两端各有一只斧刃的凶残武器，也是一件双头武器。虽然由兽人发明、也与兽人传统相联系，还常因过重和笨拙而被诟病，这把双头斧实际能被其他任何种族打造和持用。由于两端都有锋刃，持用者必须抓握住兽人双头斧的握柄中央，然后加以挥舞——这种回旋斩劈的战斗风格相较巨斧或战斧更像是在用木棍。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 60 gp
+    damage: 1d8/1d8
+    critical: x3
+    weight: 15
+    damageType: S
+    special:
+      - double
+- id: 'Axe, Butchering'
+  name: 屠戮斧
+  desc: 屠戮斧出自贝尔克泽恩的兽人铁匠之手。这柄斧头有着一个特大号的斧首，上面点缀有尖刺。同时其斧柄粗长而厚实，勉强能让其重量分布能保持平衡。如果使用者的力量低于19（如果是小体型及以下的尺寸则是17），则他将无法操控这柄有着让人望而生畏尺寸的武器，并在攻击时会受到-2减值。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 65 gp
+    damage: 3d6
+    critical: ×3
+    weight: 25
+    damageType: S
+- id: 'Battle Ladder, gnome'
+  name: 侏儒战梯
+  desc: 侏儒们把这种加固过的4英尺长窄梯当做武器。战斗中，侏儒战梯就像木棍一样。但梯子上的空间可以用来纠缠对手的肢体，因此其获得“绊摔”武器特性。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 20 gp
+    damage: 1d6/1d6
+    critical: x2
+    weight: 8
+    damageType: B
+    special:
+      - trip
+- id: Boarding gaff
+  name: 登船叉
+  desc: 登船叉，又称钩叉，是一根末端有着刺鱼用尖钩的长杆。海盗通常会在其分叉的末端加上额外的沉重钩子以帮助攀舰，该武器也因此得名。此外，登船叉也可以用来捕鱼。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 8 gp
+    damage: 1d6/1d6
+    critical: x2
+    weight: 8
+    damageType: S
+    special:
+      - double
+      - reach
+      - trip
+- id: Chain-hammer
+  name: 双子流星锤
+  desc: 这一对锤子通过一条松散的锁链连接在一起。两枚锤子的平衡性都颇为良好，使其能在近战时一同使用。此外，锁链的长度也能让使用者可以在短距离内把其中一枚锤子投掷出去，然后通过锁链将其拉拽回来。拉动链条回收丢出去的锤子是一个移动动作。双子流星锤其能投掷的最大距离是10英尺。矮人游侠很喜欢使用这种武器，他们通常会在手上戴上带锁铁手套以确保至少有一个锤子能牢牢地握在手中。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 35 gp
+    damage: 1d6/1d6
+    critical: ×2
+    range: 20
+    weight: 8
+    damageType: B
+    special:
+      - double
+      - see text
+- id: 'Chain, spiked'
+  name: 刺链
+  desc: 刺链长约4尺，布满了凶残的钩刺。有些会有铁箍作为把手。你能通过“武器娴熟”专长在持用一把型号与你体型相符的刺链时，在攻击检定中以敏捷修正取代力量修正，即便它并不是轻型武器。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 25 gp
+    damage: 2d4
+    critical: x2
+    weight: 10
+    damageType: P
+    special:
+      - disarm
+      - trip
+- id: Crook
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 1 gp
+    damage: 1d6
+    critical: x2
+    weight: 5
+    damageType: B
+    special:
+      - reach
+      - trip
+- id: 'Curve blade, elven'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 80 gp
+    damage: 1d10
+    critical: 18–20/x2
+    weight: 7
+    damageType: S
+- id: 'Dorn-Dergar, dwarven'
+  name: 矮人链球
+  desc: 这件异种武器由一条10尺长的铁索，和末端一枚大号拳头尺寸的坚实铁球组成。通过用一个移动动作放开和收紧他握住的铁链长度，使用者可以将链球在触及武器或是普通的非触及武器间来回切换。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 50 gp
+    damage: 1d10
+    critical: x2
+    weight: 15
+    damageType: B
+    special:
+      - reach
+      - see text
+- id: Double spear
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 25 gp
+    damage: 1d8/1d8
+    critical: ×3
+    weight: 12
+    damageType: P
+    special:
+      - double
+- id: Elven branched spear
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 20 gp
+    damage: 1d8
+    critical: x3
+    weight: 10
+    damageType: P
+    special:
+      - brace
+      - reach
+- id: Fauchard
+  name: 斩矛
+  desc: 就和大砍刀一样，斩矛也是一根末端有着弧形刀刃的长杆武器。然而，和短镰或巨镰一样，其锋刃处于凹进去的一侧。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 14 gp
+    damage: 1d10
+    critical: 18-20/x2
+    weight: 10
+    damageType: S
+    special:
+      - reach
+      - trip
+- id: 'Flail, dire'
+  name: 双头链枷
+  desc: 双头链枷在长握柄的两端各有一只布满尖刺的铁球、与握柄以锁链相接。这件武器触及虽短、但威力拔群，并通常结合回旋动量来挥舞使用。双头链枷的持用者必须足够强壮，才能有效使用并避免脱手。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 90 gp
+    damage: 1d8/1d8
+    critical: x2
+    weight: 10
+    damageType: B
+    special:
+      - disarm
+      - double
+      - trip
+- id: Flailpole
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 15 gp
+    damage: 1d8
+    critical: x2
+    weight: 10
+    damageType: B
+    special:
+      - disarm
+      - reach
+      - trip
+- id: Flambard
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 50 gp
+    damage: 1d10
+    critical: 19-20/x2
+    weight: 6
+    damageType: S
+    special:
+      - sunder
+- id: Flying blade
+  name: 旋刃
+  desc: 旋刃是一件大型的圆月弯刀与10尺锁链铆定而成。你在持用旋刃战斗时，将其在自己头顶旋转数圈后掷向对手。由于旋刃是件太过笨拙的武器，你用它做出的攻击检定-2；但若你用它发动针对移动而引起的藉机攻击时，攻击检定不但不受减值反而还会+2。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 40 gp
+    damage: 1d12
+    critical: x3
+    weight: 12
+    damageType: S
+    special:
+      - performance
+      - reach
+- id: Garrote
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 3 gp
+    damage: 1d6
+    critical: x2
+    weight: 1
+    damageType: S
+    special:
+      - grapple
+      - see text
+- id: 'Giant-Sticker, Dwarven'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 25 gp
+    damage: 2d6
+    critical: x3
+    weight: 12
+    damageType: P or S
+    special:
+      - brace
+      - reach
+- id: 'Hammer, Gnome hooked'
+  name: 侏儒钩锤
+  desc: 侏儒钩锤是一件双头武器——这件天才工具的长柄一端是锤头，另一端则是弧形的镐。锤头的钝面是造成1d6伤害的钝击武器（重击倍率×3），钩侧是造成1d4伤害的穿刺武器（重击倍率×4）。你能将任一端视为主手武器。侏儒能将钩锤视为军用武器。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 20 gp
+    damage: 1d8/1d6
+    critical: x3/x4
+    weight: 6
+    damageType: B or P
+    special:
+      - double
+      - trip
+- id: Harpoon
+  name: 鱼叉
+  desc: 鱼叉是一把有倒钩的矛，其尾部还连结着50尺长的绳索。多数鱼叉都有着金属尖端，少数为兽牙或木制的。若你擅长鱼叉，它可以当作绊摔武器使用。一把鱼叉的10磅重量包括了其本身外加50尺长的麻绳，该重量可以通过换用较短或较轻的绳索来减轻。若你不擅长鱼叉，可将其视为矛。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 5 gp
+    damage: 1d8
+    critical: x3
+    range: 10
+    weight: 16
+    damageType: P
+    special:
+      - grapple
+- id: 'Longaxe, dwarven'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 50 gp
+    damage: 1d12
+    critical: x3
+    weight: 14
+    damageType: S
+    special:
+      - reach
+- id: 'Longhammer, dwarven'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 70 gp
+    damage: 2d6
+    critical: x3
+    weight: 20
+    damageType: B
+    special:
+      - reach
+- id: Mancatcher
+  name: 捕人叉
+  desc: 这件长兵器包括了两支攻击时环绕住对象的弧形金属杠，允许你将一名对手定身。捕人叉是用来捕捉特定体型（譬如小型或中型）的生物而打造的，无法作用于体型不对的生物。向对像进行一次接触攻击，命中后再通过战技检定来擒抱他（虽然未空出双手也无需承受-4减值）；成功则意味着你与对手展开擒抱。一旦对手被擒抱，你能以擒抱动作来移动或伤害他。捕人叉硬度为10，生命值5点；破坏它的力量检定DC为26。若你放开捕人叉，对方能以一个标准动作解放自己。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 15 gp
+    damage: 1d2
+    critical: x2
+    weight: 10
+    damageType: P
+    special:
+      - grapple
+      - reach
+      - see text
+- id: Orc skull ram
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 15 gp
+    damage: 1d10
+    critical: x3
+    weight: 20
+    damageType: B
+    special:
+      - reach
+- id: 'Piston maul, gnome'
+  name: 侏儒动力槌
+  desc: 每当这把炼金能量驱动的大棒锤击目标，它锤头上安装的机械活塞就会释放出可怖的破坏力。使用动力槌进行的成功的破武战技攻击可以造成额外+4伤害。但是，动力槌使用一枚暴雷石作为能量源；否则它只相当于一把普通的巨木棒。为动力槌更换暴雷石需要一个标准动作，每一块暴雷石可以驱动动力槌24小时，之后便会耗尽。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 70 gp
+    damage: 1d10
+    critical: x2
+    weight: 15
+    damageType: B
+- id: 'Ripsaw glaive, gnome'
+  name: 侏儒链锯大砍刀
+  desc: 这把大砍刀的锋刃被替换成了用一副转轴驱动的带刃的链条，这个转轴上链接着一条厚重的拉索。如果拉索被（以一个移动动作）拉动，这锯刃就会开始保持飞旋相当于你的力量调整值的轮数，这时武器可以造成额外+2伤害；若非如此，则它相当于普通的大砍刀。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 30 gp
+    damage: 1d10
+    critical: x3
+    weight: 12
+    damageType: S
+    special:
+      - reach
+      - see text
+- id: 'Scarf, bladed'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 12 gp
+    damage: 1d6
+    critical: x2
+    weight: 2
+    damageType: S
+    special:
+      - disarm
+      - trip
+- id: 'Spear, totem'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 25 gp
+    damage: 1d10
+    critical: x3
+    range: 10
+    weight: 6
+    damageType: P or S
+- id: 'Sphinx Hammer, Dwarven'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 45 gp
+    damage: 1d10
+    critical: x3
+    range: 20
+    weight: 8
+    damageType: B
+- id: Switchscythe
+  name: 摺叠巨镰
+  desc: 这种巨镰其装载有机簧的刃部能摺叠并收纳入武器的柄部。展开摺叠巨镰的刃部是一个迅捷动作，将其重新收纳起来则需要一个标准动作。使用者能通过唬骗或者巧手技能来把收纳状态下摺叠巨镰隐藏起来，视作隐藏武器。伪装这种装置需要1分钟，伪装后会为此类相关检定提供+5加值。一旦武器展开伪装则宣告失败，需要将其再次收纳才能重新隐藏。任何适用于巨镰的效果同样适用于摺叠巨镰。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 18 gp
+    damage: 2d4
+    critical: ×4
+    weight: 10
+    damageType: P or S
+    special:
+      - trip
+- id: 'Sword, two-bladed'
+  name: 双刃剑
+  desc: 双刃剑是一件双头武器——从短柄中央向两端伸出孪生的剑刃，允许持用者发动优雅而致命的连续技。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 100 gp
+    damage: 1d8/1d8
+    critical: 19-20/x2
+    weight: 10
+    damageType: S
+    special:
+      - double
+- id: 'Urgrosh, dwarven'
+  name: 矮人矛斧
+  desc: 矮人矛斧是一件双头武器——斧头和矛尖分别位于长柄的两端。矛斧的斧头是造成1d8伤害的挥砍武器，矛尖是造成1d6伤害的穿刺武器。你能将任一端视为主手武器；另一端则为副手武器。若你用矛斧迎击冲锋角色，这件武器的矛尖能够造成双倍伤害。矮人能将矮人矛斧视为军用武器。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 50 gp
+    damage: 1d8/1d6
+    critical: x3
+    weight: 12
+    damageType: P or S
+    special:
+      - brace
+      - double
+- id: 'Darts, featherweight (10)'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 1 gp
+- id: Bola
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 5 gp
+    damage: 1d4
+    critical: x2
+    range: 10
+    weight: 2
+    damageType: B
+    special:
+      - nonlethal
+      - trip
+- id: 'Bola, Brutal'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 15 gp
+    damage: 1d4
+    critical: x2
+    range: 10
+    weight: 2
+    damageType: B and P
+    special:
+      - trip
+- id: Boomerang
+  name: 回力镖
+  desc: 回力镖原本是一件狩猎工具，但是它非凡的投掷武器特性被用在战场上也并不奇怪。一把回力镖由扁平的木材制成，具有长长的握柄和弯曲的弧线，弧线收紧处则削得相当锋利。狩猎用的回力镖并不会飞回来。
+  meta:
+    training: exotic
+    category: ranged
+    cost: 3 gp
+    damage: 1d6
+    critical: x2
+    range: 30
+    weight: 3
+    damageType: B
+- id: 'Bow, thorn'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 50 gp
+    damage: 1d6
+    critical: x3
+    range: 40
+    weight: 2
+    damageType: P
+- id: 'Crossbow, crank (heavy)'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 400 gp
+    damage: 1d10
+    critical: 19-20/x2
+    range: 120
+    weight: 12
+    damageType: P
+- id: 'Crossbow, crank (light)'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 250 gp
+    damage: 1d8
+    critical: 19-20/x2
+    range: 80
+    weight: 6
+    damageType: P
+- id: 'Crossbow, double'
+  name: 双发弩
+  desc: '这件重型武器一次扣下扳机可以击发两只铁簇弩矢。由于其型号和重量惊人，你在擅长它的情况下攻击检定也要受到-4减值，若不擅长则为-8。若攻击命中，目标将会受到两只弩矢的伤害。重击、偷袭和其他基于精准的伤害仅会应用于第一只弩矢。装填一支弩矢是一个标准动作；“快速装填”专长能将其减至一个移动动作。“十字弓熟稔（Crossbow Mastery, APG）”专长允许你通过一个移动动作为其装填两只弩矢。双发弩发射弩矢。'
+  meta:
+    training: exotic
+    category: ranged
+    cost: 300 gp
+    damage: 1d8
+    critical: 19-20/x2
+    range: 80
+    weight: 18
+    damageType: P
+- id: 'Crossbow, hand'
+  name: 手弩
+  desc: 你能用手拉开手弩。为手弩装填是一个会引发藉机攻击的移动动作。如同使用轻弩和重弩一样，手弩发射标准弩矢。你能单手使用手弩射击且不受攻击减值，但无法单手装填。你还能两只手各持用一把轻弩射击，但这样将会受到如同使用两把轻型武器的双武器战斗减值。
+  meta:
+    training: exotic
+    category: ranged
+    cost: 100 gp
+    damage: 1d4
+    critical: 19-20/x2
+    range: 30
+    weight: 2
+    damageType: P
+- id: 'Crossbow, launching'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 75 gp
+    range: 30
+    weight: 8
+- id: 'Crossbow, repeating heavy'
+  name: 连发重弩
+  desc: 这把连发重弩装有5支弩矢。只要其中还有弩矢，你就能通过拉动杠杆进行装填（一个自由动作）。安装一个含有5支弩矢的新弹匣是一个会引起藉机攻击的整轮动作。只要武器型号与你的体型相符，你能单手击发连发重弩、或两只手分别持一把连发重弩进行射击。但是想要使用装填杠杆，你必须用双手操作这件武器，并且必须用两只手来安装新弹匣。
+  meta:
+    training: exotic
+    category: ranged
+    cost: 400 gp
+    damage: 1d10
+    critical: 19-20/x2
+    range: 120
+    weight: 12
+    damageType: P
+- id: 'Crossbow, repeating light'
+  name: 连发轻弩
+  desc: 这件武器的功能与连发重弩相似，不过伤害、重击和射程数据与轻弩相同而非重弩。它的轻量型和精细构造，使得在依赖隐秘性与射速的行动中更为便携和有效。
+  meta:
+    training: exotic
+    category: ranged
+    cost: 250 gp
+    damage: 1d8
+    critical: 19-20/x2
+    range: 80
+    weight: 6
+    damageType: P
+- id: Flask Thrower
+  name: 掷瓶器
+  desc: 这个异种武器由一根棍子和棍子末端一个篮子组成，篮子内可以放置强酸等类似的炼金武器。掷瓶器能有效地增加造成溅射伤害的投掷物质的飞行距离，比如强酸，炽火胶或圣水。同时，掷瓶器也适用于绊足包，暴雷石或铁蒺藜。
+  meta:
+    training: exotic
+    category: ranged
+    cost: 25 gp
+    range: 20
+    weight: 4
+- id: Grappling hook
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 6 gp
+    damage: 1d6
+    critical: x2
+    range: 10
+    weight: 14
+    damageType: P
+    special:
+      - grapple
+- id: 'Hornbow, orc'
+  name: 兽人角弓
+  desc: 兽人角弓通常以巨兽的坚角所打造，体积甚至超过了长弓。尽管射程上比起其他弓来稍稍逊色，但兽人角弓因其毁灭性的破坏力而广受兽人和其亲族的青睐。所有角弓都属于复合弓，因此其和别的复合弓一样可以在制造时进行调整以在高力量修正上获益。任何能同时适用于长弓和短弓的效果同样适用于角弓。
+  meta:
+    training: exotic
+    category: ranged
+    cost: 130 gp
+    damage: 2d6
+    critical: ×3
+    range: 80
+    weight: 7
+    damageType: P
+- id: 'Javelin, stormshaft'
+  name: 雷鸣标枪
+  desc: 这种一次性的标枪在其枪头后装载有一枚暴雷石。如果成功地以这种标枪命中目标，目标生物在如常受到正常伤害的同时，暴雷石的效果也会以其为中心产生。如果使用者失手了，则投骰已决定其落地位置（采用与投炸武器失手的相同规则）。暴雷石的效果将会以落地位置的方格为中心产生。
+  meta:
+    training: exotic
+    category: ranged
+    cost: 35 gp
+    damage: 1d6
+    critical: ×2
+    range: 30
+    weight: 3
+    damageType: P
+- id: Lasso
+  name: 套索
+  desc: 这件投掷武器是一段打有活结的绳索，使你能够如同使用捕网一般缠绕住对手。缠绕对像施法的专注DC为“10+法术环级”。缠绕对像能以整轮动作通过DC15的脱逃检定摆脱绳索。套索生命值2点，AC为10，破坏它的力量检定DC为23。成功命中后套索会拉紧；想要再次使用，你需要通过一个标准动作来使绳结复位。
+  meta:
+    training: exotic
+    category: ranged
+    cost: 1 sp
+    weight: 5
+- id: Net
+  name: 捕网
+  desc: 捕网用来缠绕对手。当你掷出捕网时，你向对像进行一次远程接触攻击。捕网的最大射程为10尺。若你命中，目标陷入缠绕状态。被缠绕的生物攻击检定-2、敏捷-4、仅能半速移动，并且无法冲锋或奔跑。若你在力量对抗检定中胜出以控制捕网的拉索，缠绕对像将仅能在捕网绳长的限制范围内移动。若缠绕对像想要施法，他必须通过DC为“10+法术环级”的专注检定，失败则无法施法。缠绕对像能以整轮动作通过DC20的脱逃检定摆脱捕网。捕网拥有生命值5点，破坏它的力量检定DC为25。捕网仅能作用于体型和你相差一级以内的生物。捕网必须被折叠好才能有效投掷。你在战斗中首次使用捕网时，进行正常的远程接触攻击；在折叠好之前再次使用则会使攻击检定承受-4减值。擅长捕网的角色需要2轮折叠好捕网，不熟练者耗时加倍。
+  meta:
+    training: exotic
+    category: ranged
+    cost: 20 gp
+    range: 10
+    weight: 6
+- id: 'Net, snag'
+  name: 钩网
+  desc: 这个短而宽的捕网上覆盖着刺环以及活结。它的功能如同典型的捕网，不过它拥有绊摔特性。如果你已经用其缠住敌人并且同时握住拖绳，就能够在自己的回合使用绊摔战技检定对抗敌人以替代一次近战攻击；如果你成功了，就能绊摔敌人或对其造成1点穿刺伤害。若要在被钩网纠缠时施法，专注检定DC为“17+法术环级”。使用逃脱检定挣脱钩网的DC为22。
+  meta:
+    training: exotic
+    category: ranged
+    cost: 30 gp
+    range: 10
+    weight: 10
+    damageType: P
+    special:
+      - trip
+      - see text
+- id: 'Pelletbow, Dwarven Heavy'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 75 gp
+    damage: 1d6
+    critical: 19-20/x3
+    range: 60
+    weight: 8
+    damageType: B
+- id: 'Pelletbow, Dwarven Light'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 50 gp
+    damage: 1d4
+    critical: 19-20/x3
+    range: 40
+    weight: 4
+    damageType: B
+- id: 'Shield, throwing'
+  name: 飞盾
+  desc: 这面盾牌被设计用来投掷，因此其握把的设计允许你通过一个自由动作卸下并投掷出去。塔盾无法被作为飞盾。盾牌的AC增强加值和盾刺都无法作用于你的攻击和伤害检定。飞盾无法被卸武。
+  meta:
+    training: exotic
+    category: ranged
+    cost: +50 gp
+    damage: 1d6
+    critical: x2
+    range: 20
+    damageType: B
+    special:
+      - performance
+      - trip
+- id: Shrillshaft javelin
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 35 gp
+    damage: 1d6
+    critical: x2
+    range: 30
+    weight: 3
+    damageType: P
+- id: Shuriken (5)
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 1 gp
+    damage: 1d2
+    critical: x2
+    range: 10
+    weight: 1
+    damageType: P
+    special:
+      - monk
+- id: 'Sling, double'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 10 gp
+    damage: 1d4
+    critical: x2
+    range: 50
+    weight: 1
+    damageType: B
+    special:
+      - double
+      - see text
+- id: Sling glove
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 5 gp
+    damage: 1d4
+    critical: x2
+    range: 50
+    weight: 2
+    damageType: B
+- id: 'Sling staff, halfling'
+  name: 半身人投石杖
+  desc: 特殊设计为连结短棒的投石索，一把半身人投石杖能在熟练持用者的手中发挥巨大威力。你能在使用投石杖时将力量修正加至伤害，如同它是投掷武器一般。你能单手使用投石杖抛石，但无法装填。为投石杖装填是一个需要用到两只手、并且会引发藉机攻击的移动动作。半身人投石杖抛射弹丸。你能用投石杖抛掷普通的石块，但石块不如专门的弹丸一样密度均匀、形状圆润。因此这种攻击要受到-1减值，而判断伤害时要将其视为武器型号小于实际一级。半身人投石杖还能被当作造成钝击伤害的简易近战武器，视为同等型号的木棒。半身人能将半身人投石杖视为军用武器。
+  meta:
+    training: exotic
+    category: ranged
+    cost: 20 gp
+    damage: 1d8
+    critical: x3
+    range: 80
+    weight: 3
+    damageType: B
+- id: 'Sling, stitched'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    damage: 1d6
+    critical: x2
+    weight: 1
+    damageType: B
+    special:
+      - disarm
+      - trip
+- id: Wrist launcher
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 200 gp
+    range: 20
+    weight: 1
+    damageType: P
+- id: 'Wrist launcher, heavy'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 250 gp
+    damage: 1d4
+    critical: 19–20/x2
+    range: 30
+    weight: 2
+    damageType: P
