@@ -5,7 +5,7 @@ desc:
 
   角色定位: 游荡剑客使用梦幻般的步伐和快而精准的突刺，进出战场扰乱和阻碍敌人。这个快速而敏捷的战士是施法者的护卫，也是盗贼和杀手的好战友，在有机会展示自己的勇气并对那些大笨蠢物进行最后一击之前，游荡剑客会用幽默的态度直面死亡，并且用自己的智慧狠狠地进行还击。
 
-alignment: any
+alignment: []
 hd: 10
 classSkills:
   - acrobatics
@@ -26,15 +26,20 @@ classSkills:
   - swim
 skillPoints: 4
 
-proficiencies:
-  weapon:
-    - simple
-    - martial
-  armor:
-    - light
-    - proficiency(Buckler)
-
 feats:
+  - id: Swashbuckler Weapon and Armor Proficiency
+    name: 游荡剑客人武器防具擅长
+    desc: 游荡剑客擅长所有的简单和军用武器。游荡剑客擅长所有的轻甲以及小圆盾。
+    effects:
+      - type: gainProficiency
+        args:
+          weaponTraining:
+            - simple
+            - martial
+          armorTraining:
+            - light
+          shield:
+            - buckler
   - id: Panache
     name: 派头
     type: ex
@@ -90,7 +95,8 @@ feats:
       每当在4级及之后每4级获得新的额外专长时，一名游荡剑客可以选择一个新的额外专长替代已有的一个额外专长。作为结果，游荡剑客会失去原有的专长并获得一个新专长。被替换的专长不能是被用于满足另一个专长、进阶职业或其他能力的前提条件的专长。每次到达新的指定级别时，游荡剑客只能选择一个新的专长来替换原有的专长，并且不能选择替换本级获得的新额外专长。在选择战斗专长时，游荡剑客等级可以作为战士等级满足专长的前提条件。
     effects:
       - type: gainFeat
-        featType: combat
+        args:
+          featType: combat
   - id: Swashbuckler Weapon Training +1
     name: 游荡剑客武器训练 +1
     type: ex
@@ -117,6 +123,7 @@ levels:
     reflex: 2
     will: 0
     special:
+      - Swashbuckler Weapon and Armor Proficiency
       - Deeds
       - Panache
       - Swashbuckler Finesse

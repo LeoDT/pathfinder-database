@@ -63,12 +63,14 @@ racialTrait:
     name: 武器熟悉
     desc: 半兽人擅长巨斧以及弯刃大刀，并且将任何冠以“兽人”之名的武器视为军用武器。
     effects:
-      - id: treatWeaponWithPrefixAsMartial
-        prefix: orc
-      - id: gainWeaponProficiencies
-        weapons:
-          - Greataxe
-          - Falchion
+      - type: treatWeaponWithPrefixAsMartial
+        args:
+          prefix: orc
+      - type: gainWeaponProficiencies
+        args:
+          weapons:
+            - Greataxe
+            - Falchion
 
 alternateRacialTrait:
   - id: Acute Darkvision

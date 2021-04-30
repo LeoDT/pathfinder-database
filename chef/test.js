@@ -1,23 +1,18 @@
-import { parse } from 'https://deno.land/std@0.85.0/encoding/csv.ts';
-import { stringify } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
+import { parse } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
 
-const c = await parse(
-  `
-—,1,1d2,1d3,1d4
-1,1d2,1d3,1d4,1d6
-1d2,1d3,1d4,1d6,1d8
-1d3,1d4,1d6,1d8,2d6
-1d4,1d6,1d8,2d6,3d6
-1d6,1d8,1d10,2d8,3d8
-1d8,1d10,1d12,3d6,4d6
-1d4,1d6,2d4,2d6,3d6
-1d8,1d10,2d6,3d6,4d6
-1d10,2d6,2d8,3d8,4d8
-2d6,2d8,2d10,4d8,6d8
-`,
-  { columns: [, 'small', 'medium', 'large', 'huge'] }
-);
+let text = '';
+for await (const entry of Deno.readDir('./pf-database/feats')) {
+  text += await Deno.readTextFile(`./pf-database/feats/${entry.name}`);
+}
 
-const y = stringify(c);
+const feats = parse(text);
 
-console.log(y);
+const types = new Set();
+
+for (const f of feats) {
+  for (const t of f.type) {
+    types.add(t);
+  }
+}
+
+console.log(types);

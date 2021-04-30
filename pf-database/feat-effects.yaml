@@ -1,0 +1,66 @@
+- id: Exotic Weapon Proficiency
+  effects:
+    - type: gainSelectedWeaponProficiency
+      args:
+        training:
+          - exotic
+- id: Martial Weapon Proficiency
+  effects:
+    - type: gainSelectedWeaponProficiency
+      args:
+        training:
+          - martial
+- id: Simple Weapon Proficiency
+  effects:
+    - type: gainProficiency
+      args:
+        weaponTraining:
+          - simple
+- id: Improved Initiative
+  effects:
+    - type: gainInitiative
+      args:
+        bonus:
+          type: untyped
+          amount: 4
+- id: Dodge
+  effects:
+    - type: gainAC
+      args:
+        bonus:
+          type: dodge
+          amount: 1
+- id: Great Fortitude
+  effects:
+    - type: gainSave
+      args:
+        saveType: fortitude
+        bonus:
+          type: untyped
+          amount: 2
+- id: Iron Will
+  effects:
+    - type: gainSave
+      args:
+        saveType: will
+        bonus:
+          type: untyped
+          amount: 2
+- id: Lightning Reflexes
+  effects:
+    - type: gainSave
+      args:
+        saveType: reflex
+        bonus:
+          type: untyped
+          amount: 2
+- id: Two-Weapon Fighting
+  effects:
+    - type: gainTwoWeaponFighting
+- id: Toughness
+  effects:
+    - type: gainHP
+      args:
+        bonus:
+          type: untyped
+          amountFormula: MAX(3, level)

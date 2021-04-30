@@ -275,6 +275,7 @@
     critical: x2
     weight: 1
     damageType: P
+    bothHand: true
 - id: Boarding pike
   name: ''
   desc: ''
@@ -289,6 +290,7 @@
     special:
       - brace
       - reach
+    bothHand: true
 - id: Kumade
   name: ''
   desc: ''
@@ -302,6 +304,7 @@
     damageType: P
     special:
       - grapple
+    bothHand: true
 - id: 'Kumade, collapsible'
   name: ''
   desc: ''
@@ -315,6 +318,7 @@
     damageType: P
     special:
       - grapple
+    bothHand: true
 - id: Lantern staff
   name: 燃灯杖
   desc: 这柄长长的金属棍有着用来盛放灯油的容器，其末端有着类似灯笼一样的结构。灌有燃料的燃灯杖可以像附盖提灯一样提供光源。同时以燃灯杖进行攻击时，在正常伤害外还可以造成1点火焰伤害。任何适用于木棍的效果——那些将木棍作为双头武器使用的除外——同样适用于燃灯杖。
@@ -326,6 +330,7 @@
     critical: ×2
     weight: 9
     damageType: B
+    bothHand: true
 - id: Longspear
   name: 长矛
   desc: 长矛长约8尺。
@@ -340,6 +345,7 @@
     special:
       - brace
       - reach
+    bothHand: true
 - id: Quarterstaff
   name: 木棍
   desc: 木棍是一根简单的木头棍子，长约5尺。战斗时一手握住末端、另一手握在棍身1/4处，能够封挡来袭、迅捷反击。
@@ -353,6 +359,7 @@
     special:
       - double
       - monk
+    bothHand: true
 - id: Spear
   name: 矛
   desc: 矛长约5尺，可以用于投掷。
@@ -367,6 +374,7 @@
     damageType: P
     special:
       - brace
+    bothHand: true
 - id: 'Spear, boar'
   name: 猎猪矛
   desc: 这只矛装有十字横枝，防护敌人的突击。若你以准备动作迎击对方冲锋并且命中，你在下轮前针对该目标的AC获得+2盾牌加值。
@@ -381,6 +389,7 @@
     special:
       - brace
       - see text
+    bothHand: true
 - id: 'Spear, weighted'
   name: ''
   desc: ''
@@ -395,6 +404,7 @@
     special:
       - brace
       - double
+    bothHand: true
 - id: Blowgun
   name: 吹箭
   desc: 吹箭通常用来在远距离传递弱化敌人（而非致命）的毒药。它们发射时几乎无声。合适的毒药搭配请参见毒药相关信息。
@@ -1114,6 +1124,7 @@
       - brace
       - reach
       - see text
+    bothHand: true
 - id: Bec de corbin
   name: 鸦啄战锤
   desc: 鸦啄战锤是一件很像苜蓿战锤的长兵器，不过锤头略钝、而矛尖则牢固并弯曲。你主要以矛尖来攻击。你持用鸦啄战锤时，击破中型和重型盔甲的破武战技检定+2。
@@ -1129,6 +1140,7 @@
       - brace
       - reach
       - see text
+    bothHand: true
 - id: Bill
   name: 戈刀
   desc: 这件长兵器的锋刃呈弧形或钩状，并与其背部的长刺紧紧相贴。尖刺主要用来格挡。这件武器在你防御式战斗或完全防御时给予你AC+1盾牌加值。被戈刀击中的骑乘对像用以维持骑乘的骑术检定-1。
@@ -1145,6 +1157,7 @@
       - disarm
       - reach
       - see text
+    bothHand: true
 - id: Earth breaker
   name: 裂地锤
   desc: 这把巨锤头部的致命钢铁收拢为数个钝尖，将挥舞的猛恶力道集中于较小的区域，使其能够轻易砸穿铠甲。由于其令人咋舌的尺寸和沉重的锤头，一把裂地锤的平衡很难掌控，需要双手才能恰当地举起和控制。
@@ -1156,6 +1169,7 @@
     critical: x3
     weight: 14
     damageType: B
+    bothHand: true
 - id: Falchion
   name: 弯刃大刀
   desc: 这把兵器有着弯刀一般弯曲和锐利的锋刃，未开锋的刀背则有直有曲。它的重量集中在前端，因此用来切斩要比戳刺来得顺手。
@@ -1167,6 +1181,7 @@
     critical: 18–20/x2
     weight: 8
     damageType: S
+    bothHand: true
 - id: 'Flail, heavy'
   name: 重型链枷
   desc: 类似轻型链枷，重型链枷有着较大的铁球和较长的握柄。
@@ -1181,6 +1196,7 @@
     special:
       - disarm
       - trip
+    bothHand: true
 - id: Glaive
   name: 大砍刀
   desc: 大砍刀是把单刀加装在长约7尺的握柄上的武器。
@@ -1194,6 +1210,7 @@
     damageType: S
     special:
       - reach
+    bothHand: true
 - id: Glaive-guisarme
   name: 尖刺大砍刀
   desc: 这件长兵器组合了大砍刀的锋刃和一只险恶的弯钩。被戈刀击中的骑乘对像用以维持骑乘的骑术检定-2。
@@ -1209,6 +1226,7 @@
       - brace
       - reach
       - see text
+    bothHand: true
 - id: Greataxe
   name: 巨斧
   desc: 这把双手战斧沉到你无法单手持用的地步。斧头可能单刃或双刃，为了增加斩击力和协助破盾还可能打成“胡子形”（意即带钩或斧刃底端向外弯曲）。握柄一般长3到4尺。
@@ -1220,6 +1238,7 @@
     critical: x3
     weight: 12
     damageType: S
+    bothHand: true
 - id: Greatclub
   name: 巨木棒
   desc: 这把普通木棒的巨大笨重版沉到你无法单手持用的地步。它可能经过了装饰和雕刻、以金属强化过，也有可能仅是个大树枝。巨木棒和寻常木棒一样有很多名字，譬如大棒、巨棒、棒棒等。
@@ -1231,6 +1250,7 @@
     critical: x2
     weight: 8
     damageType: B
+    bothHand: true
 - id: Greatsword
   name: 巨剑
   desc: 这把巨大的双手剑长约5尺。巨剑可能会在剑身底部有一处未开锋，用来协助抓握。
@@ -1242,6 +1262,7 @@
     critical: 19-20/x2
     weight: 8
     damageType: S
+    bothHand: true
 - id: Guisarme
   name: 长勾刀
   desc: 长钩刀柄长8尺，先端装有刀刃和弯钩。
@@ -1256,6 +1277,7 @@
     special:
       - reach
       - trip
+    bothHand: true
 - id: Halberd
   name: 戟
   desc: 戟像是5尺长的矛，但通常在先端附近装有斧头。
@@ -1270,6 +1292,7 @@
     special:
       - brace
       - trip
+    bothHand: true
 - id: 'Hammer, lucerne'
   name: 苜蓿战锤
   desc: 这件长兵器同时有着用来发动粉碎敲击的锤头，以及用来穿刺甲胄的矛尖。长长的握柄允许持用者蓄积令人惊异的力道。你持用苜蓿战锤时，击破中型和重型盔甲的破武战技检定+2。
@@ -1285,6 +1308,7 @@
       - brace
       - reach
       - see text
+    bothHand: true
 - id: Horsechopper
   name: 斩马刀
   desc: 地精为了战马而发明了这件装有钩刃的长戟。斩马刀的武器型号多为小型。
@@ -1299,6 +1323,7 @@
     special:
       - reach
       - trip
+    bothHand: true
 - id: Lance
   name: 长枪
   desc: 在冲锋的坐骑背上使用长枪将造成双倍伤害。你能在骑乘中以单手持用长枪。
@@ -1312,6 +1337,7 @@
     damageType: P
     special:
       - reach
+    bothHand: true
 - id: Ogre hook
   name: 食人魔巨钩
   desc: 这把锋利金属制成的大钩子能轻易地摔翻和捕获逃窜的敌人。由食人魔发明，食人魔巨钩的武器型号多为大型，并且样式粗糙——常为从受害者身上剥下来的武器或盔甲扭成的。尽管做工差劲，获得一把食人魔巨钩的稀有度和高风险，使其价格不菲。
@@ -1325,6 +1351,7 @@
     damageType: P
     special:
       - trip
+    bothHand: true
 - id: Pickaxe
   name: ''
   desc: ''
@@ -1336,6 +1363,7 @@
     critical: x4
     weight: 12
     damageType: P
+    bothHand: true
 - id: Planson
   name: ''
   desc: ''
@@ -1349,6 +1377,7 @@
     damageType: B or P
     special:
       - brace
+    bothHand: true
 - id: Ranseur
   name: 刺叉
   desc: 和三叉戟外观相似，刺叉的一根长刺被两根短刺所夹。
@@ -1363,6 +1392,7 @@
     special:
       - disarm
       - reach
+    bothHand: true
 - id: Scythe
   name: 巨镰
   desc: 这件武器包括一只装有突起握柄的木制长柄，以及与木柄成直角的一把锐利曲刃。演化自用来收割庄稼的农具，一把巨镰需要双手使用，笨拙却能够一击必杀。与“收割”之间的关联使它常被作为死亡的象征符号，这令巨镰也往往被用作威慑武器。
@@ -1376,6 +1406,7 @@
     damageType: P or S
     special:
       - trip
+    bothHand: true
 - id: 'Spear, syringe'
   name: ''
   desc: ''
@@ -1391,6 +1422,7 @@
     special:
       - brace
       - see text
+    bothHand: true
 - id: Ammentum
   name: ''
   desc: ''
@@ -1464,6 +1496,7 @@
     range: 100
     weight: 3
     damageType: P
+    bothHand: true
 - id: 'Longbow, composite'
   name: 复合长弓
   desc: 无论其型号大小，你至少需要两只手来使用一把弓。你可以在骑乘中使用复合长弓。所有的复合长弓都以特定的力量级别（即持用者必须达到每把弓的最小力量修正要求才能熟练使用）来制造。如果你的力量修正小于某把复合长弓的力量级别，你将无法自如使用并在攻击检定中承受-2减值。熟练使用一把复合长弓一般需要+0及以上的力量修正。一把复合长弓能以很高的力量级别来制造，使得力量高于一般水准的持用者发挥优势；该特性允许你将力量修正加至伤害检定，最高不超过这把弓的力量级别。每1点力量加值会使弓的价格增加100gp。若你的力量修正为负值，你持用复合长弓的伤害检定亦会受其影响。复合长弓发射箭矢。在决定“武器擅长”及类似专长时，复合长弓被视为长弓。
@@ -1476,6 +1509,7 @@
     range: 110
     weight: 3
     damageType: P
+    bothHand: true
 - id: Pilum
   name: 重标枪
   desc: 这把重型标枪的尖端被设计用来击穿并嵌入盾牌。类似弹药，一支重标枪在击中目标后损毁。若你以重标枪击中持盾的对象，他在用一个标准动作从盾牌上拔出此物之前失去AC的盾牌加值。
@@ -1500,6 +1534,7 @@
     range: 60
     weight: 2
     damageType: P
+    bothHand: true
 - id: 'Shortbow, composite'
   name: 复合短弓
   desc: 无论其型号大小，你至少需要两只手来使用一把弓。你可以在骑乘中使用复合短弓。所有的复合短弓都以特定的力量级别（即持用者必须达到每把弓的最小力量修正要求才能熟练使用）来制造。如果你的力量修正小于某把复合短弓的力量级别，你将无法自如使用并在攻击检定中承受-2减值。熟练使用一把复合短弓一般需要+0及以上的力量修正。一把复合短弓能以很高的力量级别来制造，使得力量高于一般水准的持用者发挥优势；该特性允许你将力量修正加至伤害检定，最高不超过这把弓的力量级别。每1点力量加值会使弓的价格增加75gp。若你的力量修正为负值，你持用复合短弓的伤害检定亦会受其影响。复合短弓发射箭矢。在决定“武器擅长”及类似专长时，复合短弓被视为短弓。
@@ -1512,6 +1547,7 @@
     range: 70
     weight: 2
     damageType: P
+    bothHand: true
 - id: Spear-sling
   name: ''
   desc: ''
@@ -2173,6 +2209,7 @@
     damageType: S
     special:
       - double
+    bothHand: true
 - id: 'Axe, Butchering'
   name: 屠戮斧
   desc: 屠戮斧出自贝尔克泽恩的兽人铁匠之手。这柄斧头有着一个特大号的斧首，上面点缀有尖刺。同时其斧柄粗长而厚实，勉强能让其重量分布能保持平衡。如果使用者的力量低于19（如果是小体型及以下的尺寸则是17），则他将无法操控这柄有着让人望而生畏尺寸的武器，并在攻击时会受到-2减值。
@@ -2184,6 +2221,7 @@
     critical: ×3
     weight: 25
     damageType: S
+    bothHand: true
 - id: 'Battle Ladder, gnome'
   name: 侏儒战梯
   desc: 侏儒们把这种加固过的4英尺长窄梯当做武器。战斗中，侏儒战梯就像木棍一样。但梯子上的空间可以用来纠缠对手的肢体，因此其获得“绊摔”武器特性。
@@ -2197,6 +2235,7 @@
     damageType: B
     special:
       - trip
+    bothHand: true
 - id: Boarding gaff
   name: 登船叉
   desc: 登船叉，又称钩叉，是一根末端有着刺鱼用尖钩的长杆。海盗通常会在其分叉的末端加上额外的沉重钩子以帮助攀舰，该武器也因此得名。此外，登船叉也可以用来捕鱼。
@@ -2212,6 +2251,7 @@
       - double
       - reach
       - trip
+    bothHand: true
 - id: Chain-hammer
   name: 双子流星锤
   desc: 这一对锤子通过一条松散的锁链连接在一起。两枚锤子的平衡性都颇为良好，使其能在近战时一同使用。此外，锁链的长度也能让使用者可以在短距离内把其中一枚锤子投掷出去，然后通过锁链将其拉拽回来。拉动链条回收丢出去的锤子是一个移动动作。双子流星锤其能投掷的最大距离是10英尺。矮人游侠很喜欢使用这种武器，他们通常会在手上戴上带锁铁手套以确保至少有一个锤子能牢牢地握在手中。
@@ -2227,6 +2267,7 @@
     special:
       - double
       - see text
+    bothHand: true
 - id: 'Chain, spiked'
   name: 刺链
   desc: 刺链长约4尺，布满了凶残的钩刺。有些会有铁箍作为把手。你能通过“武器娴熟”专长在持用一把型号与你体型相符的刺链时，在攻击检定中以敏捷修正取代力量修正，即便它并不是轻型武器。
@@ -2241,6 +2282,7 @@
     special:
       - disarm
       - trip
+    bothHand: true
 - id: Crook
   name: ''
   desc: ''
@@ -2255,6 +2297,7 @@
     special:
       - reach
       - trip
+    bothHand: true
 - id: 'Curve blade, elven'
   name: ''
   desc: ''
@@ -2266,6 +2309,7 @@
     critical: 18–20/x2
     weight: 7
     damageType: S
+    bothHand: true
 - id: 'Dorn-Dergar, dwarven'
   name: 矮人链球
   desc: 这件异种武器由一条10尺长的铁索，和末端一枚大号拳头尺寸的坚实铁球组成。通过用一个移动动作放开和收紧他握住的铁链长度，使用者可以将链球在触及武器或是普通的非触及武器间来回切换。
@@ -2280,6 +2324,7 @@
     special:
       - reach
       - see text
+    bothHand: true
 - id: Double spear
   name: ''
   desc: ''
@@ -2293,6 +2338,7 @@
     damageType: P
     special:
       - double
+    bothHand: true
 - id: Elven branched spear
   name: ''
   desc: ''
@@ -2307,6 +2353,7 @@
     special:
       - brace
       - reach
+    bothHand: true
 - id: Fauchard
   name: 斩矛
   desc: 就和大砍刀一样，斩矛也是一根末端有着弧形刀刃的长杆武器。然而，和短镰或巨镰一样，其锋刃处于凹进去的一侧。
@@ -2321,6 +2368,7 @@
     special:
       - reach
       - trip
+    bothHand: true
 - id: 'Flail, dire'
   name: 双头链枷
   desc: 双头链枷在长握柄的两端各有一只布满尖刺的铁球、与握柄以锁链相接。这件武器触及虽短、但威力拔群，并通常结合回旋动量来挥舞使用。双头链枷的持用者必须足够强壮，才能有效使用并避免脱手。
@@ -2336,6 +2384,7 @@
       - disarm
       - double
       - trip
+    bothHand: true
 - id: Flailpole
   name: ''
   desc: ''
@@ -2351,6 +2400,7 @@
       - disarm
       - reach
       - trip
+    bothHand: true
 - id: Flambard
   name: ''
   desc: ''
@@ -2364,6 +2414,7 @@
     damageType: S
     special:
       - sunder
+    bothHand: true
 - id: Flying blade
   name: 旋刃
   desc: 旋刃是一件大型的圆月弯刀与10尺锁链铆定而成。你在持用旋刃战斗时，将其在自己头顶旋转数圈后掷向对手。由于旋刃是件太过笨拙的武器，你用它做出的攻击检定-2；但若你用它发动针对移动而引起的藉机攻击时，攻击检定不但不受减值反而还会+2。
@@ -2378,6 +2429,7 @@
     special:
       - performance
       - reach
+    bothHand: true
 - id: Garrote
   name: ''
   desc: ''
@@ -2392,6 +2444,7 @@
     special:
       - grapple
       - see text
+    bothHand: true
 - id: 'Giant-Sticker, Dwarven'
   name: ''
   desc: ''
@@ -2406,6 +2459,7 @@
     special:
       - brace
       - reach
+    bothHand: true
 - id: 'Hammer, Gnome hooked'
   name: 侏儒钩锤
   desc: 侏儒钩锤是一件双头武器——这件天才工具的长柄一端是锤头，另一端则是弧形的镐。锤头的钝面是造成1d6伤害的钝击武器（重击倍率×3），钩侧是造成1d4伤害的穿刺武器（重击倍率×4）。你能将任一端视为主手武器。侏儒能将钩锤视为军用武器。
@@ -2420,6 +2474,7 @@
     special:
       - double
       - trip
+    bothHand: true
 - id: Harpoon
   name: 鱼叉
   desc: 鱼叉是一把有倒钩的矛，其尾部还连结着50尺长的绳索。多数鱼叉都有着金属尖端，少数为兽牙或木制的。若你擅长鱼叉，它可以当作绊摔武器使用。一把鱼叉的10磅重量包括了其本身外加50尺长的麻绳，该重量可以通过换用较短或较轻的绳索来减轻。若你不擅长鱼叉，可将其视为矛。
@@ -2434,6 +2489,7 @@
     damageType: P
     special:
       - grapple
+    bothHand: true
 - id: 'Longaxe, dwarven'
   name: ''
   desc: ''
@@ -2447,6 +2503,7 @@
     damageType: S
     special:
       - reach
+    bothHand: true
 - id: 'Longhammer, dwarven'
   name: ''
   desc: ''
@@ -2460,6 +2517,7 @@
     damageType: B
     special:
       - reach
+    bothHand: true
 - id: Mancatcher
   name: 捕人叉
   desc: 这件长兵器包括了两支攻击时环绕住对象的弧形金属杠，允许你将一名对手定身。捕人叉是用来捕捉特定体型（譬如小型或中型）的生物而打造的，无法作用于体型不对的生物。向对像进行一次接触攻击，命中后再通过战技检定来擒抱他（虽然未空出双手也无需承受-4减值）；成功则意味着你与对手展开擒抱。一旦对手被擒抱，你能以擒抱动作来移动或伤害他。捕人叉硬度为10，生命值5点；破坏它的力量检定DC为26。若你放开捕人叉，对方能以一个标准动作解放自己。
@@ -2475,6 +2533,7 @@
       - grapple
       - reach
       - see text
+    bothHand: true
 - id: Orc skull ram
   name: ''
   desc: ''
@@ -2488,6 +2547,7 @@
     damageType: B
     special:
       - reach
+    bothHand: true
 - id: 'Piston maul, gnome'
   name: 侏儒动力槌
   desc: 每当这把炼金能量驱动的大棒锤击目标，它锤头上安装的机械活塞就会释放出可怖的破坏力。使用动力槌进行的成功的破武战技攻击可以造成额外+4伤害。但是，动力槌使用一枚暴雷石作为能量源；否则它只相当于一把普通的巨木棒。为动力槌更换暴雷石需要一个标准动作，每一块暴雷石可以驱动动力槌24小时，之后便会耗尽。
@@ -2499,6 +2559,7 @@
     critical: x2
     weight: 15
     damageType: B
+    bothHand: true
 - id: 'Ripsaw glaive, gnome'
   name: 侏儒链锯大砍刀
   desc: 这把大砍刀的锋刃被替换成了用一副转轴驱动的带刃的链条，这个转轴上链接着一条厚重的拉索。如果拉索被（以一个移动动作）拉动，这锯刃就会开始保持飞旋相当于你的力量调整值的轮数，这时武器可以造成额外+2伤害；若非如此，则它相当于普通的大砍刀。
@@ -2513,6 +2574,7 @@
     special:
       - reach
       - see text
+    bothHand: true
 - id: 'Scarf, bladed'
   name: ''
   desc: ''
@@ -2527,6 +2589,7 @@
     special:
       - disarm
       - trip
+    bothHand: true
 - id: 'Spear, totem'
   name: ''
   desc: ''
@@ -2539,6 +2602,7 @@
     range: 10
     weight: 6
     damageType: P or S
+    bothHand: true
 - id: 'Sphinx Hammer, Dwarven'
   name: ''
   desc: ''
@@ -2551,6 +2615,7 @@
     range: 20
     weight: 8
     damageType: B
+    bothHand: true
 - id: Switchscythe
   name: 摺叠巨镰
   desc: 这种巨镰其装载有机簧的刃部能摺叠并收纳入武器的柄部。展开摺叠巨镰的刃部是一个迅捷动作，将其重新收纳起来则需要一个标准动作。使用者能通过唬骗或者巧手技能来把收纳状态下摺叠巨镰隐藏起来，视作隐藏武器。伪装这种装置需要1分钟，伪装后会为此类相关检定提供+5加值。一旦武器展开伪装则宣告失败，需要将其再次收纳才能重新隐藏。任何适用于巨镰的效果同样适用于摺叠巨镰。
@@ -2564,6 +2629,7 @@
     damageType: P or S
     special:
       - trip
+    bothHand: true
 - id: 'Sword, two-bladed'
   name: 双刃剑
   desc: 双刃剑是一件双头武器——从短柄中央向两端伸出孪生的剑刃，允许持用者发动优雅而致命的连续技。
@@ -2577,6 +2643,7 @@
     damageType: S
     special:
       - double
+    bothHand: true
 - id: 'Urgrosh, dwarven'
   name: 矮人矛斧
   desc: 矮人矛斧是一件双头武器——斧头和矛尖分别位于长柄的两端。矛斧的斧头是造成1d8伤害的挥砍武器，矛尖是造成1d6伤害的穿刺武器。你能将任一端视为主手武器；另一端则为副手武器。若你用矛斧迎击冲锋角色，这件武器的矛尖能够造成双倍伤害。矮人能将矮人矛斧视为军用武器。
@@ -2591,6 +2658,7 @@
     special:
       - brace
       - double
+    bothHand: true
 - id: 'Darts, featherweight (10)'
   name: ''
   desc: ''

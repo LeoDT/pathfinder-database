@@ -5,7 +5,7 @@ desc:
 
   角色定位: 尽管许多的女巫都隐居于文明的边缘，有一些还是选择生活在社会当中——无论是否揭露真正的身份。女巫法术的多样性，令她们能够适应从预言家到治疗师的多种角色，而她们的巫术也包含了许多在战斗中实用的能力。有时候，女巫会外出旅行，寻求更多的知识，以便更好的理解那引导着她们的神秘力量。
 
-alignment: any
+alignment: []
 hd: 6
 classSkills:
   - craft
@@ -26,6 +26,14 @@ proficiencies:
     - simple
 
 feats:
+  - id: Witch Weapon and Armor Proficiency
+    name: 女巫武器防具擅长
+    desc: 女巫擅长使用所有的简单武器。她们不擅长使用任何盔甲或盾牌。任何防具都会限制女巫的手势，因而导致施展具有姿态成分的法术时失败。
+    effects:
+      - type: gainProficiency
+        args:
+          weaponTraining:
+            - simple
   - id: Spells
     name: 法术
     desc: 女巫施展女巫法术列表中的奥术。女巫必须预先选择并准备法术。要学习、准备或施放法术，女巫的智力属性必须达到“10+法术环级”。女巫法术的豁免DC为“10+法术环级+女巫智力修正”。女巫每天在每个法术环级上只能施展一定数量的法术。她的每日法术数量参见上表。此外，她还能因较高的智力属性而获得一些额外的法术使用次数。女巫可以知晓任意数量的法术，她必须通过8小时睡眠并同她的魔宠交流1小时以准备法术。女巫在与魔宠交流时决定要准备的法术。
@@ -53,6 +61,7 @@ levels:
     reflex: 0
     will: 2
     special:
+      - Witch Weapon and Armor Proficiency
       - Cantrips
       - Hex
       - Patron Spells

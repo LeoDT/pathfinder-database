@@ -1,4 +1,4 @@
-- id: Universalist
+- id: Universal
   name: 普通学派
   desc: 不专精于任何学派的法师是最多元化的奥术施法者。
   type: standard
@@ -16,6 +16,10 @@
   name: 防护学派
   desc: 护法师使用魔法对抗它本身，同样也掌握了防御和守卫魔法的艺术。
   type: standard
+  effects:
+    - type: gainArcaneSchoolPrepareSlot
+      args:
+        school: abjuration
   powers:
     - id: Resistance
       name: 抗力
@@ -62,6 +66,10 @@
   name: 咒法学派
   desc: 咒法师专注于学习让召唤生物和魔法都屈服于他的意志。
   type: standard
+  effects:
+    - type: gainArcaneSchoolPrepareSlot
+      args:
+        school: conjuration
   powers:
     - id: Summoner's Charm
       name: 召唤者魅力
@@ -103,6 +111,10 @@
   name: 预言学派
   desc: 预言师是遥感，预言，和利用魔法去探究世界的大师。
   type: standard
+  effects:
+    - type: gainArcaneSchoolPrepareSlot
+      args:
+        school: divination
   powers:
     - id: Forewarned
       name: 预警
@@ -144,6 +156,10 @@
   name: 惑控学派
   desc: 惑控师使用魔法去控制和操纵受害者的心智。
   type: standard
+  effects:
+    - type: gainArcaneSchoolPrepareSlot
+      args:
+        school: enchantment
   powers:
     - id: Enchanting Smile
       name: 迷人微笑
@@ -190,6 +206,10 @@
   name: 塑能学派
   desc: 塑能师陶醉于赤裸裸的魔法力量，并且能够无比轻松地进行创造和毁灭。
   type: standard
+  effects:
+    - type: gainArcaneSchoolPrepareSlot
+      args:
+        school: evocation
   powers:
     - id: Intense Spells
       name: 锐化法术
@@ -236,6 +256,10 @@
   name: 幻术学派
   desc: 幻术师用魔法编织混合了幻想和虚构的鬼影去阻挡和激怒他们的敌人。
   type: standard
+  effects:
+    - type: gainArcaneSchoolPrepareSlot
+      args:
+        school: illusion
   powers:
     - id: Extended Illusions
       name: 延迟幻像
@@ -282,6 +306,10 @@
   name: 死灵学派
   desc: 恐怖的死灵师指挥不死生物并且使用不生的污秽力量对抗他的敌人。
   type: standard
+  effects:
+    - type: gainArcaneSchoolPrepareSlot
+      args:
+        school: necromancy
   powers:
     - id: Power over Undead
       name: 力胜于亡
@@ -323,6 +351,10 @@
   name: 变化学派
   desc: 变化师使用魔法来改变周围世界。
   type: standard
+  effects:
+    - type: gainArcaneSchoolPrepareSlot
+      args:
+        school: transmutation
   powers:
     - id: Physical Enhancement
       name: 体能增强
@@ -366,6 +398,10 @@
   type: elemental
   conflict:
     - Earth
+  effects:
+    - type: gainArcaneSchoolPrepareSlot
+      args:
+        school: air
   powers:
     - id: Air Supremacy
       name: 大气主宰
@@ -386,6 +422,10 @@
   conflict:
     - Air
     - Wood
+  effects:
+    - type: gainArcaneSchoolPrepareSlot
+      args:
+        school: earth
   powers:
     - id: Earth Supremacy
       name: 大地主宰
@@ -406,6 +446,10 @@
   conflict:
     - Earth
     - Water
+  effects:
+    - type: gainArcaneSchoolPrepareSlot
+      args:
+        school: fire
   powers:
     - id: Fire Supremacy
       name: 火焰主宰
@@ -425,6 +469,10 @@
   type: elemental
   conflict:
     - Fire
+  effects:
+    - type: gainArcaneSchoolPrepareSlot
+      args:
+        school: water
   powers:
     - id: Water Supremacy
       name: 水之主宰
@@ -444,6 +492,10 @@
   type: elemental
   conflict:
     - Fire
+  effects:
+    - type: gainArcaneSchoolPrepareSlot
+      args:
+        school: metal
   powers:
     - id: Metal Magic
       name: 金系魔法
@@ -466,6 +518,10 @@
   type: elemental
   conflict:
     - Metal
+  effects:
+    - type: gainArcaneSchoolPrepareSlot
+      args:
+        school: wood
   powers:
     - id: Wood Magic
       name: 木系魔法

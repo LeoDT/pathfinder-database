@@ -5,7 +5,7 @@ desc:
 
   角色定位: 审判者通常都处于奔波之中，追捕敌人，同时调查潜在的威胁。他们常常和其他人一起旅行，不为别的，只为隐藏自己的存在。审判者会利用任何机会与同样信仰的人合作，但即使这样的盟友也无法免受审判者的怀疑。
 
-alignment: any
+alignment: []
 hd: 8
 classSkills:
   - bluff
@@ -44,6 +44,25 @@ proficiencies:
     - shields (except tower shields)
 
 feats:
+  - id: Inquisitor Weapon and Armor Proficiency
+    name: 审判者武器防具擅长
+    desc: 审判者擅长使用所有简易武器，以及手弩、长弓、连发弩、短弓和他们信仰神祉的偏好武器。他们擅长轻型、中型盔甲和盾牌（除了塔盾）。
+    effects:
+      - type: gainProficiency
+        args:
+          weaponTraining:
+            - simple
+          weapon:
+            - Crossbow, hand
+            - Shortbow
+            - Longbow
+            - Crossbow, repeating light
+            - Crossbow, repeating heavy
+          armorTraining:
+            - light
+            - medium
+          shieldTraining:
+            - normal
   - id: Spells
     name: 法术
     desc: |
@@ -136,7 +155,8 @@ feats:
     desc: 在3级以及之后每3级，审判者额外获得1个团队专长。这些奖励专长必须从团队专长列表中选择。审判者选择专长必须满足专长的先决条件。以一个标准动作，审判者可以选择学习一个新的团队专长来代替最新获得的一个团队专长。实际上，审判者失去一个奖励专长，替换成一个新的。她只能替换最近获得的团队专长。当她获得一个新的团队专长，之前所学的团队专长将固定并且不能用于替换。审判者每天可以替换最近的团队专长次数等于她的感知修正。
     effects:
       - type: gainFeat
-        featType: teamwork
+        args:
+          featType: teamwork
   - id: Bane
     type: su
     name: 破敌
@@ -184,6 +204,7 @@ levels:
     reflex: 0
     will: 2
     special:
+      - Inquisitor Weapon and Armor Proficiency
       - Domain
       - Judgment 1/day
       - Monster Lore

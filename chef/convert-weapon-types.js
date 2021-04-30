@@ -13,6 +13,10 @@ const IDS = {
 };
 const longbowRegex = /Longbow,\scomposite\s\(\+[12345]\)/;
 
+export function isBothHand(name) {
+  return /(longbow|shortbow)/i.test(name);
+}
+
 export function pickWeapon(obj, keys) {
   const newObj = {};
 
@@ -128,6 +132,9 @@ for (const c of data) {
   if (meta.damageType === 'B (or S)') {
     meta.damageType = 'B or S';
   }
+  if (category === 'two-handed' || isBothHand(c.name)) {
+    meta.bothHand = true;
+  }
 
   c.name = c.name.replace('composite (+0)', 'composite');
   const id = c.name.toLowerCase();
@@ -167,12 +174,3 @@ for (const c of data) {
 }
 
 Deno.writeTextFile(`pf-database/weapon-types.yaml`, stringify(weapons, { lineWidth: -1 }));
-
-const set = new Set();
-weapons.forEach((w) => {
-  w.meta.special?.forEach((s) => {
-    set.add(s);
-  });
-});
-
-console.log(set);

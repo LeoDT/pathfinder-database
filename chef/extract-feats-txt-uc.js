@@ -1,7 +1,7 @@
 import { stringify } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
 
 import { removeNewlines, removeSpaces } from './utils.js';
-import { startsWithMetaKey, featMetaFromTexts } from './feat-utils.js';
+import { startsWithMetaKey, featMetaFromTexts, featTypeFromText } from './feat-utils.js';
 
 const featNameRegex = /^(?<name>[^：【]+?)\s?（(?<id>[^。、]+?)）〔?(?<type>.*?)〕?$/;
 
@@ -21,7 +21,7 @@ function convertToFeat(featTexts) {
 
   const feat = {
     ...nameAndIdAndType,
-    type: nameAndIdAndType.type || 'general',
+    type: nameAndIdAndType.type ? featTypeFromText(nameAndIdAndType.type) : ['general'],
     meta,
   };
 

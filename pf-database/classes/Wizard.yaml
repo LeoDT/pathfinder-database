@@ -5,7 +5,7 @@ desc:
 
   角色定位: 普通法师可能学习使自己准备好面对所有形式的的威胁，而专精法师从事魔法学派的研究使他们在某些方面异常拿手。然而撇开他们的专业，所有法师都是不可思议的大师并且能够援助他们的盟友攻克任何威胁。
 
-alignment: any
+alignment: []
 hd: 6
 classSkills:
   - appraise
@@ -17,15 +17,19 @@ classSkills:
   - spellcraft
 skillPoints: 2
 
-proficiencies:
-  weapon:
-    - club
-    - dagger
-    - heavy crossbow
-    - light crossbow
-    - quarterstaff
-
 feats:
+  - id: Wizard Weapon and Armor Proficiency
+    name: 法师武器防具擅长
+    desc: 法师擅长使用木棒、匕首、重弩、轻弩、木棍，但是不擅长使用任何盔甲或盾牌。任何防具都会限制法师的动作，因而导致法师施展具有姿态成分的法术时失败。
+    effects:
+      - type: gainProficiency
+        args:
+          weapon:
+            - Club
+            - Dagger
+            - Crossbow, light
+            - Crossbow, heavy
+            - Quarterstaff
   - id: Spells
     name: 法术
     desc: |
@@ -34,8 +38,9 @@ feats:
       法师必须每天研习他的法术书来准备法术。他不能准备任何没有记录在他法术书内的法术，除了‘阅读魔法’——任何法师都可以凭记忆准备这个法术。在开始游戏的时候法师会带有一本法术书，该法术书内记录了所有的0环法术（除了他的对立学派法术），再加上3个玩家选择的1环法术。法师的每1点智力加值可以让起始法术书内多获得1个1环法术。每获得1个新的法师等级，法师都可以获得2个法术添加在法术书中，这2个法术可以是任何他能施展的法术环级上的法术（基于他新的法师等级）。无论何时，法师都可以将其他法师法术书上的法术加入自己的法术书。
     effects:
       - type: gainSpellCasting
-        castingType: wizard-like
-        abilityType: int
+        args:
+          castingType: wizard-like
+          abilityType: int
   - id: Bonus Languages
     name: 额外语言
     desc: 法师能以龙语替换他的种族额外语言列表中的一种。
@@ -59,7 +64,8 @@ feats:
       每个奥术学派都会给予法师一定数量的学派能力。另外，专精法师在每个法术环级上获得一个额外的学派法术位，从1环法术开始。每天，法师能够在此法术位中准备一个专精学派的法术，这个法术必须在法师的法术书中。学派法术位中能够添加超魔专长，但要使用更高环的法术位。普通学派法师不获得学派法术位。
     effects:
       - type: gainArcaneSchool
-        standardForbidden: 2
+        args:
+          standardForbidden: 2
   - id: Cantrips
     name: 戏法
     desc: 每天，法师能够准备一些戏法，或者说0环法术。参照法师法术列表。这些法术的施展如同其他任何法术，但它们不会在施展的时候消耗掉，并且可以被再次使用。法师可以准备对立学派的戏法，但是需要消耗2倍的0环奥术位。
@@ -82,6 +88,7 @@ levels:
     reflex: 0
     will: 2
     special:
+      - Wizard Weapon and Armor Proficiency
       - Spells
       - Arcane Bond
       - Arcane School

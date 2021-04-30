@@ -1,0 +1,63 @@
+fine:
+  attack: 8
+  ac: 8
+  cmb: -8
+  cmd: -8
+  stealth: 16
+  carry: 0.125
+diminutive:
+  attack: 4
+  ac: 4
+  cmb: -4
+  cmd: -4
+  stealth: 12
+  carry: 0.25
+tiny:
+  attack: 2
+  ac: 2
+  cmb: -2
+  cmd: -2
+  stealth: 8
+  carry: 0.5
+small:
+  attack: 1
+  ac: 1
+  cmb: -1
+  cmd: -1
+  stealth: 4
+  carry: 0.75
+medium:
+  attack: 0
+  ac: 0
+  cmb: 0
+  cmd: 0
+  stealth: 0
+  carry: 1
+large:
+  attack: -1
+  ac: -1
+  cmb: 1
+  cmd: 1
+  stealth: -4
+  carry: 2
+huge:
+  attack: -2
+  ac: -2
+  cmb: 2
+  cmd: 2
+  stealth: -8
+  carry: 4
+gargantuan:
+  attack: -4
+  ac: -4
+  cmb: 4
+  cmd: 4
+  stealth: -12
+  carry: 8
+colassal:
+  attack: -8
+  ac: -8
+  cmb: 8
+  cmd: 8
+  stealth: -16
+  carry: 16

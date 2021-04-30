@@ -7,18 +7,36 @@ import {
 import { compose } from './utils.js';
 import { spellLevelFromText } from './spell-utils.js';
 
+const baseDir = './pf-database';
+const targetDir = './pathfinder-workbench/src/data';
+
+const featEffects = parseYAML(Deno.readTextFileSync(`${baseDir}/feat-effects.yaml`));
+const featEffectsIndex = new Map();
+featEffects.forEach((f) => {
+  featEffectsIndex.set(f.id, f);
+});
 function featPatchMap(items) {
-  return items.filter((item) => {
-    if (item.book === 'crb') {
-      return !['Rapid Reload', 'Extra Channel'].includes(item.id);
+  const results = [];
+
+  for (const item of items) {
+    if (item.book === 'crb' && ['Rapid Reload', 'Extra Channel'].includes(item.id)) {
+      continue;
     }
 
-    if (item.book === 'apg') {
-      return !['Extra Hex'].includes(item.id);
+    if (item.book === 'apg' && ['Extra Hex'].includes(item.id)) {
+      continue;
     }
 
-    return true;
-  });
+    const patch = featEffectsIndex.get(item.id);
+
+    if (patch) {
+      Object.assign(item, patch);
+    }
+
+    results.push(item);
+  }
+
+  return results;
 }
 
 function mergeMap(items, file) {
@@ -32,9 +50,6 @@ function mergeDone(collections) {
     .reduce((acc, col) => acc.concat(col), [])
     .sort((a, b) => (a.id.toLowerCase() > b.id.toLowerCase() ? 1 : -1));
 }
-
-const baseDir = './pf-database';
-const targetDir = './pathfinder-workbench/src/data';
 
 const converters = [
   {
@@ -73,7 +88,7 @@ const converters = [
     done: mergeDone,
   },
   {
-    file: 'skills',
+    file: 'core-skills',
     done: (skills) => {
       const converted = [];
 

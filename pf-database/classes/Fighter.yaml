@@ -5,7 +5,7 @@ desc:
 
   角色定位: 战士是战斗中的精英——打垮敌人、扭转战局、从死地中杀出生天。各异的武器和招式使战士的战术多变，少有人能与其并肩。
 
-alignment: any
+alignment: []
 hd: 10
 classSkills:
   - climb
@@ -20,24 +20,31 @@ classSkills:
   - swim
 skillPoints: 2
 
-proficiencies:
-  weapon:
-    - simple
-    - martial
-  armor:
-    - light
-    - medium
-    - heavy
-    - shield
-    - Tower Shield Proficiency
-
 feats:
+  - id: Fighter Weapon and Armor Proficiency
+    name: 战士武器防具擅长
+    desc: 战士擅长使用所有的简易武器和军用武器，同时擅长所有类型盔甲（重甲，中甲，轻甲）和盾牌（包括塔盾）。
+    effects:
+      - type: gainProficiency
+        args:
+          weaponTraining:
+            - simple
+            - martial
+          armorTraining:
+            - light
+            - medium
+            - heavy
+          shieldTraining:
+            - normal
+          shield:
+            - Shield, tower
   - id: Bonus Feat
     name: 奖励专长
     desc: 1级以及之后的每个偶数等级，战士获得一项奖励专长，该额外专长独立于角色升级时获得的（意味着战士每级都可获得专长）。这些专长必须在战斗专长列表中，有时也被称为“战士奖励专长”。当战士达到4级以及随后的每4级（8级，12级，以此类推），它还可以选择学习一个新的额外专长来取代先前获得的一项奖励专长。实际效果相当于以旧换新。被取代的旧专长不能是其他专长、进阶职业或能力的先决条件。战士只能在到达特定等级时决定是否要置换专长，且每个特定等级时只能置换一项专长。
     effects:
       - type: gainFeat
-        featType: combat
+        args:
+          featType: combat
   - id: Bravery +1
     name: 英勇 +1
     type: ex
@@ -95,6 +102,7 @@ levels:
     reflex: 0
     will: 0
     special:
+      - Fighter Weapon and Armor Proficiency
       - Bonus Feat
   - level: 2
     bab: [2]
@@ -110,7 +118,7 @@ levels:
     reflex: 1
     will: 1
     special:
-      - Armor Training
+      - Armor Training 1
   - level: 4
     bab: [4]
     fortitude: 4
@@ -124,7 +132,7 @@ levels:
     reflex: 1
     will: 1
     special:
-      - Weapon Training
+      - Weapon Training 1
   - level: 6
     bab: [6, 1]
     fortitude: 5
@@ -139,7 +147,7 @@ levels:
     reflex: 2
     will: 2
     special:
-      - Armor Training
+      - Armor Training 2
   - level: 8
     bab: [8, 3]
     fortitude: 6
@@ -153,7 +161,7 @@ levels:
     reflex: 3
     will: 3
     special:
-      - Weapon Training
+      - Weapon Training 2
   - level: 10
     bab: [10, 5]
     fortitude: 7
@@ -168,7 +176,7 @@ levels:
     reflex: 3
     will: 3
     special:
-      - Armor Training
+      - Armor Training 3
   - level: 12
     bab: [12, 7, 2]
     fortitude: 8
@@ -182,7 +190,7 @@ levels:
     reflex: 4
     will: 4
     special:
-      - Weapon Training
+      - Weapon Training 3
   - level: 14
     bab: [14, 9, 4]
     fortitude: 9
@@ -197,7 +205,7 @@ levels:
     reflex: 5
     will: 5
     special:
-      - Armor Training
+      - Armor Training 4
   - level: 16
     bab: [16, 11, 6, 1]
     fortitude: 10
@@ -211,7 +219,7 @@ levels:
     reflex: 5
     will: 5
     special:
-      - Weapon Training
+      - Weapon Training 4
   - level: 18
     bab: [18, 13, 8, 3]
     fortitude: 11

@@ -55,9 +55,20 @@ racialTrait:
   - id: Keen Senses
     name: 敏锐感官
     desc: 半精灵的察觉检定获得+2种族加值。
+    effects:
+        - type: gainSkill
+          args:
+            skillId: perception
+            bonus:
+              type: racial
+              amount: 2
   - id: Multitalented
     name: 多才多艺
     desc: 半精灵在1级时选择两个天赋职业，并且无论其中哪个天赋职业提升等级时，均可以获得+1生命值或者+1技能点的奖励。
+    effects:
+      - type: gainFavoredClassAmount
+        args:
+          amount: 1
 
 alternateRacialTrait:
   - id: Ancestral Arms
@@ -65,6 +76,12 @@ alternateRacialTrait:
     desc: 部分半精灵接受过使用罕见武器的训练。拥有该种族特性的半精灵在1级时针对某一种武器，获得“擅长异种武器”或“擅长军用武器”作为奖励专长。该特性取代适应力。
     replace:
       - Adaptability
+    effects:
+      - type: gainSelectedWeaponProficiency
+        args:
+          training:
+            - martial
+            - exotic
   - id: Arcane Training
     name: 奥术训练
     desc: 为了精通奥术，半精灵偶尔会从自身的血脉之中寻求帮助。拥有该种族特性的半精灵只能选择一个天赋职业，并且该职业必须为奥术施法者。他们能够在使用法术触发类以及法术完成类物品时视其天赋职业比实际高1级（如果他们在天赋职业上没有等级，那么视其为1级）。该特性取代多才多艺。

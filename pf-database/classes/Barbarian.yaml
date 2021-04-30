@@ -5,7 +5,7 @@ desc:
 
   角色定位: 野蛮人在战斗中独当一面，能够用非凡的格斗技巧和刚健身躯摞倒那些看上去强过自己的对手。以狂暴之力超越多数其他战士，野蛮人凶猛地冲锋陷阵，并削翻一切敢挡道的敌人。
 
-alignment: non-lawful
+alignment: ['NG', 'N', 'NE', 'CG', 'CN', 'CE']
 hd: 12
 classSkills:
   - acrobatics
@@ -20,16 +20,21 @@ classSkills:
   - swim
 skillPoints: 4
 
-proficiencies:
-  weapon:
-    - simple
-    - martial
-  armor:
-    - light
-    - medium
-    - shields (except tower shields)
-
 feats:
+  - id: Barbarian Weapon and Armor Proficiency
+    name: 野蛮人武器防具擅长
+    desc: 野蛮人擅长使用所有的简易武器、军用武器、轻甲、中甲，以及盾牌（不包括塔盾）。
+    effects:
+      - type: gainProficiency
+        args:
+          weaponTraining:
+            - simple
+            - martial
+          armorTraining:
+            - light
+            - medium
+          shieldTraining:
+            - normal
   - id: Fast Movement
     type: ex
     name: 快速移动
@@ -116,6 +121,7 @@ levels:
     reflex: 0
     will: 0
     special:
+      - Barbarian Weapon and Armor Proficiency
       - Fast Movement
       - Rage
   - level: 2

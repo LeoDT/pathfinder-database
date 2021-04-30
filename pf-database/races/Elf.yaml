@@ -66,16 +66,18 @@ racialTrait:
     name: 武器熟悉
     desc: 精灵擅长长弓（包括复合长弓）、长剑、细剑以及短弓（包括复合短弓），并且将任何冠以“精灵”之名的武器视为军用武器。
     effects:
-      - id: treatWeaponWithPrefixAsMartial
-        prefix: elven
+      - type: treatWeaponWithPrefixAsMartial
+        args:
+          prefix: elven
       - id: gainWeaponProficiencies
-        weapons:
-          - Longbow
-          - Longbow, Composite
-          - Longsword
-          - Rapier
-          - Shortbow
-          - Shortbow, Composite
+        args:
+          weapons:
+            - Longbow
+            - Longbow, Composite
+            - Longsword
+            - Rapier
+            - Shortbow
+            - Shortbow, Composite
 
 alternateRacialTrait:
   - id: Arcane Focus

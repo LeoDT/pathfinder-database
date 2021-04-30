@@ -75,15 +75,17 @@ racialTrait:
     desc: 矮人在察觉异常的石制造物（比如石墙与石制地板中隐藏的陷阱与密门）时，察觉检定+2。当他们在这些石制造物10尺范围内时，就可以进行检定，无论他们是否在主动搜索。
   - id: Weapon Familiarity
     name: 武器熟悉
-    desc: 精灵擅长长弓（包括复合长弓）、长剑、细剑以及短弓（包括复合短弓），并且将任何冠以“精灵”之名的武器视为军用武器。
+    desc: 矮人擅长战斧，重型十字镐以及战锤，并且将任何冠以“矮人”之名的武器视为军用武器。
     effects:
-      - id: treatWeaponWithPrefixAsMartial
-        prefix: dwarven
-      - id: gainWeaponProficiencies
-        weapons:
-        - Battleaxe
-        - Heavy pick
-        - Warhammer
+      - type: treatWeaponWithPrefixAsMartial
+        args:
+          prefix: dwarven
+      - type: gainWeaponProficiencies
+        args:
+          weapons:
+            - Battleaxe
+            - Heavy pick
+            - Warhammer
 
 alternateRacialTrait:
   - id: Ancient Enmity
