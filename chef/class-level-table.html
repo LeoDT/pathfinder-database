@@ -11,6 +11,12 @@
       转换职业等级数据, <a href="https://www.d20pfsrd.com/classes/">d20pfsrd</a>, 请复制完整table
     </div>
     <textarea id="input" cols="60" rows="20" placeholder="input"></textarea>
+    <textarea
+      id="spells-known-input"
+      cols="60"
+      rows="20"
+      placeholder="spells known input"
+    ></textarea>
     <textarea id="output" cols="60" rows="20" placeholder="output"></textarea>
 
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
@@ -43,12 +49,16 @@
       }
 
       const input = document.getElementById('input');
+      const spellsKnownInput = document.getElementById('spells-known-input');
       const output = document.getElementById('output');
 
-      input.addEventListener('input', () => {
+      const call = () => {
         const text = input.value;
+        const spellsKnownText = spellsKnownInput.value;
         const root = document.createElement('div');
         root.innerHTML = text;
+        const spellsKnownRoot = document.createElement('div');
+        spellsKnownRoot.innerHTML = spellsKnownText;
 
         let hasSpell = false;
         let spellStartFromZero = false;
@@ -63,8 +73,9 @@
           }
         });
 
+        const spellsKnownTrs = Array.from(spellsKnownRoot.querySelectorAll('tbody tr'));
         const html = Array.from(root.querySelectorAll('tbody tr'))
-          .map((tr) => {
+          .map((tr, level) => {
             const tds = Array.from(tr.querySelectorAll('td'));
 
             if (tds.length < 5) {
@@ -81,9 +92,10 @@
   reflex: ${get(3).replace('+', '')}
   will: ${get(4).replace('+', '')}`;
 
-            const specialText = get(5);
+            const specialText = get(5).trim();
 
-            if (specialText || specialText !== '-') {
+            if (specialText && specialText !== '-' && specialText !== '—') {
+              console.log(specialText);
               yaml += `
   special:
 ${special(specialText)}`;
@@ -97,6 +109,7 @@ ${special(specialText)}`;
 
                 return t;
               });
+              const spellsKnownTr = spellsKnownTrs[level];
 
               if (!spellStartFromZero) {
                 spells.unshift('0');
@@ -104,6 +117,21 @@ ${special(specialText)}`;
 
               yaml += `
   spellsPerDay: [${spells.join(', ')}]`;
+
+              if (spellsKnownTr) {
+                const spellsKnown = Array.from(spellsKnownTr.querySelectorAll('td'))
+                  .slice(1)
+                  .map((td) => {
+                    const t = removeNewlines(removeSpaces(td.textContent));
+
+                    if (t === '—') return 0;
+
+                    return t;
+                  });
+
+                yaml += `
+  spellsKnown: [${spellsKnown.join(', ')}]`;
+              }
             }
 
             return yaml;
@@ -112,7 +140,10 @@ ${special(specialText)}`;
           .join('\n');
 
         output.value = html;
-      });
+      };
+
+      input.addEventListener('input', call);
+      spellsKnownInput.addEventListener('input', call);
 
       output.addEventListener('focus', () => {
         output.select();
