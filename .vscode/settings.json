@@ -1,8 +1,7 @@
 {
   "deno.enable": true,
-  "deno.import_intellisense_origins": {
-    "https://deno.land": true
-  },
   "search.useIgnoreFiles": true,
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "deno.lint": false,
+  "deno.unstable": true
 }

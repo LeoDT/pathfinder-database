@@ -53,6 +53,10 @@ function mergeDone(collections) {
 
 const converters = [
   {
+    dir: 'weapon-types',
+    done: mergeDone,
+  },
+  {
     dir: 'spells',
     map: mergeMap,
     done: mergeDone,

@@ -1,18 +1,43 @@
-import { parse } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
+import { parse as parseYAML } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
+import { parse as parseCSV } from 'https://deno.land/std@0.85.0/encoding/csv.ts';
 
-let text = '';
-for await (const entry of Deno.readDir('./pf-database/feats')) {
-  text += await Deno.readTextFile(`./pf-database/feats/${entry.name}`);
-}
+const weaponsYaml = parseYAML(
+  [
+    './chef/data/weapons/aa2.yaml',
+    './chef/data/weapons/exotic.yaml',
+    './chef/data/weapons/martial.yaml',
+    './chef/data/weapons/simple.yaml',
+  ]
+    .map((f) => {
+      return Deno.readTextFileSync(f);
+    })
+    .join('\n')
+);
 
-const feats = parse(text);
+const csv = [
+  Deno.readTextFileSync('./chef/data/weapons.csv'),
+  Deno.readTextFileSync('./chef/data/weapons_eastern.csv'),
+].join('\n');
 
-const types = new Set();
+const weaponCSV = await parseCSV(csv, {
+  columns: [
+    'name',
+    'cost',
+    'damageSmall',
+    'damage',
+    'critical',
+    'range',
+    'weight',
+    'damageType',
+    'special',
+    'source',
+  ],
+});
 
-for (const f of feats) {
-  for (const t of f.type) {
-    types.add(t);
+const ids = weaponCSV.map((w) => w.name.toLowerCase());
+
+weaponsYaml.forEach((w) => {
+  if (!ids.includes(w.id.toLowerCase())) {
+    console.log(w.id);
   }
-}
-
-console.log(types);
+});

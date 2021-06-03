@@ -2299,8 +2299,8 @@
       - trip
     bothHand: true
 - id: 'Curve blade, elven'
-  name: ''
-  desc: ''
+  name: 精灵曲剑
+  desc: 本质上是加长版的弯刀，但刀身更窄的精灵曲剑相当稀罕。由于打造它的金属柔韧性超群，精灵曲剑在抵抗针对其本身的破武战技时令你的CMD+10。你能通过“武器娴熟”专长在持用一把型号与你体型相符的精灵曲剑时，在攻击检定中以敏捷修正取代力量修正，即便它并不是轻型武器。
   meta:
     training: exotic
     category: two-handed
@@ -2667,8 +2667,8 @@
     category: ranged
     cost: 1 gp
 - id: Bola
-  name: ''
-  desc: ''
+  name: 套牛绳
+  desc: 套牛绳是用细索连结的一对木、石或铁质重物。你能回旋并投掷此武器，向一名对手发动远程绊摔攻击。你不会在使用套牛绳绊摔时遭到反摔。
   meta:
     training: exotic
     category: ranged
@@ -3015,3 +3015,643 @@
     range: 30
     weight: 2
     damageType: P
+- id: Hanbo
+  name: ''
+  desc: ''
+  meta:
+    training: simple
+    category: light
+    cost: 1 gp
+    damage: 1d6
+    critical: x2
+    weight: 2
+    damageType: B
+    special:
+      - monk
+      - trip
+- id: Butterfly sword
+  name: 蝴蝶双刀
+  desc: 这种成对设计的短剑可以收在一起，看上去就如同一把独立的武器。你可以将他们同时拔出并以一个自由动作拆解成一对武器，这样能更好的发挥它们猛恶的削斩威力。蝴蝶刀的剑身宽而短，长度只有1尺左右。它们的硬木握把覆有绳套，装有可以保护持用手的D字形金属框。上表中给出的价格为一对蝴蝶刀。一对精制蝴蝶刀价格增加320gp。若要为蝴蝶双刀添加增强加值或其他附魔，将其中每一把剑独立处理（举例而言，为一对精制蝴蝶刀添加+1增强价值会使价格增加4000gp）。
+  meta:
+    training: martial
+    category: light
+    cost: 20 gp
+    damage: 1d4
+    critical: 19–20/×2
+    weight: 1
+    damageType: S
+    special:
+      - monk
+- id: Iron brush
+  name: 判官笔
+  desc: 这种看起来像是普通毛笔的武器笔身为钢制，笔尾装有尖钉。虽然并不是非常有威力的武器，但判官笔很容易藏匿（使用者在将判官笔藏在身上的巧手检定+2），也可以将之抛掷出一段距离来打击对手，或用来击打对手身上秘孔要穴、造成难以预料的破坏。
+  meta:
+    training: martial
+    category: light
+    cost: 2 gp
+    damage: 1d3
+    critical: ×2
+    range: 10
+    damageType: P
+- id: Jutte
+  name: 十手
+  desc: 这种铁尺似的武器装有一个反转的铁钩，可以用来格挡或钳制住对方的兵器。部分十手还有特制的尖头甚至开刃。
+  meta:
+    training: martial
+    category: light
+    cost: 8 gp
+    damage: 1d6
+    critical: ×2
+    weight: 1
+    damageType: B
+    special:
+      - disarm
+      - monk
+- id: Kerambit
+  name: 虎牙刺
+  desc: 这件纤小，弯曲的匕首在握把的底端有一个圆环，让它可以套在手指上或是藏在头发内。虽然并不大，这把造型狠毒的小武器可以造成十分严重的伤害。虎牙刺非常易于隐藏（使用者在将虎牙刺藏在身上的巧手检定+2），所以忍者和刺客爱用这种武器。
+  meta:
+    training: martial
+    category: light
+    cost: 2 gp
+    damage: 1d3
+    critical: ×3
+    damageType: S
+- id: Lungchuan tamo
+  name: 杖隐刃
+  desc: 这支短棍形的剑鞘里装有一对纤细的短刀，它们的设计非常适合投掷。
+  meta:
+    training: martial
+    category: light
+    cost: 5 gp
+    damage: 1d4
+    critical: ×2
+    range: 10
+    weight: 1
+    damageType: P or S
+    special:
+      - monk
+- id: Shang gou
+  name: 双钩
+  desc: 这对精钢打造的长剑有一个回钩的弯头，而它的护手也被制造成可以防护整个持用手的月牙刃状，钩尖和月牙刃都被打磨的足够锐利可以用来战斗。双钩可以合成一具武器或是分解开来进行双武器战斗。当拆开的时候，双钩获得卸武特性；而在组合使用时，双钩具有绊摔特性。
+  meta:
+    training: martial
+    category: light
+    cost: 6 gp
+    damage: 1d4
+    critical: ×2
+    weight: 1
+    damageType: S
+    special:
+      - disarm or trip (see text)
+      - monk
+- id: Tonfa
+  name: 旋棍
+  desc: 这支L形的格斗棍棒非常适合在戳打的同时挡格对方的攻击。当使用者握住旋棍的手柄时，他可以选择旋转棍身敲击或是直接利用与手臂平行的部分击打。
+  meta:
+    training: martial
+    category: light
+    cost: 1 gp
+    damage: 1d6
+    critical: ×2
+    weight: 1
+    damageType: B
+    special:
+      - blocking
+      - monk
+- id: Wushu dart (5)
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: light
+    cost: 1 gp
+    damage: 1d3
+    critical: ×2
+    range: 10
+    damageType: P
+    special:
+      - monk
+- id: 'Broadsword, nine ring'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: one-handed
+    cost: 15 gp
+    damage: 1d8
+    critical: ×3
+    weight: 4
+    damageType: S
+    special:
+      - monk
+- id: Double chicken saber
+  name: 鸡刀镰
+  desc: 这把先端长约3尺的直刃剑被扭作令人惊讶的两枝，其相对的锐刺可以用来从对手的手中拖拽武器。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 12 gp
+    damage: 1d6
+    critical: 19–20/×2
+    weight: 3
+    damageType: S
+    special:
+      - disarm
+      - monk
+- id: Sibat
+  name: 倒钩矛
+  desc: 这件武器类似于一把用有弹性的竹篙为手柄，装有倒钩矛头的短矛。在成功造成重击时，矛头可以钩入对手的肉体或护甲。这时，倒钩矛的使用者可以以一个自由动作擒抱目标，在你以此法发动擒抱时不会受到擒抱目标的藉机攻击。当使用倒钩矛擒抱目标时，使用者只能对目标造成移动或伤害效果，而且使用者也被视为受到擒抱——虽然它不需要一直保持邻接目标来维持擒抱。不过，如果你移出了倒钩矛的触及范围，你会因为同一个动作结束擒抱。
+  meta:
+    training: martial
+    category: one-handed
+    cost: 2 gp
+    damage: 1d6
+    critical: ×3
+    range: 10
+    weight: 2
+    damageType: P or S
+- id: Hooked lance
+  name: 钩镰枪
+  desc: 这种纤细，约有10尺长度的长枪在枪头上还装有一个突出的倒钩，可以用来在战斗中钩挂对手的衣甲。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 3 gp
+    damage: 1d8
+    critical: ×4
+    weight: 10
+    damageType: P
+    special:
+      - reach
+      - trip
+    bothHand: true
+- id: Monk’s spade
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: two-handed
+    cost: 20 gp
+    damage: 1d6/1d6
+    critical: ×2
+    weight: 12
+    damageType: B or P or S
+    special:
+      - double
+      - monk
+    bothHand: true
+- id: Naginata
+  name: 薙刀
+  desc: 薙刀由一段6尺长的刀柄和长约2尺、类似剑刃但略弯的刀身组成，薙刀的长度可以让使用者在不受到对方的刀剑、以及类似短兵器威胁的情况下从容地展开攻击。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 35 gp
+    damage: 1d8
+    critical: ×4
+    weight: 9
+    damageType: S
+    special:
+      - reach
+    bothHand: true
+- id: Nodachi
+  name: 野太刀
+  desc: 这把长刀有着长达4尺、锐利无比的刀身。步兵常利用它来对抗骑马的敌人，既可以用来将骑手挑下马背，也可以支在地面上对抗骑兵冲锋。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 60 gp
+    damage: 1d10
+    critical: 18–20/×2
+    weight: 8
+    damageType: S or P
+    special:
+      - brace
+    bothHand: true
+- id: Sansetsukon
+  name: 三节棍
+  desc: 这支武器由三节2尺长、以链条互相连接的短杖组成，使用起来极具灵活性，在高速挥舞时能很好地防护持用者。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 8 gp
+    damage: 1d10
+    critical: 19–20/×2
+    weight: 3
+    damageType: B
+    special:
+      - blocking
+      - disarm
+      - monk
+    bothHand: true
+- id: 'Sword, tri-point double-edged'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: two-handed
+    cost: 12 gp
+    damage: 1d10
+    critical: ×3
+    weight: 14
+    damageType: P
+    special:
+      - reach
+    bothHand: true
+- id: Tiger fork
+  name: 三股叉
+  desc: 这支颀长，造型类似三叉戟的钢叉在8尺长的手柄前端装有三股尖头。三股叉可以像棍棒一样挥舞攻击，持用者也可以双手握紧叉柄冲刺戳击目标。三股叉也可以用作反冲锋武器。
+  meta:
+    training: martial
+    category: two-handed
+    cost: 5 gp
+    damage: 1d8
+    critical: ×2
+    weight: 8
+    damageType: P
+    special:
+      - brace
+      - monk
+    bothHand: true
+- id: Tube arrow shooter
+  name: 袖箭
+  desc: 这件武器的主体部分（一支小金属管）可以藏进衣袖里，袖箭内的弹簧机关可以用来弹射一发短小的竹矢。使用者将袖箭藏在身上的巧手检定+2，扣动袖箭上的机关就可以让竹矢射出。在发射以后，袖箭需要重新装填才能使用。装填袖箭需要一个整轮动作，如果你拥有“快速装填”专长，那么装填袖箭是一个标准动作。
+  meta:
+    training: martial
+    category: ranged
+    cost: 3 gp
+    damage: 1d4
+    critical: ×2
+    range: 40
+    weight: 1
+    damageType: P
+- id: 'Arrow, Bamboo shaft (10)'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: ranged
+    cost: 1 gp
+    weight: 1
+- id: 'Arrow, iron-tipped distance (20)'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: ranged
+    cost: 1 gp
+    weight: 4
+- id: 'Arrow(s), whistling (20)'
+  name: ''
+  desc: ''
+  meta:
+    training: martial
+    category: ranged
+    cost: 2 gp
+    weight: 3
+- id: Poisoned sand tube
+  name: 毒砂管
+  desc: 这支用金属或竹节制造的，外形类似卷轴匣的吹管填满了浸泡过吸入或接触毒药的细腻毒砂。当装填满三剂毒药后，毒砂管的使用者可以通过大力吹动吹管，将毒砂扬到15尺锥形范围内敌人的脸上。每一个处于影响范围内的敌人都会受到一剂毒药的影响。即使沙尘并未浸毒，被吹到的生物也必须通过一个DC12的强韧检定否则将目眩1轮。每次使用之后毒砂管都必须重新装入毒砂。装填毒砂管是一个整轮动作，如果你拥有“快速装填”专长，那么装填毒砂管是一个标准动作。
+  meta:
+    training: martial
+    category: ranged
+    cost: 1 gp
+    damage: special
+    weight: 1
+- id: Bich’hwa
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 5 gp
+    damage: 1d4
+    critical: 19-20/x2
+    weight: 2
+    damageType: P or S
+    special:
+      - monk
+- id: Dan bong
+  name: 短棒
+  desc: 这种粗短的棍棒常为武术家使用以增强他们的招式。短棒可以有效的用来钳制对手的行动或是戳刺对方的要害，为使用者在擒抱战技检定上提供+2加值。
+  meta:
+    training: exotic
+    category: light
+    cost: 1 sp
+    damage: 1d3
+    critical: 19–20/×2
+    range: 10
+    damageType: B
+    special:
+      - blocking
+      - monk
+- id: Emei piercer
+  name: 峨眉刺
+  desc: 这也是一件用来增强徒手战斗所用的特殊武器。峨眉刺通常是一支长8到10寸，双头锋利的钢钎，安装在一具带有指环的旋座上。在战斗时，峨眉刺的使用者可以将其套在手指上并快速旋转钢钎以造成额外伤害。峨眉刺无法被卸武，持用者在使用峨眉刺时，他的徒手击打可以造成穿刺伤害。
+  meta:
+    training: exotic
+    category: light
+    cost: 3 gp
+    damage: 1d3
+    critical: 19–20/×2
+    damageType: P
+    special:
+      - monk
+      - see text
+- id: Fighting fan
+  name: 铁骨扇
+  desc: 虽然从外表上看起来与普通的绸面或纸折扇无异，铁骨扇的扇骨乃是用精钢所铸。铁骨扇通常成对使用以更好的在战斗中扰乱对手，它的扇骨通常会修出尖头并可能喂毒。
+  meta:
+    training: exotic
+    category: light
+    cost: 5 gp
+    damage: 1d4
+    critical: ×3
+    damageType: S or P
+    special:
+      - distracting
+      - monk
+- id: Madu (leather)
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 40 gp
+    damage: 1d4
+    critical: x2
+    weight: 5
+    damageType: P
+    special:
+      - performance
+- id: Madu (steel)
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 40 gp
+    damage: 1d4
+    critical: x2
+    weight: 6
+    damageType: P
+    special:
+      - performance
+- id: Pata
+  name: 拳剑
+  desc: 作为拳刃的进化版本，拳剑是固定在不分指铁手套前面的短剑。你以此武器发动的攻击相较戳刺更像是拳击，这是你能够在每一击中蓄积更强的力道。你无法用持有拳剑的手抓握任何其他东西。拳剑在抵抗针对其本身的卸武战技时令你的CMD+10。
+  meta:
+    training: exotic
+    category: light
+    cost: 14 gp
+    damage: 1d6
+    critical: x3
+    weight: 3
+    damageType: P
+    special:
+      - performance
+- id: Tekko-kagi (iron claw)
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: light
+    cost: 2 gp
+    damage: 1d3
+    critical: ×2
+    damageType: P
+    special:
+      - disarm
+      - see text
+- id: Wakizashi
+  name: 胁差
+  desc: 这把更为短小窄细版本的武士刀通常只有1-2尺长。胁差一般用来作为备用武器或处决对手，武者也在受辱时使用胁差切腹自杀来挽回荣誉。武士常常将武士刀与胁差成对携带，称之为“大小双刀”。
+  meta:
+    training: exotic
+    category: light
+    cost: 35 gp
+    damage: 1d6
+    critical: 18–20/×2
+    weight: 2
+    damageType: P or S
+    special:
+      - deadly
+- id: Katana
+  name: 武士刀
+  desc: 这种刀剑通常是为武士设计的，由数种不同材质的钢材以复杂的工艺折叠锻打而成。武士刀的刀身细长而锋锐，微微弯曲的单面开刃可以让剑士通过劈砍斩断对手的脖颈和肢体。虽然武士刀有着完美的平衡，但是它并不容易熟练掌握。一个角色可以双手使用武士刀作为军用武器，但必须拥有“擅长异种武器（武士刀）”专长才能单手使用它。
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 50 gp
+    damage: 1d8
+    critical: 18–20/×2
+    weight: 6
+    damageType: S
+    special:
+      - deadly
+- id: Nine-section whip
+  name: 九节鞭
+  desc: 这件武器的主体部分是九节互相连接的铁条，而它的末端则是一支6吋长的锐利钢刺。九节鞭可以单手或双手，甚至双持使用。
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 8 gp
+    damage: 1d8
+    critical: 19–20/×2
+    weight: 3
+    damageType: B
+    special:
+      - blocking
+      - distracting
+      - monk
+      - trip
+- id: 'Sword, temple'
+  name: 仪剑
+  desc: 这把沉重的刀剑通常被宗教场所的守卫使用。仪剑有着新月形的刀刃，令它看上去介于镰刀和弯刀之间。很多仪剑上打有孔洞，再以铃铛、钵片之类神圣坠饰加以镶嵌，用来体现其所有者的精神崇拜或冥思法器。武僧擅长仪剑。
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 30 gp
+    damage: 1d8
+    critical: 19-20/x2
+    weight: 3
+    damageType: S
+    special:
+      - monk
+      - trip
+- id: Urumi
+  name: 软剑
+  desc: 也被称为“鞭剑”，这把武器具有长达5尺，边缘锋锐而极具弹性的钢锻剑刃。软剑可以通过类似抽打的动作削切对手，它柔软而有弹性的剑身甚至可以卷起收入腰带中。
+  meta:
+    training: exotic
+    category: one-handed
+    cost: 30 gp
+    damage: 1d8
+    critical: 18-20/x2
+    weight: 6
+    damageType: S
+- id: Bo staff
+  name: 长棒
+  desc: 这支棍棒与木棍造型类似，不过整体要更为细长，且其中一头略收窄成锥形。长棒是一种攻守兼备的武器。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 1 gp
+    damage: 1d6/1d6
+    critical: ×2
+    weight: 3
+    damageType: B
+    special:
+      - blocking
+      - double
+      - monk
+    bothHand: true
+- id: Chain spear
+  name: 链枪
+  desc: 这件凶残的武器常因其功能多样而被用于角斗表演。武器本身是一支标准的短矛，主要用来戳刺。矛的末端连结着一段锁链，锁链往往带刺、尾部还有铁钩。铁钩和锁链可被用来发动绊摔攻击。若你在绊摔战技检定中失败10点以上，你能够扔掉链枪以避免被反摔。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 15 gp
+    damage: 1d6/1d6
+    critical: ×2
+    weight: 13
+    damageType: P and S
+    special:
+      - double
+      - trip
+    bothHand: true
+- id: 'Kama, double-chained'
+  name: 双镰
+  desc: 这种武器就像一对用8尺长的锁链连接起来的单镰，双镰的使用者可以如同每只手各持一把单镰一样进行攻击，或是伸长链子进行一个单次的长武触及攻击。另外，使用者也可以抛出其中一端来尝试对对方发动卸武或摔绊战技。最后，如果双镰从使用者的手中掉落，使用者可以以一个自由动作拉回其锁链来重新掌握武器。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 8 gp
+    damage: 1d6/1d6
+    critical: ×2
+    weight: 4
+    damageType: S
+    special:
+      - double
+      - monk
+      - reach
+      - trip
+    bothHand: true
+- id: 'Katana, double walking stick'
+  name: 手杖刀
+  desc: 这对轻便平衡，足以双手各持一把的剑可以藏在一支单鞘里。虽然名字看起来像是普通的武士刀，不过它们的制式不过比胁差略长而已。在手杖刀藏在鞘内的时候，这件武器可以作为木棍使用。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 50 gp
+    damage: 1d6
+    critical: 19-20/×2
+    weight: 6
+    damageType: S
+    bothHand: true
+- id: Kusarigama (sickle and chain)
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 12 gp
+    damage: 1d3/1d6
+    critical: ×2
+    weight: 3
+    damageType: S or B
+    special:
+      - double
+      - monk
+      - reach
+      - trip
+      - grapple
+    bothHand: true
+- id: Kyoketsu shoge
+  name: 距拔
+  desc: 这件武器的主体是一把长约一尺的双刃刀，其一侧还延伸出一支形似鸟嘴的弯钩旁枝。刀刃底部连着一条10尺长的绳索，绳索的另一端则是一枚大型的钢环。在战斗中，这把刀可以如同匕首一样作为副手近战武器或是投掷武器。绳索和钢环则可以用来挥舞攻击，如同一件钝击长兵器。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 6 gp
+    damage: 1d4
+    critical: ×2
+    range: 20
+    weight: 1
+    damageType: S or P
+    special:
+      - disarm
+      - grapple
+      - monk
+      - reach
+    bothHand: true
+- id: Meteor hammer
+  name: 流星锤
+  desc: 这件武器由一对通过10尺长的锁链连接的铁锤组成。你可以旋舞铁锤以利于锁链捆绑对手。当你用流星锤进行一次摔绊战技攻击且命中时，你可以选择将目标向你拉近5尺而非将其击倒。除此之外，流星锤有两种用法
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 10 gp
+    damage: 1d8
+    critical: ×2
+    weight: 10
+    damageType: B
+    special:
+      - reach
+      - trip
+    bothHand: true
+- id: 'Sword, seven-branched'
+  name: 七支刀
+  desc: 这支造型奇特的兵刃剑身长2尺，剑刃上铸有6支短小的L型铁枝。这些铁枝在两侧剑刃上交错排列，在战斗中，它们可以用来钩挂敌人的衣甲或是从敌人手中钩下武器。如果使用者用七支刀钩挂对手，他需要进行一个绊摔战技检定。如果绊摔成功，目标不会被击倒而是因拖拉失去平衡，在本轮接下来的时间陷入措手不及状态。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 50 gp
+    damage: 1d10
+    critical: ×3
+    weight: 7
+    damageType: S
+    special:
+      - disarm
+      - monk
+    bothHand: true
+- id: Tetsubo
+  name: 金碎棒
+  desc: 这是一种和巨木棒类似，但相对细长的钝击棍棒。金碎棒的前半截棒身嵌有数十枚金属嵌钉，给予金碎棒额外的重量和破坏力以增强打击效果。
+  meta:
+    training: exotic
+    category: two-handed
+    cost: 20 gp
+    damage: 1d10
+    critical: ×4
+    weight: 10
+    damageType: B
+    bothHand: true
+- id: 'Chakram, crystal'
+  name: ''
+  desc: ''
+  meta:
+    training: exotic
+    category: ranged
+    cost: 20 gp
+    damage: 1d6
+    critical: 18-20/x2
+    weight: 2
+    damageType: S
+- id: Rope dart
+  name: 绳镖
+  desc: 这件不起眼的武器看起来不过是一条12尺长的绳子和一支6寸长的铁镖。和流星锤的使用方法类似，绳镖可以在高速旋舞以后掷出，刺击远距离的敌人。每次攻击以后，绳镖的使用者只需要简单的拉动绳子就可以收回武器。
+  meta:
+    training: exotic
+    category: ranged
+    cost: 1 gp
+    damage: 1d4
+    critical: ×2
+    range: 20
+    damageType: P
+    special:
+      - blocking
+      - distracting
+      - monk

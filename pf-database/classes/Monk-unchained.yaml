@@ -59,27 +59,83 @@ feats:
       该加值在武僧对抗接触攻击或者措手
     effects:
       - type: gainAC
-        when:
-          - level: ">= 4"
-            armor: none
-            shield: none
-            load: light
+        when: |
+          AND(
+            armor="none",
+            buckler="none",
+            NOT(mainHandCategory="shield"),
+            NOT(offHandCategory="shield"),
+            carryLoad="light"
+          )
+        args:
+          bonus:
+            type: naturalArmor
+            amountFormula: wis
         growArgs:
           - level: 4
-            ac: 1
-            cmd: 1
+            args:
+              bonus:
+                type: naturalArmor
+                amountFormula: wis + 1
           - level: 8
-            ac: 2
-            cmd: 2
+            args:
+              bonus:
+                type: naturalArmor
+                amountFormula: wis + 2
           - level: 12
-            ac: 3
-            cmd: 3
+            args:
+              bonus:
+                type: naturalArmor
+                amountFormula: wis + 3
           - level: 16
-            ac: 4
-            cmd: 4
+            args:
+              bonus:
+                type: naturalArmor
+                amountFormula: wis + 4
           - level: 20
-            ac: 5
-            cmd: 5
+            args:
+              bonus:
+                type: naturalArmor
+                amountFormula: wis + 5
+      - type: gainCMD
+        when: |
+          AND(
+            armor="none",
+            buckler="none",
+            NOT(mainHandCategory="shield"),
+            NOT(offHandCategory="shield"),
+            carryLoad="light"
+          )
+        args:
+          bonus:
+            type: naturalArmor
+            amountFormula: wis
+        growArgs:
+          - level: 4
+            args:
+              bonus:
+                type: naturalArmor
+                amountFormula: wis + 1
+          - level: 8
+            args:
+              bonus:
+                type: naturalArmor
+                amountFormula: wis + 2
+          - level: 12
+            args:
+              bonus:
+                type: naturalArmor
+                amountFormula: wis + 3
+          - level: 16
+            args:
+              bonus:
+                type: naturalArmor
+                amountFormula: wis + 4
+          - level: 20
+            args:
+              bonus:
+                type: naturalArmor
+                amountFormula: wis + 5
   - id: Bonus Feat
     name: 奖励专长
     desc: 在１级、２级及之后每４级，武僧可以获得１个奖励专长。这些专长必须出自以下列表：随手武器（Catch Off-Guard），战斗反射，拨挡飞箭，闪避，精通擒抱，蝎形拳（Scorpion Style），随手投掷（Throw Anything）。6级时，以下专长可以加入表中：蛇形拳（Gorgon’s Fist），精通冲撞，精通卸武，精通虚招，精通绊摔，灵活移动。10级时，以下专长可以加入表中：精通重击，万蛇出洞（Medusa’s Wrath），抓取飞箭，跳跃攻击。武僧无须拥有这些专长的先决条件便可以选用它们。
@@ -103,10 +159,27 @@ feats:
     desc: |
       １级时，武僧可以用全力攻击动作发动疾风连击。发动疾风连击时，他可以最高ＢＡＢ进行一次额外攻击。该次额外攻击可与加速术或类似效果提供的额外攻击次数叠加。他可以并用徒手打击或者是特殊武僧武器来使出疾风连击。在持用多把武器进行疾风连击时，他无需承受双武器减值或多武器减值，但他亦无法在获得疾风连击所给予额外攻击后，再获得任何额外攻击（他依然可以因高ＢＡＢ、本能力、加速术或类似效果而获得额外攻击次数）。
       １１级时，武僧在发动疾风连击时可以再获得１次以最高ＢＡＢ进行的额外攻击。该次攻击与本能力１级时获得的额外攻击、加速术或类似效果提供的额外攻击次数叠加。
+    effects:
+      - type: addAttackOption
+        args:
+          extraAttack:
+            by: maxBab
+            amount: 1
+          ignoreTwoWeapon: true
+        growArgs:
+          - level: 11
+            args:
+              extraAttack:
+                by: maxBab
+                amount: 2
   - id: Stunning Fist
     name: 震慑拳
     type: ex
     desc: １级起，武僧获得【震慑拳】作为奖励专长，即使他并未满足先决条件。４级时与其后的每４级，武僧都可能在他的震慑拳上附加一种新的状态效果。这状态将会取代原来的效果（震慑目标１轮），成功的豁免检定可以忽略此状态。４级时，武僧的【震慑拳】可以令目标疲乏。８级时，可以令目标恶心１分钟。１２级时，可以令目标恍惚“１ｄ６＋１”轮。１６级时，可以令对手永久目盲或耳聋。20级时，可以令目标麻痹“１ｄ６＋１”轮。武僧必须在攻击骰投出前选择他要使用何种状态。这些效果不会其本身叠加（被震慑拳打成疲乏的目标再吃到疲乏震慑拳时，不会因疲乏状态的叠加而变为力竭），但是重复命中可以延长状态的持续时间。
+    effects:
+      - type: addTracker
+        args:
+          maxFormula: monkunchainedLevel + MAX(0, FLOOR((level - monkunchainedLevel) / 4))
   - id: Unarmed Strike
     type: ex
     name: 徒手打击
@@ -118,7 +191,25 @@ feats:
       - type: gainFeat
         args:
           forceFeat: Improved Unarmed Strike
-      - type: gainMonkUnarmedStrike
+      - type: enchantUnarmedStrike
+        args:
+          damage: 1d6
+        growArgs:
+          - level: 4
+            args:
+              damage: 1d8
+          - level: 8
+            args:
+              damage: 1d10
+          - level: 12
+            args:
+              damage: 2d6
+          - level: 16
+            args:
+              damage: 2d8
+          - level: 20
+            args:
+              damage: 2d10
   - id: Evasion
     type: ex
     name: 反射闪避
@@ -128,10 +219,42 @@ feats:
     name: 快速移动
     desc: ３级时，武僧的陆地移动速度获得增强加值，如表。穿甲或处于中、重载状态下的武僧失去该额外速度。
     effects:
-      - type: gainMonkFastMovement
-        when:
-          - armor: none
-          - load: light
+      - type: gainSpeed
+        when: AND(armor="none", carryLoad="light")
+        args:
+          bonus: enchancement
+          amount: 0
+        growArgs:
+          - level: 3
+            args:
+              bonus:
+                type: enchancement
+                amount: 10
+          - level: 6
+            args:
+              bonus:
+                type: enchancement
+                amount: 20
+          - level: 9
+            args:
+              bonus:
+                type: enchancement
+                amount: 30
+          - level: 12
+            args:
+              bonus:
+                type: enchancement
+                amount: 40
+          - level: 15
+            args:
+                bonus:
+                  type: enchancement
+                  amount: 50
+          - level: 18
+            args:
+              bonus:
+                type: enchancement
+                amount: 60
   - id: Ki Pool
     type: su
     name: 气池
@@ -142,10 +265,16 @@ feats:
     effects:
       - type: addTracker
         args:
-          id: Ki Pool
-          name: 气池
-          max: 1 / 2 * level + wis
-  - id: Ki Powers
+          maxFormula: 1 / 2 * monkunchainedLevel + wis
+  - id: Ki Strike (magic)
+    name: 斗气击(魔法)
+  - id: Ki Strike (cold iron/silver)
+    name: 斗气击(寒铁/镀银)
+  - id: Ki Strike (秩序)
+    name: 斗气击(寒铁/镀银)
+  - id: Ki Strike (adamantine)
+    name: 斗气击(精金)
+  - id: Ki Power
     type: su
     name: 绝学
     desc: 在４级及之后每２级，武僧可以学习一种绝学。这些绝学通过从气池中消耗气，来展现出不可思议的力量。或是独门绝技，或是秘术奥义，或是无双轻功。一旦选定绝学，就无法再更改。某些绝学需要武僧达到一定等级才能选择学习。除非有特别说明，某种同一绝学无法选择学习两次。
@@ -157,9 +286,9 @@ feats:
     type: ex
     name: 百病不侵
     desc: ５级时，武僧免疫所有疾病，包括超自然与魔法疾病。
-  - id: Style Strike
+  - id: Style Strike (1/round)
     type: ex
-    name: 真劲击
+    name: 真劲击 (1/轮)
     desc: ５级时，武僧可以学习到一种真劲击。当他进行疾风连击时，可以宣布其中一次徒手攻击为真劲击。该次攻击正常判定命中与否，但根据真劲击的选择不同，会附加上不同的效果。９级及之后的每４级，武僧都可再学习一种真劲击。武僧必须在指定徒手攻击骰掷前决定使用何种真劲击。１５级时，武僧至多可将疾风连击中２次徒手攻击指定为真劲击，且可为不同的类型。武僧可选真劲击如下所列。
     subs:
       - id: Defensive Spin
@@ -192,6 +321,10 @@ feats:
       - id: Spin Kick
         name: 卧龙尾
         desc: 武僧踢出的这一下，完全出乎敌人的意料。该次攻击会对抗目标的措手不及ＡＣ。拥有直觉闪避职业能力或类似效果的生物在被该真劲击攻击时不会措手不及。该次真劲击必须用腿打出。
+    grow:
+      - level: 15
+        id: Style Strike (2/round)
+        name: 真劲击 (2/轮)
   - id: Improved Evasion
     type: ex
     name: 精通反射闪避
@@ -219,6 +352,7 @@ levels:
     will: 0
     special:
       - Monk(Unchained) Weapon and Armor Proficiency
+      - AC Bonus
       - Bonus Feat
       - Flurry of Blows
       - Stunning Fist
@@ -254,7 +388,7 @@ levels:
     reflex: 4
     will: 1
     special:
-      - Purity Of Body
+      - Purity of Body
       - Style Strike (1/round)
   - level: 6
     bab: [6, 1]
@@ -285,7 +419,7 @@ levels:
     will: 3
     special:
       - Improved Evasion
-      - Style Strike
+      - Style Strike (1/round)
   - level: 10
     bab: [10, 5]
     fortitude: 7
@@ -301,7 +435,7 @@ levels:
     reflex: 7
     will: 3
     special:
-      - Flurry Of Blows
+      - Flurry of Blows
   - level: 12
     bab: [12, 7, 2]
     fortitude: 8
@@ -315,8 +449,8 @@ levels:
     reflex: 8
     will: 4
     special:
-      - Style Strike
-      - Tongue Of The Sun And Moon
+      - Style Strike (1/round)
+      - Tongue of The Sun And Moon
   - level: 14
     bab: [14, 9, 4]
     fortitude: 9
@@ -346,7 +480,7 @@ levels:
     reflex: 10
     will: 5
     special:
-      - Style Strike
+      - Style Strike (2/round)
       - Timeless Body
   - level: 18
     bab: [18, 13, 8, 3]

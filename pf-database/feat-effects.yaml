@@ -64,3 +64,21 @@
         bonus:
           type: untyped
           amountFormula: MAX(3, level)
+- id: Power Attack
+  effects:
+    - type: addAttackOption
+      args:
+        attackBonuses:
+          - name: 猛力攻击
+            bonus:
+              type: untyped
+              amountFormula: "MAX(1, FLOOR(maxBab / 4)) * -1"
+
+        damageBonuses:
+          - applyMultiplier: str
+            bonus:
+              name: 猛力攻击
+              bonus:
+                type: untyped
+                amountFormula: "MAX(1, FLOOR(maxBab / 4)) * 2"
+

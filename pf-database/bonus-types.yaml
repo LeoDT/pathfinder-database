@@ -57,6 +57,8 @@
 - id: naturalArmor
   name: 天生护甲
   stack: false
+  flatFootedAC: true
+  touchAC: true
 - id: profane
   name: 亵渎
   stack: false
