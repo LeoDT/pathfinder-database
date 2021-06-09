@@ -2,6 +2,7 @@ import { parse as parseYAML } from 'https://deno.land/std@0.85.0/encoding/yaml.t
 import {
   resolve as pathResolve,
   basename as pathBasename,
+  join as pathJoin,
 } from 'https://deno.land/std@0.85.0/path/mod.ts';
 
 import { compose } from './utils.js';
@@ -46,20 +47,22 @@ function mergeMap(items, file) {
 }
 
 function mergeDone(collections) {
-  return collections
-    .reduce((acc, col) => acc.concat(col), [])
-    .sort((a, b) => (a.id.toLowerCase() > b.id.toLowerCase() ? 1 : -1));
+  return collections.reduce((acc, col) => acc.concat(col), []);
+}
+
+function sortDone(collections) {
+  return collections.sort((a, b) => (a.id.toLowerCase() > b.id.toLowerCase() ? 1 : -1));
 }
 
 const converters = [
   {
     dir: 'weapon-types',
-    done: mergeDone,
+    done: compose(sortDone, mergeDone),
   },
   {
     dir: 'spells',
     map: mergeMap,
-    done: mergeDone,
+    done: compose(sortDone, mergeDone),
     produceMore: (spells) => {
       const spellByClassLevel = {};
 
@@ -89,7 +92,7 @@ const converters = [
   {
     dir: 'feats',
     map: compose(featPatchMap, mergeMap),
-    done: mergeDone,
+    done: compose(sortDone, mergeDone),
   },
   {
     file: 'core-skills',
@@ -121,6 +124,14 @@ const converters = [
       return converted;
     },
   },
+  {
+    dir: 'classes',
+    done: compose(sortDone),
+  },
+  {
+    dir: 'archetypes',
+    done: compose(sortDone, mergeDone),
+  },
 ];
 
 async function convertDir(dirEntry, converter) {
@@ -142,6 +153,10 @@ async function convertDir(dirEntry, converter) {
       }
 
       collections.push(loaded);
+    } else if (entry.isDirectory) {
+      collections = collections.concat(
+        await convertDir({ ...entry, name: pathJoin(dirEntry.name, entry.name) }, converter)
+      );
     }
   }
 

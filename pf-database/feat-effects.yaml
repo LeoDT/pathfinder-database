@@ -81,4 +81,17 @@
               bonus:
                 type: untyped
                 amountFormula: "MAX(1, FLOOR(maxBab / 4)) * 2"
-
+- id: Weapon Finesse
+  effects:
+    - type: meleeAttackAbility
+      when: |
+        OR(
+          mainHandCategory="light",
+          mainHandCategory="unarmed strike",
+          mainHand="Rapier",
+          mainHand="Whip",
+          mainHand="Chain, spiked",
+          mainHand="Curve blade, elven"
+        )
+      args:
+        ability: dex
