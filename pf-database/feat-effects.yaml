@@ -30,6 +30,11 @@
         bonus:
           type: dodge
           amount: 1
+    - type: gainCMD
+      args:
+        bonus:
+          type: dodge
+          amount: 1
 - id: Great Fortitude
   effects:
     - type: gainSave
@@ -95,3 +100,10 @@
         )
       args:
         ability: dex
+- id: Skill Focus
+  effects:
+    - type: gainSkill
+      args:
+        bonus:
+          type: untyped
+          amountFormula: IF(currentSkillRank >= 10, 6, 3)

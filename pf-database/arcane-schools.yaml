@@ -3,23 +3,31 @@
   desc: 不专精于任何学派的法师是最多元化的奥术施法者。
   type: standard
   noConflict: true
+  noSchoolSlot: true
   powers:
     - id: Hand of the Apprentice
       name: 学徒之手
       type: su
       desc: 你能让你的武器从你的手中飞出，打击一个敌人然后回到你手中。通过一个标准动作，你能使用一件近战武器作出一次30尺射程的单攻击。这次攻击视同投掷武器远程攻击，除了你用智力加值取代敏捷加值来决定攻击值（伤害依然使用力量加值）。此能力不能用于执行一项战技攻击。你能够每天使用此能力次数为“3+智力修正”。
+      effects:
+        - type: classFeatSource
+        - type: addTracker
+          args:
+            maxFormula: int+3
     - id: Metamagic Mastery
       name: 超魔熟稔
       type: su
       desc: 在8级，你能够添加任何一项你所知的超魔专长到你即将施展的法术上。不需要改变法术等级或者施法时间。你能在8级时使用此能力每天一次，之后每2级增加1次（20级时每天7次）。每当你将此能力用于一项将法术位额外消耗超过1阶的超魔专长时。你必须为超过的每一阶法术消耗一次使用次数。即使此能力不增加实际法术等级，你也不能用此能力去施展一个法术等级被修改到超过你能施放最高法术等级的法术。
+      effectsWhen: wizardLevel >= 8
+      effects:
+        - type: classFeatSource
+        - type: addTracker
+          args:
+            maxFormula: FLOOR(MAX(0, wizardLevel - 8) / 2) + 1
 - id: Abjuration
   name: 防护学派
   desc: 护法师使用魔法对抗它本身，同样也掌握了防御和守卫魔法的艺术。
   type: standard
-  effects:
-    - type: gainArcaneSchoolPrepareSlot
-      args:
-        school: abjuration
   powers:
     - id: Resistance
       name: 抗力
@@ -66,10 +74,6 @@
   name: 咒法学派
   desc: 咒法师专注于学习让召唤生物和魔法都屈服于他的意志。
   type: standard
-  effects:
-    - type: gainArcaneSchoolPrepareSlot
-      args:
-        school: conjuration
   powers:
     - id: Summoner's Charm
       name: 召唤者魅力
@@ -111,15 +115,18 @@
   name: 预言学派
   desc: 预言师是遥感，预言，和利用魔法去探究世界的大师。
   type: standard
-  effects:
-    - type: gainArcaneSchoolPrepareSlot
-      args:
-        school: divination
   powers:
     - id: Forewarned
       name: 预警
       type: su
       desc: 你总是能在突袭轮行动，即使你在发现敌人的察觉检定上失败。但在你行动以前，你始终处于措手不及状态。另外，你的先攻获得法师等级一半的加值（至少为1）。在20级时，你的先攻检定总是自然投出20。
+      effects:
+        - type: classFeatSource
+        - type: gainInitiative
+          args:
+            bonus:
+              type: untyped
+              amountFormula: MAX(1, FLOOR(wizardLevel / 2))
     - id: Diviner's Fortune
       name: 探知机运
       type: sp
@@ -139,10 +146,21 @@
           name: 预感
           type: su
           desc: 在你的回合开始时，以可以以一个自由动作掷骰一个d20。在下一回合之前你可以以这个结果取代任何你要进行但还没掷骰的d20检定。如果你在下一回合之前没有使用这个结果，就会失去这次效果。你每天可以使用这个能力次数为“3+智力修正”。
+          effects:
+            - type: classFeatSource
+            - type: addTracker
+              args:
+                maxFormula: int+3
         - id: Foretell
           name: 预知之语
           type: su
           desc: 8级开始，你可以说出一个对于稍后的未来预报。当你的预知之语生效时，你散发30尺半径的命运灵光支持你的盟友或者妨碍你的对手，由你在施放的时候选择。如果你选择支持，你和你的盟友在属性检定、攻击检定、施法者等级检定、豁免检定以及技能检定上获得+2幸运加值。如果你选择妨碍，你的敌人都立刻在如上的效果上受到-2减值。你每天可以使用这个能力的轮数相当于你的法师等级。这些回合并不需要连续。
+          effectsWhen: wizardLevel >= 8
+          effects:
+            - type: classFeatSource
+            - type: addTracker
+              args:
+                maxFormula: wizardLevel
     - id: Scryer
       name: 探知学派
       replace:
@@ -156,10 +174,6 @@
   name: 惑控学派
   desc: 惑控师使用魔法去控制和操纵受害者的心智。
   type: standard
-  effects:
-    - type: gainArcaneSchoolPrepareSlot
-      args:
-        school: enchantment
   powers:
     - id: Enchanting Smile
       name: 迷人微笑
@@ -206,10 +220,6 @@
   name: 塑能学派
   desc: 塑能师陶醉于赤裸裸的魔法力量，并且能够无比轻松地进行创造和毁灭。
   type: standard
-  effects:
-    - type: gainArcaneSchoolPrepareSlot
-      args:
-        school: evocation
   powers:
     - id: Intense Spells
       name: 锐化法术
@@ -256,10 +266,6 @@
   name: 幻术学派
   desc: 幻术师用魔法编织混合了幻想和虚构的鬼影去阻挡和激怒他们的敌人。
   type: standard
-  effects:
-    - type: gainArcaneSchoolPrepareSlot
-      args:
-        school: illusion
   powers:
     - id: Extended Illusions
       name: 延迟幻像
@@ -306,10 +312,6 @@
   name: 死灵学派
   desc: 恐怖的死灵师指挥不死生物并且使用不生的污秽力量对抗他的敌人。
   type: standard
-  effects:
-    - type: gainArcaneSchoolPrepareSlot
-      args:
-        school: necromancy
   powers:
     - id: Power over Undead
       name: 力胜于亡
@@ -351,10 +353,6 @@
   name: 变化学派
   desc: 变化师使用魔法来改变周围世界。
   type: standard
-  effects:
-    - type: gainArcaneSchoolPrepareSlot
-      args:
-        school: transmutation
   powers:
     - id: Physical Enhancement
       name: 体能增强
@@ -398,10 +396,6 @@
   type: elemental
   conflict:
     - Earth
-  effects:
-    - type: gainArcaneSchoolPrepareSlot
-      args:
-        school: air
   powers:
     - id: Air Supremacy
       name: 大气主宰
@@ -422,10 +416,6 @@
   conflict:
     - Air
     - Wood
-  effects:
-    - type: gainArcaneSchoolPrepareSlot
-      args:
-        school: earth
   powers:
     - id: Earth Supremacy
       name: 大地主宰
@@ -446,10 +436,6 @@
   conflict:
     - Earth
     - Water
-  effects:
-    - type: gainArcaneSchoolPrepareSlot
-      args:
-        school: fire
   powers:
     - id: Fire Supremacy
       name: 火焰主宰
@@ -469,10 +455,6 @@
   type: elemental
   conflict:
     - Fire
-  effects:
-    - type: gainArcaneSchoolPrepareSlot
-      args:
-        school: water
   powers:
     - id: Water Supremacy
       name: 水之主宰
@@ -518,10 +500,6 @@
   type: elemental
   conflict:
     - Metal
-  effects:
-    - type: gainArcaneSchoolPrepareSlot
-      args:
-        school: wood
   powers:
     - id: Wood Magic
       name: 木系魔法

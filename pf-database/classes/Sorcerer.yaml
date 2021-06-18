@@ -44,18 +44,73 @@ feats:
       3级以及之后每2级，术士学到一个来源于自身血统的额外法术。这些法术不包含于术士所知法术列表。这些法术同样不能在更高等级时替换为其他法术。7级以及之后每6级，术士从自身血统的特定专长列表中选其一作为奖励专长。术士必须满足该专长的前提条件。
     effects:
       - type: gainBloodline
-  - id: Bloodline Feat
-    name: 血统专长
-    effects:
-      - type: gainBloodlineFeat
   - id: Bloodline Power
     name: 血统力量
+    placeholder: true
+    grow:
+      - level: 1
+        id: Bloodline Power 1
+        name: 血统力量 1
+      - level: 3
+        id: Bloodline Power 2
+        name: 血统力量 2
+      - level: 9
+        id: Bloodline Power 3
+        name: 血统力量 3
+      - level: 15
+        id: Bloodline Power 4
+        name: 血统力量 4
+      - level: 20
+        id: Bloodline Power 5
+        name: 血统力量 5
+  - id: Bloodline Feat
+    name: 血统专长
+    placeholder: true
     effects:
-      - type: gainBloodlinePower
+      - type: gainFeat
+        args:
+          bloodlineFeat: true
+    grow:
+      - level: 7
+        id: Bloodline Feat 1
+        name: 血统专长 1
+      - level: 13
+        id: Bloodline Feat 2
+        name: 血统专长 2
+      - level: 19
+        id: Bloodline Feat 3
+        name: 血统专长 3
   - id: Bloodline Spell
     name: 血统法术
-    effects:
-      - type: gainBloodlineSpell
+    placeholder: true
+    grow:
+      - level: 3
+        id: Bloodline Spell 1
+        name: 血统法术 1
+      - level: 5
+        id: Bloodline Spell 2
+        name: 血统法术 2
+      - level: 7
+        id: Bloodline Spell 3
+        name: 血统法术 3
+      - level: 9
+        id: Bloodline Spell 4
+        name: 血统法术 4
+      - level: 11
+        id: Bloodline Spell 5
+        name: 血统法术 5
+      - level: 13
+        id: Bloodline Spell 6
+        name: 血统法术 6
+      - level: 15
+        id: Bloodline Spell 7
+        name: 血统法术 7
+      - level: 17
+        id: Bloodline Spell 8
+        name: 血统法术 8
+      - level: 19
+        id: Bloodline Spell 9
+        name: 血统法术 9
   - id: Cantrips
     name: 戏法
     desc: 术士能够学习一些戏法，或者说0环法术。如同术士所知法术列表中的“所知法术”。 这些法术的施展如同其他任何法术，但它们不会在施展的时候消耗掉，并且可以被再次使用。
@@ -75,7 +130,8 @@ levels:
   special:
     - Sorcerer Weapon and Armor Proficiency
     - Spells
-    - Bloodline Power
+    - Bloodline
+    - Bloodline Power 1
     - Cantrips
     - Eschew Materials
   spellsPerDay: [0, 3, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -93,8 +149,8 @@ levels:
   reflex: 1
   will: 3
   special:
-    - Bloodline Power
-    - Bloodline Spell
+    - Bloodline Power 2
+    - Bloodline Spell 1
   spellsPerDay: [0, 5, 0, 0, 0, 0, 0, 0, 0, 0]
   spellsKnown: [5, 3, 0, 0, 0, 0, 0, 0, 0, 0]
 - level: 4
@@ -110,7 +166,7 @@ levels:
   reflex: 1
   will: 4
   special:
-    - Bloodline Spell
+    - Bloodline Spell 2
   spellsPerDay: [0, 6, 4, 0, 0, 0, 0, 0, 0, 0]
   spellsKnown: [6, 4, 2, 0, 0, 0, 0, 0, 0, 0]
 - level: 6
@@ -126,8 +182,8 @@ levels:
   reflex: 2
   will: 5
   special:
-    - Bloodline Feat
-    - Bloodline Spell
+    - Bloodline Feat 1
+    - Bloodline Spell 3
   spellsPerDay: [0, 6, 6, 4, 0, 0, 0, 0, 0, 0]
   spellsKnown: [7, 5, 3, 2, 0, 0, 0, 0, 0, 0]
 - level: 8
@@ -143,8 +199,8 @@ levels:
   reflex: 3
   will: 6
   special:
-    - Bloodline Power
-    - Bloodline Spell
+    - Bloodline Power 3
+    - Bloodline Spell 4
   spellsPerDay: [0, 6, 6, 6, 4, 0, 0, 0, 0, 0]
   spellsKnown: [8, 5, 4, 3, 2, 0, 0, 0, 0, 0]
 - level: 10
@@ -160,7 +216,7 @@ levels:
   reflex: 3
   will: 7
   special:
-    - Bloodline Spell
+    - Bloodline Spell 5
   spellsPerDay: [0, 6, 6, 6, 6, 4, 0, 0, 0, 0]
   spellsKnown: [9, 5, 5, 4, 3, 2, 0, 0, 0, 0]
 - level: 12
@@ -176,8 +232,8 @@ levels:
   reflex: 4
   will: 8
   special:
-    - Bloodline Feat
-    - Bloodline Spell
+    - Bloodline Feat 2
+    - Bloodline Spell 6
   spellsPerDay: [0, 6, 6, 6, 6, 6, 4, 0, 0, 0]
   spellsKnown: [9, 5, 5, 4, 4, 3, 2, 0, 0, 0]
 - level: 14
@@ -193,8 +249,8 @@ levels:
   reflex: 5
   will: 9
   special:
-    - Bloodline Power
-    - Bloodline Spell
+    - Bloodline Power 4
+    - Bloodline Spell 7
   spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 4, 0, 0]
   spellsKnown: [9, 5, 5, 4, 4, 4, 3, 2, 0, 0]
 - level: 16
@@ -210,7 +266,7 @@ levels:
   reflex: 5
   will: 10
   special:
-    - Bloodline Spell
+    - Bloodline Spell 8
   spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 6, 4, 0]
   spellsKnown: [9, 5, 5, 4, 4, 4, 3, 3, 2, 0]
 - level: 18
@@ -226,8 +282,8 @@ levels:
   reflex: 6
   will: 11
   special:
-    - Bloodline Feat
-    - Bloodline Spell
+    - Bloodline Feat 3
+    - Bloodline Spell 9
   spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 6, 6, 4]
   spellsKnown: [9, 5, 5, 4, 4, 4, 3, 3, 3, 2]
 - level: 20
@@ -236,6 +292,6 @@ levels:
   reflex: 6
   will: 12
   special:
-    - Bloodline Power
+    - Bloodline Power 5
   spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6]
   spellsKnown: [9, 5, 5, 4, 4, 4, 3, 3, 3, 3]

@@ -34,7 +34,8 @@ feats:
     effects:
       - type: gainProficiency
         args:
-          weaponPrefix: monk
+          weaponWithSpecial:
+            - monk
           weapon:
             - Club
             - Crossbow, light
@@ -265,7 +266,7 @@ feats:
     effects:
       - type: addTracker
         args:
-          maxFormula: 1 / 2 * monkunchainedLevel + wis
+          maxFormula: FLOOR(1 / 2 * monkunchainedLevel + wis)
   - id: Ki Strike (magic)
     name: 斗气击(魔法)
   - id: Ki Strike (cold iron/silver)
@@ -286,9 +287,9 @@ feats:
     type: ex
     name: 百病不侵
     desc: ５级时，武僧免疫所有疾病，包括超自然与魔法疾病。
-  - id: Style Strike (1/round)
+  - id: Style Strike
     type: ex
-    name: 真劲击 (1/轮)
+    name: 真劲击
     desc: ５级时，武僧可以学习到一种真劲击。当他进行疾风连击时，可以宣布其中一次徒手攻击为真劲击。该次攻击正常判定命中与否，但根据真劲击的选择不同，会附加上不同的效果。９级及之后的每４级，武僧都可再学习一种真劲击。武僧必须在指定徒手攻击骰掷前决定使用何种真劲击。１５级时，武僧至多可将疾风连击中２次徒手攻击指定为真劲击，且可为不同的类型。武僧可选真劲击如下所列。
     subs:
       - id: Defensive Spin
@@ -322,6 +323,9 @@ feats:
         name: 卧龙尾
         desc: 武僧踢出的这一下，完全出乎敌人的意料。该次攻击会对抗目标的措手不及ＡＣ。拥有直觉闪避职业能力或类似效果的生物在被该真劲击攻击时不会措手不及。该次真劲击必须用腿打出。
     grow:
+      - level: 5
+        id: Style Strike (1/round)
+        name: 真劲击 (1/轮)
       - level: 15
         id: Style Strike (2/round)
         name: 真劲击 (2/轮)

@@ -1,6 +1,7 @@
 - id: acrobatics
   ability: dex
   name: 特技
+  armorPenalty: true
 - id: appraise
   ability: int
   name: 估价
@@ -10,6 +11,7 @@
 - id: climb
   ability: str
   name: 攀爬
+  armorPenalty: true
 - id: craft
   ability: int
   category: true
@@ -29,21 +31,27 @@
 - id: disable device
   ability: dex
   name: 解除装置
+  trained: true
+  armorPenalty: true
 - id: disguise
   ability: cha
   name: 易容
 - id: escape artist
   ability: dex
   name: 逃脱
+  armorPenalty: true
 - id: fly
   ability: dex
   name: 飞行
+  armorPenalty: true
 - id: handle animal
   ability: cha
   name: 驯养动物
+  trained: true
 - id: heal
   ability: wis
   name: 医疗
+  trained: true
 - id: intimidate
   ability: cha
   name: 威吓
@@ -51,6 +59,7 @@
   ability: int
   category: true
   name: 知识
+  trained: true
   subs:
     - id: arcana
       name: 奥秘
@@ -75,6 +84,7 @@
 - id: linguistics
   ability: int
   name: 语言学
+  trained: true
 - id: perception
   ability: wis
   name: 察觉
@@ -105,6 +115,7 @@
   ability: wis
   category: true
   name: 专业
+  trained: true
   subs:
     - id: architect
       name: 建筑师
@@ -119,24 +130,31 @@
 - id: ride
   ability: dex
   name: 骑术
+  armorPenalty: true
 - id: sense motive
   ability: wis
   name: 察言观色
 - id: sleight of hand
   ability: dex
   name: 巧手
+  trained: true
+  armorPenalty: true
 - id: spellcraft
   ability: int
   name: 法术识别
+  trained: true
 - id: stealth
   ability: dex
   name: 隐匿
+  armorPenalty: true
 - id: survival
   ability: wis
   name: 生存
 - id: swim
   ability: str
   name: 游泳
+  armorPenalty: true
 - id: use magic device
   ability: cha
   name: 使用魔法装置
+  trained: true

@@ -1,0 +1,76 @@
+- id: Celestial
+  name: 天界血统
+  desc: 你的血统被天界力量祝福，不是来自你的天界祖先就是通过神力的直接干涉。尽管这力量将你导向善良之路，你的命运（和阵营）依然由你自己决定。
+  skills:
+    - heal
+  spells:
+    - Bless
+    - Resist Energy
+    - Magic Circle against Evil
+    - Remove Curse
+    - Flame Strike
+    - Dispel Magic, Greater
+    - Banishment
+    - Sunburst
+    - Gate
+  feats:
+     - Dodge
+     - Extend Spell
+     - Iron Will
+     - Mobility
+     - Mounted Combat
+     - Ride-By Attack
+     - Skill Focus[knowledge(religion)]
+     - Weapon Finesse
+  arcana:
+    id: Celestial Arcana
+    name: 天界血统奥秘
+    desc: 当你施展一个“召唤”子学派的法术，召唤生物获得伤害减免“1/2术士等级（最小为1）”/邪恶。这项奖励不能与召唤生物的任何原有伤害减免叠加。
+  powers:
+    - id: Heavenly Fire
+      name: 天堂之火
+      type: sp
+      desc: 1级开始，你能通过一个标准动作释放一道圣火射线，对30尺以内的任何目标进行一次远程接触攻击。此射线对邪恶生物造成“1d4+1/2术士等级”伤害，此伤害属于神圣伤害，无法免疫或抵抗。此射线位善良生物带来“1d4+1/2术士等级”的治疗，每个善良生物每天不能被你的天堂之火治疗超过一次。中立生物不会受伤也不会被治疗。你每天能够使用此能力次数为“3+魅力调整值”。
+      effects:
+        - type: classFeatSource
+          args:
+            source: Bloodline Power 1
+        - type: addTracker
+          args:
+            maxFormula: cha + 3
+    - id: Celestial Resistances
+      name: 天界抗力
+      type: ex
+      desc: 在3级时，你获得寒冷、强酸抗性各5点。9级时，此奖励提升为10点。
+      effectsWhen: sorcererLevel >= 3
+      effects:
+        - type: classFeatSource
+          args:
+              source: Bloodline Power 2
+    - id: Wings of Heaven
+      name: 天堂之翼
+      type: su
+      desc: 在9级时，你能够长出羽翼并且能够每天飞行等同于每术士等级1分钟的时间。速度60尺，机动性良好。使用此能力不需要连续，但是每次使用至少1分钟以上。
+      effectsWhen: sorcererLevel >= 9
+      effects:
+        - type: classFeatSource
+          args:
+              source: Bloodline Power 3
+    - id: Conviction
+      name: 坚定信念
+      type: su
+      desc: 15级开始，你能够重投任何一个你刚刚投出的属性、攻击、技能、豁免检定。你必须在投骰后、但在GM公布结果以前决定使用此能力。你必须接受第二次结果，即使结果更糟。你能使用此能力每天1次。
+      effectsWhen: sorcererLevel >= 15
+      effects:
+        - type: classFeatSource
+          args:
+              source: Bloodline Power 4
+    - id: Ascension
+      name: 飞升
+      type: su
+      desc: 在20级，你内在注满天堂的力量。你免疫强酸，寒冷，石化；获得10点电抗和火抗；对抗毒素豁免+4；你能够无限使用“天堂之翼”；并获得与任何能说话的生物交谈的能力（如同“巧言术”）。
+      effectsWhen: sorcererLevel >= 20
+      effects:
+        - type: classFeatSource
+          args:
+              source: Bloodline Power 5
