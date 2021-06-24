@@ -48,8 +48,8 @@
 
             if (name && id) {
               let type;
-              if (id.search(/,\s(ex|su|sp)/i) !== -1) {
-                [id, type] = id.split(', ');
+              if (id.search(/[,，]\s?(ex|su|sp)/i) !== -1) {
+                [id, type] = id.split(/[,，]/);
               }
 
               let r = `- id: ${id}
