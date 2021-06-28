@@ -70,33 +70,33 @@ feats:
           )
         args:
           bonus:
-            type: naturalArmor
+            type: untyped
             amountFormula: wis
         growArgs:
           - level: 4
             args:
               bonus:
-                type: naturalArmor
+                type: untyped
                 amountFormula: wis + 1
           - level: 8
             args:
               bonus:
-                type: naturalArmor
+                type: untyped
                 amountFormula: wis + 2
           - level: 12
             args:
               bonus:
-                type: naturalArmor
+                type: untyped
                 amountFormula: wis + 3
           - level: 16
             args:
               bonus:
-                type: naturalArmor
+                type: untyped
                 amountFormula: wis + 4
           - level: 20
             args:
               bonus:
-                type: naturalArmor
+                type: untyped
                 amountFormula: wis + 5
       - type: gainCMD
         when: |
@@ -109,33 +109,33 @@ feats:
           )
         args:
           bonus:
-            type: naturalArmor
+            type: untyped
             amountFormula: wis
         growArgs:
           - level: 4
             args:
               bonus:
-                type: naturalArmor
+                type: untyped
                 amountFormula: wis + 1
           - level: 8
             args:
               bonus:
-                type: naturalArmor
+                type: untyped
                 amountFormula: wis + 2
           - level: 12
             args:
               bonus:
-                type: naturalArmor
+                type: untyped
                 amountFormula: wis + 3
           - level: 16
             args:
               bonus:
-                type: naturalArmor
+                type: untyped
                 amountFormula: wis + 4
           - level: 20
             args:
               bonus:
-                type: naturalArmor
+                type: untyped
                 amountFormula: wis + 5
   - id: Bonus Feat
     name: 奖励专长
