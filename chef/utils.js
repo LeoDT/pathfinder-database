@@ -29,7 +29,31 @@ export function removeSpaces(text) {
 }
 
 export function compose(...fns) {
-  const compose2 = (f, g) => (...args) => f(g(...args));
+  const compose2 =
+    (f, g) =>
+    (...args) =>
+      f(g(...args));
 
   return fns.reduce(compose2);
+}
+
+export function parseWeight(weight) {
+  const s = weight.replace(/lbs?\./, '');
+
+  if (s.includes('/')) {
+    const [t, b] = s.split('/');
+    const w = t / b;
+
+    if (Number.isNaN(w)) {
+      return 0;
+    }
+
+    return w;
+  }
+
+  if (/\d+/.test(s)) {
+    return parseInt(s);
+  }
+
+  return 0;
 }

@@ -40,6 +40,29 @@ function featPatchMap(items) {
   return results;
 }
 
+const magicItemEffects = parseYAML(
+  Deno.readTextFileSync(`${baseDir}/magic-item-type-effects.yaml`)
+);
+const magicItemEffectsIndex = new Map();
+magicItemEffects.forEach((f) => {
+  magicItemEffectsIndex.set(f.id, f);
+});
+function magicItemPatchMap(items) {
+  const results = [];
+
+  for (const item of items) {
+    const patch = magicItemEffectsIndex.get(item.id);
+
+    if (patch) {
+      Object.assign(item, patch);
+    }
+
+    results.push(item);
+  }
+
+  return results;
+}
+
 function mergeMap(items, file) {
   const book = pathBasename(file, '.yaml');
 
@@ -131,6 +154,11 @@ const converters = [
   {
     dir: 'archetypes',
     done: compose(sortDone, mergeDone),
+  },
+  {
+    dir: 'magic-item-types',
+    map: compose(magicItemPatchMap),
+    done: compose(mergeDone),
   },
 ];
 

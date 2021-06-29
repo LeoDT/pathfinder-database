@@ -85,11 +85,11 @@ export function spellMetaFromIndex(index, id) {
   }
 
   const s = {
-    school: spell.school,
+    school: spell.school.toLowerCase(),
   };
 
   if (spell.subschool) {
-    s.subschool = spell.subschool;
+    s.subschool = spell.subschool.toLowerCase();
   }
 
   s.level = spell.spell_level;

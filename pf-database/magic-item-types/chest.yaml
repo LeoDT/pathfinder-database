@@ -1,0 +1,302 @@
+- id: All Tools Vest
+  name: 巧匠背心
+  desc: 这件织有无数口袋的皮革背心为劳动者带来无上的福音。每天一次，以一个标准动作，穿戴者可以说出指令来召唤多个用之于一项工艺检定上的标准工具。它们自背心上无数的口袋中出现，然而如果它们太重或太大，则会出现在地板、橱柜、工作台、工具箱等等临近的空间中。一旦你召唤出这些工具，它们将存在24小时，或者直到另一个生物触碰它们。
+  meta:
+    group: wondrous item
+    price: 1800 gp
+    weight: 5
+    casterLevel: 1
+    aura: faint conjuration
+    slot: chest
+- id: Bandages Of Rapid Recovery
+  name: 快速复原绷带
+  desc: 这条亚麻绷带有着鸽羽般的色泽与柔软，但是其强烈的消毒水气味让它们与一般制品有着决定性的不同。任何以此绷带包扎的生物每日能像它们进行了完整的休息一样回复HP与属性伤害(核心191页)，即使他没有完整休息。如果该生物同时接受长期护理(通过医疗技能)或者确实地休息，那他在计算HP回复量时的有效等级或生命骰+4。一旦该绷带被移除、或是使用的生物的HP与属性伤害完全恢复，此绷带即失去魔力。
+  meta:
+    group: wondrous item
+    price: 200 gp
+    weight: 1
+    casterLevel: 1
+    aura: faint conjuration
+    slot: chest
+- id: Bane Baldric
+  name: 破敌绶带
+  desc: 这华丽的天鹅绒绶带从肩膀横跨胸部一直到腰部。如果穿戴者是一个审判者，他的破敌和高等破敌能力视为比正常等级高5级的审判者。如果穿戴者不是审判者，则他得到如同5级审判者的破敌能力，不过必须先使用一个轻型近战武器或单手近战武器至少24小时以同调，并且只有这个通过同调武器才能使用破敌能力。同一时间只能存在一个同调武器。
+  meta:
+    group: wondrous item
+    price: 10000 gp
+    weight: 1
+    casterLevel: 10
+    aura: moderate conjuration
+    slot: chest
+- id: Blouse Of The Boastful Bastard
+  name: 狂霸浪子衫衣
+  desc: 这件时尚的紫色丝质衬衫上的图案是用金线缝制的刺绣，即便是最保守的游荡剑客（swashbucklers）在穿上它之后也会显得放荡不羁。若穿戴者具有派头（panache）职业能力，那么当她因为被成功重击而受到伤害时，便可以恢复1点时髦值（panache point）。这件衬衫对无法使用派头的人没有效果。
+  meta:
+    group: wondrous item
+    price: 8000 gp
+    weight: 0
+    casterLevel: 5
+    aura: faint transmutation
+    slot: chest
+- id: Cackling Hag's Blouse
+  name: 尖笑女巫罩衫
+  desc: 这件宽松的罩衫上装饰着怪异的装饰和奖章，穿戴者的威吓检定得到+2表现加值。如果穿戴者是一名女巫，她获得巫术：尖笑(cackle hex)。如果穿戴者已经学会该巫术，则每天可以有两次机会以迅捷动作而非移动动作使用巫术：尖笑。
+  meta:
+    group: wondrous item
+    price: 6000 gp
+    weight: 2
+    casterLevel: 3
+    aura: faint enchantment
+    slot: chest
+- id: Deadshot Vest
+  name: 死狙背心
+  desc: 这件黑色蛇皮背心有着条纹流苏，缝合口饰有骨头或者小动物骷髅。铳士的神射手(deadeye)勇毅动作的勇毅点消耗-1(最小使用量为1)。此外，一天一次，当穿戴者用火器(firearm)将一个生物的HP降低到0甚至更少的时候，他可以以一个迅捷动作对该生物使用死亡丧钟(death knell)(DC13，意志通过则无效)。穿戴者不需要触摸目标也能发送效果，但每一个针对目标的射程增量减值都会同样减少DC(如第一个射程增量的减值是-2，那么DC是11)。
+  meta:
+    group: wondrous item
+    price: 6000 gp
+    weight: 1
+    casterLevel: 3
+    aura: faint necromancy
+    slot: chest
+- id: Endless Bandolier
+  name: 无尽子弹带
+  desc: 这条子弹带的缝隙看上去只能放20份子弹(cartridges)(火器子弹，见UC)，但实际上由于空间扭曲，它可以装下60份子弹。此外，子弹带上有6个额外的空间口袋，可以用来装额外的枪支或者工具。四个较小的口袋，每个可以装一个单手火器、1磅子弹、1个火药角、或者一个相似大小的东西。两个大口袋，每个可以装一个双手火器或一个相似大小的东西。穿戴者从子弹带上取出物件就如同从一个普通弹药带或皮套里取子弹一样简单。子弹带的重量不变，无论装了什么进去。
+  meta:
+    group: wondrous item
+    price: 1500 gp
+    weight: 2
+    casterLevel: 9
+    aura: moderate conjuration
+    slot: chest
+- id: Mantle Of Faith
+  name: 信仰披肩
+  desc: 这件神圣的披肩有着不同宗教的图标和喜好色彩。当穿在普通衣服外面时，穿戴者得到5/邪恶的DR。
+  meta:
+    group: wondrous item
+    price: 76000 gp
+    weight: 0
+    casterLevel: 20
+    aura: strong abjuration
+    slot: chest
+- id: Mantle Of Immortality
+  name: 不朽披肩
+  desc: 这件优雅的披肩，修剪出金色迷宫的格局。穿戴者忽略老化的负面影响。穿戴者再也不用承受老化所带来的力量、敏捷和体质减值。如果脱下披肩(或者其力量被抑制)，时间的力量就会突然袭击穿戴者，穿戴者必须做一个DC20的强韧豁免检定，失败则会力竭(exhaust)24小时。再次穿上披肩会继续取消老化惩罚，但是力竭则无法取消，必须等待回复或者使用法术。
+  meta:
+    group: wondrous item
+    price: 50000 gp
+    weight: 1
+    casterLevel: 17
+    aura: strong transmutation
+    slot: chest
+- id: Mantle Of Spell Resistance
+  name: 法术抵抗披肩
+  desc: 这件轻披风纹饰有秘法符号。穿戴者将它穿在普通护甲的外面，穿戴者获得21点法术抗力。
+  meta:
+    group: wondrous item
+    price: 90000 gp
+    weight: 0
+    casterLevel: 9
+    aura: moderate abjuration
+    slot: chest
+- id: Mantle Of The Crusader Host
+  name: 十字军圣骸布
+  desc: 这件圣骸布上撰写了上百段赞颂善神的宗教文章。穿戴它的角色会被赋予DR 5/邪恶。在对抗具有恶魔亚种（demon subtype）的生物所进行的攻击时，伤害减免变为DR 5/—。若穿戴者时圣武士，那么在对抗她的制裁邪恶目标时，伤害减免变为DR 5/—。
+  meta:
+    group: wondrous item
+    price: 95000 gp
+    weight: 0
+    casterLevel: 20
+    aura: strong abjuration
+    slot: chest
+- id: Merciful Baldric
+  name: 恩惠绶带
+  desc: 这条绣着黄金太阳的白色丝绸绶带永远不会打湿、褪色和油腻。每天一次，穿戴着该绶带的圣武士可以选择3个符合等级的你不知道的额外恩惠(mercy)效果，将它们加入你进入可用的恩惠列表中。这个效果持续24小时。当穿戴者使用恩惠效果缓解一个诅咒、疾病或者毒素时，可以确切地解除这个效果而不是仅仅持续1个小时。
+  meta:
+    group: wondrous item
+    price: 60000 gp
+    weight: 2
+    casterLevel: 11
+    aura: moderate conjuration
+    slot: chest
+- id: 'Poisoner''s Jacket, Greater'
+  name: 强效毒素夹克
+  desc: 这件夹克在具有弱效毒素夹克的能力的同时，每天一次，可以创造一小瓶核心规则里不多于4000gp的单剂量毒药。这一瓶看起来是阴暗的石灰流体状。创造出来1个小时后失去毒性。
+  meta:
+    group: wondrous item
+    price: 58000 gp
+    weight: 4
+    casterLevel: 15
+    aura: strong conjuration and necromancy
+    slot: chest
+- id: 'Poisoner''s Jacket, Lesser'
+  name: 弱效毒素夹克
+  desc: 每天三次，这件黑色夹克的穿戴者可以创造一小瓶核心规则里的不多于300gp的单剂量毒药。这瓶毒药看起来总是阴暗的琥珀色。创造出来1小时后失去毒性。
+  meta:
+    group: wondrous item
+    price: 12000 gp
+    weight: 3
+    casterLevel: 5
+    aura: faint conjuration and necromancy
+    slot: chest
+- id: Prophet's Pectoral
+  name: 先知胸饰
+  desc: 神圣的石头、雕刻的星、智慧的文字等胸饰，都可以让穿戴者在释放占卜术(augury)、预言术(divination)和异界探知(contact other plane)时更加成功。在上述法术的任何d100骰子中增添一个d6的结果进去。当释放通神术(commune)和问道自然(commune with nature)时，穿戴者可以额外问一个问题或者得到一段额外的信息。
+  meta:
+    group: wondrous item
+    price: 6000 gp
+    weight: 1
+    casterLevel: 3
+    aura: faint divination
+    slot: chest
+- id: Quick Runner's Shirt
+  name: 高速战士衬衫
+  desc: 这件衬衫是由轻如蛛丝的布织成，绣有带翼的脚步。每天一次以一个迅捷动作，穿戴者可以获得一次额外的移动动作进行移动，然后立刻结束他的回合，失去任何未使用的动作。穿戴者在激活该能力前必须持续穿戴该衬衫24小时。
+  meta:
+    group: wondrous item
+    price: 1000 gp
+    weight: 0
+    casterLevel: 5
+    aura: faint transmutation
+    slot: chest
+- id: Resplendent Uniform Coat
+  name: 华丽制服
+  desc: 这通常是一件羊毛长大衣。穿着轻型盔甲的军事指挥官会考虑它的。一名骑士(cavalier)的战术(tactician)能力每天使用次数额外增加1次，并且能力影响范围从30尺变为60尺。
+  meta:
+    group: wondrous item
+    price: 7000 gp
+    weight: 5
+    casterLevel: 5
+    aura: faint enchantment
+    slot: chest
+- id: Sash Of The War Champion
+  name: 武勇肩章
+  desc: 这枚亮红色的布条上描绘着群众向战车献花的画面，它能佩戴在穿戴者的肩头、横过胸前垂落于对侧腰部。穿戴者在决定盔甲训练(armor training)和英勇(bravery)职业特性时，将其战士等级视为目前+4.
+  meta:
+    group: wondrous item
+    price: 4000 gp
+    weight: 1
+    casterLevel: 9
+    aura: moderate abjuration
+    slot: chest
+- id: Shirt Of Immolation
+  name: 献祭衬衫
+  desc: 当穿戴者在擒抱时(无论是进攻还是防守)，衬衫会爆发出火焰，每轮给擒抱者1d6+10点火焰伤害给擒抱者。火焰不会伤害穿戴者并且持续1轮(尽管下一轮继续擒抱就会接着燃烧)。每天最多燃烧10轮，无需连续。
+  meta:
+    group: wondrous item
+    price: 8000 gp
+    weight: 1
+    casterLevel: 10
+    aura: moderate evocation
+    slot: chest
+- id: Sipping Jacket
+  name: 吸水夹克
+  desc: 这是一件由吸水性纤维制成的重帆布外套。每天一次，以一个标准动作，穿戴者可以将一瓶药水全部洒在外套上，然后被外套所吸收。如果药水有瞬时效果，穿戴者可以用一个迅捷动作激活外套来吸收药水。如果药水的效果时间是按照轮来计算的，穿戴者的迅捷动作吸收可以只持续1轮，并且可以每一轮激活一次直到药水的所有效果耗尽。这些轮无需连续。外套只能吸收那些瞬时生效的药水或者用轮来计算效果时间的药水，并且药水的作用对像必须是生物(例如，不能作用于油)。当外套吸收了药水，则无法将药水返回瓶中。被吸收的药水将在不被使用24小时后失去效果。
+  meta:
+    group: wondrous item
+    price: 5000 gp
+    weight: 5
+    casterLevel: 7
+    aura: moderate transmutation
+    slot: chest
+- id: Snakeskin Tunic
+  name: 蛇皮短衫
+  desc: 一件蛇皮短衫取材于一条有点尺度的巨蛇，紧身而合体。穿戴者得到+1护甲AC，+2敏捷增强加值，对抗毒素的豁免检定+2奖励。
+  meta:
+    group: wondrous item
+    price: 8000 gp
+    weight: 2
+    casterLevel: 8
+    aura: moderate abjuration and transmutation
+    slot: chest
+- id: Spectral Shroud
+  name: 幽灵罩袍
+  desc: 这种薄而惨白的布覆盖住穿戴者的整个躯干和脸，不过不会影响穿戴者的视力。这件病态的罩袍给予穿戴者一些只有幽灵才有的能力。穿戴者可以看见隐形的和灵化的生物，如同“识破隐形”法术一般。一天一次，穿戴者可以变成虚体10轮并得到一个飞行速度等于基本速度一半的飞行速度，机动性为完美。穿戴者不能在虚体状态下攻击，不过能以一个移动动作取消虚体状态。
+  meta:
+    group: wondrous item
+    price: 26000 gp
+    weight: 0
+    casterLevel: 5
+    aura: moderate necromancy
+    slot: chest
+- id: Tunic Of Careful Casting
+  name: 谨慎施法短衫
+  desc: 这件羊毛短衫装饰有连续的银色与黑色线绣和图案。它能协助施法者集中注意力，专注检定得到+2加值。
+  meta:
+    group: wondrous item
+    price: 5000 gp
+    weight: 1
+    casterLevel: 3
+    aura: faint abjuration
+    slot: chest
+- id: Tunic Of Deadly Might
+  name: 致命打击短衫
+  desc: 短衫由金线制成，袖子则是银色的袖口。穿戴者在对抗卸除武器和击破武器的CMD上得到+2加值。如果穿戴者是一个武士(samurai)，则每天两次以迅捷动作启动，在武士成功重击了一个他的挑战目标(the targer of challenge)时，使武器得到雷鸣附魔(thundering)效果。
+  meta:
+    group: wondrous item
+    price: 6000 gp
+    weight: 2
+    casterLevel: 3
+    aura: faint evocation
+    slot: chest
+- id: Unfettered Shirt
+  name: 无拘衬衫
+  desc: 这件看起来松散的立领衬衫，实际上是消减了大部分位置以免阻碍穿戴者的运动。每天一次，以一个命令，穿戴者获得行动自如(freedom of movement)效果10分钟。
+  meta:
+    group: wondrous item
+    price: 10000 gp
+    weight: 0
+    casterLevel: 7
+    aura: moderate abjuration and transmutation
+    slot: chest
+- id: Vest Of Escape
+  name: 逃脱背心
+  desc: 这件简单的丝绸背心看起来不伦不类，但实际上是缝合镶嵌了无数的秘密口袋在上面。隐藏在里面的神奇工具提供你的解除装置技能检定(disabe device)+4表现加值。背心同样给予穿戴者的逃脱技能检定(escape artist)+6表现加值。
+  meta:
+    group: wondrous item
+    price: 5200 gp
+    weight: 0
+    casterLevel: 4
+    aura: faint conjuration and transmutation
+    slot: chest
+- id: Vest Of Stable Mutation
+  name: 稳定突变背心
+  desc: |-
+    这件皮革背心配有一些口袋，是用来储存一些炼金术所需要的物件的。
+    不过这件背心最主要的作用，是缓解炼金术士的突变药剂的副作用。任何穿戴者炼金术士服下突变药剂，都不会在心智属性上面受到任何减值。
+  meta:
+    group: wondrous item
+    price: 20000 gp
+    weight: 2
+    casterLevel: 8
+    aura: moderate abjuration
+    slot: chest
+- id: Vest Of Surgery
+  name: 手术背心
+  desc: 这件翡翠绿背心前面有四个突起的口袋来装东西。穿戴者在做医疗检定(heal)的时候始终视为有医药箱(healer's kit)。一天一次，穿戴者可以通过一个DC20的医疗检定来试图【治疗重伤】(这是一个医疗技能用法)。如果检定成功，治愈1d4点属性伤害而不是恢复HP。
+  meta:
+    group: wondrous item
+    price: 3000 gp
+    weight: 4
+    casterLevel: 5
+    aura: faint conjuration
+    slot: chest
+- id: Vest Of The Cockroach
+  name: 蟑螂背心
+  desc: 这件使用填充材料、有些臃肿的背心是以黑棕色生染布料制成，另穿戴者在卧倒时有点不适。如果穿戴者是一名游荡者，他获得韧性(resiliency)游荡者天赋，如果他已经有这项天赋，该天赋生效时带来的每个游荡者等级带来2点Hp而不是1点。
+  meta:
+    group: wondrous item
+    price: 16000 gp
+    weight: 2
+    casterLevel: 3
+    aura: faint necromancy
+    slot: chest
+- id: Vest Of The Vengeful Tracker
+  name: 复仇追踪者背心
+  desc: 这件棕绿相间的背心缝上了很长的口袋，用一个磁石纽扣开合。穿戴者在追踪猎物时更加英勇。穿戴者在对一个成功追踪了24小时之内的生物的第一次武器攻击的攻击和伤害上得到+1士气加值；如果该目标是措手不及状态，该加值提高到2；如果该目标是他的宿敌，则得到+4加值在重击确认骰上。
+  meta:
+    group: wondrous item
+    price: 6000 gp
+    weight: 3
+    casterLevel: 5
+    aura: faint divination
+    slot: chest

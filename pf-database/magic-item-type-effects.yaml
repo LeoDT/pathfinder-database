@@ -1,0 +1,112 @@
+- id: Cloak Of Resistance +1
+  effects:
+    - type: gainSave
+      args:
+        saveType: all
+        bonus:
+          type: resistance
+          amount: 1
+- id: Cloak Of Resistance +2
+  effects:
+    - type: gainSave
+      args:
+        saveType: all
+        bonus:
+          type: resistance
+          amount: 2
+- id: Cloak Of Resistance +3
+  effects:
+    - type: gainSave
+      args:
+        saveType: all
+        bonus:
+          type: resistance
+          amount: 3
+- id: Cloak Of Resistance +4
+  effects:
+    - type: gainSave
+      args:
+        saveType: all
+        bonus:
+          type: resistance
+          amount: 4
+- id: Cloak Of Resistance +5
+  effects:
+    - type: gainSave
+      args:
+        saveType: all
+        bonus:
+          type: resistance
+          amount: 5
+- id: Belt Of Giant Strength +2
+  effects:
+    - type: abilityBonus
+      args:
+        bonus:
+          type: enchancement
+          amount: 2
+        abilityType: str
+- id: Belt Of Giant Strength +4
+  effects:
+    - type: abilityBonus
+      args:
+        bonus:
+          type: enchancement
+          amount: 4
+        abilityType: str
+- id: Belt Of Giant Strength +6
+  effects:
+    - type: abilityBonus
+      args:
+        bonus:
+          type: enchancement
+          amount: 6
+        abilityType: str
+- id: Belt Of Incredible Dexterity +2
+  effects:
+    - type: abilityBonus
+      args:
+        bonus:
+          type: enchancement
+          amount: 2
+        abilityType: dex
+- id: Belt Of Incredible Dexterity +4
+  effects:
+    - type: abilityBonus
+      args:
+        bonus:
+          type: enchancement
+          amount: 4
+        abilityType: dex
+- id: Belt Of Incredible Dexterity +6
+  effects:
+    - type: abilityBonus
+      args:
+        bonus:
+          type: enchancement
+          amount: 6
+        abilityType: dex
+- id: Belt Of Mighty Constitution +2
+  effects:
+    - type: abilityBonus
+      args:
+        bonus:
+          type: enchancement
+          amount: 2
+        abilityType: con
+- id: Belt Of Mighty Constitution +4
+  effects:
+    - type: abilityBonus
+      args:
+        bonus:
+          type: enchancement
+          amount: 4
+        abilityType: con
+- id: Belt Of Mighty Constitution +6
+  effects:
+    - type: abilityBonus
+      args:
+        bonus:
+          type: enchancement
+          amount: 6
+        abilityType: con

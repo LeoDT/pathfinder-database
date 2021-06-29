@@ -1,0 +1,577 @@
+- id: Anaconda's Coils
+  name: 蟒蛇缠腰
+  desc: 这件蛇皮腰带的扣环就像一个眼镜蛇头。穿戴者的力量得到+2增强加值，擒抱战技检定得到+2表现加值。在穿戴上它的24小时内，视力量加值为临时加值。额外的，该腰带给予穿戴者紧勒constrict能力，该能力伤害为1d6+力量调整值。
+  meta:
+    group: wondrous item
+    price: 18500 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Aquatic Cummerbund
+  name: 水性腹带
+  desc: 长久以来都认为它来自于侏儒的设计，在腹带那深蓝色的材质上装饰有许多跳舞的海豚。穿戴者的游泳检定得到+4表现加值，并且可以在分心时和危险时的游泳检定上取10.
+  meta:
+    group: wondrous item
+    price: 2600 gp
+    weight: 0
+    casterLevel: 5
+    aura: faint transmutation
+    slot: belt
+- id: Belt Of Dwarvenkind
+  name: 矮人腰带
+  desc: 当穿戴者面对矮人时，所有魅力检定和以魅力为关键属性的技能检定有+4表现加值。面对侏儒及半身人时，有+2表现加值，面对其他种族时，受-2表现减值。穿戴者可以理解和读写矮人语。如果穿戴者不是矮人，还可获得黑暗视觉（范围60英尺）、熟悉岩石、体质值得到+2增强加值，以及对毒素、法术及类法术能力有+2抗力加值。
+  meta:
+    group: wondrous item
+    price: 14900 gp
+    weight: 1
+    casterLevel: 12
+    aura: strong divination
+    slot: belt
+- id: Belt Of Equilibrium
+  name: 平静腰带
+  desc: 只要穿戴者在他的回合内，没有移动超过5尺，他就可以忽略疲乏、战栗、恶心所带来的减值，直到他的下回合结束或者他移动了超过5尺，以先发生者为准。穿戴者依然处在这些状态下，只不过不承受减值而已，直到状态时间到或者被移除。
+  meta:
+    group: wondrous item
+    price: 12000 gp
+    weight: 1
+    casterLevel: 3
+    aura: faint conjuration
+    slot: belt
+- id: Belt Of Fallen Heroes
+  name: 沉沦英雄腰带
+  desc: 这个巨大的黄铜色腰带被分成了三个区域，每一个都描述了一场战斗。每天一次，以一个命令，穿戴者可以召唤出一个其上描述的战斗中的一位英雄的英灵。该英灵视作【灵能盟友】作用，不过不同于法术造物，这个英灵并不是无心智的。无论被召唤的英雄是否激活，它会用心灵感应的方式，警告穿戴者危险并给与通向胜利的建议，来引导穿戴者，因此穿戴者的所有豁免检定得到+1洞察加值。
+  meta:
+    group: wondrous item
+    price: 21000 gp
+    weight: 1
+    casterLevel: 7
+    aura: moderate conjuration
+    slot: belt
+- id: Belt Of Foraging
+  name: 求生腰带
+  desc: 穿戴者在荒野中总是十分耐操。只要在野外求生技能上至少有一个等级，穿戴者荒野行走时不需要进行技能检定；他在以半速陆地速度进行搜集食物和对抗恶劣天气时的检定总是自动成功（只针对自己）。不过他也可以进行检定，检定结果比DC10每多出2点，他就可以给另外一个人提供食物和水。更多的，他在荒野行走时，成功通过一个DC20的野外求生技能检定，可以使用全速陆地速度移动。若如此做，在给同伴提供食物和水时，检定结果比DC20每多出2点，就可以给另外一个人提供。
+  meta:
+    group: wondrous item
+    price: 6000 gp
+    weight: 1
+    casterLevel: 3
+    aura: faint divination
+    slot: belt
+- id: Belt Of Giant Strength +2
+  name: +2 巨力腰带
+  desc: 这是一条宽腰带，以厚重皮革制成，并镶嵌铁饰。穿戴者的力量值有+2、+4或+6增强加值。在刚穿戴的24小时内，此加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 4000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Belt Of Giant Strength +4
+  name: +4 巨力腰带
+  desc: 这是一条宽腰带，以厚重皮革制成，并镶嵌铁饰。穿戴者的力量值有+2、+4或+6增强加值。在刚穿戴的24小时内，此加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 16000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Belt Of Giant Strength +6
+  name: +6 巨力腰带
+  desc: 这是一条宽腰带，以厚重皮革制成，并镶嵌铁饰。穿戴者的力量值有+2、+4或+6增强加值。在刚穿戴的24小时内，此加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 36000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Belt Of Incredible Dexterity +2
+  name: +2 敏捷腰带
+  desc: 这条腰带有着银制的带扣，通常描绘着猛虎的形象。穿戴者的敏捷值有+2、+4或+6增强加值。在刚穿戴的24小时内，此加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 4000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Belt Of Incredible Dexterity +4
+  name: +4 敏捷腰带
+  desc: 这条腰带有着银制的带扣，通常描绘着猛虎的形象。穿戴者的敏捷值有+2、+4或+6增强加值。在刚穿戴的24小时内，此加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 16000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Belt Of Incredible Dexterity +6
+  name: +6 敏捷腰带
+  desc: 这条腰带有着银制的带扣，通常描绘着猛虎的形象。穿戴者的敏捷值有+2、+4或+6增强加值。在刚穿戴的24小时内，此加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 36000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Belt Of Mighty Constitution +2
+  name: +2 健体腰带
+  desc: 这条腰带的黄金带扣上有着熊的形象。穿戴者的体质值有+2、+4或+6增强加值。在刚穿戴的24小时内，此加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 4000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Belt Of Mighty Constitution +4
+  name: +4 健体腰带
+  desc: 这条腰带的黄金带扣上有着熊的形象。穿戴者的体质值有+2、+4或+6增强加值。在刚穿戴的24小时内，此加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 16000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Belt Of Mighty Constitution +6
+  name: +6 健体腰带
+  desc: 这条腰带的黄金带扣上有着熊的形象。穿戴者的体质值有+2、+4或+6增强加值。在刚穿戴的24小时内，此加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 36000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: 'Belt Of Mighty Hurling, Greater'
+  name: 强效猛力投掷腰带
+  desc: 它类似于弱效猛力投掷腰带，不过穿戴者的力量得到+4增强加值，并且所有穿戴者投掷出去的投掷武器，都视为自带回力returning附魔。临时投掷武器、溅射武器、穿戴者不擅长的投掷武器，都不会得到回力效果影响。在刚穿戴的24小时内，力量加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 42000 gp
+    weight: 1
+    casterLevel: 12
+    aura: moderate transmutation
+    slot: belt
+- id: 'Belt Of Mighty Hurling, Lesser'
+  name: 弱效猛力投掷腰带
+  desc: 这条厚皮革制腰带使用拳头状的亮铜色扣带。穿戴者的力量得到+2增强加值。并且允许穿戴者使用力量调整值代替敏捷调整值来进行远程投掷武器的攻击检定。同时，穿戴者的所有远程投掷武器的射程增量增加10尺。在刚穿戴的24小时内，力量加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 14000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Belt Of Physical Might +2
+  name: +2 体能腰带
+  desc: 这条腰带有着硕大的铁带扣，描绘着巨人的形象。穿戴者的力量、体质或敏捷值其中之二有+2、+4或+6增强加值。在刚穿戴的24小时内，此加值视为临时加值。要提升何种属性须在制作时决定，此后就不能更改。
+  meta:
+    group: wondrous item
+    price: 10000 gp
+    weight: 1
+    casterLevel: 12
+    aura: strong transmutation
+    slot: belt
+- id: Belt Of Physical Might +4
+  name: +4 体能腰带
+  desc: 这条腰带有着硕大的铁带扣，描绘着巨人的形象。穿戴者的力量、体质或敏捷值其中之二有+2、+4或+6增强加值。在刚穿戴的24小时内，此加值视为临时加值。要提升何种属性须在制作时决定，此后就不能更改。
+  meta:
+    group: wondrous item
+    price: 40000 gp
+    weight: 1
+    casterLevel: 12
+    aura: strong transmutation
+    slot: belt
+- id: Belt Of Physical Might +6
+  name: +6 体能腰带
+  desc: 这条腰带有着硕大的铁带扣，描绘着巨人的形象。穿戴者的力量、体质或敏捷值其中之二有+2、+4或+6增强加值。在刚穿戴的24小时内，此加值视为临时加值。要提升何种属性须在制作时决定，此后就不能更改。
+  meta:
+    group: wondrous item
+    price: 90000 gp
+    weight: 1
+    casterLevel: 12
+    aura: strong transmutation
+    slot: belt
+- id: Belt Of Physical Perfection +2
+  name: +2 超凡体能腰带
+  desc: 这条腰带有着硕大的白金带扣，描绘着泰坦的形象。穿戴者的力量、体质、敏捷皆获得+2、+4或+6增强加值、在刚穿戴的24小时内，此加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 16000 gp
+    weight: 1
+    casterLevel: 16
+    aura: strong transmutation
+    slot: belt
+- id: Belt Of Physical Perfection +4
+  name: +4 超凡体能腰带
+  desc: 这条腰带有着硕大的白金带扣，描绘着泰坦的形象。穿戴者的力量、体质、敏捷皆获得+2、+4或+6增强加值、在刚穿戴的24小时内，此加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 64000 gp
+    weight: 1
+    casterLevel: 16
+    aura: strong transmutation
+    slot: belt
+- id: Belt Of Physical Perfection +6
+  name: +6 超凡体能腰带
+  desc: 这条腰带有着硕大的白金带扣，描绘着泰坦的形象。穿戴者的力量、体质、敏捷皆获得+2、+4或+6增强加值、在刚穿戴的24小时内，此加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 144000 gp
+    weight: 1
+    casterLevel: 16
+    aura: strong transmutation
+    slot: belt
+- id: Belt Of Stoneskin
+  name: 石肤腰带
+  desc: 每24小时内，穿戴者得到DR10/精金，直到它吸收了100点伤害，从它初次吸收伤害时开始计算24小时的周期。当刚穿戴好它，或者每次脱下它又穿戴上，必须在连续穿戴24小时后，它才能开始正常起作用。
+  meta:
+    group: wondrous item
+    price: 60000 gp
+    weight: 10
+    casterLevel: 10
+    aura: moderate abjuration
+    slot: belt
+- id: Belt Of Superior Maneuvers +1
+  name: +1 卓越战技腰带
+  desc: 这根薄薄的黑布腰带通常被当做宽松的长袍、和服（kimono）或者武术家道服（dobok）的腰部系带来使用。每日3次以自由动作，佩戴者能够选择一种战技，并且在这种战技的战技检定中获得+1至+5的增强加值，而且会在抵御此类战技的CMD上获得+1至+5的加值，持续1轮。此外，若此腰带的佩戴者是拳师（Brawler）的话，该效果还会使她的额外获得1次千招百式（Martial Flexibility）职业能力的每日使用。
+  meta:
+    group: wondrous item
+    price: 2000 gp
+    weight: 0
+    casterLevel: 5
+    aura: faint evocation
+    slot: belt
+- id: Belt Of Superior Maneuvers +2
+  name: +2 卓越战技腰带
+  desc: 这根薄薄的黑布腰带通常被当做宽松的长袍、和服（kimono）或者武术家道服（dobok）的腰部系带来使用。每日3次以自由动作，佩戴者能够选择一种战技，并且在这种战技的战技检定中获得+1至+5的增强加值，而且会在抵御此类战技的CMD上获得+1至+5的加值，持续1轮。此外，若此腰带的佩戴者是拳师（Brawler）的话，该效果还会使她的额外获得1次千招百式（Martial Flexibility）职业能力的每日使用。
+  meta:
+    group: wondrous item
+    price: 8000 gp
+    weight: 0
+    casterLevel: 5
+    aura: faint evocation
+    slot: belt
+- id: Belt Of Superior Maneuvers +3
+  name: +3 卓越战技腰带
+  desc: 这根薄薄的黑布腰带通常被当做宽松的长袍、和服（kimono）或者武术家道服（dobok）的腰部系带来使用。每日3次以自由动作，佩戴者能够选择一种战技，并且在这种战技的战技检定中获得+1至+5的增强加值，而且会在抵御此类战技的CMD上获得+1至+5的加值，持续1轮。此外，若此腰带的佩戴者是拳师（Brawler）的话，该效果还会使她的额外获得1次千招百式（Martial Flexibility）职业能力的每日使用。
+  meta:
+    group: wondrous item
+    price: 18000 gp
+    weight: 0
+    casterLevel: 5
+    aura: faint evocation
+    slot: belt
+- id: Belt Of Superior Maneuvers +4
+  name: +4 卓越战技腰带
+  desc: 这根薄薄的黑布腰带通常被当做宽松的长袍、和服（kimono）或者武术家道服（dobok）的腰部系带来使用。每日3次以自由动作，佩戴者能够选择一种战技，并且在这种战技的战技检定中获得+1至+5的增强加值，而且会在抵御此类战技的CMD上获得+1至+5的加值，持续1轮。此外，若此腰带的佩戴者是拳师（Brawler）的话，该效果还会使她的额外获得1次千招百式（Martial Flexibility）职业能力的每日使用。
+  meta:
+    group: wondrous item
+    price: 32000 gp
+    weight: 0
+    casterLevel: 5
+    aura: faint evocation
+    slot: belt
+- id: Belt Of Superior Maneuvers +5
+  name: +5 卓越战技腰带
+  desc: 这根薄薄的黑布腰带通常被当做宽松的长袍、和服（kimono）或者武术家道服（dobok）的腰部系带来使用。每日3次以自由动作，佩戴者能够选择一种战技，并且在这种战技的战技检定中获得+1至+5的增强加值，而且会在抵御此类战技的CMD上获得+1至+5的加值，持续1轮。此外，若此腰带的佩戴者是拳师（Brawler）的话，该效果还会使她的额外获得1次千招百式（Martial Flexibility）职业能力的每日使用。
+  meta:
+    group: wondrous item
+    price: 50000 gp
+    weight: 0
+    casterLevel: 5
+    aura: faint evocation
+    slot: belt
+- id: Belt Of Teeth
+  name: 牙之腰带
+  desc: 结实的皮革腰带上黄铜色的带扣是时尚的三个恶魔头像。每一轮，带扣都可以活化，对5尺范围内一个引发藉机攻击的目标进行一次藉机攻击。这次攻击使用穿戴者的bab和力量调整值，并且有+4表现加值。它造成的伤害等同于穿戴者进行一次啮咬bite的伤害（中体型为1d6，具体见bestiary）加上穿戴者的力量调整值。腰带的这次攻击不计算为本轮内穿戴者的攻击次数，也不占用一次藉机攻击次数，它只是提供了另一种藉机攻击的方式。
+  meta:
+    group: wondrous item
+    price: 4000 gp
+    weight: 3
+    casterLevel: 1
+    aura: faint transmutation
+    slot: belt
+- id: Belt Of The Weasel
+  name: 黄鼠狼腰带
+  desc: 这条意外柔软的腰带的带扣是内嵌式的，其勾画出来的形象就是一只黄鼠狼的脸。穿戴者的敏捷得到+2增强加值，并且可以在俯卧时以半速移动。在刚穿戴的24小时内，敏捷加值视为临时加值。穿戴者在俯卧时的攻击检定不受到减值，在面对近战攻击时AC也不受到惩罚。额外的，穿戴者得到compression（暂译为压缩）特性（bestiary2）。
+  meta:
+    group: wondrous item
+    price: 10000 gp
+    weight: 1
+    casterLevel: 4
+    aura: moderate transmutation
+    slot: belt
+- id: Belt Of Thunderous Charging
+  name: 雷霆冲锋腰带
+  desc: |-
+    腰带扣上是一只冲刺中的犀牛浮雕。穿戴者的力量得到+2增强加值。刚穿戴的24小时内，力量加值视为临时加值。
+    腰带增强了穿戴者冲刺时的动能，穿戴者的冲撞bull rush和闯越overrun战技得到+2加值。此外，每当穿戴者冲锋时，他的近战武器和天生武器所造成的伤害视为比平常大一体型。
+  meta:
+    group: wondrous item
+    price: 10000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Belt Of Tumbling
+  name: 翻滚腰带
+  desc: 这条薄薄的、灵活的棉绳腰带围绕着穿戴者的腰好几圈。穿戴者在通过狭窄地形时和穿过敌人占据地区时的特技动作检定得到+4表现加值。
+  meta:
+    group: wondrous item
+    price: 800 gp
+    weight: 1
+    casterLevel: 1
+    aura: faint transmutation
+    slot: belt
+- id: Beneficial Bandolier
+  name: 随心子弹带
+  desc: |-
+    这条子弹带用精细鞣质皮革制成。它有200个子弹弹药槽。霰弹pellets和黑火药保存在特质小袋里，子弹bullets则是别在小圈中。随心子弹带会根据需要调整自己来容纳这两者。在其上有为炮匠工具gunsmith’s kit和火药角powder horn预留的位置。无论其上外挂了多少数量的前述物品，它的重量都不会改变。
+    以一个迅捷动作，穿戴者可以从子弹带中呼唤出一单发子弹，并传送进一个相匹配的火器中。
+  meta:
+    group: wondrous item
+    price: 1000 gp
+    weight: 2
+    casterLevel: 9
+    aura: moderate transmutation
+    slot: belt
+- id: Bladed Belt
+  name: 束剑腰带
+  desc: 与其它用一根连续性材质制成的腰带不同，它是以许多个鞣质皮革用密集的钉子组合而成。以一个命令，穿戴者可以将该腰带变形为一个他所选择的精制品挥砍或穿刺类型的近战武器。只要他仍持握该武器，就可以用一个命令让它变回腰带。此外，该腰带可以如同挥砍或穿刺武器一般被附魔，附魔时视它为精制品。
+  meta:
+    group: wondrous item
+    price: 2000 gp
+    weight: 3
+    casterLevel: 1
+    aura: faint transmutation
+    slot: belt
+- id: Blinkback Belt
+  name: 闪回腰带
+  desc: 一些夹子被固定在这件腰带上，以便于和金属链接起来。至多2件单手武器或者4件轻型武器可以固定在腰带上。当穿戴者从腰带上取下一件武器，并在他的下一回合结束前投掷出去，在该次投掷攻击完成后，该武器会迅速传送回腰带上并固定好。
+  meta:
+    group: wondrous item
+    price: 5000 gp
+    weight: 2
+    casterLevel: 7
+    aura: moderate conjuration
+    slot: belt
+- id: Canopic Wrap
+  name: 卡诺皮克缠腰
+  desc: |-
+    这条看起来破旧不堪又有些发黄的腰带是由亚麻缠布编织在一起，再在正面加上朴实的石质扣带制作而成。这种腰带所使用的布料来自木乃伊的缠布，那些在曾经属于古奥斯里昂（Ancient Osirion）的浩瀚沙漠中探险的人们通常会使用这样的腰带。在穿戴好这条腰带时，腰带会在对抗疾病的豁免检定中提供+4抗力加值，这也包括诸如腐尸症（mummy rot）的超自然疾病。
+    卡诺皮克缠腰还会让生物体内的主要脏器产生怪异的内部转变，使得它们在体内进行随机迁移。由于这种古怪的效果，穿戴者还会获得次级护命UE（light fortification）护甲特殊能力的效果。该效果也会让经受过训练的医疗人员难以施展身手，因此任何对穿戴者进行的医疗检定DC均会增加5点。
+  meta:
+    group: wondrous item
+    price: 10500 gp
+    weight: 1
+    casterLevel: 7
+    aura: moderate transmutation
+    slot: belt
+- id: Cord Of Stubborn Resolve
+  name: 坚定决心绑腰绳
+  desc: |-
+    将它系紧在腰上后，这根又粗又长的绳子给予穿戴者的体质+2增强加值。在刚穿戴的24小时内，该体质加值视为临时加值。
+    任何会导致穿戴者疲乏fatigued的效果，以穿戴者受到1d6点瘀伤来代替。任何会导致穿戴者力竭exhaustion的效果，以穿戴者受到1d6点瘀伤并疲乏来代替。
+  meta:
+    group: wondrous item
+    price: 15000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Elemental Earth Belt
+  name: 地元素腰带
+  desc: |-
+    这腰带是以光滑的石片和坚硬的皮革带连结制成。穿戴者的体质得到+4增强加值，并且穿戴者免疫推、拉、等一系列强制穿戴者移动的效果。不过这个效果不能免疫传送系列效果。额外的，每天一次，以一个命令，穿戴者可以变成大型土元素，如同法术elemental body III一般。
+    在刚穿戴的24小时内，该体质加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 24000 gp
+    weight: 3
+    casterLevel: 11
+    aura: moderate transmutation
+    slot: belt
+- id: Equestrian Belt
+  name: 马术腰带
+  desc: 腰带上的装饰意味着大批马匹在狂风荒野上尽情奔跑。穿戴者只要穿戴中甲、轻甲或者无甲，则在以下动作检定上自动成功：用膝控制坐骑、待在鞍上、与受过战斗训练的坐骑同时战斗、在战斗中控制坐骑、快速上下坐骑。额外的，在别的骑术检定中，穿戴者得到+4表现加值，哪怕此时穿戴者穿戴了重甲。
+  meta:
+    group: wondrous item
+    price: 3200 gp
+    weight: 1
+    casterLevel: 3
+    aura: faint transmutation
+    slot: belt
+- id: Gorgon Belt
+  name: 蛇发女妖腰带
+  desc: 穿戴者的力量得到+4增强加值，并且穿戴者在进行冲锋、闯越、冲撞、摔绊时，忽视困难地形的影响。额外的，一天一次，以一个命令，穿戴者可以喷射出一条60尺长的直线绿色毒气，如同喷吐武器一般。任何直线上的生物必须进行一个DC18的豁免检定，失败则会麻痹1d4轮。（译注：没有写豁免类型，按照喷吐武器类型，应该是反射豁免）在因此被麻痹的生物的回合结束时，它可以尝试一次新的豁免检定，检定成功则结束麻痹效果。在刚穿戴的24小时内，该力量加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 23000 gp
+    weight: 1
+    casterLevel: 9
+    aura: moderate transmutation
+    slot: belt
+- id: Heavyload Belt
+  name: 重负腰带
+  desc: 这条宽腰带，以两根细绳穿过腰带两侧的孔径来绑紧腰部。穿戴者视为永久处于法术重负术ant haul（APG）的作用下。
+  meta:
+    group: wondrous item
+    price: 2000 gp
+    weight: 3
+    casterLevel: 1
+    aura: faint transmutation
+    slot: belt
+- id: Infernal Cord
+  name: 地狱束绳
+  desc: |-
+    这条厚皮腰带上遍布着宛如瘢痕一般的痛苦面容，每一张面容都在愁容和笑脸间不断切换。切利亚斯（Cheliax）境内阿斯摩蒂斯（Asmodeus）的仆从通常会佩戴这种束带，这种腰带会使佩戴者的体质获得+2增强加值。在佩戴这条腰带后的头24个小时内，这个体质加值被视为临时属性加值。
+    每当有敌人对佩戴者造成重击（scores a critical hit）时，佩戴者就能在1分钟内获得1点快速回复。若重击仅造成非致命伤害，便不会触发该能力。由炼银武器（silver weapons）、善良阵营武器（good-aligned weapons）以及具有善良描述符（good descriptor）的法术或效果不会触发这种快速回复，而且还会将已经激活的快速回复压制1轮。
+    地狱束绳的佩戴者在被侦测时会如同自身是邪恶生物一般，而且她自身能够在佩戴它时感受到装备是邪恶的。任何非邪恶生物如果佩戴这条腰带，便会获得1个负向等级，直至将腰带脱下为止。
+  meta:
+    group: wondrous item
+    price: 5000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: 'Infernal Cord, Greater'
+  name: 高等地狱束绳
+  desc: 这件物品的功能如同地狱束绳（Infernal Cord）一般，不过它会赋予体质+4增强加值，而且快速回复效果增加至4点。在佩戴这条腰带后的头24个小时内，这个体质加值被视为临时属性加值。佩戴者在被侦测时会如同自身是邪恶牧师一般，而非仅仅是邪恶生物。
+  meta:
+    group: wondrous item
+    price: 31000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Merform Belt
+  name: 人鱼腰带
+  desc: 一天一次，穿戴者可以将自己变成一个人鱼merfolk。在这个形态下，穿戴者可以在水下呼吸并且下半身会变形为鱼尾。在这个形态下，穿戴者得到+2天生护甲，30尺游泳速度，不过他的陆地移动速度会减少到5尺。穿戴者最多可以保持这个形态12小时，并且可以在任意时间以一个命令来解除变形。
+  meta:
+    group: wondrous item
+    price: 32000 gp
+    weight: 2
+    casterLevel: 3
+    aura: faint transmutation
+    slot: belt
+- id: Meridian Belt
+  name: 四环腰带
+  desc: |-
+    这条狭窄的布制腰带上装有四圆环扣在一起形状的银扣带。这使得佩戴腰带的生物能够在每只手上佩戴戒指以外还能够在双脚上佩戴魔法戒指——尽管同时只有两个戒指生效。以一个迅捷动作，佩戴者能够改变他所佩戴的戒指的生效情况（双手，双脚，左手和右脚，等等）。比如，一名生物能够佩戴防护戒指（ring of protection），能量抗力戒指（ring of energy resistance），游泳戒指（ring of swimming）以及法术反制戒指（ring of counterspells），之后以自身的意愿每轮以迅捷动作在这些戒指中选择2个使其生效。
+    腰带不会改变激活戒指使用的动作类型（比如，激活隐形戒指仍旧是标准动作），但是允许佩戴者轻松切换这几个戒指所带有的恒定效果。即使腰带无法在同调时间内激活戒指的效果，在穿戴腰带之后，脚部佩戴戒指的时间也计入某些戒指的同调时间（比如维生戒指）。
+  meta:
+    group: wondrous item
+    price: 1000 gp
+    weight: 1
+    casterLevel: 9
+    aura: moderate transmutation
+    slot: belt
+- id: Minotaur Belt
+  name: 牛头人腰带
+  desc: 该腰带给予穿戴者的力量+2增强加值，并且在冲锋、闯越、冲撞、摔绊时忽略困难地形。在刚穿戴的24小时内，该力量加值视为临时加值。
+  meta:
+    group: wondrous item
+    price: 11000 gp
+    weight: 1
+    casterLevel: 4
+    aura: faint transmutation
+    slot: belt
+- id: Monkey Belt
+  name: 灵猴腰带
+  desc: 这条毛茸茸的棕色皮带像猴子的尾巴。穿戴者的敏捷得到+2增强加值。在刚穿戴的24小时内，视该敏捷加值为临时加值。穿戴者在攀爬时的AC不会失去敏捷加值，半速爬行的时候的攀爬检定也不会受到-5的检定惩罚。以一个迅捷动作，穿戴者命令腰带活化，将腰带变形为一条由穿戴者操控的适用于抓握的尾巴。该尾巴不会给予穿戴者额外的攻击次数和动作，也不可用来持握武器，不过可以用来进行徒手攻击、操控物品，如同穿戴者的正常肢体一般（尽管有一些需要手指完成的动作超出了尾巴的能力）腰带每天最多可以变成尾巴形态5分钟。这些时间不需要连续。
+  meta:
+    group: wondrous item
+    price: 9400 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: 'Monkey Belt, Greater'
+  name: 高等灵猴腰带
+  desc: |-
+    此腰带如同灵猴腰带一般，不过该腰带使穿戴者的力量和敏捷同时得到+2增强加值。在刚穿戴的24小时内，视此加值为临时加值。
+    当穿戴者使用命令将腰带变形为尾巴时，穿戴者的攀爬检定同时得到+5环境加值。
+  meta:
+    group: wondrous item
+    price: 18000 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Plague Rat Belt
+  name: 瘟疫鼠腰带
+  desc: 穿戴者的体质得到+2增强加值。在刚穿戴的24小时内，视该加值为临时加值。同时，每天三次，以一个直觉动作，穿戴者可以重骰一次对抗疾病或者毒素的豁免检定。穿戴者必须接受重骰的结果，哪怕更糟。
+  meta:
+    group: wondrous item
+    price: 5200 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: 'Plague Rat Belt, Greater'
+  name: 高等瘟疫鼠腰带
+  desc: 该腰带如同瘟疫鼠腰带一般，不过该腰带的穿戴者的敏捷和体质同时得到+2增强加值。在刚穿戴的24小时内，视该加值为临时加值。
+  meta:
+    group: wondrous item
+    price: 11200 gp
+    weight: 1
+    casterLevel: 8
+    aura: moderate transmutation
+    slot: belt
+- id: Sash Of Flowing Water
+  name: 流水腰带
+  desc: 如果穿戴者至少有一只手空闲（不持握任何东西），那么它以一个直觉动作，可以尝试偏斜一次针对你的成功的近战攻击。如果他决定这样做，他投掷一次徒手攻击的攻击检定，并将所有适当的调整值计算其中，比如对宿敌的攻击加值或者猛力攻击所带来的攻击减值。如果你的此次攻击检定大于你所意图偏斜的那次近战攻击的攻击检定，那次攻击就完全无效。这次徒手攻击不造成任何伤害，且不算做对敌的成功攻击。在如此做时，该攻击者不需要在穿戴者的触及范围内。无论攻击者的此次攻击时候有效，穿戴者接下来的所有攻击检定得到-4惩罚，直到穿戴者的下一回合开始。
+  meta:
+    group: wondrous item
+    price: 25000 gp
+    weight: 1
+    casterLevel: 10
+    aura: moderate abjuration
+    slot: belt
+- id: Security Belt
+  name: 秘藏腰带
+  desc: 秘藏腰带能使针对穿戴者的巧手检定的DC增加5，以及定位穿戴者身上隐藏的物品、武器时的察言观色或搜查检定的DC增加5（见巧手技能说明）。穿戴者同时在对抗偷窃战技的CMD上得到+5加值。一天一次，以一个命令，穿戴者可以接触一个最多10尺见方的单独物体，并将其缩小为一件小块布，如同缩物术shrink item一般。以一个移动动作，穿戴者可以从腰带的口袋里掏出一块被缩小的“布”，然后将其还原为正常形态。秘藏腰带和其中的藏品很难被魔法侦测到。它们如同被一个永久的魔法灵光magic aura法术作用，使它们看起来没有一点魔法力。
+  meta:
+    group: wondrous item
+    price: 12500 gp
+    weight: 1
+    casterLevel: 5
+    aura: faint transmutation
+    slot: belt
+- id: Serpent Belt
+  name: 毒蛇腰带
+  desc: 穿戴者对抗毒素的豁免得到+4加值，逃脱检定得到+2加值。额外的，一天一次，以一个命令，腰带可以活化为一条venomous snake或者constrictor snake，并遵守穿戴者的口令活动最多一个小时。如果这条活化蛇被杀死或者离开穿戴者100尺远，这条蛇会原地变回腰带状。
+  meta:
+    group: wondrous item
+    price: 9000 gp
+    weight: 1
+    casterLevel: 5
+    aura: faint transmutation
+    slot: belt
+- id: 'Serpent Belt, Greater'
+  name: 高等毒蛇腰带
+  desc: 这条腰带如同毒蛇腰带，不过穿戴者的力量和敏捷得到+2增强加值。在刚穿戴的24小时内，该加值视为临时加值。当腰带变形为venomous snake或者constrictor snake时，可以说出第二个命令，将该蛇套上一下模板中的一个：进化模板advanced、天界模板celestial、熵力模板entropic（Bestiary2）、炼狱模板fiendish、resolute（Bestiary2）。在套上模板后，该蛇需要改变为模板相应的适合的阵营。
+  meta:
+    group: wondrous item
+    price: 20000 gp
+    weight: 1
+    casterLevel: 5
+    aura: faint transmutation
+    slot: belt
+- id: Shadowform Belt
+  name: 阴影形态腰带
+  desc: 将它绑在穿戴者的要上后，穿戴者的敏捷得到+6增强加值。刚穿戴的24小时内，视该加值为临时加值。额外的，以一个迅捷动作，穿戴者可以变成虚体incorporeal。在虚体时，穿戴者不会得到基于魅力调整值的偏斜AC加值，但是他的天生护甲AC将会转变为偏斜AC。每天最多能够变化为虚体10轮。这些轮数无需连续。
+  meta:
+    group: wondrous item
+    price: 110000 gp
+    weight: 0
+    casterLevel: 17
+    aura: strong transmutation
+    slot: belt
