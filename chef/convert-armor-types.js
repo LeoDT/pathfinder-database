@@ -107,6 +107,7 @@ for (const c of data) {
 
   const meta = pickArmor(c, pickFields);
 
+  meta.cost = meta.cost.replace(/,/g, '');
   meta.weight = parseInt(meta.weight.replace(/lbs?\./, '').trim());
   meta.ac = Number.isNaN(parseInt(meta.ac)) ? 0 : parseInt(meta.ac);
   meta.penalty = Number.isNaN(parseInt(meta.penalty)) ? 0 : parseInt(meta.penalty);

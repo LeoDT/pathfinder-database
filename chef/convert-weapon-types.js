@@ -118,6 +118,9 @@ for await (const dataFile of [
 
     const meta = pickWeapon(c, pickFields);
 
+    if (meta.cost) {
+      meta.cost = meta.cost.replace(/,/g, '');
+    }
     if (meta.range) {
       meta.range = parseInt(meta.range.replace('ft.', '').trim());
     }
@@ -182,10 +185,6 @@ for await (const dataFile of [
     };
 
     weapons.push(weapon);
-
-    if (!weapon.name) {
-      console.log(weapon.id);
-    }
   }
 }
 

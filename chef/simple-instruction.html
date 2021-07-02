@@ -49,7 +49,8 @@
             if (name && id) {
               let type;
               if (id.search(/[,，]\s?(ex|su|sp)/i) !== -1) {
-                [id, type] = id.split(/[,，]/);
+                type = id.split(/[,，]/).slice(-1)[0];
+                id = id.split(/[,，]/).slice(0, -1).join(',');
               }
 
               let r = `- id: ${id}
@@ -57,7 +58,7 @@
 
               if (type) {
                 r += `
-  type: ${type.toLowerCase()}`;
+  type: ${type.trim().toLowerCase()}`;
               }
 
               r += `
