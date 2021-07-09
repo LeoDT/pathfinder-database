@@ -30,19 +30,6 @@ classSkills:
   - swim
 skillPoints: 6
 
-proficiencies:
-  weapon:
-    - simple
-    - hand crossbow
-    - longbow
-    - repeating crossbow
-    - shortbow
-    - the favored weapon of her deity
-  armor:
-    - light
-    - medium
-    - shields (except tower shields)
-
 feats:
   - id: Inquisitor Weapon and Armor Proficiency
     name: 审判者武器防具擅长
@@ -69,13 +56,28 @@ feats:
       审判者可以施展审判者法术列表中的神术。假如她还没用完她的当天法术，她不需要事先准备施展她所知道的法术。要学习或者施展一个法术，审判者的感知值必须至少有“10+法术环级”。对抗审判者的法术豁免难度DC等于“10+法术环级+感知修正”。审判者每天在每个法术环级可以施展一定数量的法术。她的基础每日施法数量在上表中列出。另外，她还可以因高感知值获得每日额外法术。
 
       审判者所选择的法术受到相当限制。审判者刚开始根据她的选择已知4个0环法术和2个1环法术。在每个新的审判者等级，她都可以获得一个或更多已知法术，在上表中给出（与每日法术数量不同，审判者的可知法术数量不受感知值的影响。表格中的可知法术数量是固定的）。当审判者达到5级，以及之后每3级（8级，11级，如此类推），审判者可以选择学习一个新法术来代替原来已知的法术。实际上，审判者“失去”一个旧的法术替换成一个新的。新法术的环级必须与被替换的法术相同，并且必须比审判者可施展的最高法术环级低至少1环。审判者在每个法术环级上只能交换一个法术，并且她必须在该等级获得新法术的同时决定是否交换法术。
+    effects:
+      - type: gainSpellCasting
+        args:
+          castingType: sorcerer-like
+          abilityType: wis
   - id: Domain
     name: 领域
     desc: 如同牧师，审判者信仰的神祉影响到她的阵营、她可使用的魔法以及她的价值观。尽管审判者不像牧师那样严守神祉的戒律，事实上如果能更好地为她的信仰服务她会乐意违反它们，但是她还是需要对这些规条表示尊重。审判者可以选择一个她信仰的神祉所包含的领域。审判者只有阵营符合才可以选择阵营领域。如果你的GM许可，审判者也可以为一个理念服务而非一个特定神祉，并选择一个象征她个人理想和能力的领域。对此阵营领域的约束依然生效。每个领域根据审判者等级给予一些神授力量。审判者不会获得领域奖励的法术列表，也不会得到奖励的领域法术位。审判者用他的等级决定神授力量的强度和效果如同牧师等级一样。如果审判者拥有牧师等级，她的两个领域之一必须与审判者等级所选择的领域相同。决定这个领域神授力量的强度和效果时牧师等级和审判者等级叠加，但是决定奖励法术时不会叠加。
-  - id: Judgment 1/day
+    effects:
+      - type: gainDomain
+        args:
+          amount: 1
+          inquisition: true
+          spells: false
+  - id: Judgment
     type: su
-    name: 审判 1/日
+    name: 审判
     desc: 从1级开始，审判者可以用一个迅捷动作对她的敌人进行审判。当审判开始时，审判者根据使用的审判类型获得加值或者特殊能力。1级时审判者每天可以使用这个能力1次。在4级及之后每3级，审判者每天可以获得额外1次使用次数。一旦启动，这个能力持续到战斗结束，然后所有优势马上消失。审判者必须参与战斗才能获得这些优势。如果她陷入惊惧、恐慌、麻痹、震慑、昏迷，或者其他不能参与战斗的状态，该能力不会结束，但她失去审判带来的优势、直到回归到战斗中。当审判者使用该能力时，她必须选择一种审判效果。以一个迅捷动作，她可以改变审判种类。如果审判者是邪恶阵营，她得到的是亵渎加值而非神圣加值。中立阵营的审判者必须选择获得神圣加值或亵渎加值，一旦选定将无法改变。
+    effects:
+      - type: addTracker
+        args:
+          maxFormula: 1 + MAX(1, FLOOR(inquisitorLevel / 3) + 1)
     subs:
       - id: Destruction
         name: 惩戒
@@ -105,6 +107,9 @@ feats:
         name: 制裁
         desc: 审判为审判者的武器浸染神圣的光芒。审判者的武器在穿透伤害减免时视为魔法武器。6级时，审判者的武器在穿透伤害减免时同时被视为一个阵营武器（混乱、邪恶、善良、秩序）。阵营种类取决于审判者的阵营。如果审判者是中立阵营，她不会得到这个好处。10级时，审判者的武器在穿透伤害减免时视为精金武器（但不会额外减少硬度）。
     grow:
+      - level: 1
+        id: Judgment 1/day
+        name: 审判 1/日
       - level: 4
         id: Judgment 2/day
         name: 审判 2/日
@@ -134,10 +139,23 @@ feats:
     type: ex
     name: 严苛凝视
     desc: 审判者擅长于察觉她们敌人的诡计并威吓他们。审判者在所有威吓及察言观色上得到审判者等级一半（最少+1）的士气加值。
+    effects:
+      - type: gainSkill
+        args:
+          skillId: intimidate
+          bonus:
+            type: morale
+            amountFormula: MAX(1, FLOOR(inquisitorLevel / 2))
   - id: Cunning Initiative
     type: ex
     name: 巧夺先攻
     desc: 在2级时，审判者在敏捷修正之外，额外将她的感知修正加在先攻检定上。
+    effects:
+      - type: gainInitiative
+        args:
+          bonus:
+            type: untyped
+            amountFormula: wis
   - id: Detect Alignment
     type: sp
     name: 侦测阵营
@@ -205,6 +223,7 @@ levels:
     will: 2
     special:
       - Inquisitor Weapon and Armor Proficiency
+      - Spells
       - Domain
       - Judgment 1/day
       - Monster Lore

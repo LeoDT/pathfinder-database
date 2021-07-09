@@ -57,3 +57,8 @@ export function parseWeight(weight) {
 
   return 0;
 }
+
+export function extractNameAndIdAndType(s) {
+  return s.match(/(?<name>.+?)\s?（(?<id>.+?)?[,，]?\s?(?<type>sp|Sp|SP|Su|su|SU|Ex|ex|EX)?）$/)
+    .groups;
+}
