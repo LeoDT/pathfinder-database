@@ -63,6 +63,11 @@
   effects:
     - type: gainTwoWeaponFighting
 - id: Toughness
+  calculatedValues:
+    - name: 加值
+      formula: MAX(3, level)
+      showInName: true
+      showInNameTemplate: +<%= value %>
   effects:
     - type: gainHP
       args:

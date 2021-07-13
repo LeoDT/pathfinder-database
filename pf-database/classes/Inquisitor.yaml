@@ -117,17 +117,17 @@ feats:
         id: Judgment 3/day
         name: 审判 3/日
       - level: 10
-        id: Judgment 3/day
-        name: 审判 3/日
-      - level: 13
         id: Judgment 4/day
         name: 审判 4/日
-      - level: 16
+      - level: 13
         id: Judgment 5/day
         name: 审判 5/日
-      - level: 19
+      - level: 16
         id: Judgment 6/day
         name: 审判 6/日
+      - level: 19
+        id: Judgment 7/day
+        name: 审判 7/日
   - id: Monster Lore
     type: ex
     name: 怪物学识

@@ -3517,7 +3517,7 @@
   name: 异界之门
   meta:
     school: conjuration
-    subschool: creation or calling
+    subschool: 'creation, calling'
     level: 'cleric/oracle 9, sorcerer/wizard 9, psychic 9'
     domain: '荣耀领域 9, 交易子域 9'
     castingTime: 标准动作

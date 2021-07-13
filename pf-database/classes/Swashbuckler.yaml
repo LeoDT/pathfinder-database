@@ -54,11 +54,14 @@ feats:
     name: 巧手游荡剑客
     type: ex
     desc: 1级时，游荡剑客在使用轻型或单手穿刺类近战武器时获得武器娴熟专长的效果。除此之外，游荡剑客可以用魅力属性代替智力满足战斗专长的前提。这个职业能力在满足其他专长的前提条件时视作“武器娴熟”专长。
-  - id: Charmed Life 3/day
-    name: 快乐人生 3/日
+  - id: Charmed Life
+    name: 快乐人生
     type: ex
     desc: 2级时，游荡剑客学会了怎么避免麻烦。每天3次，在尝试进行一次豁免检定前，用一个直觉动作，游荡剑客可以将自己的魅力加值加到豁免结果上。她必须在投骰之前决定使用这个能力，并且每次进行豁免只能使用一次这种能力。在6级和之后的每4级，游荡剑客会获得1次额外的该能力使用次数（18级时最大每天7次）
     grow:
+      - level: 2
+        id: Charmed Life 3/day
+        name: 快乐人生 3/日
       - level: 6
         id: Charmed Life 4/day
         name: 快乐人生 4/日
@@ -71,11 +74,14 @@ feats:
       - level: 18
         id: Charmed Life 7/day
         name: 快乐人生 7/日
-  - id: Nimble +1
-    name: 机敏 +1
+  - id: Nimble
+    name: 机敏
     type: ex
     desc: 3级起，当游荡剑客穿着轻甲或无甲时AC获得+1闪避加值。任何使游荡剑客无法将敏捷加至AC的效果均会令本能力无效。此加值在3级后的每4级再+1，19级时为最大的+5。
     grow:
+      - level: 3
+        id: Nimble +1
+        name: 机敏 +1
       - level: 7
         id: Nimble +2
         name: 机敏 +2
@@ -97,11 +103,14 @@ feats:
       - type: gainFeat
         args:
           featType: combat
-  - id: Swashbuckler Weapon Training +1
-    name: 游荡剑客武器训练 +1
+  - id: Swashbuckler Weapon Training
+    name: 游荡剑客武器训练
     type: ex
     desc: 5级时，游荡剑客在使用单手或轻型穿刺近战武器时在攻击和伤害检定时获得+1加值。除此以外，当使用单手或轻型近战武器时，游荡剑客还会获得对应的精通重击专长效果。这个加值在5级后的每4级会额外加1（最大在17级时达到+4）。
     grow:
+      - level: 5
+        id: Swashbuckler Weapon Training +1
+        name: 游荡剑客武器训练 +1
       - level: 9
         id: Swashbuckler Weapon Training +2
         name: 游荡剑客武器训练 +2

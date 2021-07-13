@@ -89,7 +89,7 @@ export function spellMetaFromIndex(index, id) {
   };
 
   if (spell.subschool) {
-    s.subschool = spell.subschool.toLowerCase();
+    s.subschool = spell.subschool.toLowerCase().replace(' or ', ', ');
   }
 
   s.level = spell.spell_level;

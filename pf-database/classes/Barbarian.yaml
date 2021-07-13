@@ -939,7 +939,7 @@ levels:
     reflex: 2
     will: 2
     special:
-      - Damage Reduction 1/—
+      - Damage Reduction 1/-
   - level: 8
     bab: [8, 3]
     fortitude: 6
@@ -960,7 +960,7 @@ levels:
     reflex: 3
     will: 3
     special:
-      - Damage Reduction 2/—
+      - Damage Reduction 2/-
       - Rage Power 5
   - level: 11
     bab: [11, 6, 1]
@@ -983,7 +983,7 @@ levels:
     reflex: 4
     will: 4
     special:
-      - Damage Reduction 3/—
+      - Damage Reduction 3/-
   - level: 14
     bab: [14, 9, 4]
     fortitude: 9
@@ -1005,7 +1005,7 @@ levels:
     reflex: 5
     will: 5
     special:
-      - Damage Reduction 4/—
+      - Damage Reduction 4/-
       - Rage Power 8
   - level: 17
     bab: [17, 12, 7, 2]
@@ -1028,7 +1028,7 @@ levels:
     reflex: 6
     will: 6
     special:
-      - Damage Reduction 5/—
+      - Damage Reduction 5/-
   - level: 20
     bab: [20, 15, 10, 5]
     fortitude: 12

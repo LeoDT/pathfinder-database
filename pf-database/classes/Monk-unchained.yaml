@@ -144,16 +144,57 @@ feats:
       - type: gainFeat
         args:
           ignorePrerequisites: true
-          feats: [Catch Off-Guard, Combat Reflexes, Deflect Arrows, Dodge, Improved Grapple, Scorpion Style, Throw Anything]
+          feats:
+            [
+              Catch Off-Guard,
+              Combat Reflexes,
+              Deflect Arrows,
+              Dodge,
+              Improved Grapple,
+              Scorpion Style,
+              Throw Anything,
+            ]
         growArgs:
           - level: 6
             args:
               feats:
-                [Catch Off-Guard, Combat Reflexes, Deflect Arrows, Dodge, Improved Grapple, Scorpion Style, Throw Anything, Gorgon’s Fist, Improved Bull Rush, Improved Disarm, Improved Feint, Improved Trip, Mobility]
+                [
+                  Catch Off-Guard,
+                  Combat Reflexes,
+                  Deflect Arrows,
+                  Dodge,
+                  Improved Grapple,
+                  Scorpion Style,
+                  Throw Anything,
+                  Gorgon’s Fist,
+                  Improved Bull Rush,
+                  Improved Disarm,
+                  Improved Feint,
+                  Improved Trip,
+                  Mobility,
+                ]
           - level: 10
             args:
               feats:
-                [Catch Off-Guard, Combat Reflexes, Deflect Arrows, Dodge, Improved Grapple, Scorpion Style, Throw Anything, Gorgon’s Fist, Improved Bull Rush, Improved Disarm, Improved Feint, Improved Trip, Mobility, Improved Critical, Medusa’s Wrath, Snatch Arrows, Spring Attack]
+                [
+                  Catch Off-Guard,
+                  Combat Reflexes,
+                  Deflect Arrows,
+                  Dodge,
+                  Improved Grapple,
+                  Scorpion Style,
+                  Throw Anything,
+                  Gorgon’s Fist,
+                  Improved Bull Rush,
+                  Improved Disarm,
+                  Improved Feint,
+                  Improved Trip,
+                  Mobility,
+                  Improved Critical,
+                  Medusa’s Wrath,
+                  Snatch Arrows,
+                  Spring Attack,
+                ]
   - id: Flurry of Blows
     type: ex
     name: 疾风连击
@@ -177,6 +218,11 @@ feats:
     name: 震慑拳
     type: ex
     desc: １级起，武僧获得【震慑拳】作为奖励专长，即使他并未满足先决条件。４级时与其后的每４级，武僧都可能在他的震慑拳上附加一种新的状态效果。这状态将会取代原来的效果（震慑目标１轮），成功的豁免检定可以忽略此状态。４级时，武僧的【震慑拳】可以令目标疲乏。８级时，可以令目标恶心１分钟。１２级时，可以令目标恍惚“１ｄ６＋１”轮。１６级时，可以令对手永久目盲或耳聋。20级时，可以令目标麻痹“１ｄ６＋１”轮。武僧必须在攻击骰投出前选择他要使用何种状态。这些效果不会其本身叠加（被震慑拳打成疲乏的目标再吃到疲乏震慑拳时，不会因疲乏状态的叠加而变为力竭），但是重复命中可以延长状态的持续时间。
+    calculatedValues:
+      - name: 每日次数
+        formula: monkunchainedLevel + MAX(0, FLOOR((level - monkunchainedLevel) / 4))
+        showInName: true
+        showInNameTemplate: <%= value %>次
     effects:
       - type: addTracker
         args:
@@ -248,9 +294,9 @@ feats:
                 amount: 40
           - level: 15
             args:
-                bonus:
-                  type: enchancement
-                  amount: 50
+              bonus:
+                type: enchancement
+                amount: 50
           - level: 18
             args:
               bonus:
@@ -271,7 +317,7 @@ feats:
     name: 斗气击(魔法)
   - id: Ki Strike (cold iron/silver)
     name: 斗气击(寒铁/镀银)
-  - id: Ki Strike (秩序)
+  - id: Ki Strike (lawful)
     name: 斗气击(寒铁/镀银)
   - id: Ki Strike (adamantine)
     name: 斗气击(精金)
@@ -947,7 +993,7 @@ levels:
     will: 4
     special:
       - Style Strike 3
-      - Tongue of The Sun And Moon
+      - Tongue of the Sun and Moon
   - level: 14
     bab: [14, 9, 4]
     fortitude: 9
