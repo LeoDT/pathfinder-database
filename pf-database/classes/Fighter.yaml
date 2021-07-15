@@ -44,7 +44,8 @@ feats:
     effects:
       - type: gainFeat
         args:
-          featType: combat
+          featTypes:
+            - combat
   - id: Bravery
     name: 英勇
     type: ex

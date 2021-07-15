@@ -1,43 +1,87 @@
 import { parse as parseYAML } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
-import { parse as parseCSV } from 'https://deno.land/std@0.85.0/encoding/csv.ts';
+import { titleCase } from 'https://unpkg.com/title-case@3.0.3/dist.es2015/index.js';
 
-const weaponsYaml = parseYAML(
-  [
-    './chef/data/weapons/aa2.yaml',
-    './chef/data/weapons/exotic.yaml',
-    './chef/data/weapons/martial.yaml',
-    './chef/data/weapons/simple.yaml',
-  ]
-    .map((f) => {
-      return Deno.readTextFileSync(f);
-    })
-    .join('\n')
+const spellFiles = ['acg', 'apg', 'arg', 'crb', 'uc', 'um'].map((b) =>
+  parseYAML(Deno.readTextFileSync(`./pf-database/spells/${b}.yaml`))
 );
 
-const csv = [
-  Deno.readTextFileSync('./chef/data/weapons.csv'),
-  Deno.readTextFileSync('./chef/data/weapons_eastern.csv'),
-].join('\n');
-
-const weaponCSV = await parseCSV(csv, {
-  columns: [
-    'name',
-    'cost',
-    'damageSmall',
-    'damage',
-    'critical',
-    'range',
-    'weight',
-    'damageType',
-    'special',
-    'source',
-  ],
-});
-
-const ids = weaponCSV.map((w) => w.name.toLowerCase());
-
-weaponsYaml.forEach((w) => {
-  if (!ids.includes(w.id.toLowerCase())) {
-    console.log(w.id);
+const spells = new Map();
+for (const ss of spellFiles) {
+  for (const s of ss) {
+    spells.set(s.id, s);
   }
-});
+}
+
+const domains = parseYAML(Deno.readTextFileSync('./pf-database/domains.yaml'));
+
+const romeNumber = /^[iIvVxX]+$/;
+
+function fixDomainSpellId(id) {
+  const lower = ['From', 'Against'];
+  const suffixes = ['Greater', 'Lesser', 'Mass'];
+  const splitted = titleCase(id).split(' ');
+  const replacers = {
+    'geas/quest': 'Geas/Quest',
+    'blindness/deafness': 'Blindness/Deafness',
+    'summon monster vd3幽影': 'Summon Monster V',
+    'create greater undead': 'Create Greater Undead',
+    'elemental body': 'Elemental Body IV',
+    'remove blindness/deafness': 'Remove Blindness/Deafness',
+    'antilife shield': 'Antilife Shell',
+    "draljon's breath": "Dragon's Breath",
+    "summon nature's ally IV": "Summon Nature's Ally IV",
+    "summon nature's ally VII": "Summon Nature's Ally VII",
+    'animate object': 'Animate Objects',
+  };
+
+  if (replacers[id]) {
+    return replacers[id];
+  }
+
+  let result = [];
+  let suffix = '';
+  for (let s of splitted) {
+    if (suffixes.includes(s)) {
+      suffix = s;
+      continue;
+    }
+
+    if (lower.includes(s)) {
+      s = s.toLowerCase();
+    }
+
+    if (romeNumber.test(s)) {
+      s = s.toUpperCase();
+    }
+
+    result.push(s);
+  }
+
+  return `${result.join(' ')}${suffix ? `, ${suffix}` : ''}`;
+}
+
+/* for (const domain of domains) {
+  if (domain.spells) {
+    for (const s of domain.spells) {
+      const id = fixDomainSpellId(s);
+
+      if (!spells.get(id)) {
+        console.log(s, id);
+      }
+    }
+  }
+} */
+
+for (const domain of domains) {
+  if (domain.subDomains) {
+    for (const d of domain.subDomains) {
+      if (d.spells) {
+        for (const s of d.spells) {
+          if (!spells.get(s)) {
+            console.log(s);
+          }
+        }
+      }
+    }
+  }
+}

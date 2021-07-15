@@ -3,8 +3,7 @@ name: 侦探
 class: Bard
 book: apg
 
-desc:
-  描述: 凭藉着超人的才智，侦探可以将细碎的线索拼接成唯一的真相，让犯罪者无处藏身。
+desc: 凭藉着超人的才智，侦探可以将细碎的线索拼接成唯一的真相，让犯罪者无处藏身。
 
 feats:
   - id: Careful Teamwork

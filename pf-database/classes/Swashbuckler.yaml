@@ -102,7 +102,8 @@ feats:
     effects:
       - type: gainFeat
         args:
-          featType: combat
+          featTypes:
+            - combat
   - id: Swashbuckler Weapon Training
     name: 游荡剑客武器训练
     type: ex

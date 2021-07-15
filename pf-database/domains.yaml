@@ -16,15 +16,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6, druidLevel >= 6)'
   spells:
-    - obscuring mist
-    - chain lightning
-    - wind wall
-    - elemental body iv
-    - gaseous form
-    - whirlwind
-    - air walk
-    - elemental swarm
-    - control winds
+    - Obscuring Mist
+    - Chain Lightning
+    - Wind Wall
+    - Elemental Body IV
+    - Gaseous Form
+    - Whirlwind
+    - Air Walk
+    - Elemental Swarm
+    - Control Winds
   subDomains:
     - id: Cloud
       name: 云
@@ -39,8 +39,8 @@
           replace:
             - Electricity Resistance
       spells:
-        - solid fog
-        - storm of vengeance
+        - Solid Fog
+        - Storm of Vengeance
     - id: Wind
       name: 风
       powers:
@@ -53,9 +53,9 @@
           replace:
             - Lightning Arc
       spells:
-        - whispering wind
-        - wind walk
-        - winds of vengeance apg
+        - Whispering Wind
+        - Wind Walk
+        - Winds of Vengeance
   druid: true
 - id: Animal
   name: 动物
@@ -75,15 +75,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 4, inquisitorLevel >= 4, druidLevel >= 4)'
   spells:
-    - calm animals
-    - antilife shell
-    - hold animal
-    - animal shapes
-    - dominate animal
-    - summon nature's ally viii
-    - summon nature's ally iv
-    - shapechange
-    - beast shape iii
+    - Calm Animals
+    - Antilife Shell
+    - Hold Animal
+    - Animal Shapes
+    - Dominate Animal
+    - Summon Nature's Ally VIII
+    - Summon Nature's Ally IV
+    - Shapechange
+    - Beast Shape III
   subDomains:
     - id: Feather
       name: 飞羽
@@ -97,9 +97,9 @@
           replace:
             - Speak with Animals
       spells:
-        - feather fall
-        - fly
-        - fly mass apg
+        - Feather Fall
+        - Fly
+        - 'Fly, Mass'
       desc: 将飞行加入你的本职技能。每当你施放一个让你获得飞行速度的法术时，你的灵活性提高一个等级（最高到完美）。
     - id: Fur
       name: 毛兽
@@ -113,8 +113,8 @@
           replace:
             - Speak with Animals
       spells:
-        - magic fang
-        - ibeast shape i
+        - Magic Fang
+        - Beast Shape I
   druid: true
 - id: Artifice
   name: 手艺
@@ -134,15 +134,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - animate rope
-    - major creation
-    - wood shape
-    - wall of iron
-    - stone shape
-    - statue
-    - minor creation
-    - prismatic sphere
-    - fabricate
+    - Animate Rope
+    - Major Creation
+    - Wood Shape
+    - Wall of Iron
+    - Stone Shape
+    - Statue
+    - Minor Creation
+    - Prismatic Sphere
+    - Fabricate
   subDomains:
     - id: Construct
       name: 构装
@@ -157,8 +157,8 @@
           replace:
             - Dancing Weapons
       spells:
-        - limited wish
-        - polymorph any object
+        - Limited Wish
+        - Polymorph Any Object
     - id: Toil
       name: 疲累
       powers:
@@ -172,9 +172,9 @@
           replace:
             - Dancing Weapons
       spells:
-        - command
-        - waves of fatigue
-        - waves of exhaustion
+        - Command
+        - Waves of Fatigue
+        - Waves of Exhaustion
 - id: Chaos
   name: 混乱
   desc: 以你的手为武器注入混乱的生命，并且你得意于所有事物的无序状态。
@@ -193,15 +193,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - protection from law
-    - animate objects
-    - align weapon
-    - word of chaos
-    - magic circle against law
-    - cloak of chaos
-    - chaos hammer
-    - summon monster ix
-    - dispel law
+    - Protection from Law
+    - Animate Objects
+    - Align Weapon
+    - Word of Chaos
+    - Magic Circle against Law
+    - Cloak of Chaos
+    - Chaos Hammer
+    - Summon Monster IX
+    - Dispel Law
   subDomains:
     - id: Azata
       name: 爱塔
@@ -215,9 +215,9 @@
           replace:
             - Touch of Chaos
       spells:
-        - expeditious retreat
-        - fly
-        - planar ally
+        - Expeditious Retreat
+        - Fly
+        - Planar Ally
     - id: Demon
       name: 恶魔
       powers:
@@ -230,9 +230,9 @@
           replace:
             - Touch of Chaos
       spells:
-        - doom
-        - rage
-        - planar ally
+        - Doom
+        - Rage
+        - Planar Ally
     - id: Protean
       name: 星灵
       powers:
@@ -246,9 +246,9 @@
           replace:
             - Chaos Blade
       spells:
-        - confusionlesser
-        - displacement
-        - planar ally
+        - 'Confusion, Lesser'
+        - Displacement
+        - Planar Ally
     - id: Revelry
       name: 狂欢
       powers:
@@ -262,10 +262,10 @@
           replace:
             - Chaos Blade
       spells:
-        - hideous laughter
-        - good hope
-        - heroes' feast
-        - irresistible dance
+        - Hideous Laughter
+        - Good Hope
+        - Heroes' Feast
+        - Irresistible Dance
     - id: Entropy
       name: 熵
       powers:
@@ -279,10 +279,10 @@
           replace:
             - Chaos Blade
       spells:
-        - entropic shield
-        - dispel magic
-        - confusion
-        - destruction
+        - Entropic Shield
+        - Dispel Magic
+        - Confusion
+        - Destruction
     - id: Whimsy
       name: 滑稽领域
       powers:
@@ -296,9 +296,9 @@
           replace:
             - Chaos Blade
       spells:
-        - hideous laughter
-        - confusion
-        - ' cloak of dreamsapg'
+        - Hideous Laughter
+        - Confusion
+        - Cloak of Dreams
 - id: Charm
   name: 魅惑
   desc: '你能用触摸和微笑来阻挡和迷惑敌人, 你的美丽和优雅是天赐的。'
@@ -317,15 +317,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - charm person
-    - geas/quest
-    - calm emotions
-    - insanity
-    - suggestion
-    - demand
-    - heroism
-    - dominate monster
-    - charm monster
+    - Charm Person
+    - Geas/Quest
+    - Calm Emotions
+    - Insanity
+    - Suggestion
+    - Demand
+    - Heroism
+    - Dominate Monster
+    - Charm Monster
   subDomains:
     - id: Love
       name: 爱慕
@@ -339,8 +339,8 @@
           replace:
             - Dazing Touch
       spells:
-        - enthrall
-        - euphoric tranquility apg
+        - Enthrall
+        - Euphoric Tranquility
     - id: Lust
       name: 情欲
       powers:
@@ -354,8 +354,8 @@
           replace:
             - Charming Smile
       spells:
-        - touch of idiocy
-        - confusion
+        - Touch of Idiocy
+        - Confusion
 - id: Community
   name: 团队
   desc: 你的触摸能治疗伤害，你的风采使人团结，加强彼此情感的联系。
@@ -374,15 +374,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - bless
-    - heroes' feast
-    - shield other
-    - refuge
-    - prayer
-    - mass cure critical wounds
-    - imbue with spell ability
-    - miracle
-    - telepathic bond
+    - Bless
+    - Heroes' Feast
+    - Shield Other
+    - Refuge
+    - Prayer
+    - 'Cure Critical Wounds, Mass'
+    - Imbue with Spell Ability
+    - Miracle
+    - Telepathic Bond
   subDomains:
     - id: Family
       name: 家族
@@ -396,8 +396,8 @@
           replace:
             - Calming Touch
       spells:
-        - calm emotions
-        - create food and water
+        - Calm Emotions
+        - Create Food and Water
     - id: Home
       name: 家园
       powers:
@@ -411,9 +411,9 @@
           replace:
             - Unity
       spells:
-        - alarm
-        - glyph of warding
-        - guards and wards
+        - Alarm
+        - Glyph of Warding
+        - Guards and Wards
     - id: Cooperation
       name: 协作
       powers:
@@ -426,9 +426,9 @@
           replace:
             - Unity
       spells:
-        - borrow skill
-        - share language
-        - coordinated effort
+        - Borrow Skill
+        - Share Language
+        - Coordinated Effort
 - id: Darkness
   name: 黑暗
   desc: 你操纵阴影和黑暗，另外你获得“盲斗”作为奖励专长。
@@ -447,15 +447,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - obscuring mist
-    - shadow walk
-    - blindness/deafness
-    - power word blind
-    - deeper darkness
-    - greater shadow evocation
-    - shadow conjuration
-    - shades
-    - summon monster vd3幽影
+    - Obscuring Mist
+    - Shadow Walk
+    - Blindness/Deafness
+    - Power Word Blind
+    - Deeper Darkness
+    - 'Shadow Evocation, Greater'
+    - Shadow Conjuration
+    - Shades
+    - Summon Monster V
   subDomains:
     - id: Loss
       name: 失却
@@ -470,9 +470,9 @@
           replace:
             - Eyes of Darkness
       spells:
-        - enervation
-        - modify memory
-        - energy drain
+        - Enervation
+        - Modify Memory
+        - Energy Drain
     - id: Night
       name: 暗夜
       powers:
@@ -485,8 +485,8 @@
           replace:
             - Touch of Darkness
       spells:
-        - sleep
-        - nightmare
+        - Sleep
+        - Nightmare
     - id: Moon
       name: 月
       powers:
@@ -500,9 +500,9 @@
           replace:
             - Eyes of Darkness
       spells:
-        - faerie fire
-        - moonstruckapg
-        - dream
+        - Faerie Fire
+        - Moonstruck
+        - Dream
 - id: Death
   name: 死亡
   desc: 你能用接触令活物流血，令死物安适。
@@ -521,15 +521,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - cause fear
-    - create undead
-    - death knell
-    - destruction
-    - animate dead
-    - create greater undead
-    - death ward
-    - wail of the banshee
-    - slay living
+    - Cause Fear
+    - Create Undead
+    - Death Knell
+    - Destruction
+    - Animate Dead
+    - Create Greater Undead
+    - Death Ward
+    - Wail of the Banshee
+    - Slay Living
   subDomains:
     - id: Murder
       name: 杀戮
@@ -544,9 +544,9 @@
           replace:
             - Death's Embrace
       spells:
-        - keen edge
-        - suffocation apg
-        - suffocationmass apg
+        - Keen Edge
+        - Suffocation
+        - 'Suffocation, Mass'
     - id: Undead
       name: 亡灵
       powers:
@@ -559,9 +559,9 @@
           replace:
             - Bleeding Touch
       spells:
-        - ghoul touch
-        - enervation
-        - energy drain
+        - Ghoul Touch
+        - Enervation
+        - Energy Drain
 - id: Destruction
   name: 毁灭
   desc: 你陶醉在毁灭和破坏中，能施展毁灭打击。
@@ -580,15 +580,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - true strike
-    - harm
-    - shatter
-    - disintegrate
-    - rage
-    - earthquake
-    - inflict critical wounds
-    - implosion
-    - shout
+    - True Strike
+    - Harm
+    - Shatter
+    - Disintegrate
+    - Rage
+    - Earthquake
+    - Inflict Critical Wounds
+    - Implosion
+    - Shout
   subDomains:
     - id: Catastrophe
       name: 天灾
@@ -603,9 +603,9 @@
           replace:
             - Destructive Aura
       spells:
-        - gust of wind
-        - call lightning
-        - control weather
+        - Gust of Wind
+        - Call Lightning
+        - Control Weather
     - id: Rage
       name: 狂暴
       powers:
@@ -619,8 +619,8 @@
           replace:
             - Destructive Aura
       spells:
-        - bull's strength
-        - moonstruck apg
+        - Bull's Strength
+        - Moonstruck
     - id: Torture
       name: 折磨
       powers:
@@ -633,9 +633,9 @@
           replace:
             - Destructive Smite
       spells:
-        - pain strikeapg
-        - symbol of pain
-        - demand
+        - Pain Strike
+        - Symbol of Pain
+        - Demand
 - id: Earth
   name: 土
   desc: 你能够操纵土、金属、石头，发射酸镖，和土系生物沟通。
@@ -654,15 +654,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6, druidLevel >= 6)'
   spells:
-    - magic stone
-    - stoneskin
-    - soften earth and stone
-    - elemental body iv
-    - stone shape
-    - earthquake
-    - spike stones
-    - elemental swarm
-    - wall of stone
+    - Magic Stone
+    - Stoneskin
+    - Soften Earth and Stone
+    - Elemental Body IV
+    - Stone Shape
+    - Earthquake
+    - Spike Stones
+    - Elemental Swarm
+    - Wall of Stone
   subDomains:
     - id: Caves
       name: 窟
@@ -677,9 +677,9 @@
           replace:
             - Acid Resistance
       spells:
-        - create pit apg
-        - spiked pit apg
-        - hungry pit apg
+        - Create Pit
+        - Spiked Pit
+        - Hungry Pit
     - id: Metal
       name: 铁
       powers:
@@ -692,9 +692,9 @@
           replace:
             - Acid Dart
       spells:
-        - heat metal
-        - wall of iron
-        - iron body
+        - Heat Metal
+        - Wall of Iron
+        - Iron Body
   druid: true
 - id: Evil
   name: 邪恶
@@ -714,15 +714,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - protection from good
-    - create undead
-    - align weapon
-    - blasphemy
-    - magic circle against good
-    - unholy aura
-    - unholy blight
-    - summon monster ix
-    - dispel good
+    - Protection from Good
+    - Create Undead
+    - Align Weapon
+    - Blasphemy
+    - Magic Circle against Good
+    - Unholy Aura
+    - Unholy Blight
+    - Summon Monster IX
+    - Dispel Good
   subDomains:
     - id: Daemon
       name: 邪魔
@@ -737,9 +737,9 @@
           replace:
             - Scythe of Evil
       spells:
-        - cause fear
-        - vampiric touch
-        - planar binding
+        - Cause Fear
+        - Vampiric Touch
+        - Planar Binding
     - id: Demon
       name: 恶魔
       powers:
@@ -752,9 +752,9 @@
           replace:
             - Touch of Evil
       spells:
-        - doom
-        - rage
-        - planar binding
+        - Doom
+        - Rage
+        - Planar Binding
     - id: Devil
       name: 魔鬼
       powers:
@@ -767,9 +767,9 @@
           replace:
             - Touch of Evil
       spells:
-        - command
-        - suggestion
-        - planar binding
+        - Command
+        - Suggestion
+        - Planar Binding
     - id: Fear Domain
       name: 恐惧
       powers:
@@ -783,9 +783,9 @@
           replace:
             - Scythe of Evil
       spells:
-        - cause fear
-        - scare
-        - fear
+        - Cause Fear
+        - Scare
+        - Fear
 - id: Fire
   name: 火
   desc: 你能够唤起火灾，命令火海来的生物，并且你不可燃。
@@ -804,15 +804,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6, druidLevel >= 6)'
   spells:
-    - burning hands
-    - fire seeds
-    - produce flame
-    - elemental body
-    - fireball
-    - incendiary cloud
-    - wall of fire
-    - elemental swarm
-    - fire shield
+    - Burning Hands
+    - Fire Seeds
+    - Produce Flame
+    - Elemental Body IV
+    - Fireball
+    - Incendiary Cloud
+    - Wall of Fire
+    - Elemental Swarm
+    - Fire Shield
   subDomains:
     - id: Ash
       name: 灰烬
@@ -827,8 +827,8 @@
           replace:
             - Fire Resistance
       spells:
-        - disintegrate
-        - fiery body apg
+        - Disintegrate
+        - Fiery Body
     - id: Smoke
       name: 烟幕
       powers:
@@ -841,8 +841,8 @@
           replace:
             - Fire Bolt
       spells:
-        - pyrotechnics
-        - stinking cloud
+        - Pyrotechnics
+        - Stinking Cloud
     - id: Arson
       name: 纵火
       powers:
@@ -855,9 +855,9 @@
           replace:
             - Fire Bolt
       spells:
-        - flaming sphere
-        - flame strike
-        - delayed blast fireball
+        - Flaming Sphere
+        - Flame Strike
+        - Delayed Blast Fireball
   druid: true
 - id: Glory
   name: 荣耀
@@ -877,15 +877,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - shield of faith
-    - undeath to death
-    - bless weapon
-    - holy sword
-    - searing light
-    - holy aura
-    - holy smite
-    - gate
-    - righteous might
+    - Shield of Faith
+    - Undeath to Death
+    - Bless Weapon
+    - Holy Sword
+    - Searing Light
+    - Holy Aura
+    - Holy Smite
+    - Gate
+    - Righteous Might
   subDomains:
     - id: Heroism
       name: 英勇
@@ -900,8 +900,8 @@
           replace:
             - Divine Presence
       spells:
-        - heroism
-        - heroism greater
+        - Heroism
+        - 'Heroism, Greater'
     - id: Honor
       name: 诚实
       powers:
@@ -914,8 +914,8 @@
           replace:
             - Touch of Glory
       spells:
-        - zone of truth
-        - geas/quest
+        - Zone of Truth
+        - Geas/Quest
 - id: Good
   name: 善良
   desc: 你能保证自己的身心都是纯好人。
@@ -934,15 +934,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - protection from evil
-    - blade barrier
-    - align weapon
-    - holy word
-    - magic circle against evil
-    - holy aura
-    - holy smite
-    - summon monster ix
-    - dispel evil
+    - Protection from Evil
+    - Blade Barrier
+    - Align Weapon
+    - Holy Word
+    - Magic Circle against Evil
+    - Holy Aura
+    - Holy Smite
+    - Summon Monster IX
+    - Dispel Evil
   subDomains:
     - id: Agathion
       name: 盖森
@@ -957,9 +957,9 @@
           replace:
             - Holy Lance
       spells:
-        - shield of faith
-        - tongues
-        - planar ally
+        - Shield of Faith
+        - Tongues
+        - Planar Ally
     - id: Archon
       name: 亚空
       powers:
@@ -973,9 +973,9 @@
           replace:
             - Holy Lance
       spells:
-        - divine favor
-        - prayer
-        - planar ally
+        - Divine Favor
+        - Prayer
+        - Planar Ally
     - id: Azata
       name: 爱塔
       powers:
@@ -988,9 +988,9 @@
           replace:
             - Touch of Good
       spells:
-        - expeditious retreat
-        - fly
-        - planar ally
+        - Expeditious Retreat
+        - Fly
+        - Planar Ally
     - id: Redumption
       name: 救赎
       powers:
@@ -1004,9 +1004,9 @@
           replace:
             - Holy Lance
       spells:
-        - qualm
-        - forced repentance
-        - atonement
+        - Qualm
+        - Forced Repentance
+        - Atonement
     - id: Friendship
       name: 友谊
       powers:
@@ -1019,8 +1019,8 @@
           replace:
             - Touch of Good
       spells:
-        - shield other
-        - ' telepathic bond'
+        - Shield Other
+        - Telepathic Bond
 - id: Healing
   name: 医疗
   desc: 你的轻抚能够驱走痛苦和死亡，而你的医疗魔法充满了强大的生机。
@@ -1039,15 +1039,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6)'
   spells:
-    - cure light wounds
-    - heal
-    - cure moderate wounds
-    - regenerate
-    - cure serious wounds
-    - mass cure critical wounds
-    - cure critical wounds
-    - mass heal
-    - breath of life
+    - Cure Light Wounds
+    - Heal
+    - Cure Moderate Wounds
+    - Regenerate
+    - Cure Serious Wounds
+    - 'Cure Critical Wounds, Mass'
+    - Cure Critical Wounds
+    - 'Heal, Mass'
+    - Breath of Life
   subDomains:
     - id: Restoration
       name: 复原
@@ -1061,9 +1061,9 @@
           replace:
             - Rebuke Death
       spells:
-        - remove disease
-        - neutralize poison
-        - break enchantment
+        - Remove Disease
+        - Neutralize Poison
+        - Break Enchantment
     - id: Resurrection
       name: 回生
       powers:
@@ -1077,9 +1077,9 @@
           replace:
             - Healer's Blessing
       spells:
-        - raise dead
-        - resurrection
-        - true resurrection
+        - Raise Dead
+        - Resurrection
+        - True Resurrection
 - id: Knowledge
   name: 知识
   desc: 你是通晓传说的智者。你可以额外将所有知识技能添加到你的职业技能列表中。
@@ -1098,15 +1098,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6)'
   spells:
-    - comprehend languages
-    - find the path
-    - detect thoughts
-    - legend lore
-    - speak with dead
-    - discern location
-    - divination
-    - foresight
-    - true seeing
+    - Comprehend Languages
+    - Find the Path
+    - Detect Thoughts
+    - Legend Lore
+    - Speak with Dead
+    - Discern Location
+    - Divination
+    - Foresight
+    - True Seeing
   subDomains:
     - id: Memory
       name: 记忆
@@ -1120,9 +1120,9 @@
           replace:
             - Lore Keeper
       spells:
-        - memory lapse apg
-        - modify memory
-        - moment of prescience
+        - Memory Lapse
+        - Modify Memory
+        - Moment of Prescience
     - id: Thought
       name: 思想
       powers:
@@ -1136,9 +1136,9 @@
           replace:
             - Remote Viewing
       spells:
-        - seek thoughts apg
-        - telepathic bond
-        - mind blank
+        - Seek Thoughts
+        - Telepathic Bond
+        - Mind Blank
 - id: Law
   name: 秩序
   desc: 你遵循绝对的秩序法则，并由此获得启迪。
@@ -1157,15 +1157,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - protection from chaos
-    - hold monster
-    - align weapon
-    - dictum
-    - magic circle against chaos
-    - shield of law
-    - order's wrath
-    - summon monster ix
-    - dispel chaos
+    - Protection from Chaos
+    - Hold Monster
+    - Align Weapon
+    - Dictum
+    - Magic Circle against Chaos
+    - Shield of Law
+    - Order's Wrath
+    - Summon Monster IX
+    - Dispel Chaos
   subDomains:
     - id: Archon
       name: 亚空
@@ -1180,9 +1180,9 @@
           replace:
             - Staff of Order
       spells:
-        - divine favor
-        - prayer
-        - planar ally
+        - Divine Favor
+        - Prayer
+        - Planar Ally
     - id: Devil
       name: 魔鬼
       powers:
@@ -1195,9 +1195,9 @@
           replace:
             - Touch of Law
       spells:
-        - command
-        - suggestion
-        - planar binding
+        - Command
+        - Suggestion
+        - Planar Binding
     - id: Inevitable
       name: 制裁
       powers:
@@ -1210,9 +1210,9 @@
           replace:
             - Touch of Law
       spells:
-        - command undead
-        - commandgreater
-        - planar binding
+        - Command Undead
+        - 'Command, Greater'
+        - Planar Binding
     - id: Judgment
       name: 审判
       powers:
@@ -1225,9 +1225,9 @@
           replace:
             - Touch of Law
       spells:
-        - castigate
-        - rebuke
-        - mark of justice
+        - Castigate
+        - Rebuke
+        - Mark of Justice
     - id: Loyalty
       name: 忠诚领域
       powers:
@@ -1240,8 +1240,8 @@
           replace:
             - Touch of Law
       spells:
-        - remove fear
-        - ' greater command'
+        - Remove Fear
+        - 'Command, Greater'
     - id: Slavery
       name: 奴役
       powers:
@@ -1255,9 +1255,9 @@
           replace:
             - Staff of Order
       spells:
-        - charm person
-        - dominate person
-        - ' binding'
+        - Charm Person
+        - Dominate Person
+        - Binding
     - id: Tyranny
       name: 暴政
       powers:
@@ -1271,9 +1271,9 @@
           replace:
             - Staff of Order
       spells:
-        - command
-        - bestow curse
-        - ' symbol of persuasion'
+        - Command
+        - Bestow Curse
+        - Symbol of Persuasion
 - id: Liberation
   name: 解放
   desc: 你拥有自由的灵魂，与所有试图奴役与压迫的人为敌。
@@ -1292,15 +1292,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - remove fear
-    - greater dispel magic
-    - remove paralysis
-    - refuge
-    - remove curse
-    - mind blank
-    - freedom of movement
-    - freedom
-    - break enchantment
+    - Remove Fear
+    - 'Dispel Magic, Greater'
+    - Remove Paralysis
+    - Refuge
+    - Remove Curse
+    - Mind Blank
+    - Freedom of Movement
+    - Freedom
+    - Break Enchantment
   subDomains:
     - id: Freedom
       name: 权
@@ -1314,8 +1314,8 @@
           replace:
             - Liberation
       spells:
-        - sanctuary
-        - plane shift
+        - Sanctuary
+        - Plane Shift
     - id: Revolution
       name: 革命
       powers:
@@ -1329,8 +1329,8 @@
           replace:
             - Freedom's Call
       spells:
-        - enthrall
-        - symbol of persuasion
+        - Enthrall
+        - Symbol of Persuasion
 - id: Luck
   name: 机运
   desc: 你整个人都充满了运气，你的存在就能带来好运。
@@ -1349,15 +1349,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6)'
   spells:
-    - true strike
-    - mislead
-    - aid
-    - spell turning
-    - protection from energy
-    - moment of prescience
-    - freedom of movement
-    - miracle
-    - break enchantment
+    - True Strike
+    - Mislead
+    - Aid
+    - Spell Turning
+    - Protection from Energy
+    - Moment of Prescience
+    - Freedom of Movement
+    - Miracle
+    - Break Enchantment
   subDomains:
     - id: Curse
       name: 诅咒
@@ -1371,9 +1371,9 @@
           replace:
             - Bit of Luck
       spells:
-        - bane
-        - bestow curse
-        - eyebite
+        - Bane
+        - Bestow Curse
+        - Eyebite
     - id: Fate
       name: 天命
       powers:
@@ -1387,8 +1387,8 @@
           replace:
             - Good Fortune
       spells:
-        - augury
-        - borrow fortune apg
+        - Augury
+        - Borrow Fortune
     - id: Imagination
       name: 想像
       powers:
@@ -1402,10 +1402,10 @@
           replace:
             - Good Fortune
       spells:
-        - silent image
-        - minor image
-        - major image
-        - dream
+        - Silent Image
+        - Minor Image
+        - Major Image
+        - Dream
 - id: Madness
   name: 狂乱
   desc: 潜藏在自身深处的狂乱包围了你，将其释放出来可令你的敌人疯狂或是进行特定能力献祭。
@@ -1424,15 +1424,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - lesser confusion
-    - phantasmal killer
-    - touch of idiocy
-    - insanity
-    - rage
-    - scintillating pattern
-    - confusion
-    - weird
-    - nightmare
+    - 'Confusion, Lesser'
+    - Phantasmal Killer
+    - Touch of Idiocy
+    - Insanity
+    - Rage
+    - Scintillating Pattern
+    - Confusion
+    - Weird
+    - Nightmare
   subDomains:
     - id: Insanity
       name: 疯狂
@@ -1446,8 +1446,8 @@
           replace:
             - Vision of Madness
       spells:
-        - moonstruck apg
-        - phantasmal web apg
+        - Moonstruck
+        - Phantasmal Web
     - id: Nightmare
       name: 梦魇
       powers:
@@ -1460,8 +1460,8 @@
           replace:
             - Vision of Madness
       spells:
-        - phantasmal killer
-        - cloak of dreams apg
+        - Phantasmal Killer
+        - Cloak of Dreams
 - id: Magic
   name: 魔法
   desc: 你是一位关于一切神秘之物的真正的研究者，能够看到魔法本质中的神性。
@@ -1480,15 +1480,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - identify
-    - antimagic field
-    - magic mouth
-    - spell turning
-    - dispel magic
-    - protection from spells
-    - imbue with spell ability
-    - mage's disjunction
-    - spell resistance
+    - Identify
+    - Antimagic Field
+    - Magic Mouth
+    - Spell Turning
+    - Dispel Magic
+    - Protection from Spells
+    - Imbue with Spell Ability
+    - Mage's Disjunction
+    - Spell Resistance
   subDomains:
     - id: Arcane
       name: 奥秘
@@ -1502,9 +1502,9 @@
           replace:
             - Hand of the Acolyte
       spells:
-        - magic aura
-        - arcane eye
-        - analyze dweomer
+        - Magic Aura
+        - Arcane Eye
+        - Analyze Dweomer
     - id: Divine
       name: 神力
       powers:
@@ -1517,10 +1517,10 @@
           replace:
             - Hand of the Acolyte
       spells:
-        - bless water
-        - cleanse apg
-        - resurrection
-        - miracle
+        - Bless Water
+        - Cleanse
+        - Resurrection
+        - Miracle
 - id: Nobility
   name: 高贵
   desc: 你是杰出的领袖，鼓舞着所有追随着你的信仰和教导的人。
@@ -1546,15 +1546,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - divine favor
-    - geas/quest
-    - enthrall
-    - repulsion
-    - magic vestment
-    - demand
-    - discern lies
-    - storm of vengeance
-    - greater command
+    - Divine Favor
+    - Geas/Quest
+    - Enthrall
+    - Repulsion
+    - Magic Vestment
+    - Demand
+    - Discern Lies
+    - Storm of Vengeance
+    - 'Command, Greater'
   subDomains:
     - id: Leadership
       name: 领导
@@ -1568,9 +1568,9 @@
           replace:
             - Inspiring Word
       spells:
-        - bless
-        - prayer
-        - brilliant inspiration apg
+        - Bless
+        - Prayer
+        - Brilliant Inspiration
     - id: Martyr
       name: 殉难
       powers:
@@ -1584,8 +1584,8 @@
           replace:
             - Leadership
       spells:
-        - shield other
-        - sacrificial oath apg
+        - Shield Other
+        - Sacrificial Oath
 - id: Plant
   name: 植物
   desc: 你得到植物的庇护，能够生长出防御用的棘刺，也能够与植物沟通交流。
@@ -1604,15 +1604,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6, druidLevel >= 6)'
   spells:
-    - entangle
-    - repel wood
-    - barkskin
-    - animate plants
-    - plant growth
-    - control plants
-    - command plants
-    - shambler
-    - wall of thorns
+    - Entangle
+    - Repel Wood
+    - Barkskin
+    - Animate Plants
+    - Plant Growth
+    - Control Plants
+    - Command Plants
+    - Shambler
+    - Wall of Thorns
   subDomains:
     - id: Decay
       name: 腐朽
@@ -1627,9 +1627,9 @@
           replace:
             - Bramble Armor
       spells:
-        - contagion
-        - poison
-        - harm
+        - Contagion
+        - Poison
+        - Harm
     - id: Growth
       name: 滋长
       powers:
@@ -1642,8 +1642,8 @@
           replace:
             - Wooden Fist
       spells:
-        - enlarge person
-        - righteous might
+        - Enlarge Person
+        - Righteous Might
   druid: true
 - id: Protection
   name: 保护
@@ -1663,15 +1663,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - sanctuary
-    - antimagic field
-    - shield other
-    - repulsion
-    - protection from energy
-    - mind blank
-    - spell immunity
-    - prismatic sphere
-    - spell resistance
+    - Sanctuary
+    - Antimagic Field
+    - Shield Other
+    - Repulsion
+    - Protection from Energy
+    - Mind Blank
+    - Spell Immunity
+    - Prismatic Sphere
+    - Spell Resistance
   subDomains:
     - id: Defense
       name: 防御
@@ -1685,9 +1685,9 @@
           replace:
             - Resistant Touch
       spells:
-        - shield
-        - barkskin
-        - deflection apg
+        - Shield
+        - Barkskin
+        - Deflection
     - id: Purity
       name: 纯净
       powers:
@@ -1701,9 +1701,12 @@
           replace:
             - Aura of Protection
       spells:
-        - protection from chaos/evil/good/law
-        - remove blindness/deafness
-        - atonement
+        - Protection from Chaos
+        - Protection from Evil
+        - Protection from Good
+        - Protection from Law
+        - Remove Blindness/Deafness
+        - Atonement
 - id: Repose
   name: 安眠
   desc: 你将死亡视作最终的休息，作为好好渡过生命时光的报偿，而非什么需要恐惧的东西。而污秽的不死生物是对你珍重事物的玷污。
@@ -1722,15 +1725,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - deathwatch
-    - undeath to death
-    - gentle repose
-    - destruction
-    - speak with dead
-    - waves of exhaustion
-    - death ward
-    - wail of the banshee
-    - slay living
+    - Deathwatch
+    - Undeath to Death
+    - Gentle Repose
+    - Destruction
+    - Speak with Dead
+    - Waves of Exhaustion
+    - Death Ward
+    - Wail of the Banshee
+    - Slay Living
   subDomains:
     - id: Ancestors
       name: 先祖
@@ -1745,8 +1748,8 @@
           replace:
             - Ward Against Death
       spells:
-        - rest eternal apg
-        - geas/quest
+        - Rest Eternal
+        - Geas/Quest
     - id: Souls
       name: 灵魂
       powers:
@@ -1759,9 +1762,9 @@
           replace:
             - Gentle Rest
       spells:
-        - animate dead
-        - antilife shield
-        - trap the soul
+        - Animate Dead
+        - Antilife Shell
+        - Trap the Soul
 - id: Rune
   name: 符文
   desc: 你在怪异的符文中找到了强力的魔法。你获得“法术专攻”作为额外专长。
@@ -1781,15 +1784,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - erase
-    - greater glyph of warding
-    - secret page
-    - instant summons
-    - glyph of warding
-    - symbol of death
-    - explosive runes
-    - teleportation circle
-    - lesser planar binding
+    - Erase
+    - 'Glyph of Warding, Greater'
+    - Secret Page
+    - Instant Summons
+    - Glyph of Warding
+    - Symbol of Death
+    - Explosive Runes
+    - Teleportation Circle
+    - 'Planar Binding, Lesser'
   subDomains:
     - id: Language
       name: 语言
@@ -1804,10 +1807,10 @@
           replace:
             - Spell Rune
       spells:
-        - comprehend languages
-        - share language apg
-        - tongues
-        - telepathic bond
+        - Comprehend Languages
+        - Share Language
+        - Tongues
+        - Telepathic Bond
     - id: Wards
       name: 守护
       powers:
@@ -1821,9 +1824,9 @@
           replace:
             - Spell Rune
       spells:
-        - arcane lock
-        - dimensional anchor
-        - guards and wards
+        - Arcane Lock
+        - Dimensional Anchor
+        - Guards and Wards
 - id: Scalykind
   name: 鳞类
   desc: 你是爬虫类的真神，只凭一撇便可令弱小的生物昏厥。
@@ -1842,15 +1845,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 4, inquisitorLevel >= 4)'
   spells:
-    - magic fang
-    - eyebite
-    - animal trance
-    - creeping doom
-    - greater magic fang
-    - animal shapes
-    - poison
-    - shapechange
-    - animal growth
+    - Magic Fang
+    - Eyebite
+    - Animal Trance
+    - Creeping Doom
+    - 'Magic Fang, Greater'
+    - Animal Shapes
+    - Poison
+    - Shapechange
+    - Animal Growth
   subDomains:
     - id: Dragon
       name: 龙
@@ -1865,9 +1868,9 @@
           replace:
             - Serpent Companion
       spells:
-        - draconic reservoir
-        - draljon's breath
-        - ' iform of the dragon i'
+        - Draconic Reservoir
+        - Dragon's Breath
+        - Form of the Dragon I
     - id: Saurian
       name: 蜥类
       powers:
@@ -1881,9 +1884,9 @@
           replace:
             - Serpent Companion
       spells:
-        - summon natures ally iv
-        - beast shape iii
-        - summon natures ally vii
+        - Summon Nature's Ally IV
+        - Beast Shape III
+        - Summon Nature's Ally VII
     - id: Venom
       name: 毒液
       powers:
@@ -1896,9 +1899,9 @@
           replace:
             - Venemous Stare
       spells:
-        - pernicious poisonum
-        - beast shape iii
-        - cloudkill
+        - Pernicious Poison
+        - Beast Shape III
+        - Cloudkill
 - id: Strength
   name: 力量
   desc: 大块头有大智慧——你的信仰为你带来不可思议的力量和能力。
@@ -1917,15 +1920,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - enlarge person
-    - stoneskin
-    - bull's strength
-    - grasping hand
-    - magic vestment
-    - clenched fist
-    - spell immunity
-    - crushing hand
-    - righteous might
+    - Enlarge Person
+    - Stoneskin
+    - Bull's Strength
+    - Grasping Hand
+    - Magic Vestment
+    - Clenched Fist
+    - Spell Immunity
+    - Crushing Hand
+    - Righteous Might
   subDomains:
     - id: Ferocity
       name: 凶猛
@@ -1939,8 +1942,8 @@
           replace:
             - Strength Surge
       spells:
-        - rage
-        - bull's strength mass
+        - Rage
+        - 'Bull''s Strength, Mass'
     - id: Resolve
       name: 决意
       powers:
@@ -1954,8 +1957,8 @@
           replace:
             - Might of the Gods
       spells:
-        - bless
-        - heroes' feast
+        - Bless
+        - Heroes' Feast
 - id: Sun
   name: 太阳
   desc: 你在灼目的太阳中见到了纯净真理之光，并能以它的祝福或愤怒帮助你。
@@ -1974,15 +1977,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - endure elements
-    - fire seeds
-    - heat metal
-    - sunbeam
-    - searing light
-    - sunburst
-    - fire shield
-    - prismatic sphere
-    - flame strike
+    - Endure Elements
+    - Fire Seeds
+    - Heat Metal
+    - Sunbeam
+    - Searing Light
+    - Sunburst
+    - Fire Shield
+    - Prismatic Sphere
+    - Flame Strike
   subDomains:
     - id: Day
       name: 白昼
@@ -1997,8 +2000,8 @@
           replace:
             - Nimbus of Light
       spells:
-        - continual flame
-        - daylight
+        - Continual Flame
+        - Daylight
     - id: Light
       name: 光明
       powers:
@@ -2011,8 +2014,8 @@
           replace:
             - Sun's Blessing
       spells:
-        - faerie fire
-        - daylight
+        - Faerie Fire
+        - Daylight
     - id: Revelation
       name: 启示
       powers:
@@ -2025,10 +2028,10 @@
           replace:
             - Sun's Blessing
       spells:
-        - detect secret doors
-        - see invisibility
-        - banish seeming
-        - true seeing
+        - Detect Secret Doors
+        - See Invisibility
+        - Banish Seeming
+        - True Seeing
 - id: Travel
   name: 旅行
   desc: 你是一名探险家，在旅行中找到简单的快乐，它是脚、魔法、神奇的运输工具。你的基本速度增加10英尺。
@@ -2047,15 +2050,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - longstrider
-    - find the path
-    - locate object
-    - greater teleport
-    - fly
-    - phase door
-    - dimension door
-    - astral projection
-    - teleport
+    - Longstrider
+    - Find the Path
+    - Locate Object
+    - 'Teleport, Greater'
+    - Fly
+    - Phase Door
+    - Dimension Door
+    - Astral Projection
+    - Teleport
   subDomains:
     - id: Exploration
       name: 探索
@@ -2069,9 +2072,9 @@
           replace:
             - Agile Feet
       spells:
-        - expeditious retreat
-        - locate creature
-        - world wave apg
+        - Expeditious Retreat
+        - Locate Creature
+        - World Wave
     - id: Trade
       name: 交易
       powers:
@@ -2084,9 +2087,9 @@
           replace:
             - Agile Feet
       spells:
-        - floating disk
-        - overland flight
-        - gate
+        - Floating Disk
+        - Overland Flight
+        - Gate
 - id: Trickery
   name: 诡术
   desc: 你是幻象和骗术的大师，唬骗、易容和潜行是你的本职技能。
@@ -2105,15 +2108,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - disguise self
-    - mislead
-    - invisibility
-    - screen
-    - nondetection
-    - mass invisibility
-    - confusion
-    - time stop
-    - false vision
+    - Disguise Self
+    - Mislead
+    - Invisibility
+    - Screen
+    - Nondetection
+    - 'Invisibility, Mass'
+    - Confusion
+    - Time Stop
+    - False Vision
   subDomains:
     - id: Deception
       name: 欺骗
@@ -2127,8 +2130,8 @@
           replace:
             - Copycat
       spells:
-        - mirror image
-        - project image
+        - Mirror Image
+        - Project Image
     - id: Thievery
       name: 盗窃
       powers:
@@ -2142,8 +2145,8 @@
           replace:
             - Master's Illusion
       spells:
-        - locate object
-        - ethereal jaunt
+        - Locate Object
+        - Ethereal Jaunt
 - id: Void
   name: 虚空
   desc: 你可以从翱翔于星界，唤来寒冷的黑暗，穿梭于异界之中，或召唤更为强大的生物。
@@ -2162,15 +2165,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - feather fall
-    - planar binding
-    - levitate
-    - reverse gravity
-    - fly
-    - greater planar binding
-    - lesser planar binding
-    - interplanetary teleport
-    - overland flight
+    - Feather Fall
+    - Planar Binding
+    - Levitate
+    - Reverse Gravity
+    - Fly
+    - 'Planar Binding, Greater'
+    - 'Planar Binding, Lesser'
+    - Interplanetary Teleport
+    - Overland Flight
   subDomains:
     - id: Dark Tapestry
       name: 异幕
@@ -2184,9 +2187,9 @@
           replace:
             - Guarded Mind
       spells:
-        - summon monster ii
-        - summon monster v
-        - insanity
+        - Summon Monster II
+        - Summon Monster V
+        - Insanity
     - id: Isolation
       name: 孤寂
       powers:
@@ -2199,9 +2202,9 @@
           replace:
             - Part the Veil
       spells:
-        - crushing despair
-        - wall of force
-        - prismatic wall
+        - Crushing Despair
+        - Wall of Force
+        - Prismatic Wall
     - id: Stars
       name: 星辰
       powers:
@@ -2214,9 +2217,9 @@
           replace:
             - Part the Veil
       spells:
-        - hypnotic pattern
-        - sunbeam
-        - meteor swarm
+        - Hypnotic Pattern
+        - Sunbeam
+        - Meteor Swarm
 - id: War
   name: 战争
   desc: 你是你所信仰神祇的神圣战士，自愿并且时刻准备着为保卫你的信仰而战。
@@ -2235,15 +2238,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8)'
   spells:
-    - magic weapon
-    - blade barrier
-    - spiritual weapon
-    - power word blind
-    - magic vestment
-    - power word stun
-    - divine power
-    - power word kill
-    - flame strike
+    - Magic Weapon
+    - Blade Barrier
+    - Spiritual Weapon
+    - Power Word Blind
+    - Magic Vestment
+    - Power Word Stun
+    - Divine Power
+    - Power Word Kill
+    - Flame Strike
   subDomains:
     - id: Blood
       name: 鲜血
@@ -2258,9 +2261,9 @@
           replace:
             - Weapon Master
       spells:
-        - vampiric touch
-        - wall of thorns
-        - inflict serious wounds mass
+        - Vampiric Touch
+        - Wall of Thorns
+        - 'Inflict Serious Wounds, Mass'
     - id: Tactics
       name: 战术
       powers:
@@ -2273,9 +2276,9 @@
           replace:
             - Battle Rage
       spells:
-        - aid
-        - command greater
-        - planar ally greater
+        - Aid
+        - 'Command, Greater'
+        - 'Planar Ally, Greater'
 - id: Water
   name: 水
   desc: 你能够熟练掌控水、雾和冰，召唤水的生物，以及抵抗寒冷。
@@ -2294,15 +2297,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6, druidLevel >= 6)'
   spells:
-    - obscuring mist
-    - cone of cold
-    - fog cloud
-    - elemental body iv
-    - water breathing
-    - horrid wilting
-    - control water
-    - elemental swarm
-    - ice storm
+    - Obscuring Mist
+    - Cone of Cold
+    - Fog Cloud
+    - Elemental Body IV
+    - Water Breathing
+    - Horrid Wilting
+    - Control Water
+    - Elemental Swarm
+    - Ice Storm
   subDomains:
     - id: Ice
       name: 冰
@@ -2317,8 +2320,8 @@
           replace:
             - Cold Resistance
       spells:
-        - freezing sphere
-        - polar ray
+        - Freezing Sphere
+        - Polar Ray
     - id: Oceans
       name: 海
       powers:
@@ -2331,9 +2334,9 @@
           replace:
             - Icicle
       spells:
-        - slipstream apg
-        - water walk
-        - tsunami apg
+        - Slipstream
+        - Water Walk
+        - Tsunami
     - id: Flotsam
       name: 漂浮
       powers:
@@ -2347,9 +2350,9 @@
           replace:
             - Cold Resistance
       spells:
-        - make whole
-        - major creation
-        - animate object
+        - Make Whole
+        - Major Creation
+        - Animate Objects
     - id: Rivers
       name: 河流
       powers:
@@ -2362,10 +2365,10 @@
           replace:
             - Cold Resistance
       spells:
-        - hydraulic pushapg
-        - slipstreamapg
-        - elemental body ii
-        - fluid formapg
+        - Hydraulic Push
+        - Slipstream
+        - Elemental Body II
+        - Fluid Form
   druid: true
 - id: Weather
   name: 天气
@@ -2385,15 +2388,15 @@
         - type: classFeatSource
       effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8, druidLevel >= 8)'
   spells:
-    - obscuring mist
-    - control winds
-    - fog cloud
-    - control weather
-    - call lightning
-    - whirlwind
-    - sleet storm
-    - storm of vengeance
-    - ice storm
+    - Obscuring Mist
+    - Control Winds
+    - Fog Cloud
+    - Control Weather
+    - Call Lightning
+    - Whirlwind
+    - Sleet Storm
+    - Storm of Vengeance
+    - Ice Storm
   subDomains:
     - id: Seasons
       name: 季节
@@ -2407,9 +2410,9 @@
           replace:
             - Storm Burst
       spells:
-        - goodberry
-        - blight
-        - sunburst
+        - Goodberry
+        - Blight
+        - Sunburst
     - id: Storms
       name: 风暴
       powers:
@@ -2423,6 +2426,6 @@
           replace:
             - Lightning Lord
       spells:
-        - call lightning storm
-        - sirocco apg
+        - Call Lightning Storm
+        - Sirocco
   druid: true

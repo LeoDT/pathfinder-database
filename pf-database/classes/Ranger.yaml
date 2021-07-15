@@ -1,0 +1,326 @@
+id: Ranger
+name: 游侠
+desc:
+  描述: 为狩猎的刺激添加作料的，只有掠食者与被掠食者。或是斥候，或是追踪者，或是赏金猎人，游侠们拥有同样的特点：他们精于使用特定的武器战斗，长于追踪最难以捉摸的猎物，并且善于击败种类繁多的猎物。知识丰富，富于耐心，技巧卓越的猎手们，这些游侠追猎人类，野兽，甚至怪物，在掠食者之道中积累见识，精于应对各种环境，并拥有致命的武力。他们中的一些追捕食人生物以保护家园，另一些则追寻更加刺激的猎物——甚至是自己同类的逃亡者。
+  角色定位: 游侠是熟练的伏击者，无论近战、远袭都能以极富技巧的舞步在战场上进退自如。他们的能力可以对特定类型对手造成可怖伤害，而综合技术在对阵各种敌人时均极具价值。
+
+alignment: []
+hd: 10
+classSkills:
+  - climb
+  - craft
+  - handle animal
+  - heal
+  - intimidate
+  - knowledge (dungeoneering)
+  - knowledge (geography)
+  - knowledge (nature)
+  - perception
+  - profession
+  - ride
+  - spellcraft
+  - stealth
+  - survival
+  - swim
+skillPoints: 6
+
+feats:
+  - id: Ranger Weapon and Armor Proficiency
+    name: 武器和防具擅长
+    desc: 游侠擅长所有简易和军用武器，以及所有盔甲（轻型，中型）和盾牌（除了塔盾）。
+  - id: Favored Enemy
+    name: 宿敌
+    type: ex
+    desc: 1级时，游侠从宿敌列表中选择一种生物类型。他在针对该类型生物的唬骗、知识、察觉、察言观色和生存检定+2。此外，他在针对该类型生物的攻击和伤害检定也+2。游侠在未受训的情况下也可以使用知识技能来辨识宿敌生物。在5级和之后每5级（10，15和20级），游侠可以额外选择一种宿敌。此外，每次增加宿敌时，可以指定将针对任意一种宿敌的检定加值再+2（如果愿意的话，也可指定刚刚选择的宿敌）。如果游侠选择类人生物或者异界生物作为宿敌，那么他必须选择生物的亚种，如下表所示（注意也有其他的类人生物亚种可供选择，下表中所列的仅仅是最常见的部分）。如果某种特定生物同时属于两类宿敌类型，游侠的加值无法叠加，只能使用较高的值作为加值。
+    grow:
+      - level: 1
+        id: 1st Favored Enemy
+        name: 第一宿敌
+      - level: 5
+        id: 2nd Favored Enemy
+        name: 第二宿敌
+      - level: 10
+        id: 3rd Favored Enemy
+        name: 第三宿敌
+      - level: 15
+        id: 4th Favored Enemy
+        name: 第四宿敌
+      - level: 20
+        id: 5th Favored Enemy
+        name: 第五宿敌
+  - id: Track
+    name: 追踪
+    type: ex
+    desc: 游侠在识别痕迹时将游侠等级的一半（最少为1）加到生存检定上。
+  - id: Wild Empathy
+    name: 野性认同
+    type: ex
+    desc: 游侠可以改善动物的初始态度。该能力类似在改善人的态度时所做的交涉检定。游侠进行d20检定，再加上他的游侠等级和魅力修正来决定【野性认同】检定的结果。一般家畜开始时的态度是冷淡，野外生物则通常是不友善。要使用野性认同，游侠和动物必须在普通可视环境下彼此相距30尺以内。一般通过这种方式影响一个动物需要1分钟时间，不过和影响人类似，所需的时间可能会变长或变短。游侠也可以通过此能力影响一个智力为1或2的魔法兽, 不过在检定中要受到-4减值。
+  - id: Combat Style Feat
+    name: 战斗流派专长
+    type: ex
+    desc: |
+      在2级时，游侠必须在两种战斗流派中选择一种进行修习
+      如果游侠选择了箭术，他在获得战斗流派专长能力时可以从如下专长中选择：远距射击，近距射击，精准射击和快速射击。在6级时，精通精准射击和多重射击加入列表中。10级时，精确瞄准（Pinpoint Targeting）和移动射击加入列表中。
+      如果游侠选择了双武器格斗，他在获得战斗流派专长能力时可以从如下专长中选择：双重切割（Double Slice），精通盾击，即时备战和双武器格斗。在6级时，精通双武器格斗和双武器防御加入列表中，10级时，高等双武器格斗和双武器撕裂（Two-Weapon Rend）加入列表中。
+      【战斗流派专长】带来的收益只有在游侠穿戴轻型，中型盔甲或不穿甲时才有效。在穿戴重甲时，游侠失去所有的战斗流派专长。战斗流派一经选择，便无法改变。
+    grow:
+      - level: 2
+        id: Combat Style Feat 1
+        name: 战斗流派专长 1
+      - level: 6
+        id: Combat Style Feat 2
+        name: 战斗流派专长 2
+      - level: 10
+        id: Combat Style Feat 3
+        name: 战斗流派专长 3
+      - level: 14
+        id: Combat Style Feat 4
+        name: 战斗流派专长 4
+      - level: 18
+        id: Combat Style Feat 5
+        name: 战斗流派专长 5
+  - id: Endurance
+    name: 坚忍
+    desc: 游侠在3级时获得“坚忍”作为奖励专长。
+  - id: Favored Terrain
+    name: 偏好地形
+    type: ex
+    desc: 3级时，游侠可以从偏好地形列表中选择一种地形。处在该类地形时，游侠的先攻检定和知识（地理）、察觉、隐匿和生存检定+2。游侠在其偏好地形上旅行时不会留下任何痕迹并且无法被追踪（如果他刻意想要留下痕迹也是可以的）。在8级时和之后每5级，游侠可以额外选择一种偏好地形。此外，每次增加偏好地形时，可以指定将针对任意一种偏好地形的检定加值再+2（如果愿意的话，也可指定刚刚选择的偏好地形）。如果某种特定地形同时属于多种偏好地形，游侠的加值无法叠加，只能使用较高的值作为加值。
+    grow:
+      - level: 3
+        id: 1st Favored Terrain
+        name: 第一偏好地形
+      - level: 8
+        id: 2nd Favored Terrain
+        name: 第二偏好地形
+      - level: 13
+        id: 3rd Favored Terrain
+        name: 第三偏好地形
+      - level: 18
+        id: 4th Favored Terrain
+        name: 第四偏好地形
+  - id: Hunter's Bond
+    name: 猎手羁绊
+    type: ex
+    desc: |
+      4级时，游侠与他的狩猎伙伴产生了一种羁绊，可以两种不同的方式之一体现。
+      其一为游侠与其队友的羁绊。此羁绊让他以移动动作给予30尺之内能看见或听到他的盟友，针对单一目标时等同其本身针对该宿敌的一半加值，持续轮数为游侠的感知调整值（至少为1）。这一加值不与游侠队友的宿敌加值叠加，而是应用较高的一个。
+      其二为游侠与其动物伙伴的羁绊。选择了此种方式的游侠可以从如下列表中选择一种动物伙伴：獾、鸟类、骆驼、猫科（小型），凶暴鼠、狗、马、矮种马、蛇（毒蛇或蟒蛇）或狼。如果战役部分或全部在水生环境中展开，游侠可以选择鲨鱼。选择的动物会成为游侠的忠诚伙伴，会以符合自身种类的方式在冒险旅途中陪伴游侠。游侠的动物伙伴享有游侠的宿敌和偏好地形加值。这一能力的作用方式与德鲁伊的动物伙伴能力（德鲁伊的自然纽带能力的一部分）类似，只是游侠的德鲁伊等效等级相当于“游侠等级-3”。
+  - id: Spells
+    name: 法术
+    desc: |
+      从4级开始，游侠可以施展少量神术，从游侠法术列表中选择。游侠必须提前选择并准备法术。要准备施展某个法术，游侠的感知必须达到“10+法术环级”。对抗游侠法术的豁免DC等于“10+法术环级+感知修正”。和其他施法者一样，游侠每天可以使用的各个环级的法术有限。他的基本每日法术分配可见上表。另外，如果有较高的感知值，他还可以获得额外奖励每日法术。如果表中指出游侠在指定的法术环级上有0个法术，那么他只能获得高感知值提供的额外法术。
+      游侠每天必须花费1小时进行冥想来恢复他的每日法术。游侠可以准备和施放游侠法术列表中的任何法术，只要他能够施展相应环级的法术，但他必须在每日的冥想时选择自己要准备的法术。直到3级为止，游侠都没有施法者等级。在4级或者更高等级，他的施法者等级等同于“游侠等级-3”。
+    effects:
+      - type: gainSpellCasting
+        args:
+          castingType: cleric-like
+          abilityType: wis
+  - id: Woodland Stride
+    name: 穿林步
+    type: ex
+    desc: 7级起，游侠可以以正常速度通过任何矮树丛（例如自然的荆棘、石南、茂密的灌木丛，以及其他类似地形），并且不会受到伤害或者其他惩罚。但是，被魔法强化的、或使用魔法手段特意用来阻碍行动的此类地形还是会阻碍游侠的行动。
+  - id: Swift Tracker
+    name: 快速追踪
+    type: ex
+    desc: 8级起，游侠可以以其正常速度进行追踪而不用受到-5惩罚。在以双倍速度移动时进行追踪只受-10惩罚（而不是一般的-20）。
+  - id: Evasion
+    name: 反射闪避
+    type: ex
+    desc: 9级起，游侠可以以高超的敏捷避开魔法和特殊攻击。游侠在对抗若通过反射豁免可以减少一半伤害的攻击时，如果通过了豁免，则不会受到伤害。只有在穿戴轻型，中型盔甲或不穿甲时才可以进行反射闪避。无助状态下的游侠不能获得反射闪避的收益。
+  - id: Quarry
+    name: 狩猎目标
+    type: ex
+    desc: 11级时，游侠可以以标准动作指定一个视线内的目标为自己的狩猎目标。在追踪自己的狩猎目标时，游侠可以在以普通速度移动时的生存检定中取10，不用受到惩罚。此外，在攻击自己的狩猎目标时，游侠的攻击检定获得+2洞察加值，并且所有重击威胁自动确认。游侠不能同时指定多个狩猎目标，并且目标的类型必须属于自己的宿敌。他可以在任意时刻以自由动作解除此效果，但无法在24小时内指定新的狩猎目标。如果游侠能够确认自己的狩猎目标已经死亡，那么他可以在1小时后选择一个新的狩猎目标。
+  - id: Camouflage
+    name: 伪装
+    type: ex
+    desc: 12级或更高等级的游侠可以在其偏好地形中使用隐匿技能，即使该地形没有提供掩蔽或隐蔽物。
+  - id: Improved Evasion
+    name: 精通反射闪避
+    type: ex
+    desc: 16级时，游侠的【反射闪避】能力升级。此能力与反射闪避相似，只是不但游侠可以在通过反射检定后不受到任何伤害，而且即使失败也只受到一半的伤害。无助状态下的游侠不能获得精通反射闪避的收益。
+  - id: Hide in Plain Sight
+    name: 视线躲藏
+    type: ex
+    desc: 17级或更高等级的游侠在其偏好地形中，即使在被注意时也可以使用隐匿技能。
+  - id: Improved Quarry
+    name: 高等狩猎目标
+    type: ex
+    desc: 19级时，游侠追猎自己的猎物的能力升级。他现在可以以自由动作指定狩猎目标，并且可以在以普通速度移动时的生存检定中取20，不用受到惩罚。他的攻击洞察加值提高到+4。如果他的狩猎目标被杀死或者逃走，他可以在10分钟后指定新的狩猎目标。
+  - id: Master Hunter
+    name: 狩猎大师
+    type: ex
+    desc: 20级的游侠成为一名狩猎大师。他在使用生存技能进行追踪时总是可以以全速移动，并不用受到惩罚。他可以以一个标准动作对自己的宿敌进行一次攻击，应用全部的攻击加值。如果攻击命中，目标正常受到伤害，并且必须进行DC为“10+1/2游侠等级+感知修正”的强韧豁免检定，否则会立刻死亡。游侠可以选择对目标造成等同于其当前生命值的非致命伤害，成功的豁免检定会抵消这一伤害。游侠每天可以对每种宿敌使用1次此能力，但不能在24小时内对同一类型的生物使用多次。
+
+levels:
+  - level: 1
+    bab: [1]
+    fortitude: 2
+    reflex: 2
+    will: 0
+    special:
+      - Ranger Weapon and Armor Proficiency
+      - 1st Favored Enemy
+      - Track
+      - Wild Empathy
+    spellsPerDay: [0, 0, 0, 0, 0]
+  - level: 2
+    bab: [2]
+    fortitude: 3
+    reflex: 3
+    will: 0
+    special:
+      - Combat Style Feat 1
+    spellsPerDay: [0, 0, 0, 0, 0]
+  - level: 3
+    bab: [3]
+    fortitude: 3
+    reflex: 3
+    will: 1
+    special:
+      - Endurance
+      - 1st Favored Terrain
+    spellsPerDay: [0, 0, 0, 0, 0]
+  - level: 4
+    bab: [4]
+    fortitude: 4
+    reflex: 4
+    will: 1
+    special:
+      - Spells
+      - Hunters Bond
+    spellsPerDay: [0, 0, 0, 0, 0]
+  - level: 5
+    bab: [5]
+    fortitude: 4
+    reflex: 4
+    will: 1
+    special:
+      - 2nd Favored Enemy
+    spellsPerDay: [0, 1, 0, 0, 0]
+  - level: 6
+    bab: [6, 1]
+    fortitude: 5
+    reflex: 5
+    will: 2
+    special:
+      - Combat Style Feat 2
+    spellsPerDay: [0, 1, 0, 0, 0]
+  - level: 7
+    bab: [7, 2]
+    fortitude: 5
+    reflex: 5
+    will: 2
+    special:
+      - Woodland Stride
+    spellsPerDay: [0, 1, 0, 0, 0]
+  - level: 8
+    bab: [8, 3]
+    fortitude: 6
+    reflex: 6
+    will: 2
+    special:
+      - Swift Tracker
+      - 2nd Favored Terrain
+    spellsPerDay: [0, 1, 1, 0, 0]
+  - level: 9
+    bab: [9, 4]
+    fortitude: 6
+    reflex: 6
+    will: 3
+    special:
+      - Evasion
+    spellsPerDay: [0, 2, 1, 0, 0]
+  - level: 10
+    bab: [10, 5]
+    fortitude: 7
+    reflex: 7
+    will: 3
+    special:
+      - 3rd Favored Enemy
+      - Combat Style Feat 3
+    spellsPerDay: [0, 2, 1, 0, 0]
+  - level: 11
+    bab: [11, 6, 1]
+    fortitude: 7
+    reflex: 7
+    will: 3
+    special:
+      - Quarry
+    spellsPerDay: [0, 2, 1, 1, 0]
+  - level: 12
+    bab: [12, 7, 2]
+    fortitude: 8
+    reflex: 8
+    will: 4
+    special:
+      - Camouflage
+    spellsPerDay: [0, 2, 2, 1, 0]
+  - level: 13
+    bab: [13, 8, 3]
+    fortitude: 8
+    reflex: 8
+    will: 4
+    special:
+      - 3rd Favored Terrain
+    spellsPerDay: [0, 3, 2, 1, 0]
+  - level: 14
+    bab: [14, 9, 4]
+    fortitude: 9
+    reflex: 9
+    will: 4
+    special:
+      - Combat Style Feat 4
+    spellsPerDay: [0, 3, 2, 1, 1]
+  - level: 15
+    bab: [15, 10, 5]
+    fortitude: 9
+    reflex: 9
+    will: 5
+    special:
+      - 4th Favored Enemy
+    spellsPerDay: [0, 3, 2, 2, 1]
+  - level: 16
+    bab: [16, 11, 6, 1]
+    fortitude: 10
+    reflex: 10
+    will: 5
+    special:
+      - Improved Evasion
+    spellsPerDay: [0, 3, 3, 2, 1]
+  - level: 17
+    bab: [17, 12, 7, 2]
+    fortitude: 10
+    reflex: 10
+    will: 5
+    special:
+      - Hide In Plain Sight
+    spellsPerDay: [0, 4, 3, 2, 1]
+  - level: 18
+    bab: [18, 13, 8, 3]
+    fortitude: 11
+    reflex: 11
+    will: 6
+    special:
+      - 4th Favored Terrain
+      - Combat Style Feat 5
+    spellsPerDay: [0, 4, 3, 2, 2]
+  - level: 19
+    bab: [19, 14, 9, 4]
+    fortitude: 11
+    reflex: 11
+    will: 6
+    special:
+      - Improved Quarry
+    spellsPerDay: [0, 4, 3, 3, 2]
+  - level: 20
+    bab: [20, 15, 10, 5]
+    fortitude: 12
+    reflex: 12
+    will: 6
+    special:
+      - 5th Favored Enemy
+      - Master Hunter
+    spellsPerDay: [0, 4, 4, 3, 3]

@@ -1,0 +1,632 @@
+id: Magus
+name: 魔战士
+desc:
+  描述: 有的人倾尽毕生钻研古老卷册和文字，开启魔法之力；有的人花费所有时间完善自己特定武器的使用技艺，成为无人可及的大师。魔战士则同时遵循两种道路，将法术能力和战争才能彻底融为一体，同时用法术和钢铁带来毁灭性的强大力量。而随着他的力量增强，魔战士会揭开强大的奥秘形态来令他的才能得到提升，而在他技艺的顶峰时魔战士将成为钢铁与魔法界限彻底模糊的一团混合体，一股无人敢于对抗的力量。
+  角色定位: 魔战士很多时间都在世界各处旅行，学习他们所能找到的任何武艺或魔法秘技。他们或许会花上数月时间从一个战士大师那里学习一项新的剑招，与此同时夜间在当地图书馆阅读古老传说的卷册。多数走上这一道路的人都会涉足于各种知识领域，寻找任何可能帮助他们完善技艺的东西。
+
+alignment: []
+hd: 8
+classSkills:
+  - climb
+  - craft
+  - fly
+  - intimidate
+  - knowledge(arcana)
+  - knowledge(dungeoneering)
+  - knowledge(planes)
+  - profession
+  - ride
+  - spellcraft
+  - swim
+  - use magic device
+skillPoints: 2
+
+feats:
+  - id: Magus Weapon and Armor Proficiency
+    name: 武器和防具擅长
+    desc: 魔战士擅长所有简易和军用武器，也擅长轻型护甲。魔战士能够在穿着轻甲时忽视奥术失败机率地使用魔战士法术。但魔战士在穿着中甲、重甲或使用盾牌时施展包含姿势成分的法术会遭受奥术失败率，与其他承受奥术失败率的施法者相同。兼职的魔战士在施展其他职业的奥术时也正常遭受奥术失败率惩罚。
+    effects:
+      - type: gainProficiency
+        args:
+          weaponTraining:
+            - simple
+            - martial
+          armorTraining:
+            - light
+  - id: Spells
+    name: 法术
+    desc: |
+      魔战士从魔战士法术列表中选择并释放法术。魔战士必须事先选择并准备要释放的法术。要习得、准备或释放法术，魔战士必须拥有至少“10+法术环级”的智力属性值。魔战士的法术豁免难度为“10+法术环级+魔战士的智力修正”。魔战士每天每个环级仅能释放一定数量的法术。他的基本每日法术量参见上表。此外，他可能因高智力值而获得每日额外法术。魔战士可以学得任意数量的法术。他必须事先选择并准备法术，且之前需要8小时睡眠及1小时研习其法术书。魔战士在研习过程中决定要准备何种法术。
+
+      魔战士必须每日研习其法术书来准备法术。他不能准备任何法术书中所不包含的法术——除了‘阅读魔法’，这是所有魔战士通过记忆就能准备的。魔战士人物起始时拥有一本法术书，其中包含了所有0环的魔战士法术以及3个魔战士自己所选择的1环魔战士法术。魔战士同样可以选择等于其智力修正个数的1环魔战士法术加入法术书。每当获得一个新的魔战士等级，他可以将两个新的魔战士法术加入法术书中，这些法术可以是任意他所能释放的环级（以新的魔战士等级计算）。无论何时，魔战士都可以将其他法术书上的法术加入自己的法术书。
+
+      魔战士可以从法师的法术书上习得法术，反之亦然。正常情况下，习得的法术必须包含在魔战士的法术列表中。炼金术师可以从魔战士的法术书上习得炼成配方，前提是法术同样包含在炼金术士法术列表中。但反之魔战士无法从炼金术师处习得法术。
+    effects:
+      - type: gainSpellCasting
+        args:
+          castingType: wizard-like
+          abilityType: int
+  - id: Arcane Pool
+    name: 奥能力池
+    type: su
+    desc: |
+      1级时，魔战士获得一个奥能能量池，他可以从中汲取能量增强其力量和武器。奥能力池拥有等于“1/2魔战士职业等级（至少为1）+智力修正”的能量点数。每日当魔战士准备法术时，力池也得到恢复。1级时，魔战士可以用迅捷动作从奥能力池中花费1点来赋予任何他所持用的武器+1增强加值，持续1分钟。之后每4级，武器会再获得+1增强加值，17级时达到最高+5。这些加值可以与武器原本加值累计，但最高叠加至+5。多次使用此能力并不互相累计。
+
+      5级时，以下附魔可被添加至任何合适的武器上：舞空、炽焰、焰爆、冻寒、冰爆、锐锋、电击、电爆、追击或斩首。添加这些附魔会消耗等价点数的奥能增强加值。这些特性可以添加在原有该特性的武器上，但效果并不累计。若武器无魔法，则必须在添加任何附魔前先添加至少+1增强加值。这些加值和附魔在消耗奥能力池时选择决定，在下次使用此能力前无法更改。这些增强效果在武器被魔战士外的其他人持用时也无效。
+
+      魔战士同时只能以此方式增强一把武器。若他再次使用此能力，则先前的效果立即结束。
+    effects:
+      - type: addTracker
+        args:
+          maxFormula: MAX(FLOOR(magusLevel / 2), 1) + int
+  - id: Cantrips
+    name: 戏法
+    desc: 魔战士每天可以准备一定数量的戏法，或者说0环法术，参见上表中的“每日法术”。这些法术在释放时与其他法术类似，但在施展时并不消耗因而可以被再次使用。
+  - id: Spell Combat
+    name: 法术战斗
+    type: ex
+    desc: 1级时，魔战士学会了如何同时施放法术和运用武器的战术。这与双武器战斗很像，但副手武器是正在释放的法术。要使用此能力，魔战士必须有一只手空闲（即使该法术并不需要动作成份），而另一只手持用轻型或单手近战武器。以一个整轮动作，他可以在-2减值下使用其武器做出所有攻击，并同时释放任何魔战士法术列表中的释放时间为一个标准动作的法术。若他以防御式释放此法术，则可以选择令其攻击检定获得最高等于其智力修正的额外减值，并在专注检定上获得等量的环境加值。若检定失败，则法术失效，但攻击仍旧受到减值。魔战士可以选择先释放法术或先使用武器攻击，但若他拥有多于一次的攻击能力，则无法在几次武器攻击之间施展法术。
+  - id: Spellstrike
+    name: 法术打击
+    type: su
+    desc: 2级时，每当魔战士释放一个魔战士法术列表中距离为〔接触〕的法术时，作为一次近战攻击的一部分，他可以通过近战攻击传递这一法术。魔战士通过持用的武器自由进行一次近战攻击（使用他的最高基本攻击加值）而非近战接触来作为施放该法术的一部份。若命中，则该次近战攻击造成正常伤害的同时造成该法术效果。若魔战士同时使用【法术战斗】能力，那么这次攻击同样会承受近战攻击减值。法术打击可以使用武器的重击威胁范围（19-20或是18-20，也受到包括〈锐锋〉武器附魔等其他调整）造成重击，但是只具有×2的成功重击伤害倍数，不过武器攻击本身的重击伤害仍然受到武器重击倍数影响。
+  - id: Magus Arcana
+    name: 魔战士奥能
+    desc: 随着等级提升，魔战士习得了各种奥秘以拓展他将战斗力量和魔法技巧混合在一起的特别道路。3级开始，魔战士获得一项魔战士奥能，之后每3等级再额外获得一项。除非特别提及否则每项魔战士奥能不得多次选择。影响法术效能的魔战士奥能仅可用于改变魔战士法术列表的法术。
+    grow:
+      - level: 3
+        id: Magus Arcana 1
+        name: 魔战士奥能 1
+      - level: 6
+        id: Magus Arcana 2
+        name: 魔战士奥能 2
+      - level: 9
+        id: Magus Arcana 3
+        name: 魔战士奥能 3
+      - level: 12
+        id: Magus Arcana 4
+        name: 魔战士奥能 4
+      - level: 15
+        id: Magus Arcana 5
+        name: 魔战士奥能 5
+      - level: 18
+        id: Magus Arcana 6
+        name: 魔战士奥能 6
+    effects:
+      - type: selectFromSubs
+    subs:
+      - id: Accurate Strike
+        name: 精确打击
+        desc: 魔战士可以迅捷动作从【奥能力池】中花费2点奥能来使他该轮所有的近战武器攻击变成近战接触攻击。
+        when: magusLevel >= 9
+        type: ex
+      - id: Aquatic Agility
+        name: 水之灵动
+        desc: 魔战士可以迅捷动作从【奥能力池】中花费1点奥能，获得‘水下呼吸’的效果。这个效果持续每魔战士等级一轮。在此时间内，他还忽略激流(Rough Water)和水下战斗(Underwater Combat)对攻击和移动的影响。
+        when: magusLevel >= 6
+        type: su
+      - id: Arcane Accuracy
+        name: 奥能精准
+        desc: 魔战士可以迅捷动作从【奥能力池】中花费1点奥能，令其在所有攻击检定中获得等于其智力调整值的洞察加值，直到回合结束。
+        when: magusLevel >= 3
+        type: su
+      - id: Arcane Cloak
+        name: 奥能遮蔽
+        desc: 魔战士可以从【奥能力池】中花费1点奥能，将他的智力调整值加到唬骗和潜行检定上，此加值持续一分钟。
+        when: magusLevel >= 3
+        type: su
+      - id: Arcane Dealer
+        name: 奥能发牌
+        desc: 魔战士获得“致命发牌Deadly DealerHH”专长，无论他是否满足前提。他可以用他的【奥能力池】给牌组附魔，就好像它是一把具有54发弹药的远程武器一样。魔战士必须使用“奥术打击”专长或者他的【奥能力池】增强卡牌才能将其用作武器。
+        when: magusLevel >= 6
+        type: su
+      - id: Arcane Deed
+        name: 奥能炫技
+        desc: 当魔战士选择这个奥能时，他可以从游荡剑客职业能力中选择任何一个等级等同于他魔战士等级的游荡剑客可用的炫技。他使用该炫技时可用他【奥能力池】中的奥能作为时髦值来满足炫技的消耗需求。即使他用别的方法获得了时髦池，对于以奥能炫技能力获得的炫技，他也不会被视为至少有一点时髦点存在。在决定该炫技效果时，魔战士的有效游荡剑客等级为0。
+        when: HAS_CLASSFEAT("Magus", "Magus Arcana", "Flamboyant Arcana")
+        type: ex
+      - id: Arcane Edge
+        name: 奥能刀锋
+        desc: 魔战士可在他的穿刺或挥砍武器击中对手之后以直觉动作从【奥能力池】中花费1点奥能，对目标造成相当于魔战士智力调整值(最少是0)的流血伤害。
+        when: magusLevel >= 9
+        type: su
+      - id: Arcane Redoubt
+        name: 奥能堡垒
+        desc: 魔战士可以迅捷动作从【奥能力池】中花费1点奥能，将他盾牌所提供的AC加值(包括增强加值)加到他的接触AC上，此能力持续直到他下一轮开始。
+        when: magusLevel >= 3
+        type: su
+      - id: 'Arcane Redoubt, Greater'
+        name: 高等奥能壁垒
+        desc: 当魔战士使用“奥能壁垒”时，他可额外花费一点奥能将他盾牌所提供的AC加值(包括增强加值)加到他的反射豁免上，此能力持续直到他下一轮开始。若在此能力持续期间，魔战士成为一个需要反射检定的效果的目标，他可以直觉动作从【奥能力池】中花费2点奥能给自己【反射闪避】，或者花费4点奥能给自己【精通反射闪避】。
+        when: magusLevel >= 12
+        type: su
+      - id: Arcane Scent
+        name: 奥能嗅觉
+        desc: '魔战士可以从【奥能力池】中花费1点奥能，获得每魔战士等级1小时的“灵敏嗅觉 (Scent, Ex)”。该能力只能用来侦测有施法能力或类法术能力的生物。此外，在此期间魔战士可以以类移动作尝试法术辨识检定{DC＝10＋目标的施法者等级}来得知一个被侦测到的生物能释放的最高级的法术。对于每个生物，魔战士在24小时内只能尝试一次这样的法术辨识检定。'
+        when: magusLevel >= 3
+        type: ex
+      - id: Bane Blade
+        name: 破敌刀锋
+        desc: 当魔战士使用【奥能力池】强化武器时，他可额外花费一点奥能将〈破敌〉特性加在他的武器上。
+        when: magusLevel >= 15
+        type: su
+      - id: Book-Bound
+        name: 书籍联结
+        desc: '魔战士在副手持有他的法术书时，他可用直觉动作使其下一轮内的一个专注检定获得+4加值。该加值可与其他加值叠加，包括魔战士奥能精神集中 (Concentrate, Ex)【UM】。该能力每天可用三次。'
+        when: magusLevel >= 3
+        type: su
+      - id: Broad Study
+        name: 拓展学习
+        desc: 魔战士必须选择另一个他有的施法职业。他可在施展或使用该职业法术列表中的法术时使用【法术战斗】或【法术打击】能力。这并不会允许他在施展该职业法术列表中的奥术时忽视正常的奥术失败机率，除非这个法术本身没有姿势成分。
+        when: magusLevel >= 6
+        type: ex
+      - id: Circle of Order
+        name: 命令法阵
+        desc: 对抗混乱攻击时，魔战士可用迅捷动作从【奥能力池】中花费一点奥能强化他的防御。在对抗混乱阵营攻击和效果以及混乱亚种的异界生物时，他获得魔战士等级一半（20级时达到最大值+10）的AC闪避加值直到其下回合开始。（例：该闪避加值可用于对抗混乱anarchic武器 或 迷诱魔glabrezu的螯钳攻击。）
+        when: magusLevel >= 9
+        type: su
+      - id: Close Range
+        name: 缩短距离
+        desc: 选择本奥能的魔战士可以将需要远程接触攻击的射线法术以近战接触攻击方式传递。他可利用此奥能施放目标多于一个的远程接触法术（如‘灼热射线’），但他只能用一次近战攻击传递一个远程接触效果，该法术额外的远程接触攻击则被浪费掉且没有效果。这些法术可以用于【法术打击】职业能力。
+        when: magusLevel >= 3
+        type: ex
+      - id: Concentrate
+        name: 精神集中
+        desc: 魔战士能够以+4加值重掷任何刚做出的专注检定。他必须在投骰后决定本次检定是否成功前使用本能力。魔战士必须接受第二次的结果，即使更糟。魔战士每日可使用此能力一次。
+        when: magusLevel >= 3
+        type: ex
+      - id: Critical Strike
+        name: 重击施法
+        desc: 每当魔战士以近战武器造成重击时，他可用迅捷动作释放一个距离为接触的法术，然后用自由动作对被重击的目标进行一次接触攻击。魔战士每日可用此能力一次。
+        when: magusLevel >= 12
+        type: su
+      - id: Dark Shifter
+        name: 黑暗挪移
+        desc: '魔战士可以移动动作从【奥能力池】中花费1点奥能来改变一个有[黑暗]描述符的持续法术的目标。该法术的新目标必须在法术的原始范围内，使用魔战士等级作为有效施法者等级来决定以魔战士为原点该法术最大可被移动的距离。若被尝试移动的法术效果出自于另一个生物，魔战士必须通过施法者检定才能移动该法术{DC=11+效果的施法者等级}。检定失败会消耗掉移动动作，但不消耗奥能点。'
+        when: magusLevel >= 6
+        type: su
+      - id: Devoted Blade
+        name: 虔诚刀锋
+        desc: 当魔战士使用【奥能力池】强化武器时，他可额外花费一点奥能将〈混沌〉、〈公理〉、〈神圣〉、〈邪恶〉特性之一添加到他的可用列表上。魔战士只能选择添加其中一个和他自身阵营相符的阵营效果。
+        when: magusLevel >= 12
+        type: su
+      - id: Dispelling Strike
+        name: 驱散打击
+        desc: 魔战士可以迅捷动作从【奥能力池】中花费1点或更多点奥能向武器中灌输一股特殊的力量。若武器在接下来的一分钟内击中一个生物，则该生物立即受到一个目标为它的‘解除魔法’影响，‘解除魔法’的施法者等级等同于魔战士的等级，但该效果无法解除法术等级高于启动本能力时花费的奥能点数的法术（将更高等级法术视同不存在，从剩下的最高施法者等级法术开始进行解除尝试）。一旦做出攻击，该奥能的力量就会消散，即使解除尝试失败也一样。
+        when: magusLevel >= 9
+        type: su
+      - id: Disruptive
+        name: 扰法者
+        desc: 魔战士得到“扰法者DisruptiveCRB”作为奖励专长。
+        when: magusLevel >= 6
+        type: ex
+      - id: Divinatory Strike
+        name: 洞察打击
+        desc: 无论何时魔战士对一个敌人的近战攻击造成重击时，他都会不可思议地洞察被他击中的敌人的优缺点，就好像他在一个辨识该生物的知识检定中骰出自然20一样。所有作用于知识检定的加减值，包括他的智力调整值、知识技能等级和其他加减值，都适用于该能力。根据该能力最后得出的检定值和生物的CR，魔战士仍可能不了解他敌人的信息。但是即使魔战士已经在辨识该生物的知识检定上做过一次尝试，该能力仍然有效。
+        when: magusLevel >= 3
+        type: su
+      - id: Empowered Magic
+        name: 强效法术
+        desc: 魔战士每天可以释放一个法术，如同该法术被“法术强效Empower SpellCRB”所增强。这不会增加施法时间或是法术等级。
+        when: magusLevel >= 6
+        type: su
+      - id: Enduring Blade
+        name: 持久刀锋
+        desc: 当魔战士使用【奥能力池】强化武器时，他可以额外花费一点奥能让强化的持续时间增加到每个魔战士等级一分钟。
+        when: magusLevel >= 6
+        type: su
+      - id: Familiar
+        name: 魔宠
+        desc: 魔战士获得一个魔宠，使用他的魔战士等级作为法师等级决定魔宠的能力。该魔宠遵循法师【奥术联结】职业特性中给出的魔宠规则。
+        when: magusLevel >= 3
+        type: ex
+      - id: Flamboyant Arcana
+        name: 华丽奥能
+        desc: 魔战士获得游荡剑客炫技列表中的‘大胆特技’和‘适时格挡反击’炫技。魔战士只能使用他的【奥能力池】（不能使用时髦值）来满足他从这个奥能中所获得的炫技或“奥能炫技”获得的炫技的消耗，他不能用奥能力点来通过使用别的职业或专长获得的炫技，也不能使用游荡剑客恢复时髦点的方法恢复奥能力池中的奥能点。增加勇毅和时髦值的数量，或减少勇毅和时髦值的消耗，或其他影响勇毅和时髦值的效果不会因为魔战士选择该奥能而影响魔战士的【奥能力池】。
+        when: magusLevel >= 3
+        type: ex
+      - id: Ghost Blade
+        name: 幽冥刀锋
+        desc: 当魔战士使用【奥能力池】强化武器时，他可额外花费一点奥能将〈光能〉和〈幽冥〉两个特性添加到他的可用列表上。
+        when: magusLevel >= 9
+        type: su
+      - id: Hasted Assault
+        name: 急速袭击
+        desc: 魔战士可以迅捷动作从【奥能力池】中花费1点来加快其行动。本效果同‘加速术’，但仅对魔战士生效且持续等于魔战士智力调整值的轮数。
+        when: magusLevel >= 9
+        type: su
+      - id: Intuitive Protection
+        name: 直觉防护
+        desc: '当魔战士用法术辨识检定成功辨识出一个敌人施放的咒法[召唤]法术时，他可用直觉动作从【奥能力池】中花费1点奥能在自己身上施放一个‘防护混乱\邪恶\善良\守序’(在使用奥能时选择)，每个魔战士等级持续一轮。当他7级时，他可改为施放一个‘反混乱\邪恶\善良\守序法阵’(在使用奥能时选择)。'
+        when: magusLevel >= 3
+        type: sp
+      - id: Ki Arcana
+        name: 奥能真气
+        desc: 魔战士可将【奥能力池】中的奥能点和另一个职业提供的【气运丹田】中的气交换使用。
+        when: magusLevel >= 6
+        type: ex
+      - id: Lingering Pain
+        name: 疼痛滞留
+        desc: 当魔战士用他的武器击中敌人时，他可以直觉动作从【奥能力池】中花费1点奥能，直到魔战士下一轮开始前，对方进行任何专注检定时那次攻击的伤害（包括用【法术打击】造成的法术伤害）都被视作持续伤害。
+        when: magusLevel >= 3
+        type: su
+      - id: Maneuver Mastery
+        name: 战技精通
+        desc: 魔战士在选择本奥能时需选择一项战技。每当他尝试该战技时，他用他的魔战士等级作为其基本攻击加值（与其他职业带来的基本攻击加值合计）。
+        when: magusLevel >= 3
+        type: ex
+      - id: Maximized Magic
+        name: 极效法术
+        desc: 魔战士每天可以释放一个法术，如同该法术被“法术极效Maximize SpellCRB”所增强。这不会增加施法时间或是法术等级。
+        when: magusLevel >= 12
+        type: su
+      - id: Natural Spell Combat
+        name: 天生法术战斗
+        desc: 魔战士可以用他选择的一种天生武器攻击来使用【法术战斗】职业能力。若他如此做，他的专注检定获得＋2加值。若此天生武器攻击使用了一个平常握持武器的肢体（例如爪击），他无法在用此肢体发动天生武器攻击时握持武器。如果他有任何攻击时不需要肢体的天生武器（例如啮咬），他可以在正常武器攻击之外使用本能力进行【法术战斗】。
+        when: magusLevel >= 3
+        type: ex
+      - id: Planar Hunter
+        name: 位面猎手
+        desc: 当魔战士使用【奥能力池】强化武器时，他可额外花费一点奥能将〈位面〉特性加在他的武器上，或是额外花费2点奥能将〈闭锁〉特性加在他的武器上。
+        when: magusLevel >= 9
+        type: su
+      - id: Pool Ray
+        name: 力池射线
+        desc: 魔战士可以用标准动作从【奥能力池】中花费1点奥能令其一件远程武器充满元素能量。作为使用本能力的一部分，他可以自由动作用充能的远程武器进行一次攻击。在投骰之后DM宣布结果之前，魔战士可消耗掉充能使该次攻击造成1d6点能量伤害（强酸、冰冷、电击或火焰，在从【奥能力池】中花费奥能时选择）。若该次攻击未命中，则充能正常消耗，效果将被浪费掉。若魔战士有【远程法术打击】职业能力（比如重装魔战变体），他在使用【远程法术打击】能力时若同时消耗“力池射线”的元素充能，则可使该次攻击成为远程接触攻击。6级及之后每3级，力池射线造成的伤害增加1d6。
+        when: magusLevel >= 3
+        type: su
+      - id: Pool Strike
+        name: 力池打击
+        desc: 魔战士可以用标准动作从【奥能力池】中花费1点奥能令其手掌充满元素能量。作为使用本能力的一部分，他可以自由动作进行一次近战接触攻击。若攻击命中，则充能释放并造成2d6点元素伤害（强酸、冰冷、电击或火焰，在从【奥能力池】中花费奥能时选择）。他可用本能力使用【法术战斗】职业能力。若该次攻击未命中，则在能量消散前，该充能效果可保持最多1分钟。6级及之后的每3级，力池打击造成的伤害值增加1d6。
+        when: magusLevel >= 3
+        type: su
+      - id: 'Pool Strike, Arcing'
+        name: 弧光力池打击
+        desc: 魔战士在进行“力池打击”时，可从【奥能力池】中额外花费1点奥能，若该次攻击击中目标，那么他可自由动作对目标15尺范围内最多相当于他智力调整值个数(最少是0)的目标进行远程攻击。这些目标承受和“力池打击”的第一目标一样的能量伤害，即使那次伤害是重击也一样。
+        when: AND(HAS_CLASSFEAT("Magus", "Magus Arcana", "Pool Strike"), magusLevel >= 12)
+        type: su
+      - id: 'Pool Strike, Clinging'
+        name: 黏着力池打击
+        desc: 魔战士在进行“力池打击”时，可从【奥能力池】中额外花费1点奥能，若该次攻击击中目标，那么除了正常造成“力池打击”的能量伤害外，目标下一轮开始时还需承受这次伤害值一半的额外伤害。
+        when: AND(HAS_CLASSFEAT("Magus", "Magus Arcana", "Pool Strike"), magusLevel >= 9)
+        type: su
+      - id: 'Pool Strike, Thunderous'
+        name: 雷鸣力池打击
+        desc: '魔战士在进行“力池打击”时，可从【奥能力池】中额外花费1点奥能，使该次攻击造成音波伤害并且震聋单个目标一轮，目标可通过{DC=10+魔战士等级一半+魔战士智力调整值}的豁免检定免受耳聋的影响。'
+        when: AND(HAS_CLASSFEAT("Magus", "Magus Arcana", "Pool Strike"), magusLevel >= 6)
+        type: su
+      - id: Prescient Attack
+        name: 远见打击
+        desc: 在魔战士用武器击中一个敌人之后，他可以直觉动作从【奥能力池】中花费1点奥能预判对手的行动。直到魔战士下一轮结束前，目标面对魔战士的攻击失去AC上的敏捷加值。
+        when: magusLevel >= 6
+        type: su
+      - id: Prescient Defense
+        name: 远见防御
+        desc: 在魔战士用武器击中一个敌人之后，他可以直觉动作从【奥能力池】中花费1点奥能预判对手的行动。直到魔战士下一轮开始前，对于来自该对手的攻击，魔战士获得等同于智力调整值(最少是0)的AC加值和反射加值。
+        when: magusLevel >= 9
+        type: su
+      - id: Quickened Magic
+        name: 瞬发法术
+        desc: 魔战士每天可以释放一个法术，如同该法术被“法术瞬发Quicken SpellCRB”所增强。这不会增加施法时间或是法术等级。
+        when: magusLevel >= 15
+        type: su
+      - id: Rakshasa's Fortune
+        name: 罗刹时运
+        desc: '当魔战士以自己为目标施放一个[变形]子学派法术时，他可用自由动作从一个完整的哈罗牌组中抽一张牌。'
+        when: magusLevel >= 9
+        type: su
+      - id: Ranger Trap
+        name: 游侠陷阱
+        desc: 魔战士习得一个游侠陷阱。
+        when: magusLevel >= 10
+      - id: Reach Magic
+        name: 及远法术
+        desc: 魔战士每天可以释放一个法术，如同该法术被“法术及远Reach SpellAPG”所增强。这不会增加施法时间或是法术等级。
+        when: magusLevel >= 3
+        type: su
+      - id: Reflection
+        name: 法术反弹
+        desc: 魔战士可以直觉动作从【奥能力池】中花费1点或更多点奥能将一个法术反射回其施法者。这个效果如同‘法术反转Spell Turning’，但仅限目标法术等级等于或低于所消耗的奥能点数。若消耗点数不足，则改为在任何该法术允许的豁免检定上提供等同于消耗点数的洞察加值。
+        when: magusLevel >= 15
+        type: su
+      - id: Rod Mastery
+        name: 权杖掌握
+        desc: 当魔战士使用权杖时，用他的智力调整值(最少是0)取代使用该法术需要的最低属性调整值计算任何权杖内法术的DC。
+        when: magusLevel >= 3
+        type: su
+      - id: Rod Wielder
+        name: 权杖支配
+        desc: 当魔战士使用权杖内的法术或是以权杖作为【法术打击】渠道时，将他的智力调整值(最少是0)加在用于突破法术抗性的施法者等级检定上。
+        when: magusLevel >= 3
+        type: su
+      - id: Scroll Mastery
+        name: 卷轴掌握
+        desc: 当魔战士使用卷轴时，他可从【奥能力池】中花费1点奥能用他的智力调整值取代使用该法术需要的最低属性调整值计算任何卷轴内法术的DC。
+        when: magusLevel >= 6
+        type: su
+      - id: Silent Magic
+        name: 默发法术
+        desc: 魔战士每天可以释放一个法术，如同该法术被“法术默发Silent SpellCRB”所增强。这不会增加施法时间或是法术等级。
+        when: magusLevel >= 3
+        type: su
+      - id: Spell Blending
+        name: 法术混合
+        desc: 当魔战士选择本奥能时，他从法师法术列表中选择一个法术等级不超过魔战士最高可施展法术等级的法术。他将此法术添加进他的法术书中，并以法师法术列表中的法术等级加进他的已知魔战士法术列表中。他也可选择添加两个法术取代添加一个法术，但这样添加的两个法术的法术等级必须都比魔战士最高可施展法术等级低至少一级。
+        when: magusLevel >= 3
+        type: ex
+      - id: Spell Shield
+        name: 法术护盾
+        desc: 魔战士可以迅捷动作从【奥能力池】中花费1点奥能，直到他下一轮回合结束前在AC上获得等于其智力调整值的盾牌加值。
+        when: magusLevel >= 3
+        type: su
+      - id: Spell Trickery
+        name: 法术诡计
+        desc: 每当魔战士成功使用一次阴招战技，他可用迅捷动作施放一个他已经准备的、施法时间为标准动作或更低的惑控系或幻术系法术。魔战士每日可用此能力一次。
+        when: magusLevel >= 12
+        type: ex
+      - id: Spell-Scars
+        name: 法痕
+        desc: 魔战士可以使用一种被称为法痕的基于疤痕的特殊皮肤刺青来施放或者准备法术。魔战士可以像使用卷轴一样使用法痕，在施法时墨水和疤痕同时消失。他也可以不消耗法痕，而用它们准备法术，如同使用“法术熟稔Spell MasteryCRB”的法师。魔战士使用自己的法痕时不需要看见它们。魔战士身上总共可以容纳法术等级合计为18的法痕，他可以用抄录卷轴的规则来创造这些法痕，但不需要“抄录卷轴Scribe ScrollCRB”专长。
+        when: magusLevel >= 3
+        type: ex
+      - id: Spellbreaker
+        name: 破法者
+        desc: 魔战士得到“破法者SpellbreakerCRB”做为奖励专长。
+        when: magusLevel >= 9
+        type: ex
+      - id: Still Magic
+        name: 定发法术
+        desc: 魔战士每天可以释放一个法术，如同该法术被“法术定发Still SpellCRB”所增强。这不会增加施法时间或是法术等级。
+        when: magusLevel >= 3
+        type: su
+      - id: Tabris's Step
+        name: 凌波微步
+        desc: 魔战士可用迅捷动作从【奥能力池】中花费1点奥能获得‘水上行走（Water Walk）’法术效果，持续10分钟每魔战士等级。若他花费2点奥能，则他可使他接触到的最多魔战士等级个生物同样获得该效果。
+        when: magusLevel >= 6
+        type: sp
+      - id: Throwing Magus
+        name: 魔战投手
+        desc: 当魔战士使用【奥能力池】增强武器时，他可以额外消耗1点奥能将〈回力〉和〈投掷〉两个特性添加到他的可用列表上。当魔战士投掷一个被【奥能力池】增强的武器并命中时，他可以回复1点奥能。魔战士每日最多可用此法回复他的智力调整值点奥能。若魔战士在同一回合投掷一把武器并拔出另一把，他可以自由动作使用【奥能力池】增强这把新的武器，而非迅捷动作。
+        when: magusLevel >= 3
+      - id: Wand Mastery
+        name: 魔杖掌握
+        desc: 当魔战士使用魔杖时，用他的智力调整值(最少是0)取代使用该法术需要的最低属性调整值计算任何魔杖内法术的DC。
+        when: magusLevel >= 3
+        type: su
+      - id: Wand Wielder
+        name: 魔杖支配
+        desc: 魔战士在使用【法术战斗】职业能力时，可使用魔杖或法杖替代自己施展法术。
+        when: magusLevel >= 3
+        type: su
+  - id: Spell Recall
+    name: 法术唤回
+    type: su
+    desc: 4级时，魔战士习得如何使用其奥能力池来回收使用过的法术。通过一个迅捷动作他可以支付奥能力池中相对应的点数（至少1点）召回任一个已经使用过的同环级的法术。这些法术视为重新准备且没有施放过。
+  - id: Bonus Feat
+    name: 奖励专长
+    desc: 5级以及之后的每6级，魔战士都会获得一个正常专长数量之外的奖励专长。这些专长必须从战斗专长、造物专长或超魔专长中选择。他也必须正常满足这些专长的前提需求。
+    effects:
+      - type: gainFeat
+        args:
+          featTypes:
+            - combat
+            - metamagic
+            - item creation
+  - id: Knowledge Pool
+    name: 知识力池
+    type: su
+    desc: 7级时，当魔战士准备其魔战士法术时，他可以决定从奥能力池中花费1点或更多点数，最高可以等于其智力加值。他每以此法花费1点，便可以将魔战士法术列表中的任意一个法术视同包含在其法术书中并能以此法在当日正常准备该法术。他也可以运用力池法术能力施展依此法添加的法术，但仅限他下一次准备法术之前使用。
+  - id: Medium Armor
+    name: 中甲擅长
+    type: ex
+    desc: 7级时，魔战士开始擅长中甲。魔战士可以穿着中甲施展魔战士法术而忽视正常的奥术失败率。但穿着重甲或使用盾牌的魔战士则和其他奥术施法者一样，在施放包含姿势成分的法术时遭受奥术失败率。
+    effects:
+      - type: gainProficiency
+        args:
+          armorTraining:
+            - medium
+  - id: Improved Spell Combat
+    name: 精通法术战斗
+    type: ex
+    desc: 8级时，魔战士的同时施法及近战攻击能力得到进一步提升。当使用【法术战斗】能力时，魔战士在专注检定上获得+2环境加值，这个加值也添加到所有在攻击检定上承受减值所换取的加值以外。
+  - id: Fighter Training
+    name: 战斗训练
+    type: ex
+    desc: 10级时，魔战士可以将其魔战士等级的一半作为战士等级来满足专长的前提需求。若他拥有战士等级，则可将等级合计。
+  - id: Improved Spell Recall
+    name: 精通法术唤回
+    type: su
+    desc: 11级时，魔战士使用奥能力池回收法术的能力得到提升。每当他使用奥能力池以召回法术时，他只需要消耗法术环级一半的点数（至少1点）。除此之外，他还可以不召回一个使用过的法术，而是将召回法术所支付的奥能点数（至少1点）用来准备一个在他法术书内的同环其他法术。魔战士不需要因此而而重新研究他的法术书，但也不能为以此法准备的法术添加超魔专长。
+  - id: Heavy Armor
+    name: 重甲擅长
+    type: ex
+    desc: 13级时，魔战士开始擅长重甲。魔战士可以穿着重甲施展魔战士法术而忽视正常的奥术失败率。但使用盾牌的魔战士则和其他奥术施法者一样，在施放包含姿势成分的法术时遭受奥术失败率。
+    effects:
+      - type: gainProficiency
+        args:
+          armorTraining:
+            - heavy
+  - id: Greater Spell Combat
+    name: 高等法术战斗
+    type: ex
+    desc: 14级时，魔战士施放法术和近战攻击的动作完美的衔接为一体。当使用【法术战斗】能力时，其专注检定加值等于所选择承受攻击检定减值的双倍。
+  - id: Counterstrike
+    name: 反制击
+    type: ex
+    desc: 16级时，每当魔战士触及范围内的敌人以防御式成功施展法术时，该敌人在法术完成后会引发魔战士的一次藉机攻击。但该次藉机攻击不会干扰到法术。
+  - id: Greater Spell Access
+    name: 高等法术通路
+    type: su
+    desc: 19级时，魔战士能够获得更多魔法学识。他可以从法师法术列表中选取14个法术加入他的法术书，并以他的魔战士等级作为法师等级使用这些法术。魔战士可以从0环、1环、2环、3环、4环、5环和6环法师法术中每环级选择2个法术。魔战士可以忽略这些法术中的姿势成份，但他也必须为这些法术正常花费贵重的材料成分。
+  - id: True Magus
+    name: 魔战士真义
+    type: su
+    desc: 20级时，魔战士成为法术和战斗的大师。每当他使用【法术战斗】能力时，他无需在防御性施法时进行专注检定。而每当魔战士使用【法术战斗】能力施法并且其法术目标同时也是他近战攻击的目标，他可以选择令该法术的豁免DC+2，或是在任何克服法术抗力的检定中获得+2环境加值，又或是在自己行动回合内所有对该目标的攻击检定中获得+2环境加值。
+
+levels:
+  - level: 1
+    bab: [0]
+    fortitude: 2
+    reflex: 0
+    will: 2
+    special:
+      - Magus Weapon and Armor Proficiency
+      - Spells
+      - Arcane Pool
+      - Cantrips
+      - Spell Combat
+    spellsPerDay: [3, 1, 0, 0, 0, 0, 0]
+  - level: 2
+    bab: [1]
+    fortitude: 3
+    reflex: 0
+    will: 3
+    special:
+      - Spellstrike
+    spellsPerDay: [4, 2, 0, 0, 0, 0, 0]
+  - level: 3
+    bab: [2]
+    fortitude: 3
+    reflex: 1
+    will: 3
+    special:
+      - Magus Arcana 1
+    spellsPerDay: [4, 3, 0, 0, 0, 0, 0]
+  - level: 4
+    bab: [3]
+    fortitude: 4
+    reflex: 1
+    will: 4
+    special:
+      - Spell Recall
+    spellsPerDay: [4, 3, 1, 0, 0, 0, 0]
+  - level: 5
+    bab: [3]
+    fortitude: 4
+    reflex: 1
+    will: 4
+    special:
+      - Bonus Feat
+    spellsPerDay: [4, 4, 2, 0, 0, 0, 0]
+  - level: 6
+    bab: [4]
+    fortitude: 5
+    reflex: 2
+    will: 5
+    special:
+      - Magus Arcana 2
+    spellsPerDay: [5, 4, 3, 0, 0, 0, 0]
+  - level: 7
+    bab: [5]
+    fortitude: 5
+    reflex: 2
+    will: 5
+    special:
+      - Knowledge Pool
+      - Medium Armor
+    spellsPerDay: [5, 4, 3, 1, 0, 0, 0]
+  - level: 8
+    bab: [6, 1]
+    fortitude: 6
+    reflex: 2
+    will: 6
+    special:
+      - Improved Spell Combat
+    spellsPerDay: [5, 4, 4, 2, 0, 0, 0]
+  - level: 9
+    bab: [6, 1]
+    fortitude: 6
+    reflex: 3
+    will: 6
+    special:
+      - Magus Arcana 3
+    spellsPerDay: [5, 5, 4, 3, 0, 0, 0]
+  - level: 10
+    bab: [7, 2]
+    fortitude: 7
+    reflex: 3
+    will: 7
+    special:
+      - Fighter Training
+    spellsPerDay: [5, 5, 4, 3, 1, 0, 0]
+  - level: 11
+    bab: [8, 3]
+    fortitude: 7
+    reflex: 3
+    will: 7
+    special:
+      - Bonus Feat
+      - Improved Spell Recall
+    spellsPerDay: [5, 5, 4, 4, 2, 0, 0]
+  - level: 12
+    bab: [9, 4]
+    fortitude: 8
+    reflex: 4
+    will: 8
+    special:
+      - Magus Arcana 4
+    spellsPerDay: [5, 5, 5, 4, 3, 0, 0]
+  - level: 13
+    bab: [9, 4]
+    fortitude: 8
+    reflex: 4
+    will: 8
+    special:
+      - Heavy Armor
+    spellsPerDay: [5, 5, 5, 4, 3, 1, 0]
+  - level: 14
+    bab: [10, 5]
+    fortitude: 9
+    reflex: 4
+    will: 9
+    special:
+      - Greater Spell Combat
+    spellsPerDay: [5, 5, 5, 4, 4, 2, 0]
+  - level: 15
+    bab: [11, 6, 1]
+    fortitude: 9
+    reflex: 5
+    will: 9
+    special:
+      - Magus Arcana 5
+    spellsPerDay: [5, 5, 5, 5, 4, 3, 0]
+  - level: 16
+    bab: [12, 7, 2]
+    fortitude: 10
+    reflex: 5
+    will: 10
+    special:
+      - Counterstrike
+    spellsPerDay: [5, 5, 5, 5, 4, 3, 1]
+  - level: 17
+    bab: [12, 7, 2]
+    fortitude: 10
+    reflex: 5
+    will: 10
+    special:
+      - Bonus Feat
+    spellsPerDay: [5, 5, 5, 5, 4, 4, 2]
+  - level: 18
+    bab: [13, 8, 3]
+    fortitude: 11
+    reflex: 6
+    will: 11
+    special:
+      - Magus Arcana 6
+    spellsPerDay: [5, 5, 5, 5, 5, 4, 3]
+  - level: 19
+    bab: [14, 9, 4]
+    fortitude: 11
+    reflex: 6
+    will: 11
+    special:
+      - Greater Spell Access
+    spellsPerDay: [5, 5, 5, 5, 5, 5, 4]
+  - level: 20
+    bab: [15, 10, 5]
+    fortitude: 12
+    reflex: 6
+    will: 12
+    special:
+      - True Magus
+    spellsPerDay: [5, 5, 5, 5, 5, 5, 5]

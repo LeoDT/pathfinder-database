@@ -1,5 +1,6 @@
 import cheerio from 'https://dev.jspm.io/npm:cheerio@1.0.0-rc.5/index.js';
 import { stringify } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
+import { titleCase } from 'https://unpkg.com/title-case@3.0.3/dist.es2015/index.js';
 
 import { removeNewlines, removeSpaces, extractNameAndIdAndType } from './utils.js';
 
@@ -41,6 +42,52 @@ const subDomainPowerReplace = {
 };
 
 const druidDomains = ['Air', 'Animal', 'Earth', 'Fire', 'Plant', 'Water', 'Weather'];
+const romeNumberRegex = /^[iIvVxX]+$/;
+
+function fixDomainSpellId(id) {
+  const lower = ['From', 'Against'];
+  const suffixes = ['Greater', 'Lesser', 'Mass'];
+  const splitted = titleCase(id).split(' ');
+  const replacers = {
+    'geas/quest': 'Geas/Quest',
+    'blindness/deafness': 'Blindness/Deafness',
+    'summon monster vd3幽影': 'Summon Monster V',
+    'create greater undead': 'Create Greater Undead',
+    'elemental body': 'Elemental Body IV',
+    'remove blindness/deafness': 'Remove Blindness/Deafness',
+    'antilife shield': 'Antilife Shell',
+    "draljon's breath": "Dragon's Breath",
+    'summon natures ally iv': "Summon Nature's Ally IV",
+    'summon natures ally vii': "Summon Nature's Ally VII",
+    'animate object': 'Animate Objects',
+  };
+
+  if (replacers[id]) {
+    return replacers[id];
+  }
+
+  let result = [];
+  let suffix = '';
+  for (let s of splitted) {
+    s = s.replace(',', '');
+    if (suffixes.includes(s)) {
+      suffix = s;
+      continue;
+    }
+
+    if (lower.includes(s)) {
+      s = s.toLowerCase();
+    }
+
+    if (romeNumberRegex.test(s)) {
+      s = s.toUpperCase();
+    }
+
+    result.push(s);
+  }
+
+  return `${result.join(' ')}${suffix ? `, ${suffix}` : ''}`;
+}
 
 const contents = await Deno.readTextFile(`converted/page_42.html`);
 const $ = cheerio.load(contents);
@@ -198,7 +245,7 @@ for (let i = 0; i < allDomainNames.length; i++) {
         const spellText = removeNewlines(removeSpaces($td.next('td').text())).replace(/UM$/, '');
         const { id } = extractNameAndIdAndType(spellText);
 
-        if (id) return id.replace(/[^a-zA-Z\s'/]+/, '').toLowerCase();
+        if (id) return fixDomainSpellId(id.replace(/[^a-zA-Z\s'/]+/, '').toLowerCase());
       }
     })
     .filter((s) => s);
@@ -257,12 +304,30 @@ for (let i = 0; i < allDomainNames.length; i++) {
 
       return sub;
     });
-    const spells = removeNewlines(removeSpaces(spellEl.text()))
+    const spells = removeNewlines(removeSpaces(spellEl.find('sup').remove().end().text()))
       .replace('替代领域法术：', '')
       .split('；')
       .map((s) => {
-        return s.replace(/[^a-zA-Z\s'/]/g, '').toLowerCase();
-      });
+        if (s.includes('protection from chaos/evil/good/law')) {
+          return [
+            'Protection from Chaos',
+            'Protection from Evil',
+            'Protection from Good',
+            'Protection from Law',
+          ];
+        }
+
+        return fixDomainSpellId(
+          s
+            .replace(/^.*（/, '')
+            .replace(/）.*$/, '')
+            .replace(/,\sAPG/g, '')
+            .replace('，', ' ')
+            .replace(/[^a-zA-Z\s'/]/g, '')
+            .toLowerCase()
+        ).trim();
+      })
+      .flat();
 
     const sub = {
       id: id.replace(' Subdomain', ''),

@@ -174,7 +174,8 @@ feats:
     effects:
       - type: gainFeat
         args:
-          featType: teamwork
+          featTypes:
+            - teamwork
   - id: Bane
     type: su
     name: 破敌

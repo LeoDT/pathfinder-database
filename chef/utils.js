@@ -58,7 +58,8 @@ export function parseWeight(weight) {
   return 0;
 }
 
+export const nameAndIdAndTypeRegex =
+  /^(?<name>.{1,10}?)\s?[（(](?<id>.+?)?[,，]?\s?(?<type>sp|Sp|SP|Su|su|SU|Ex|ex|EX)?[)）]$/;
 export function extractNameAndIdAndType(s) {
-  return s.match(/(?<name>.+?)\s?（(?<id>.+?)?[,，]?\s?(?<type>sp|Sp|SP|Su|su|SU|Ex|ex|EX)?）$/)
-    .groups;
+  return s.match(nameAndIdAndTypeRegex).groups;
 }

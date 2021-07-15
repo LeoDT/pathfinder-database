@@ -16,6 +16,13 @@ const spellNameRegex = /^[\S]+?\s?[(|（][a-zA-Z\s',\-\/]+[)）]$/;
 const dumbSpellNameRegex = /^[a-zA-Z\s',`]+$/;
 const spellIndex = await initSpellIndex();
 
+const spellIdReplacer = {
+  'dominate animal': 'Dominate Animal',
+  'dominate monster': 'Dominate Monster',
+  'dominate person': 'Dominate Person',
+  'Vampiric touch': 'Vampiric Touch',
+};
+
 for (const book of books) {
   const contents = await Deno.readTextFile(`converted/Spell ${book.toUpperCase()}.html`);
   const $ = cheerio.load(contents);
@@ -112,7 +119,7 @@ for (const book of books) {
     id = id.replace(/\s?\[.*?\]$/, '').replace(', 又译９命', '');
 
     success.push({
-      id,
+      id: spellIdReplacer[id] ?? id,
       name,
       meta: {
         ...spellMetaFromIndex(spellIndex, id),

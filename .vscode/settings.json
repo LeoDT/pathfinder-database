@@ -3,5 +3,8 @@
   "search.useIgnoreFiles": true,
   "files.insertFinalNewline": true,
   "deno.lint": false,
-  "deno.unstable": true
+  "deno.unstable": true,
+  "deno.suggest.imports.hosts": {
+    "https://unpkg.com": false
+  }
 }
