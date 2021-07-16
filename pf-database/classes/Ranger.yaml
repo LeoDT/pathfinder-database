@@ -12,9 +12,9 @@ classSkills:
   - handle animal
   - heal
   - intimidate
-  - knowledge (dungeoneering)
-  - knowledge (geography)
-  - knowledge (nature)
+  - knowledge(dungeoneering)
+  - knowledge(geography)
+  - knowledge(nature)
   - perception
   - profession
   - ride
@@ -25,7 +25,7 @@ classSkills:
 skillPoints: 6
 
 feats:
-  - id: Ranger Weapon and Armor Proficiency
+  - id: Weapon and Armor Proficiency
     name: 武器和防具擅长
     desc: 游侠擅长所有简易和军用武器，以及所有盔甲（轻型，中型）和盾牌（除了塔盾）。
   - id: Favored Enemy
@@ -161,7 +161,7 @@ levels:
     reflex: 2
     will: 0
     special:
-      - Ranger Weapon and Armor Proficiency
+      - Weapon and Armor Proficiency
       - 1st Favored Enemy
       - Track
       - Wild Empathy

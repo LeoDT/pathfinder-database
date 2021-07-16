@@ -30,8 +30,8 @@ classSkills:
 skillPoints: 6
 
 feats:
-  - id: Bard Weapon and Armor Proficiency
-    name: 吟游诗人武器和防具擅长
+  - id: Weapon and Armor Proficiency
+    name: 武器和防具擅长
     desc: 吟游诗人擅长所有简单武器，加上长剑，细剑，闷棍，短剑，短弓和长鞭。诗人同样擅长轻甲和盾牌（除了塔盾）。诗人可以在穿着轻甲和盾牌的同时施放法术，并忽视以此带来的法术失败率。吟游诗人在穿着中型或重型盔甲，并施展包含姿态成分的法术时与其他施法者拥有相同的法术失败率。兼职的吟游诗人在施展其它职业的法术时，法术失败率依照正常计算（也就是说，不会忽略轻甲和盾牌）。
     effects:
       - type: gainProficiency
@@ -187,7 +187,7 @@ levels:
     reflex: 2
     will: 2
     special:
-      - Bard Weapon and Armor Proficiency
+      - Weapon and Armor Proficiency
       - Spells
       - Bardic Knowledge
       - Bardic Performance

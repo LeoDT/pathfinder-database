@@ -22,7 +22,7 @@ classSkills:
 skillPoints: 2
 
 feats:
-  - id: Magus Weapon and Armor Proficiency
+  - id: Weapon and Armor Proficiency
     name: 武器和防具擅长
     desc: 魔战士擅长所有简易和军用武器，也擅长轻型护甲。魔战士能够在穿着轻甲时忽视奥术失败机率地使用魔战士法术。但魔战士在穿着中甲、重甲或使用盾牌时施展包含姿势成分的法术会遭受奥术失败率，与其他承受奥术失败率的施法者相同。兼职的魔战士在施展其他职业的奥术时也正常遭受奥术失败率惩罚。
     effects:
@@ -470,7 +470,7 @@ levels:
     reflex: 0
     will: 2
     special:
-      - Magus Weapon and Armor Proficiency
+      - Weapon and Armor Proficiency
       - Spells
       - Arcane Pool
       - Cantrips

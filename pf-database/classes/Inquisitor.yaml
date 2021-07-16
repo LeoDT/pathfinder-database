@@ -31,8 +31,8 @@ classSkills:
 skillPoints: 6
 
 feats:
-  - id: Inquisitor Weapon and Armor Proficiency
-    name: 审判者武器防具擅长
+  - id: Weapon and Armor Proficiency
+    name: 武器防具擅长
     desc: 审判者擅长使用所有简易武器，以及手弩、长弓、连发弩、短弓和他们信仰神祉的偏好武器。他们擅长轻型、中型盔甲和盾牌（除了塔盾）。
     effects:
       - type: gainProficiency
@@ -223,7 +223,7 @@ levels:
     reflex: 0
     will: 2
     special:
-      - Inquisitor Weapon and Armor Proficiency
+      - Weapon and Armor Proficiency
       - Spells
       - Domain
       - Judgment 1/day

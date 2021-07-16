@@ -21,8 +21,8 @@ classSkills:
 skillPoints: 2
 
 feats:
-  - id: Fighter Weapon and Armor Proficiency
-    name: 战士武器防具擅长
+  - id: Weapon and Armor Proficiency
+    name: 武器防具擅长
     desc: 战士擅长使用所有的简易武器和军用武器，同时擅长所有类型盔甲（重甲，中甲，轻甲）和盾牌（包括塔盾）。
     effects:
       - type: gainProficiency
@@ -112,7 +112,7 @@ levels:
     reflex: 0
     will: 0
     special:
-      - Fighter Weapon and Armor Proficiency
+      - Weapon and Armor Proficiency
       - Bonus Feat
   - level: 2
     bab: [2]

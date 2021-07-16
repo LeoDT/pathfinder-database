@@ -13,9 +13,9 @@ classSkills:
   - handle animal
   - heal
   - intimidate
-  - knowledge (dungeoneering)
-  - knowledge (geography)
-  - knowledge (nature)
+  - knowledge(dungeoneering)
+  - knowledge(geography)
+  - knowledge(nature)
   - perception
   - profession
   - ride
@@ -26,7 +26,7 @@ classSkills:
 skillPoints: 6
 
 feats:
-  - id: Hunter Weapon and Armor Proficiency
+  - id: Weapon and Armor Proficiency
     name: 武器与防具擅长
     desc: 猎人擅长所有简易和军用武器，以及轻甲、中甲和盾牌（塔盾除外）。
     effects:
@@ -69,7 +69,7 @@ feats:
           maxSpellLevel: 6
   - id: Orisons
     name: 祷念
-    desc: 按照表
+    desc: 按照表：猎人已知法术，猎人可以学会若干个“祷念”，或称为0级法术。这些法术与其他法术的施放方式相同，但施放时不会消耗法术位，而且可以被再次施放。
   - id: Chaotic, Evil, Good, and Lawful Spells
     name: 混乱、邪恶、善良和秩序法术
     desc: 猎人无法施放与自己、或其信仰的神祇（如果有的话）的阵营相反的法术。与特定阵营相关的法术的说明中，会在法术详述中以混乱、邪恶、善良或秩序描述符进行标注。
@@ -219,7 +219,7 @@ levels:
     reflex: 2
     will: 0
     special:
-      - Hunter Weapon and Armor Proficiency
+      - Weapon and Armor Proficiency
       - Spells
       - Chaotic, Evil, Good, and Lawful Spells
       - Animal Companion

@@ -20,8 +20,8 @@ classSkills:
 skillPoints: 2
 
 feats:
-  - id: Sorcerer Weapon and Armor Proficiency
-    name: 术士武器防具擅长
+  - id: Weapon and Armor Proficiency
+    name: 武器防具擅长
     desc: 术士擅长使用所有的简单武器。他们不擅长使用任何盔甲或盾牌。任何防具都会限制术士的手势，因而导致术士施展具有姿态成分的法术时失败。
   - id: Spells
     name: 法术
@@ -122,176 +122,176 @@ feats:
       【专长速查】施法免材（Eschew Materials）：施法时无需廉价材料成分。
 
 levels:
-- level: 1
-  bab: [0]
-  fortitude: 0
-  reflex: 0
-  will: 2
-  special:
-    - Sorcerer Weapon and Armor Proficiency
-    - Spells
-    - Bloodline
-    - Bloodline Power 1
-    - Cantrips
-    - Eschew Materials
-  spellsPerDay: [0, 3, 0, 0, 0, 0, 0, 0, 0, 0]
-  spellsKnown: [4, 2, 0, 0, 0, 0, 0, 0, 0, 0]
-- level: 2
-  bab: [1]
-  fortitude: 0
-  reflex: 0
-  will: 3
-  spellsPerDay: [0, 4, 0, 0, 0, 0, 0, 0, 0, 0]
-  spellsKnown: [5, 2, 0, 0, 0, 0, 0, 0, 0, 0]
-- level: 3
-  bab: [1]
-  fortitude: 1
-  reflex: 1
-  will: 3
-  special:
-    - Bloodline Power 2
-    - Bloodline Spell 1
-  spellsPerDay: [0, 5, 0, 0, 0, 0, 0, 0, 0, 0]
-  spellsKnown: [5, 3, 0, 0, 0, 0, 0, 0, 0, 0]
-- level: 4
-  bab: [2]
-  fortitude: 1
-  reflex: 1
-  will: 4
-  spellsPerDay: [0, 6, 3, 0, 0, 0, 0, 0, 0, 0]
-  spellsKnown: [6, 3, 1, 0, 0, 0, 0, 0, 0, 0]
-- level: 5
-  bab: [2]
-  fortitude: 1
-  reflex: 1
-  will: 4
-  special:
-    - Bloodline Spell 2
-  spellsPerDay: [0, 6, 4, 0, 0, 0, 0, 0, 0, 0]
-  spellsKnown: [6, 4, 2, 0, 0, 0, 0, 0, 0, 0]
-- level: 6
-  bab: [3]
-  fortitude: 2
-  reflex: 2
-  will: 5
-  spellsPerDay: [0, 6, 5, 3, 0, 0, 0, 0, 0, 0]
-  spellsKnown: [7, 4, 2, 1, 0, 0, 0, 0, 0, 0]
-- level: 7
-  bab: [3]
-  fortitude: 2
-  reflex: 2
-  will: 5
-  special:
-    - Bloodline Feat 1
-    - Bloodline Spell 3
-  spellsPerDay: [0, 6, 6, 4, 0, 0, 0, 0, 0, 0]
-  spellsKnown: [7, 5, 3, 2, 0, 0, 0, 0, 0, 0]
-- level: 8
-  bab: [4]
-  fortitude: 2
-  reflex: 2
-  will: 6
-  spellsPerDay: [0, 6, 6, 5, 3, 0, 0, 0, 0, 0]
-  spellsKnown: [8, 5, 3, 2, 1, 0, 0, 0, 0, 0]
-- level: 9
-  bab: [4]
-  fortitude: 3
-  reflex: 3
-  will: 6
-  special:
-    - Bloodline Power 3
-    - Bloodline Spell 4
-  spellsPerDay: [0, 6, 6, 6, 4, 0, 0, 0, 0, 0]
-  spellsKnown: [8, 5, 4, 3, 2, 0, 0, 0, 0, 0]
-- level: 10
-  bab: [5]
-  fortitude: 3
-  reflex: 3
-  will: 7
-  spellsPerDay: [0, 6, 6, 6, 5, 3, 0, 0, 0, 0]
-  spellsKnown: [9, 5, 4, 3, 2, 1, 0, 0, 0, 0]
-- level: 11
-  bab: [5]
-  fortitude: 3
-  reflex: 3
-  will: 7
-  special:
-    - Bloodline Spell 5
-  spellsPerDay: [0, 6, 6, 6, 6, 4, 0, 0, 0, 0]
-  spellsKnown: [9, 5, 5, 4, 3, 2, 0, 0, 0, 0]
-- level: 12
-  bab: [6, 1]
-  fortitude: 4
-  reflex: 4
-  will: 8
-  spellsPerDay: [0, 6, 6, 6, 6, 5, 3, 0, 0, 0]
-  spellsKnown: [9, 5, 5, 4, 3, 2, 1, 0, 0, 0]
-- level: 13
-  bab: [6, 1]
-  fortitude: 4
-  reflex: 4
-  will: 8
-  special:
-    - Bloodline Feat 2
-    - Bloodline Spell 6
-  spellsPerDay: [0, 6, 6, 6, 6, 6, 4, 0, 0, 0]
-  spellsKnown: [9, 5, 5, 4, 4, 3, 2, 0, 0, 0]
-- level: 14
-  bab: [7, 2]
-  fortitude: 4
-  reflex: 4
-  will: 9
-  spellsPerDay: [0, 6, 6, 6, 6, 6, 5, 3, 0, 0]
-  spellsKnown: [9, 5, 5, 4, 4, 3, 2, 1, 0, 0]
-- level: 15
-  bab: [7, 2]
-  fortitude: 5
-  reflex: 5
-  will: 9
-  special:
-    - Bloodline Power 4
-    - Bloodline Spell 7
-  spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 4, 0, 0]
-  spellsKnown: [9, 5, 5, 4, 4, 4, 3, 2, 0, 0]
-- level: 16
-  bab: [8, 3]
-  fortitude: 5
-  reflex: 5
-  will: 10
-  spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 5, 3, 0]
-  spellsKnown: [9, 5, 5, 4, 4, 4, 3, 2, 1, 0]
-- level: 17
-  bab: [8, 3]
-  fortitude: 5
-  reflex: 5
-  will: 10
-  special:
-    - Bloodline Spell 8
-  spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 6, 4, 0]
-  spellsKnown: [9, 5, 5, 4, 4, 4, 3, 3, 2, 0]
-- level: 18
-  bab: [9, 4]
-  fortitude: 6
-  reflex: 6
-  will: 11
-  spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 6, 5, 3]
-  spellsKnown: [9, 5, 5, 4, 4, 4, 3, 3, 2, 1]
-- level: 19
-  bab: [9, 4]
-  fortitude: 6
-  reflex: 6
-  will: 11
-  special:
-    - Bloodline Feat 3
-    - Bloodline Spell 9
-  spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 6, 6, 4]
-  spellsKnown: [9, 5, 5, 4, 4, 4, 3, 3, 3, 2]
-- level: 20
-  bab: [10, 5]
-  fortitude: 6
-  reflex: 6
-  will: 12
-  special:
-    - Bloodline Power 5
-  spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6]
-  spellsKnown: [9, 5, 5, 4, 4, 4, 3, 3, 3, 3]
+  - level: 1
+    bab: [0]
+    fortitude: 0
+    reflex: 0
+    will: 2
+    special:
+      - Weapon and Armor Proficiency
+      - Spells
+      - Bloodline
+      - Bloodline Power 1
+      - Cantrips
+      - Eschew Materials
+    spellsPerDay: [0, 3, 0, 0, 0, 0, 0, 0, 0, 0]
+    spellsKnown: [4, 2, 0, 0, 0, 0, 0, 0, 0, 0]
+  - level: 2
+    bab: [1]
+    fortitude: 0
+    reflex: 0
+    will: 3
+    spellsPerDay: [0, 4, 0, 0, 0, 0, 0, 0, 0, 0]
+    spellsKnown: [5, 2, 0, 0, 0, 0, 0, 0, 0, 0]
+  - level: 3
+    bab: [1]
+    fortitude: 1
+    reflex: 1
+    will: 3
+    special:
+      - Bloodline Power 2
+      - Bloodline Spell 1
+    spellsPerDay: [0, 5, 0, 0, 0, 0, 0, 0, 0, 0]
+    spellsKnown: [5, 3, 0, 0, 0, 0, 0, 0, 0, 0]
+  - level: 4
+    bab: [2]
+    fortitude: 1
+    reflex: 1
+    will: 4
+    spellsPerDay: [0, 6, 3, 0, 0, 0, 0, 0, 0, 0]
+    spellsKnown: [6, 3, 1, 0, 0, 0, 0, 0, 0, 0]
+  - level: 5
+    bab: [2]
+    fortitude: 1
+    reflex: 1
+    will: 4
+    special:
+      - Bloodline Spell 2
+    spellsPerDay: [0, 6, 4, 0, 0, 0, 0, 0, 0, 0]
+    spellsKnown: [6, 4, 2, 0, 0, 0, 0, 0, 0, 0]
+  - level: 6
+    bab: [3]
+    fortitude: 2
+    reflex: 2
+    will: 5
+    spellsPerDay: [0, 6, 5, 3, 0, 0, 0, 0, 0, 0]
+    spellsKnown: [7, 4, 2, 1, 0, 0, 0, 0, 0, 0]
+  - level: 7
+    bab: [3]
+    fortitude: 2
+    reflex: 2
+    will: 5
+    special:
+      - Bloodline Feat 1
+      - Bloodline Spell 3
+    spellsPerDay: [0, 6, 6, 4, 0, 0, 0, 0, 0, 0]
+    spellsKnown: [7, 5, 3, 2, 0, 0, 0, 0, 0, 0]
+  - level: 8
+    bab: [4]
+    fortitude: 2
+    reflex: 2
+    will: 6
+    spellsPerDay: [0, 6, 6, 5, 3, 0, 0, 0, 0, 0]
+    spellsKnown: [8, 5, 3, 2, 1, 0, 0, 0, 0, 0]
+  - level: 9
+    bab: [4]
+    fortitude: 3
+    reflex: 3
+    will: 6
+    special:
+      - Bloodline Power 3
+      - Bloodline Spell 4
+    spellsPerDay: [0, 6, 6, 6, 4, 0, 0, 0, 0, 0]
+    spellsKnown: [8, 5, 4, 3, 2, 0, 0, 0, 0, 0]
+  - level: 10
+    bab: [5]
+    fortitude: 3
+    reflex: 3
+    will: 7
+    spellsPerDay: [0, 6, 6, 6, 5, 3, 0, 0, 0, 0]
+    spellsKnown: [9, 5, 4, 3, 2, 1, 0, 0, 0, 0]
+  - level: 11
+    bab: [5]
+    fortitude: 3
+    reflex: 3
+    will: 7
+    special:
+      - Bloodline Spell 5
+    spellsPerDay: [0, 6, 6, 6, 6, 4, 0, 0, 0, 0]
+    spellsKnown: [9, 5, 5, 4, 3, 2, 0, 0, 0, 0]
+  - level: 12
+    bab: [6, 1]
+    fortitude: 4
+    reflex: 4
+    will: 8
+    spellsPerDay: [0, 6, 6, 6, 6, 5, 3, 0, 0, 0]
+    spellsKnown: [9, 5, 5, 4, 3, 2, 1, 0, 0, 0]
+  - level: 13
+    bab: [6, 1]
+    fortitude: 4
+    reflex: 4
+    will: 8
+    special:
+      - Bloodline Feat 2
+      - Bloodline Spell 6
+    spellsPerDay: [0, 6, 6, 6, 6, 6, 4, 0, 0, 0]
+    spellsKnown: [9, 5, 5, 4, 4, 3, 2, 0, 0, 0]
+  - level: 14
+    bab: [7, 2]
+    fortitude: 4
+    reflex: 4
+    will: 9
+    spellsPerDay: [0, 6, 6, 6, 6, 6, 5, 3, 0, 0]
+    spellsKnown: [9, 5, 5, 4, 4, 3, 2, 1, 0, 0]
+  - level: 15
+    bab: [7, 2]
+    fortitude: 5
+    reflex: 5
+    will: 9
+    special:
+      - Bloodline Power 4
+      - Bloodline Spell 7
+    spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 4, 0, 0]
+    spellsKnown: [9, 5, 5, 4, 4, 4, 3, 2, 0, 0]
+  - level: 16
+    bab: [8, 3]
+    fortitude: 5
+    reflex: 5
+    will: 10
+    spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 5, 3, 0]
+    spellsKnown: [9, 5, 5, 4, 4, 4, 3, 2, 1, 0]
+  - level: 17
+    bab: [8, 3]
+    fortitude: 5
+    reflex: 5
+    will: 10
+    special:
+      - Bloodline Spell 8
+    spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 6, 4, 0]
+    spellsKnown: [9, 5, 5, 4, 4, 4, 3, 3, 2, 0]
+  - level: 18
+    bab: [9, 4]
+    fortitude: 6
+    reflex: 6
+    will: 11
+    spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 6, 5, 3]
+    spellsKnown: [9, 5, 5, 4, 4, 4, 3, 3, 2, 1]
+  - level: 19
+    bab: [9, 4]
+    fortitude: 6
+    reflex: 6
+    will: 11
+    special:
+      - Bloodline Feat 3
+      - Bloodline Spell 9
+    spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 6, 6, 4]
+    spellsKnown: [9, 5, 5, 4, 4, 4, 3, 3, 3, 2]
+  - level: 20
+    bab: [10, 5]
+    fortitude: 6
+    reflex: 6
+    will: 12
+    special:
+      - Bloodline Power 5
+    spellsPerDay: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+    spellsKnown: [9, 5, 5, 4, 4, 4, 3, 3, 3, 3]

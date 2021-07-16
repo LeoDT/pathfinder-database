@@ -11,11 +11,11 @@ classSkills:
   - craft
   - diplomacy
   - heal
-  - knowledge (arcana)
-  - knowledge (history)
-  - knowledge (nobility)
-  - knowledge (planes)
-  - knowledge (religion)
+  - knowledge(arcana)
+  - knowledge(history)
+  - knowledge(nobility)
+  - knowledge(planes)
+  - knowledge(religion)
   - linguistics
   - profession
   - sense motive
@@ -23,7 +23,7 @@ classSkills:
 skillPoints: 2
 
 feats:
-  - id: Cleric Weapon and Armor Proficiency
+  - id: Weapon and Armor Proficiency
     name: 武器和防具擅长
     desc: 牧师擅长使用所有简易武器、轻甲、中甲以及盾牌（塔盾除外）。牧师此外还擅长他的神祇偏好的武器。【PFS】信仰义洛理的牧师1级获得“精通徒手打击”作为奖励专长。
     effects:
@@ -115,7 +115,7 @@ levels:
     reflex: 0
     will: 2
     special:
-      - Cleric Weapon and Armor Proficiency
+      - Weapon and Armor Proficiency
       - Spells
       - Bonus Languages
       - Chaotic, Evil, Good, and Lawful Spells

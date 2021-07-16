@@ -27,8 +27,8 @@ classSkills:
 skillPoints: 4
 
 feats:
-  - id: Swashbuckler Weapon and Armor Proficiency
-    name: 游荡剑客人武器防具擅长
+  - id: Weapon and Armor Proficiency
+    name: 武器防具擅长
     desc: 游荡剑客擅长所有的简单和军用武器。游荡剑客擅长所有的轻甲以及小圆盾。
     effects:
       - type: gainProficiency
@@ -133,7 +133,7 @@ levels:
     reflex: 2
     will: 0
     special:
-      - Swashbuckler Weapon and Armor Proficiency
+      - Weapon and Armor Proficiency
       - Deeds
       - Panache
       - Swashbuckler Finesse

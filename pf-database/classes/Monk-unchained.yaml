@@ -25,8 +25,8 @@ classSkills:
 skillPoints: 4
 
 feats:
-  - id: Monk(Unchained) Weapon and Armor Proficiency
-    name: 武僧(Unchained)武器和防具擅长
+  - id: Weapon and Armor Proficiency
+    name: 武器和防具擅长
     desc: |
       武僧擅长木棒、轻弩、重弩、匕首、手斧、标枪、单镰、双截棍、木棍、笔架叉、短剑、短矛、手里剑、破魔锥、投石索、矛，和任何带有“武僧”武器特性的武器。
       武僧不擅长任何护甲或盾牌。
@@ -894,7 +894,7 @@ levels:
     reflex: 2
     will: 0
     special:
-      - Monk(Unchained) Weapon and Armor Proficiency
+      - Weapon and Armor Proficiency
       - AC Bonus
       - Bonus Feat
       - Flurry of Blows

@@ -21,8 +21,8 @@ classSkills:
 skillPoints: 4
 
 feats:
-  - id: Barbarian Weapon and Armor Proficiency
-    name: 野蛮人武器防具擅长
+  - id: Weapon and Armor Proficiency
+    name: 武器防具擅长
     desc: 野蛮人擅长使用所有的简易武器、军用武器、轻甲、中甲，以及盾牌（不包括塔盾）。
     effects:
       - type: gainProficiency
@@ -893,7 +893,7 @@ levels:
     reflex: 0
     will: 0
     special:
-      - Barbarian Weapon and Armor Proficiency
+      - Weapon and Armor Proficiency
       - Fast Movement
       - Rage
   - level: 2

@@ -18,8 +18,8 @@ classSkills:
 skillPoints: 2
 
 feats:
-  - id: Wizard Weapon and Armor Proficiency
-    name: 法师武器防具擅长
+  - id: Weapon and Armor Proficiency
+    name: 武器防具擅长
     desc: 法师擅长使用木棒、匕首、重弩、轻弩、木棍，但是不擅长使用任何盔甲或盾牌。任何防具都会限制法师的动作，因而导致法师施展具有姿态成分的法术时失败。
     effects:
       - type: gainProficiency
@@ -88,7 +88,7 @@ levels:
     reflex: 0
     will: 2
     special:
-      - Wizard Weapon and Armor Proficiency
+      - Weapon and Armor Proficiency
       - Spells
       - Arcane Bond
       - Arcane School

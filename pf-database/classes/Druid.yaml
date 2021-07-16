@@ -12,8 +12,8 @@ classSkills:
   - fly
   - handle animal
   - heal
-  - knowledge (geography)
-  - knowledge (nature)
+  - knowledge(geography)
+  - knowledge(nature)
   - perception
   - profession
   - ride
@@ -23,8 +23,8 @@ classSkills:
 skillPoints: 4
 
 feats:
-  - id: Druid Weapon and Armor Proficiency
-    name: 德鲁伊武器和防具擅长
+  - id: Weapon and Armor Proficiency
+    name: 武器和防具擅长
     desc: 德鲁伊擅长下列武器：木棒，匕首，飞镖，木棍，弯刀，巨镰，镰刀，短矛，投石索和矛。德鲁伊在【自然变身】状态时，也擅长该形体具有的任何天生攻击方式（爪抓、啮咬等）。德鲁伊擅长使用轻型和中型盔甲，但不可穿着金属盔甲，所以他们只穿厚布甲、皮甲或革甲。德鲁伊可以穿着施有‘金刚木’法术的木制盔甲，此盔甲的功能如同金属制。德鲁伊也擅长使用盾牌（塔盾除外），但只能用木制盾。使用禁用盔甲或盾牌的德鲁伊无法施展德鲁伊法术，也不能使用任何超自然或类法术职业能力，直到卸下该防具再过24小时后，才能恢复。
   - id: Spells
     name: 法术
@@ -128,7 +128,7 @@ levels:
     reflex: 0
     will: 2
     special:
-      - Druid Weapon and Armor Proficiency
+      - Weapon and Armor Proficiency
       - Spells
       - Nature Bond
       - Nature Sense
