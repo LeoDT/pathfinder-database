@@ -41,7 +41,28 @@ const subDomainPowerReplace = {
   'Aura of Menace': (domainId) => (domainId === 'Law Domain' ? 'Staff of Order' : 'Holy Lance'),
 };
 
-const druidDomains = ['Air', 'Animal', 'Earth', 'Fire', 'Plant', 'Water', 'Weather'];
+const druidDomains = [
+  'Air',
+  'Animal',
+  'Aquatic',
+  'Arctic',
+  'Cave',
+  'Desert',
+  'Eagle',
+  'Earth',
+  'Fire',
+  'Frog',
+  'Jungle',
+  'Monkey',
+  'Mountain',
+  'Plains',
+  'Plant',
+  'Serpent',
+  'Swamp',
+  'Water',
+  'Weather',
+  'Wolf',
+];
 const romeNumberRegex = /^[iIvVxX]+$/;
 
 function fixDomainSpellId(id) {
@@ -60,6 +81,8 @@ function fixDomainSpellId(id) {
     'summon natures ally iv': "Summon Nature's Ally IV",
     'summon natures ally vii': "Summon Nature's Ally VII",
     'animate object': 'Animate Objects',
+    Suffocate: 'Suffocation',
+    'Create Greater Undead': 'Create Greater Undead',
   };
 
   if (replacers[id]) {
@@ -89,11 +112,42 @@ function fixDomainSpellId(id) {
   return `${result.join(' ')}${suffix ? `, ${suffix}` : ''}`;
 }
 
-const contents = await Deno.readTextFile(`converted/page_42.html`);
+const contents = await Deno.readTextFile('converted/page_42.html');
 const $ = cheerio.load(contents);
 
+const druidContents = await Deno.readTextFile('converted/page_46.html');
+const d$ = cheerio.load(druidContents);
+
+let druidDomainStart = null;
+
+d$('body > p')
+  .get()
+  .forEach((p) => {
+    const $p = d$(p);
+
+    if (
+      $p.find('span[style*="009900"][style*="14pt"]').length > 1 &&
+      removeNewlines(removeSpaces($p.text())) === '水栖领域（Aquatic Domain）'
+    ) {
+      druidDomainStart = $p;
+    }
+  });
+
+druidDomainStart.prevAll().remove();
+
 const allDomainNames = [];
-let endEl = [];
+
+$('body > p span[style*="c00000"][style*="16pt"]')
+  .get()
+  .forEach((s) => {
+    const $s = $(s);
+
+    if ($s.text() === '引导能量变体（') {
+      $s.parents('p').nextAll().remove();
+    }
+  });
+
+$('body').append(d$('body > *'));
 
 $('body > p')
   .get()
@@ -102,13 +156,6 @@ $('body > p')
 
     if ($p.find('span[style*="009900"][style*="14pt"]').length > 1) {
       allDomainNames.push($p);
-    }
-
-    if (
-      $p.find('span[style*="c00000"][style*="16pt"]').length &&
-      $p.text().includes('引导能量变体')
-    ) {
-      endEl = $p;
     }
   });
 
@@ -119,7 +166,7 @@ for (let i = 0; i < allDomainNames.length; i++) {
   const nextNameElWrapper = allDomainNames[i + 1];
 
   const all = (
-    nextNameElWrapper ? nameElWrapper.nextUntil(nextNameElWrapper) : nameElWrapper.nextUntil(endEl)
+    nextNameElWrapper ? nameElWrapper.nextUntil(nextNameElWrapper) : nameElWrapper.nextAll()
   ).get();
 
   let descEl = null;
@@ -135,7 +182,7 @@ for (let i = 0; i < allDomainNames.length; i++) {
       continue;
     }
 
-    if ($el.find('table').length) {
+    if ($el.find('table').length || $el.is('table')) {
       if ($el.find('td[style*="f79646"]').length) {
         spellTable = $el;
       } else {
@@ -196,6 +243,10 @@ for (let i = 0; i < allDomainNames.length; i++) {
 
       continue;
     }
+
+    if (!descEl && $el.prev().prev().is(nameElWrapper)) {
+      descEl = $el;
+    }
   }
 
   const nameAndId = removeNewlines(removeSpaces(nameElWrapper.text()));
@@ -220,7 +271,7 @@ for (let i = 0; i < allDomainNames.length; i++) {
     const power = {
       name,
       id,
-      type: type?.toLowerCase(),
+      type: type?.toLowerCase() || null,
       desc,
       effects: [{ type: 'classFeatSource' }],
     };
@@ -242,7 +293,9 @@ for (let i = 0; i < allDomainNames.length; i++) {
       const text = removeNewlines(removeSpaces($td.text()));
 
       if (/^\d环/.test(text)) {
-        const spellText = removeNewlines(removeSpaces($td.next('td').text())).replace(/UM$/, '');
+        const spellText = removeNewlines(removeSpaces($td.next('td').text()))
+          .replace(/UM$/g, '')
+          .replace(/,\s(UM|APG)/, '');
         const { id } = extractNameAndIdAndType(spellText);
 
         if (id) return fixDomainSpellId(id.replace(/[^a-zA-Z\s'/]+/, '').toLowerCase());

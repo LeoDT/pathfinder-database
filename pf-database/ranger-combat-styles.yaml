@@ -1,0 +1,92 @@
+- id: Archery
+  name: 箭术专家
+  feats:
+    - Far Shot
+    - Point-Blank Shot
+    - Precise Shot
+    - Rapid Shot
+    - Focused Shot
+    - Improved Precise Shot
+    - Manyshot
+    - Crossbow Mastery
+    - Parting Shot
+    - Point-Blank Master
+    - Pinpoint Targeting
+    - Shot on the Run
+- id: Two-Weapon Combat
+  name: 双武格斗
+  feats:
+    - Double Slice
+    - Improved Shield Bash
+    - Quick Draw
+    - Two-Weapon Fighting
+    - Improved Two-Weapon Fighting
+    - Two-Weapon Defense
+    - Greater Two-Weapon Fighting
+    - Two-Weapon Rend
+- id: Crossbow
+  name: 十字弓手
+  feats:
+    - Deadly Aim
+    - Focused Shot
+    - Precise Shot
+    - Rapid Reload
+    - Crossbow Mastery
+    - Improved Precise Shot
+    - Pinpoint Targeting
+    - Shot on the Run
+- id: Mounted Combat
+  name: 骑乘战斗
+  feats:
+    - Mounted Combat
+    - Mounted Archery
+    - Ride-By Attack
+    - Trick Riding
+    - Mounted Shield
+    - Spirited Charge
+    - Mounted Skirmisher
+    - Unseat
+- id: Natural Weapon
+  name: 天生武器
+  feats:
+    - Aspect of the Beast
+    - Improved Natural Attack
+    - Rending Claws
+    - Weapon Focus
+    - Eldritch Claws
+    - Vital Strike
+    - Multiattack
+    - Improved Vital Strike
+- id: Two-Handed Weapon
+  name: 双手武器
+  feats:
+    - Cleave
+    - Power Attack
+    - Pushing Assault
+    - Shield of Swings
+    - Furious Focus
+    - Great Cleave
+    - Dreadful Carnage
+    - Improved Sunder
+- id: Weapon and Shield
+  name: 剑盾格斗
+  feats:
+    - Improved Shield Bash
+    - Shield Focus
+    - Shield Slam
+    - Two-Weapon Fighting
+    - Saving Shield
+    - Shield Master
+    - Bashing Finish
+    - Greater Shield Focus
+- id: Thrown Weapon
+  name: 投掷武器
+  feats:
+    - Distance Thrower
+    - Precise Shot
+    - Quick Draw
+    - Two-Weapon Fighting
+    - Close-Quarters Thrower
+    - False Opening
+    - Pinpoint Targeting
+    - Shot on the Run

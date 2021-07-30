@@ -48,6 +48,73 @@ feats:
       - level: 20
         id: 5th Favored Enemy
         name: 第五宿敌
+    subs:
+      - id: Aberration
+        name: 异怪
+      - id: Humanoid (other subtype)
+        name: 类人生物（其他）
+      - id: Animal
+        name: 动物
+      - id: Magical beast
+        name: 魔法兽
+      - id: Construct
+        name: 构装生物
+      - id: Monstrous humanoid
+        name: 人型怪物
+      - id: Dragon
+        name: 龙类
+      - id: Ooze
+        name: 泥型生物
+      - id: Fey
+        name: 精类
+      - id: Outsider (air)
+        name: 异界生物（气）
+      - id: Humanoid (aquatic)
+        name: 类人生物（水栖）
+      - id: Outsider (chaotic)
+        name: 异界生物（混乱）
+      - id: Humanoid (dwarf)
+        name: 类人生物（矮人）
+      - id: Outsider (earth)
+        name: 异界生物（土）
+      - id: Humanoid (elf)
+        name: 类人生物（精灵）
+      - id: Outsider (evil)
+        name: 异界生物（邪恶）
+      - id: Humanoid (giant)
+        name: 类人生物（巨人）
+      - id: Outsider (fire)
+        name: 异界生物（火）
+      - id: Humanoid (goblinoid)
+        name: 类人生物（地精）
+      - id: Outsider (good)
+        name: 异界生物（善良）
+      - id: Humanoid (gnoll)
+        name: 类人生物（豺狼人）
+      - id: Outsider (lawful)
+        name: 异界生物（秩序）
+      - id: Humanoid (gnome)
+        name: 类人生物（侏儒）
+      - id: Outsider (native)
+        name: 异界生物（本地）
+      - id: Humanoid (halfling)
+        name: 类人生物（半身人）
+      - id: Outsider (water)
+        name: 异界生物（水）
+      - id: Humanoid (human)
+        name: 类人生物（人类）
+      - id: Plant
+        name: 植物
+      - id: Humanoid (orc)
+        name: 类人生物（兽人）
+      - id: Undead
+        name: 不死生物
+      - id: Humanoid (reptilian)
+        name: 类人生物（爬虫）
+      - id: Vermin
+        name: 虫类
+    effects:
+      - type: selectFromSubs
   - id: Track
     name: 追踪
     type: ex
@@ -56,14 +123,19 @@ feats:
     name: 野性认同
     type: ex
     desc: 游侠可以改善动物的初始态度。该能力类似在改善人的态度时所做的交涉检定。游侠进行d20检定，再加上他的游侠等级和魅力修正来决定【野性认同】检定的结果。一般家畜开始时的态度是冷淡，野外生物则通常是不友善。要使用野性认同，游侠和动物必须在普通可视环境下彼此相距30尺以内。一般通过这种方式影响一个动物需要1分钟时间，不过和影响人类似，所需的时间可能会变长或变短。游侠也可以通过此能力影响一个智力为1或2的魔法兽, 不过在检定中要受到-4减值。
-  - id: Combat Style Feat
-    name: 战斗流派专长
+  - id: Combat Style
+    name: 战斗流派
     type: ex
     desc: |
-      在2级时，游侠必须在两种战斗流派中选择一种进行修习
+      在2级时，游侠必须在两种战斗流派中选择一种进行修习箭术或双武器格斗。游侠在所选流派上的技巧，以奖励专长的形式在2，6，10，14和18级获得。他可以根据自己的战斗流派选择专长，即使自身没有达到该专长的先决条件。
       如果游侠选择了箭术，他在获得战斗流派专长能力时可以从如下专长中选择：远距射击，近距射击，精准射击和快速射击。在6级时，精通精准射击和多重射击加入列表中。10级时，精确瞄准（Pinpoint Targeting）和移动射击加入列表中。
       如果游侠选择了双武器格斗，他在获得战斗流派专长能力时可以从如下专长中选择：双重切割（Double Slice），精通盾击，即时备战和双武器格斗。在6级时，精通双武器格斗和双武器防御加入列表中，10级时，高等双武器格斗和双武器撕裂（Two-Weapon Rend）加入列表中。
       【战斗流派专长】带来的收益只有在游侠穿戴轻型，中型盔甲或不穿甲时才有效。在穿戴重甲时，游侠失去所有的战斗流派专长。战斗流派一经选择，便无法改变。
+    effects:
+      - type: gainCombatStyle
+  - id: Combat Style Feat
+    name: 战斗流派专长
+    placeholder: true
     grow:
       - level: 2
         id: Combat Style Feat 1
@@ -80,6 +152,10 @@ feats:
       - level: 18
         id: Combat Style Feat 5
         name: 战斗流派专长 5
+    effects:
+      - type: gainFeat
+        args:
+          combatStyleFeat: true
   - id: Endurance
     name: 坚忍
     desc: 游侠在3级时获得“坚忍”作为奖励专长。
@@ -100,6 +176,31 @@ feats:
       - level: 18
         id: 4th Favored Terrain
         name: 第四偏好地形
+    subs:
+      - id: Cold (ice, glaciers, snow, and tundra)
+        name: 寒地（冰面，冰川，雪地和苔原）
+      - id: Desert (sand and wastelands)
+        name: 沙漠（沙地和荒地）
+      - id: Forest (coniferous and deciduous)
+        name: 森林（常绿林和落叶林）
+      - id: Jungle
+        name: 丛林
+      - id: Mountain (including hills)
+        name: 山脉（包括丘陵）
+      - id: Plains
+        name: 平原
+      - id: Planes (pick one, other than Material Plane)
+        name: 位面（从主物质位面之外选择一种）
+      - id: Swamp
+        name: 沼泽
+      - id: Underground (caves and dungeons)
+        name: 地下（洞穴与地下城）
+      - id: Urban (buildings, streets, and sewers)
+        name: 都市（建筑物，街道和下水道）
+      - id: Water (above and below the surface)
+        name: 水（水面上及水面下）
+    effects:
+      - type: selectFromSubs
   - id: Hunter's Bond
     name: 猎手羁绊
     type: ex
@@ -172,6 +273,7 @@ levels:
     reflex: 3
     will: 0
     special:
+      - Combat Style
       - Combat Style Feat 1
     spellsPerDay: [0, 0, 0, 0, 0]
   - level: 3
@@ -190,7 +292,7 @@ levels:
     will: 1
     special:
       - Spells
-      - Hunters Bond
+      - Hunter's Bond
     spellsPerDay: [0, 0, 0, 0, 0]
   - level: 5
     bab: [5]

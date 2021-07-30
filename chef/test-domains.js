@@ -14,7 +14,7 @@ for (const ss of spellFiles) {
 
 const domains = parseYAML(Deno.readTextFileSync('./pf-database/domains.yaml'));
 
-const romeNumber = /^[iIvVxX]+$/;
+const romeNumberRegex = /^[iIvVxX]+$/;
 
 function fixDomainSpellId(id) {
   const lower = ['From', 'Against'];
@@ -29,9 +29,11 @@ function fixDomainSpellId(id) {
     'remove blindness/deafness': 'Remove Blindness/Deafness',
     'antilife shield': 'Antilife Shell',
     "draljon's breath": "Dragon's Breath",
-    "summon nature's ally IV": "Summon Nature's Ally IV",
-    "summon nature's ally VII": "Summon Nature's Ally VII",
+    'summon natures ally iv': "Summon Nature's Ally IV",
+    'summon natures ally vii': "Summon Nature's Ally VII",
     'animate object': 'Animate Objects',
+    Suffocate: 'Suffocation',
+    'Create Greater Undead': 'Create Greater Undead',
   };
 
   if (replacers[id]) {
@@ -41,6 +43,7 @@ function fixDomainSpellId(id) {
   let result = [];
   let suffix = '';
   for (let s of splitted) {
+    s = s.replace(',', '');
     if (suffixes.includes(s)) {
       suffix = s;
       continue;
@@ -50,7 +53,7 @@ function fixDomainSpellId(id) {
       s = s.toLowerCase();
     }
 
-    if (romeNumber.test(s)) {
+    if (romeNumberRegex.test(s)) {
       s = s.toUpperCase();
     }
 
@@ -60,7 +63,7 @@ function fixDomainSpellId(id) {
   return `${result.join(' ')}${suffix ? `, ${suffix}` : ''}`;
 }
 
-/* for (const domain of domains) {
+for (const domain of domains) {
   if (domain.spells) {
     for (const s of domain.spells) {
       const id = fixDomainSpellId(s);
@@ -70,9 +73,9 @@ function fixDomainSpellId(id) {
       }
     }
   }
-} */
+}
 
-for (const domain of domains) {
+/* for (const domain of domains) {
   if (domain.subDomains) {
     for (const d of domain.subDomains) {
       if (d.spells) {
@@ -84,4 +87,4 @@ for (const domain of domains) {
       }
     }
   }
-}
+} */

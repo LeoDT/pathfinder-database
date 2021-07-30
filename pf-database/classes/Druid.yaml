@@ -26,11 +26,37 @@ feats:
   - id: Weapon and Armor Proficiency
     name: 武器和防具擅长
     desc: 德鲁伊擅长下列武器：木棒，匕首，飞镖，木棍，弯刀，巨镰，镰刀，短矛，投石索和矛。德鲁伊在【自然变身】状态时，也擅长该形体具有的任何天生攻击方式（爪抓、啮咬等）。德鲁伊擅长使用轻型和中型盔甲，但不可穿着金属盔甲，所以他们只穿厚布甲、皮甲或革甲。德鲁伊可以穿着施有‘金刚木’法术的木制盔甲，此盔甲的功能如同金属制。德鲁伊也擅长使用盾牌（塔盾除外），但只能用木制盾。使用禁用盔甲或盾牌的德鲁伊无法施展德鲁伊法术，也不能使用任何超自然或类法术职业能力，直到卸下该防具再过24小时后，才能恢复。
+    effects:
+      - type: gainProficiency
+        args:
+          weaponTraining:
+            - simple
+          armorTraining:
+            - light
+            - medium
+          shieldTraining:
+            - normal
+          weapon:
+            - Club
+            - Dagger
+            - Dart
+            - Quarterstaff
+            - Scimitar
+            - Scythe
+            - Sickle
+            - Shortspear
+            - Sling
+            - Spear
   - id: Spells
     name: 法术
     desc: |
       德鲁伊可以施展神术，可选择的法术列于德鲁伊法术列表。但阵营可能会限制其施展某些与他所信奉的道德伦理相违背的法术，见下述关于混乱、邪恶、善良或秩序法术的说明。德鲁伊必须事先选择和准备法术。欲准备或施展某环级的法术，德鲁伊的感知值必须达到“10+法术环级”。若要对抗德鲁伊的法术，其豁免检定的DC为“10+法术环级+感知修正”。
       如同其他的施法者，德鲁依每天在各法术环级上能施展的法术数量有限，基本的每日法术数量请见上表。德鲁依可由高感知值而获得额外的每日法术。德鲁伊每天必须花费1小时冥想沉思自然之秘以获得当日的法术。在可使用的法术环级范围内，德鲁伊可以准备和施展德鲁伊法术列表中的任意法术，但是所选择的法术必须要在每日冥想时间内决定。
+    effects:
+      - type: gainSpellCasting
+        args:
+          castingType: cleric-like
+          abilityType: wis
   - id: Spontaneous Casting
     name: 自发施法
     desc: 德鲁依可以将事先准备好的法术临时转换成召唤法术，即使他事前并未准备该召唤法术也可。此时，德鲁伊会“失去”一个准备好的法术，换得一个同级或较低环级的‘召唤自然盟友’。
@@ -50,10 +76,29 @@ feats:
       1级起，德鲁伊便与大自然构成了紧密的联系。此联系表现为下列两种形式之一。
       第一种是与自然世界的亲密联系，使得德鲁伊获得以下牧师领域之一：风，动物，土，火，植物，水，天气。在决定领域神力和领域法术时，德鲁伊的有效牧师等级等于其德鲁伊等级。做出此种选择的德鲁伊也会如同牧师一般获得额外的领域法术位。她必须在此法术位中准备领域法术，且此法术位不可用于自发施法。
       第二种选择是与一只动物伙伴形成紧密的羁绊。德鲁伊在起始时可带有可选动物伙伴的任意一种。此动物是德鲁伊冒险时的忠贞伙伴。与同类的普通动物不同的是，动物伙伴的生命骰，属性，技能和专长都会随着德鲁伊等级的提升而增长。如果人物从多个来源获得了动物伙伴，将她的有效德鲁伊等级相互叠加以决定伙伴的数据和能力。根据伙伴种类的不同，大多数伙伴的体型会在德鲁伊达到4级或7级时增长。如果德鲁伊放走他的动物伙伴，他必须举行仪式，不间断地祈祷24小时，才能获得一个新的动物伙伴。同样的仪式也可以用来取代死亡的动物伙伴。
+    effects:
+      - type: gainDomain
+        args:
+          amount: 1
+          spells: true
+          druid: true
   - id: Nature Sense
     name: 自然智识
     type: ex
     desc: 德鲁伊的知识（自然）和生存技能检定+2。
+    effects:
+      - type: gainSkill
+        args:
+          skillId: knowledge(nature)
+          bonus:
+            amount: 2
+            type: untyped
+      - type: gainSkill
+        args:
+          skillId: survival
+          bonus:
+            amount: 2
+            type: untyped
   - id: Wild Empathy
     name: 野性认同
     type: ex
@@ -134,6 +179,7 @@ levels:
       - Nature Sense
       - Orisons
       - Wild Empathy
+    spellsPerDay: [0, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0]
   - level: 2
     bab: [1]
     fortitude: 3
@@ -141,6 +187,7 @@ levels:
     will: 3
     special:
       - Woodland Stride
+    spellsPerDay: [0, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0]
   - level: 3
     bab: [2]
     fortitude: 3
@@ -148,6 +195,7 @@ levels:
     will: 3
     special:
       - Trackless Step
+    spellsPerDay: [0, 4, 2, 1, 0, 0, 0, 0, 0, 0, 0]
   - level: 4
     bab: [3]
     fortitude: 4
@@ -156,11 +204,13 @@ levels:
     special:
       - Resist Natures Lure
       - Wild Shape (1/day)
+    spellsPerDay: [0, 4, 3, 2, 0, 0, 0, 0, 0, 0, 0]
   - level: 5
     bab: [3]
     fortitude: 4
     reflex: 1
     will: 4
+    spellsPerDay: [0, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0]
   - level: 6
     bab: [4]
     fortitude: 5
@@ -168,11 +218,13 @@ levels:
     will: 5
     special:
       - Wild Shape (2/day)
+    spellsPerDay: [0, 4, 3, 3, 2, 0, 0, 0, 0, 0, 0]
   - level: 7
     bab: [5]
     fortitude: 5
     reflex: 2
     will: 5
+    spellsPerDay: [0, 4, 4, 3, 2, 1, 0, 0, 0, 0, 0]
   - level: 8
     bab: [6, 1]
     fortitude: 6
@@ -180,6 +232,7 @@ levels:
     will: 6
     special:
       - Wild Shape (3/day)
+    spellsPerDay: [0, 4, 4, 3, 3, 2, 0, 0, 0, 0, 0]
   - level: 9
     bab: [6, 1]
     fortitude: 6
@@ -187,6 +240,7 @@ levels:
     will: 6
     special:
       - Venom Immunity
+    spellsPerDay: [0, 4, 4, 4, 3, 2, 1, 0, 0, 0, 0]
   - level: 10
     bab: [7, 2]
     fortitude: 7
@@ -194,11 +248,13 @@ levels:
     will: 7
     special:
       - Wild Shape (4/day)
+    spellsPerDay: [0, 4, 4, 4, 3, 3, 2, 0, 0, 0, 0]
   - level: 11
     bab: [8, 3]
     fortitude: 7
     reflex: 3
     will: 7
+    spellsPerDay: [0, 4, 4, 4, 4, 3, 2, 1, 0, 0, 0]
   - level: 12
     bab: [9, 4]
     fortitude: 8
@@ -206,6 +262,7 @@ levels:
     will: 8
     special:
       - Wild Shape (5/day)
+    spellsPerDay: [0, 4, 4, 4, 4, 3, 3, 2, 0, 0, 0]
   - level: 13
     bab: [9, 4]
     fortitude: 8
@@ -213,6 +270,7 @@ levels:
     will: 8
     special:
       - A Thousand Faces
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 3, 2, 1, 0, 0]
   - level: 14
     bab: [10, 5]
     fortitude: 9
@@ -220,6 +278,7 @@ levels:
     will: 9
     special:
       - Wild Shape (6/day)
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 3, 3, 2, 0, 0]
   - level: 15
     bab: [11, 6, 1]
     fortitude: 9
@@ -227,6 +286,7 @@ levels:
     will: 9
     special:
       - Timeless Body
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 3, 2, 1, 0]
   - level: 16
     bab: [12, 7, 2]
     fortitude: 10
@@ -234,11 +294,13 @@ levels:
     will: 10
     special:
       - Wild Shape (7/day)
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 3, 3, 2, 0]
   - level: 17
     bab: [12, 7, 2]
     fortitude: 10
     reflex: 5
     will: 10
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 4, 3, 2, 1]
   - level: 18
     bab: [13, 8, 3]
     fortitude: 11
@@ -246,11 +308,13 @@ levels:
     will: 11
     special:
       - Wild Shape (8/day)
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 4, 3, 3, 2]
   - level: 19
     bab: [14, 9, 4]
     fortitude: 11
     reflex: 6
     will: 11
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3]
   - level: 20
     bab: [15, 10, 5]
     fortitude: 12
@@ -258,3 +322,4 @@ levels:
     will: 12
     special:
       - Wild Shape (at will)
+    spellsPerDay: [0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]

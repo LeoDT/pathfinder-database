@@ -71,15 +71,23 @@ feats:
     desc: 每天，法师能够准备一些戏法，或者说0环法术。参照法师法术列表。这些法术的施展如同其他任何法术，但它们不会在施展的时候消耗掉，并且可以被再次使用。法师可以准备对立学派的戏法，但是需要消耗2倍的0环奥术位。
   - id: Spell Focus
     name: 法术专攻
-    desc: |
-      1级时，法师获得“法术专攻”作为奖励专长。
-      【专长速查】法术专攻: 选定学派法术豁免DC+1。
+    desc: 1级时，法师获得“法术专攻”作为奖励专长。
+    effects:
+      - type: gainFeat
+        args:
+          forceFeat: Spell Focus
   - id: Bonus Feat
     name: 奖励专长
     desc: |
       在5，10，15，20级时，法师都可以获得一个奖励专长。在每次获得这些专长时他可以挑选超魔专长、物品制造专长或者“法术掌握”专长。法师依然必须达到这些专长的前提要求，包括最低施法者等级。这些奖励专长是对因角色升级而获得专长的补充。当法师选择角色升级专长时，他不受法师奖励专长的限制。
-
-      【专长速查】法术掌握（Spell Mastery）：可以不用法术书准备某些法术。
+    effects:
+      - type: gainFeat
+        args:
+          featTypes:
+            - metamagic
+            - item creation
+          feats:
+            - Spell Mastery
 
 levels:
   - level: 1

@@ -14,6 +14,10 @@ const books = {
   /* uc: 'page_199.html', */
 };
 
+const idReplacers = {
+  'Point Blank Master': 'Point-Blank Master',
+};
+
 for (const [bookName, bookHTML] of Object.entries(books)) {
   const contents = await Deno.readTextFile(`converted/${bookHTML}`);
   const $ = cheerio.load(contents);
@@ -44,9 +48,8 @@ for (const [bookName, bookHTML] of Object.entries(books)) {
 
     const nextNameElWrapper = i + 1 === allFeatNames.length ? null : allFeatNames[i + 1];
 
-    const all = (nextNameElWrapper
-      ? nameElWrapper.nextUntil(nextNameElWrapper)
-      : nameElWrapper.nextAll()
+    const all = (
+      nextNameElWrapper ? nameElWrapper.nextUntil(nextNameElWrapper) : nameElWrapper.nextAll()
     ).get();
 
     const briefEls = [];
@@ -105,6 +108,7 @@ for (const [bookName, bookHTML] of Object.entries(books)) {
 
     const feat = {
       ...nameAndIdAndType,
+      id: idReplacers[nameAndIdAndType.id] ?? nameAndIdAndType.id,
       type: nameAndIdAndType.type ? featTypeFromText(nameAndIdAndType.type) : ['general'],
       brief,
       meta,

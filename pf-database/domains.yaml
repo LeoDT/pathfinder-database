@@ -116,6 +116,64 @@
         - Magic Fang
         - Beast Shape I
   druid: true
+- id: Aquatic
+  name: 水栖
+  desc: 你是精通深海、川流、瀑布与无情海潮的大师。
+  powers:
+    - name: 海王
+      id: Sealord
+      type: su
+      desc: 你可以导引能量（有效牧师等级等于德鲁伊等级），次数相当于“3+魅力修正”，但是只能治疗或控制（如同“控制亡灵”专长）水栖与水系亚种生物。你可以用其他的专长来强化这个能力，如“额外导能”和“精通导能”，但是无法将此能力作为其他导能专长的先决条件，例如“元素导能”和“阵营导能”。此能力的DC为“10+1/2德鲁伊等级+魅力修正”。
+      effects:
+        - type: classFeatSource
+    - name: 海袭
+      id: Seastrike
+      type: su
+      desc: 6级时，以一个自由动作，你可以在水中如常使用天生或加工过的武器，如同“行动自如”法术的效果。以一个标准动作，你可以在水下投掷武器并忽略正常状况下的水下减值；如果你的目标在水中或水下，此武器还得到回力的效果。
+      effects:
+        - type: classFeatSource
+      effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6, druidLevel >= 6)'
+  spells:
+    - Hydraulic Push
+    - Freezing Sphere
+    - Slipstream
+    - Animal Shapes
+    - Water Breathing
+    - Seamantle
+    - Freedom of Movement
+    - Tsunami
+    - Black Tentacles
+  subDomains: []
+  druid: true
+- id: Arctic
+  name: 极地
+  desc: 你乃威力无穷的极地风暴，在寒冷极风打击之下，万物的反抗皆如午夜之阳一般的无力。
+  powers:
+    - name: 唤冰
+      id: Call Cold
+      type: su
+      desc: 你可以导引能量（有效牧师等级等于德鲁伊等级），次数相当于“3+魅力修正”，但是只能治疗或控制（如同“控制亡灵”专长）寒冷亚种生物。你可以用其他的专长来强化这个能力，如“额外导能”和“精通导能”，但是无法将此能力作为其他导能专长的先决条件，例如“元素导能”和“阵营导能”。此能力的DC为“10+1/2德鲁伊等级+魅力修正”。
+      effects:
+        - type: classFeatSource
+    - name: 逐焰
+      id: Banish Flame
+      type: su
+      desc: 6级时，你可以使用你的唤冰能力伤害（如同导引负能量）火系亚种生物，或使其惊惧（如同“驱散亡灵”专长）。你还可以用此能力熄灭魔法火焰，如同“解除魔法”；在12级时若此效果用来解除魔法火焰，其能力等同“高等解除魔法”。
+      effects:
+        - type: classFeatSource
+      effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6, druidLevel >= 6)'
+  spells:
+    - Frostbite
+    - Freezing Sphere
+    - Aspect of the Bear
+    - Wind Walk
+    - Sleet Storm
+    - Polar Ray
+    - Wall of Ice
+    - Polar Midnight
+    - Aspect of the Wolf
+  subDomains: []
+  druid: true
 - id: Artifice
   name: 手艺
   desc: 你能够修复损坏的物品，给予物体生命，和无中生有地创造。
@@ -175,6 +233,35 @@
         - Command
         - Waves of Fatigue
         - Waves of Exhaustion
+- id: Cave
+  name: 洞穴
+  desc: 洞穴奇观和黑暗中最深层的秘密给予你力量。
+  powers:
+    - name: 洞穴视觉
+      id: Cavesight
+      type: sp
+      desc: 你可以用一次碰触赐与一个目标60尺黑暗视觉。此能力作用在其他生物身上时，持续时间为1分钟；但作用在你自己身上时则为1小时。你每天可使用此能力的次数等于“3+感知修正”。
+      effects:
+        - type: classFeatSource
+    - name: 颤动感知
+      id: Tremorsense
+      type: ex
+      desc: 6级时你得到30尺颤动感知，12级时此能力的范围提升到60尺。
+      effects:
+        - type: classFeatSource
+      effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6, druidLevel >= 6)'
+  spells:
+    - Detect Aberration
+    - Conjure Black Pudding
+    - Stone Call
+    - Statue
+    - Deeper Darkness
+    - Earthquake
+    - Echolocation
+    - Imprisonment
+    - Wall of Stone
+  subDomains: []
+  druid: true
 - id: Chaos
   name: 混乱
   desc: 以你的手为武器注入混乱的生命，并且你得意于所有事物的无序状态。
@@ -562,6 +649,35 @@
         - Ghoul Touch
         - Enervation
         - Energy Drain
+- id: Desert
+  name: 沙漠
+  desc: 无尽黄沙中的圣灵与奥秘听候你的差遣。
+  powers:
+    - name: 蜃楼
+      id: Heat Shimmer
+      type: su
+      desc: 以一个自由动作，你让你身边的空气炙热扭曲，造成“朦胧术”的效果。当你使用此能力的时候，以肉搏攻击袭击你的生物必须通过强韧检定否则目眩1轮。你每天可以使用此能力的轮数等同于“3+感知修正”，这些轮数不须连续。
+      effects:
+        - type: classFeatSource
+    - name: 沙仆
+      id: Servant of the Sands
+      type: sp
+      desc: 8级时，每日1次，你可以召唤一只小巨灵，此能力如同“次级异界盟友”。12级时，你可以如同使用“异界盟友”一般招唤各种非贵族的巨灵。16级时，你可以召唤贵族巨灵，如同使用“高等异界盟友”。如果你在沙漠中使用此能力，你不需要为召唤提供祭品，而且各种服务皆为半价。
+      effects:
+        - type: classFeatSource
+      effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8, druidLevel >= 8)'
+  spells:
+    - Cloak of Shade
+    - Sirocco
+    - Shifting Sand
+    - Sunbeam
+    - Cup of Dust
+    - Sunburst
+    - Hallucinatory Terrain
+    - Horrid Wilting
+    - Transmute Rock to Mud
+  subDomains: []
+  druid: true
 - id: Destruction
   name: 毁灭
   desc: 你陶醉在毁灭和破坏中，能施展毁灭打击。
@@ -636,6 +752,41 @@
         - Pain Strike
         - Symbol of Pain
         - Demand
+- id: Eagle
+  name: 苍鹰
+  desc: 你的灵魂与最伟大崇高的有翼生物比翼翱翔。
+  powers:
+    - name: 魔宠
+      id: Familiar
+      type: null
+      desc: 你得到鹰作为魔宠，你的有效法师等级等于德鲁伊等级。当计算魔宠能力时，你的德鲁伊等级和其他会让你获得魔宠的职业等级叠加。
+      effects:
+        - type: classFeatSource
+    - name: 鹰眼
+      id: Hawkeye
+      type: su
+      desc: 以一个迅捷动作，你可以在单次的远程攻击或察觉检定中得到相当于你得鲁伊等级一半（最小为1）的加值。你每日可以使用此能力的次数相当于“3+感知修正”。
+      effects:
+        - type: classFeatSource
+    - name: 空中回避
+      id: Aerial evasion
+      type: ex
+      desc: 6级时，你在飞行时得到反射闪避的效果。12级时此能力变成精通反射闪避。
+      effects:
+        - type: classFeatSource
+      effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6, druidLevel >= 6)'
+  spells:
+    - Aspect of the Falcon
+    - Eagle Aerie
+    - Eagle's Splendor
+    - Animal Shapes
+    - Fly
+    - Sunburst
+    - River of Wind
+    - Winds of Vengeance
+    - Overland Flight
+  subDomains: []
+  druid: true
 - id: Earth
   name: 土
   desc: 你能够操纵土、金属、石头，发射酸镖，和土系生物沟通。
@@ -859,6 +1010,41 @@
         - Flame Strike
         - Delayed Blast Fireball
   druid: true
+- id: Frog
+  name: 青蛙
+  desc: 你尊敬那些首先来到陆地上生活的两栖类动物祖先。
+  powers:
+    - name: 魔宠
+      id: Familiar
+      type: null
+      desc: 你得到蟾蜍作为魔宠，你的有效法师等级等于德鲁伊等级。当计算魔宠能力时，你的德鲁伊等级和其他会让你获得魔宠的职业等级叠加。
+      effects:
+        - type: classFeatSource
+    - name: 黏液触须
+      id: Sticky Strike
+      type: su
+      desc: 以一个标准动作，你可以用一次远程接触攻击喷出一团黏稠的蔓团袭击15尺内的目标，然后你就可以使用“拉拽”这一怪物通用能力将他朝你拉近5尺，你在拉拽的战技攻击检定上得到相当于德鲁伊等级一半的加值。如果目标比你还大，你可不做任何检定并把自己朝对方拉近5尺。目标可以通过一次成功的力量对抗检定来移除这些藤蔓，或对藤蔓造成足够的伤害（藤蔓的生命点数等同于你的德鲁伊等级，防御等级等同于你的接触AC）。你能以自由动作解消这些藤蔓。你每日可以使用此能力的次数等于“3+感知修正”。
+      effects:
+        - type: classFeatSource
+    - name: 蛙足
+      id: Webfoot
+      type: ex
+      desc: 6级时，你得到“两栖”特性，并得到相当于你陆地移动速度的游泳速度。12级时得到相当于陆地移动速度的攀爬速度。
+      effects:
+        - type: classFeatSource
+      effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6, druidLevel >= 6)'
+  spells:
+    - Jump
+    - Confusion
+    - Delay Poison
+    - Animal Shapes
+    - Lily Pad Stride
+    - 'Shout, Greater'
+    - Shout
+    - Summon Froghemoth
+    - Blessing of the Salamander
+  subDomains: []
+  druid: true
 - id: Glory
   name: 荣耀
   desc: 你被神力赐予荣耀，是不死生物的克星。另外，如果你引导能量攻击不死生物，豁免DC+2。
@@ -1080,6 +1266,35 @@
         - Raise Dead
         - Resurrection
         - True Resurrection
+- id: Jungle
+  name: 丛林
+  desc: 自然守卫者和失落之民化为丛林之魂，在你心中低语。
+  powers:
+    - name: 林跃
+      id: Brachiation
+      type: ex
+      desc: 以一个自由动作，你得到相当于你陆地移动速度的攀爬速度，且在特技检定上得到相当于德鲁伊等级的加值。此效果每日可用轮数等于你的德鲁伊等级，这些轮数不须连续。
+      effects:
+        - type: classFeatSource
+    - name: 陷阱感知
+      id: Trap Sense
+      type: ex
+      desc: 3级时，你得到陷阱感知职业能力，此效果等同于盗贼职业能力。在计算能力加值时，你的有效盗贼等级等同于你的德鲁伊等级。如果你兼职了其他会获得此能力的职业，此能力效果累计。
+      effects:
+        - type: classFeatSource
+      effectsWhen: 'OR(clericLevel >= 3, inquisitorLevel >= 3, druidLevel >= 3)'
+  spells:
+    - Glide
+    - Swarm Skin
+    - Tar Ball
+    - Creeping Doom
+    - Venomous Bolt
+    - Wall of Lava
+    - Arboreal Hammer
+    - Shambler
+    - Blessing of the Salamander
+  subDomains: []
+  druid: true
 - id: Knowledge
   name: 知识
   desc: 你是通晓传说的智者。你可以额外将所有知识技能添加到你的职业技能列表中。
@@ -1521,6 +1736,70 @@
         - Cleanse
         - Resurrection
         - Miracle
+- id: Monkey
+  name: 猿猴
+  desc: 拥有平衡的智慧、敏捷、灵巧并嬉闹的猴子是你精神的象征。
+  powers:
+    - name: 魔宠
+      id: Familiar
+      type: null
+      desc: 你得到猴子作为魔宠，你的有效法师等级等于德鲁伊等级。当计算魔宠能力时，你的德鲁伊等级和其他会让你获得魔宠的职业等级叠加。
+      effects:
+        - type: classFeatSource
+    - name: 猴戏
+      id: Monkey Athletics
+      type: su
+      desc: 以一个自由动作，你可以在单次特技、攀爬、解除装置和巧手检定中得到相当于德鲁伊等级一半的加值。你每日可以使用此能力的次数等于“3+感知修正”。
+      effects:
+        - type: classFeatSource
+    - name: 远程诡计
+      id: Ranged Legerdemain
+      type: su
+      desc: 6级时，你可以对30尺内的目标施展解除装置和巧手技能。远程工作将使技能检定DC增加5，并且在此检定中无法取10。远程手法的操作对像重量必须为5磅或更轻。你在该项技能上级数必须至少为1。
+      effects:
+        - type: classFeatSource
+      effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6, druidLevel >= 6)'
+  spells:
+    - Beguiling Gift
+    - Confusion
+    - Spider Climb
+    - Animal Shapes
+    - Cacophonous Call
+    - Clenched Fist
+    - Freedom of Movement
+    - Foresight
+    - Summon Nature's Ally V
+  subDomains: []
+  druid: true
+- id: Mountain
+  name: 山脉
+  desc: 你掌握了穿破天际、耸立于大地之上群山的奥秘。
+  powers:
+    - name: 立足点
+      id: Foothold
+      type: su
+      desc: 以一个标准动作，你可以使相邻的10尺见方岩石表面出现锋锐皱折并变得峋峋嶙嶙。在水平地面上，这个效果将会形成困难地形，站在其上的中型以下体型的生物在CMD和特技检定上将承受-2减值。在垂直表面上，立足点将会提供你+10的攀爬加值。这些石头将在1小时后恢复原状。你每日可以使用此能力的次数等于“3+感知修正”。
+      effects:
+        - type: classFeatSource
+    - name: 空气稀薄
+      id: Thin Air
+      type: su
+      desc: 8级时，以一个自由动作，你可以将你身边5尺内的空气变得异常稀薄，使那些需要呼吸的生物感到窒息，这些生物在回合开始时如仍在区域内就必须通过强韧检定，否则将会疲乏。如果一个生物已经处于疲乏状态且呆在区域中，那么在回合开始时必须通过另一次强韧检定，否则将罹患高山症，此状态会使他所有属性受到1点属性伤害。16级时此区域覆盖10尺范围。不需要呼吸的生物对此效果免疫。此效果每日可用轮数等于你的德鲁伊等级，这些轮数不须连续。
+      effects:
+        - type: classFeatSource
+      effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8, druidLevel >= 8)'
+  spells:
+    - Stone Fist
+    - Suffocate
+    - Stone Call
+    - Flesh to Stone
+    - Cloak of Winds
+    - Reverse Gravity
+    - Stoneskin
+    - Clashing Rocks
+    - Geyser
+  subDomains: []
+  druid: true
 - id: Nobility
   name: 高贵
   desc: 你是杰出的领袖，鼓舞着所有追随着你的信仰和教导的人。
@@ -1586,6 +1865,35 @@
       spells:
         - Shield Other
         - Sacrificial Oath
+- id: Plains
+  name: 荒原
+  desc: 广茅的荒野、稀树原野与庞大的草原由你掌控。
+  powers:
+    - name: 兽群奔屣
+      id: Migrating Herd
+      type: su
+      desc: 当你以召唤法术召唤野牛、羚羊、大象、马、小马、乳齿象、原牛或之类的四足草食动物时，你召唤出来的数量为原本的两倍。此效果不和法术强效叠加。此外，这些召唤生物的移动速度提升10尺。
+      effects:
+        - type: classFeatSource
+    - name: 狮之猛扑
+      id: Pounce
+      type: ex
+      desc: 6级时，你每天可以发动一次“猛扑”能力，之后的每3级再加1次。
+      effects:
+        - type: classFeatSource
+      effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6, druidLevel >= 6)'
+  spells:
+    - Mount
+    - Find the Path
+    - Chameleon Stride
+    - Whirlwind
+    - Haste
+    - Animal Shapes
+    - Aspect of the Stag
+    - World Wave
+    - Control Winds
+  subDomains: []
+  druid: true
 - id: Plant
   name: 植物
   desc: 你得到植物的庇护，能够生长出防御用的棘刺，也能够与植物沟通交流。
@@ -1902,6 +2210,41 @@
         - Pernicious Poison
         - Beast Shape III
         - Cloudkill
+- id: Serpent
+  name: 毒蛇
+  desc: 你服侍于至今仍然存在的古老神秘蛇群。
+  powers:
+    - name: 魔宠
+      id: Familiar
+      type: null
+      desc: 你得到蛇作为魔宠，你的有效法师等级等于德鲁伊等级。当计算魔宠能力时，你的德鲁伊等级和其他会让你获得魔宠的职业等级叠加。
+      effects:
+        - type: classFeatSource
+    - name: 蛇骨
+      id: Slither
+      type: ex
+      desc: 以一个自由动作，你可以让你的身体扩展、延伸、压平，让自己可以通过狭窄的地区。你可以自由通过平常对你这个尺寸的生物而言极端狭小的空间，此状态下你对由移动所引发的藉机攻击得到+2闪避AC，同时CMB+2。此加值也在挣脱擒抱的检定上生效。这个能力持续1轮的时间，你每日可以使用此能力的次数等于“3+感知修正”。
+      effects:
+        - type: classFeatSource
+    - name: 毒液免疫
+      id: Venom Immunity
+      type: ex
+      desc: 6级时你对蛇、蜥蜴还有其他爬虫类生物的毒液免疫。12级时你对所有毒素免疫，并取代毒液免疫。
+      effects:
+        - type: classFeatSource
+      effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6, druidLevel >= 6)'
+  spells:
+    - Charm Animal
+    - Charm Monster
+    - Animal Trance
+    - Animal Shapes
+    - Poison
+    - Scintillating Pattern
+    - Strong Jaw
+    - Crushing Hand
+    - Snake Staff
+  subDomains: []
+  druid: true
 - id: Strength
   name: 力量
   desc: 大块头有大智慧——你的信仰为你带来不可思议的力量和能力。
@@ -2032,6 +2375,35 @@
         - See Invisibility
         - Banish Seeming
         - True Seeing
+- id: Swamp
+  name: 沼泽
+  desc: 代着酸甜气味的草泽、泥沼和沼泽是你力量所在。
+  powers:
+    - name: 自然愈疗
+      id: Natural Healing
+      type: su
+      desc: 你可以导引能量（有效牧师等级等于德鲁伊等级），次数相当于“3+魅力修正”，但是只能治疗动物、植物和昆虫。你能治疗这些生物的属性伤害，每降低1d6生命值治疗量便能回复1点属性伤害。你可以用其他的专长来强化这个能力，如“额外导能”和“精通导能”，但是无法将此能力作为其他导能专长的先决条件，例如“元素导能”和“阵营导能”。此能力的DC为“10+1/2德鲁伊等级+魅力修正”。
+      effects:
+        - type: classFeatSource
+    - name: 苇丛猎手
+      id: Reed Hunter
+      type: ex
+      desc: 6级时，你对迷雾、植被和水所引起的隐蔽和掩蔽得到30尺盲感的效果。12级时，此能力进化为盲视。
+      effects:
+        - type: classFeatSource
+      effectsWhen: 'OR(clericLevel >= 6, inquisitorLevel >= 6, druidLevel >= 6)'
+  spells:
+    - Hydraulic Push
+    - 'Fester, Mass'
+    - Burst of Nettles
+    - Animate Plants
+    - Lily Pad Stride
+    - Blood Mist
+    - Cape of Wasps
+    - Shambler
+    - Insect Plague
+  subDomains: []
+  druid: true
 - id: Travel
   name: 旅行
   desc: 你是一名探险家，在旅行中找到简单的快乐，它是脚、魔法、神奇的运输工具。你的基本速度增加10英尺。
@@ -2428,4 +2800,33 @@
       spells:
         - Call Lightning Storm
         - Sirocco
+  druid: true
+- id: Wolf
+  name: 狼群
+  desc: 你和群狼一起狩猎，并成为这些冷血的猎手的领袖。
+  powers:
+    - name: 精通绊摔
+      id: Improved Trip
+      type: null
+      desc: 你得到“精通绊摔”做为奖励专长。
+      effects:
+        - type: classFeatSource
+    - name: 包围策略
+      id: Pack Tactics
+      type: ex
+      desc: 8级时，在你的回合中，你能以一个自由动作指定相邻的方格。在决定你是否达成夹击的时候，你的攻击被视为来自该方格，就算该方格已经有对象存在或是被生物占据。此效果持续到你下一轮开始或是你移动为止。如果你在未使用此能力时就达成夹击，那么你可以将你的感知修正加到攻击检定上，取代原本的+2夹击加值。你每日可以使用此能力的次数等于“3+感知修正”。
+      effects:
+        - type: classFeatSource
+      effectsWhen: 'OR(clericLevel >= 8, inquisitorLevel >= 8, druidLevel >= 8)'
+  spells:
+    - Hunter's Howl
+    - Find the Path
+    - Bloodhound
+    - Animal Shapes
+    - Aspect of the Wolf
+    - Phantasmal Revenge
+    - Strong Jaw
+    - Freedom
+    - Tireless Pursuers
+  subDomains: []
   druid: true

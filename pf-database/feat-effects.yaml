@@ -82,7 +82,7 @@
           - name: 猛力攻击
             bonus:
               type: untyped
-              amountFormula: "MAX(1, FLOOR(maxBab / 4) + 1) * -1"
+              amountFormula: 'MAX(1, FLOOR(maxBab / 4) + 1) * -1'
 
         damageBonuses:
           - applyMultiplier: str
@@ -90,7 +90,7 @@
               name: 猛力攻击
               bonus:
                 type: untyped
-                amountFormula: "MAX(1, FLOOR(maxBab / 4) + 1) * 2"
+                amountFormula: 'MAX(1, FLOOR(maxBab / 4) + 1) * 2'
 - id: Weapon Finesse
   effects:
     - type: meleeAttackAbility
@@ -112,3 +112,17 @@
         bonus:
           type: untyped
           amountFormula: IF(currentSkillRank >= 10, 6, 3)
+- id: Spell Focus
+  effects:
+    - type: gainSchoolSpellDC
+      args:
+        bonus:
+          type: untyped
+          amount: 1
+- id: Greater Spell Focus
+  effects:
+    - type: gainSchoolSpellDC
+      args:
+        bonus:
+          type: untyped
+          amount: 1
