@@ -175,7 +175,7 @@ feats:
     name: 穿林步
     type: ex
     desc: 5级起，猎人和她的动物伙伴可以以正常速度通过任何种类的矮树丛（例如自然的荆棘、石南、茂密的灌木丛，以及其他类似地形），并且不会受到伤害或者其他惩罚。但是被魔法强化的、或使用魔法手段特意用来阻碍行动的此类地形还是会阻碍猎人和她的动物伙伴的行动。
-  - id: Bonus Tricks
+  - id: Bonus Trick
     name: 奖励技巧
     type: ex
     desc: 7级起以及之后的每6个等级，猎人的动物伙伴都能学会一项奖励技巧（这是在猎人的有效德鲁伊等级中获得的技巧外额外获得的）。
@@ -319,7 +319,7 @@ levels:
     reflex: 7
     will: 3
     special:
-      - Speak With Master
+      - Speak with Master
     spellsPerDay: [0, 5, 4, 4, 2, 0, 0]
     spellsKnown: [6, 6, 5, 4, 3, 0, 0]
   - level: 12
@@ -371,7 +371,7 @@ levels:
     reflex: 10
     will: 5
     special:
-      - One With The Wild
+      - One with the Wild
     spellsPerDay: [0, 5, 5, 5, 4, 4, 2]
     spellsKnown: [6, 6, 6, 6, 5, 4, 3]
   - level: 18

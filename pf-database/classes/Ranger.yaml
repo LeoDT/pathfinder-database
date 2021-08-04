@@ -398,7 +398,7 @@ levels:
     reflex: 10
     will: 5
     special:
-      - Hide In Plain Sight
+      - Hide in Plain Sight
     spellsPerDay: [0, 4, 3, 2, 1]
   - level: 18
     bab: [18, 13, 8, 3]
