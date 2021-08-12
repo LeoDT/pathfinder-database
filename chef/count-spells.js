@@ -1,4 +1,4 @@
-import { parse } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
+import { parse } from 'https://deno.land/std@0.104.0/encoding/yaml.ts';
 
 const books = ['crb', 'arg', 'apg', 'uc', 'um', 'acg'];
 

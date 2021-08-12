@@ -1,5 +1,5 @@
-import { parse as parseCSV } from 'https://deno.land/std@0.85.0/encoding/csv.ts';
-import { parse as parseYAML, stringify } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
+import { parse as parseCSV } from 'https://deno.land/std@0.104.0/encoding/csv.ts';
+import { parse as parseYAML, stringify } from 'https://deno.land/std@0.104.0/encoding/yaml.ts';
 
 const IDS = {
   'spiked shield, light': 'spiked light shield',
@@ -11,6 +11,7 @@ const IDS = {
   'crossbow, repeating light': 'repeating light crossbow',
   'sling staff, halfling': 'halfling sling staff',
   'katana, double walking stick': 'double walking stick katana',
+  ammentum: 'amentum',
 };
 const longbowRegex = /Longbow,\scomposite\s\(\+[12345]\)/;
 
@@ -69,6 +70,22 @@ const descriptions = {};
 
 (await parseYAML(descFile)).forEach((d) => {
   descriptions[d.id.toLowerCase()] = d;
+});
+
+const fighterTrainingGroupFile = await Deno.readTextFile(
+  './chef/data/fighter_weapon_training_groups.yaml'
+);
+
+const fighterTrainingGroup = {};
+
+parseYAML(fighterTrainingGroupFile).forEach(({ id, weapons }) => {
+  weapons.forEach((w) => {
+    if (!fighterTrainingGroup[w]) {
+      fighterTrainingGroup[w] = new Set([id]);
+    } else {
+      fighterTrainingGroup[w].add(id);
+    }
+  });
 });
 
 const weapons = [];
@@ -148,6 +165,11 @@ for await (const dataFile of [
     c.name = c.name.replace('composite (+0)', 'composite');
     const id = c.name.toLowerCase();
 
+    const trainingGroup = fighterTrainingGroup[id] ?? null;
+    if (trainingGroup) {
+      meta.fighterWeaponTrainingGroup = Array.from(trainingGroup);
+    }
+
     if (weapons.find((w) => w.id.toLowerCase() === id)) {
       continue;
     }
@@ -192,3 +214,5 @@ Deno.writeTextFile(
   `pf-database/weapon-types/generated.yaml`,
   stringify(weapons, { lineWidth: -1 })
 );
+
+Deno.writeTextFile('pf-database/fighter-weapon-training-groups.yaml', fighterTrainingGroupFile);

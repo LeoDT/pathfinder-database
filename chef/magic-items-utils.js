@@ -1,4 +1,4 @@
-import { parse } from 'https://deno.land/std@0.85.0/encoding/csv.ts';
+import { parse } from 'https://deno.land/std@0.104.0/encoding/csv.ts';
 
 export async function initMagicItemsIndex() {
   const f = await Deno.readTextFile('./chef/data/magic_items_full - Updated 19Jan2020.csv');

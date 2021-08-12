@@ -1,4 +1,4 @@
-import { stringify } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
+import { stringify } from 'https://deno.land/std@0.104.0/encoding/yaml.ts';
 
 import { removeNewlines, removeSpaces } from './utils.js';
 import { startsWithMetaKey, featMetaFromTexts, featTypeFromText } from './feat-utils.js';

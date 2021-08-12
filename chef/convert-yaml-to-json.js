@@ -1,9 +1,9 @@
-import { parse as parseYAML } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
+import { parse as parseYAML } from 'https://deno.land/std@0.104.0/encoding/yaml.ts';
 import {
   resolve as pathResolve,
   basename as pathBasename,
   join as pathJoin,
-} from 'https://deno.land/std@0.85.0/path/mod.ts';
+} from 'https://deno.land/std@0.104.0/path/mod.ts';
 
 import { compose } from './utils.js';
 import { spellLevelFromText } from './spell-utils.js';

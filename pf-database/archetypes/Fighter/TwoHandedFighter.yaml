@@ -1,0 +1,78 @@
+id: Two-Handed Fighter
+name: 双手战士
+class: Fighter
+book: apg
+
+desc: 有些战士使用他们能找到的最大，最沉，最威的武器，并练习用他们巨大的武器造成最大的冲击力。此战士流派的优势只在使用双手武器时生效。
+
+feats:
+  - id: Shattering Strike
+    name: 破碎击
+    type: ex
+    desc: 2级起，双手战士在进行破武的CMB和CMD上，及对物品的伤害骰上获得+1加值。此加值在2级后每4级再+1。此能力取代英勇。
+    replace:
+      - Bravery
+  - id: Overhand Chop
+    name: 过肩斩
+    type: ex
+    desc: 3级起，双手战士在进行单次攻击（攻击动作或者冲锋）时，将两倍力量修正增加到伤害骰上。此能力取代盔甲训练1。
+    replace:
+      - Armor Training 1
+    effects:
+      - type: addAttackOption
+        args:
+          damageMultiplier: 2
+  - id: Weapon Training
+    name: 武器训练
+    type: ex
+    desc: 同战士特性，但加值只在使用双手近战武器时生效。此能力取代武器训练1，2，3，4。
+    replace:
+      - Weapon Training
+    effects:
+      - type: gainFighterWeaponTraining
+        when: mainHandCategory="two-handed"
+    grow:
+      - level: 5
+        id: Weapon Training 1
+        name: 武器训练 1
+        replace:
+          - Weapon Training 1
+      - level: 9
+        id: Weapon Training 2
+        name: 武器训练 2
+        replace:
+          - Weapon Training 2
+      - level: 13
+        id: Weapon Training 3
+        name: 武器训练 3
+        replace:
+          - Weapon Training 3
+      - level: 17
+        id: Weapon Training 4
+        name: 武器训练 4
+        replace:
+          - Weapon Training 4
+  - id: Backswing
+    name: 后摆
+    type: ex
+    desc: 7级起，双手战士用双手武器进行全力攻击时，他除第一击外所有的伤害骰都增加两倍力量修正。此能力取代盔甲训练2。
+    replace:
+      - Armor Training 2
+  - id: Piledriver
+    name: 打桩机
+    type: ex
+    desc: 11级起，以一个标准动作，双手战士能用双手武器进行一次近战攻击。若命中，他能以自由动作使用一次冲撞或摔绊，且不会引发藉机攻击。此能力取代盔甲训练3。
+    replace:
+      - Armor Training 3
+  - id: Greater Power Attack
+    name: 高等猛力攻击
+    type: ex
+    desc: 15级起，当用双手武器进行“猛力攻击”时，猛力攻击提供的伤害值加倍【编者注
+    replace:
+      - Armor Training 4
+  - id: Devastating Blow
+    name: 毁灭击
+    type: ex
+    desc: 19级起，以一个标准动作，双手战士能用双手武器进行一次有-5罚值的近战攻击。若命中，则视作重击威胁。若此重击确认，只被重击触发的武器特效并不能被触发。此能力取代铠甲宗师。
+    replace:
+      - Armor Mastery

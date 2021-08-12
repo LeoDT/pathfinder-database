@@ -1,4 +1,4 @@
-import { parse as parseYAML } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
+import { parse as parseYAML } from 'https://deno.land/std@0.104.0/encoding/yaml.ts';
 import { titleCase } from 'https://unpkg.com/title-case@3.0.3/dist.es2015/index.js';
 
 const spellFiles = ['acg', 'apg', 'arg', 'crb', 'uc', 'um'].map((b) =>

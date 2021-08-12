@@ -1,5 +1,5 @@
 import cheerio from 'https://dev.jspm.io/npm:cheerio@1.0.0-rc.5/index.js';
-import { stringify } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
+import { stringify } from 'https://deno.land/std@0.104.0/encoding/yaml.ts';
 import { titleCase } from 'https://unpkg.com/title-case@3.0.3/dist.es2015/index.js';
 
 import { removeNewlines, removeSpaces, extractNameAndIdAndType } from './utils.js';

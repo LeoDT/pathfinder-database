@@ -1,4 +1,4 @@
-import { parse } from 'https://deno.land/std@0.85.0/encoding/csv.ts';
+import { parse } from 'https://deno.land/std@0.104.0/encoding/csv.ts';
 
 export const spellMetaKeyTranslates = {
   学派: 'school',

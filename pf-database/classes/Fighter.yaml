@@ -73,18 +73,60 @@ feats:
       - level: 3
         id: Armor Training 1
         name: 盔甲训练 1
+        effectsWhen: |
+          AND(
+            NOT(HAS_CLASSFEAT("Fighter", "Armor Training 2")),
+            NOT(HAS_CLASSFEAT("Fighter", "Armor Training 3")),
+            NOT(HAS_CLASSFEAT("Fighter", "Armor Training 4"))
+          )
+        effects:
+          - type: gainArmorCheckPenalty
+            args:
+              amount: 1
+          - type: gainArmorMaxDexBonus
+            args:
+              amount: 1
       - level: 7
         id: Armor Training 2
         name: 盔甲训练 2
+        effectsWhen: |
+          AND(
+            NOT(HAS_CLASSFEAT("Fighter", "Armor Training 3")),
+            NOT(HAS_CLASSFEAT("Fighter", "Armor Training 4"))
+          )
+        effects:
+          - type: gainArmorCheckPenalty
+            args:
+              amount: 2
+          - type: gainArmorMaxDexBonus
+            args:
+              amount: 2
       - level: 11
         id: Armor Training 3
         name: 盔甲训练 3
+        effectsWhen: NOT(HAS_CLASSFEAT("Fighter", "Armor Training 4"))
+        effects:
+          - type: gainArmorCheckPenalty
+            args:
+              amount: 3
+          - type: gainArmorMaxDexBonus
+            args:
+              amount: 3
       - level: 15
         id: Armor Training 4
         name: 盔甲训练 4
+        effects:
+          - type: gainArmorCheckPenalty
+            args:
+              amount: 4
+          - type: gainArmorMaxDexBonus
+            args:
+              amount: 4
   - id: Weapon Training
     name: 武器训练
     desc: 5级时，战士可以选择一个下面所标注的武器类组。当他使用该类组的武器时，他在命中与伤害上获得+1加值。在这之后的每4级（9、13跟17），战士可以选择一个新的武器类组来进行更多的训练。他同样在该武器类组的命中与伤害上获得+1加值，并且，当他使用先前所选择训练的类组武器时，他的命中跟伤害加值会额外+1。例如说，有一位战士升到了9级，他在一个武器类组的命中与伤害上获得+1加值，并在另外一个（他5级时选择的那个）武器类组的命中与伤害上获得+2加值。如果两个武器类组同时包含了一个武器，那么加值并非叠加，而是取两个类组中加值较高的那一个。
+    effects:
+      - type: gainFighterWeaponTraining
     grow:
       - level: 5
         id: Weapon Training 1
@@ -101,6 +143,12 @@ feats:
   - id: Armor Mastery
     name: 盔甲宗师
     desc: 在第19级，当一名战士穿戴盔甲或手持盾牌时，他获得伤害减免“5/-”。
+    effects:
+      - type: gainDR
+        when: OR(NOT(armor="none"), offHandCategory="shield")
+        args:
+          amount: 5
+          type: '-'
   - id: Weapon Mastery
     name: 武器宗师
     desc: 在第20级，战士可以选择一种武器——例如长剑、巨斧或长弓——任何由此武器做出的攻击，重击确认自动成功，并且重击时的伤害倍率将会额外加1。并且，当他手持此类武器时不会被卸武。

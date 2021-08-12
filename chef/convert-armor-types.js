@@ -1,5 +1,5 @@
-import { parse as parseCSV } from 'https://deno.land/std@0.85.0/encoding/csv.ts';
-import { parse as parseYAML, stringify } from 'https://deno.land/std@0.85.0/encoding/yaml.ts';
+import { parse as parseCSV } from 'https://deno.land/std@0.104.0/encoding/csv.ts';
+import { parse as parseYAML, stringify } from 'https://deno.land/std@0.104.0/encoding/yaml.ts';
 
 const IDS = {
   'parade armor': 'parade',

@@ -28,6 +28,17 @@ feats:
   - id: Weapon and Armor Proficiency
     name: 武器和防具擅长
     desc: 游侠擅长所有简易和军用武器，以及所有盔甲（轻型，中型）和盾牌（除了塔盾）。
+    effects:
+      - type: gainProficiency
+        args:
+          weaponTraining:
+            - simple
+            - martial
+          armorTraining:
+            - light
+            - medium
+          shieldTraining:
+            - normal
   - id: Favored Enemy
     name: 宿敌
     type: ex

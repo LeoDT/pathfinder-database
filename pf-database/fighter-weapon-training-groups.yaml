@@ -1,0 +1,354 @@
+- id: Axes
+  name: 斧
+  weapons:
+    - axe-gauntlet, dwarven heavy
+    - axe-gauntlet, dwarven light
+    - axe, boarding
+    - axe, butchering
+    - axe, hooked
+    - axe, knuckle
+    - axe, orc double
+    - axe, throwing
+    - bardiche
+    - battleaxe
+    - gandasa
+    - greataxe
+    - handaxe
+    - kumade
+    - kumade, collapsible
+    - mattock
+    - pata
+    - pick, heavy
+    - pick, light
+    - tongi
+    - waraxe, dwarven
+- id: Blades, Heavy
+  name: 重刃
+  weapons:
+    - ankus
+    - broadsword, nine-ring
+    - chakram
+    - curve blade, elven
+    - cutlass
+    - double chicken saber
+    - estoc
+    - falcata
+    - falchion
+    - flambard
+    - greatsword
+    - katana
+    - katana, double walking stick
+    - khopesh
+    - klar
+    - longsword
+    - nodachi
+    - rhoka
+    - sabre, sawtooth
+    - scimitar
+    - scythe
+    - shotel
+    - sickle-sword
+    - split-blade sword
+    - switchscythe
+    - sword, bastard
+    - sword, dueling
+    - sword, seven-branched
+    - sword, temple
+    - sword, two-bladed
+    - terbutje
+    - terbutje, great
+- id: Blades, Light
+  name: 轻刃
+  weapons:
+    - bayonet
+    - broken-back seax
+    - chakram
+    - dagger
+    - dagger, dueling
+    - dagger, swordbreaker
+    - dogslicer
+    - gladius
+    - hunga munga
+    - kama
+    - katar, tri-bladed
+    - kerambit
+    - knife, butterfly
+    - knife, deer horn
+    - kukri
+    - machete
+    - madu
+    - manople
+    - pata
+    - quadrens
+    - rapier
+    - rapier, spiral
+    - razor, drow
+    - sabre, sawtooth
+    - sanpkhang
+    - scizore
+    - shortsword
+    - sica
+    - sickle
+    - starknife
+    - sword cane
+    - sword, butterfly
+    - wakizashi
+    - war razor
+- id: Bows
+  name: 弓
+  weapons:
+    - hornbow, orc
+    - longbow
+    - longbow, composite
+    - shortbow
+    - shortbow, composite
+- id: Close
+  name: 贴身
+  weapons:
+    - armor, spiked
+    - axe-gauntlet, dwarven heavy
+    - axe-gauntlet, dwarven light
+    - bayonet
+    - brass knuckles
+    - cestus
+    - club, mere
+    - dagger, punching
+    - dan bong
+    - emei piercer
+    - fighting fan
+    - gauntlet
+    - gauntlet, spiked
+    - iron brush
+    - katar
+    - katar, tri-bladed
+    - klar
+    - madu
+    - rope gauntlet
+    - sap
+    - scizore
+    - shield, heavy
+    - shield, light
+    - shield, spiked
+    - tekko-kagi
+    - tonfa
+    - unarmed strike
+    - war-shield, dwarven
+    - waveblade
+    - wooden stake
+    - wushu dart
+- id: Crossbows
+  name: 弩
+  weapons:
+    - crossbow, double
+    - crossbow, hand
+    - crossbow, heavy
+    - crossbow, light
+    - crossbow, launching
+    - crossbow, repeating heavy
+    - crossbow, repeating light
+    - crossbow, heavy (underwater)
+    - crossbow, light (underwater)
+    - pelletbow, dwarven heavy
+    - pelletbow, dwarven light
+    - tube arrow shooter
+- id: Double
+  name: 双头
+  weapons:
+    - axe, orc double
+    - battle ladder, gnome
+    - bo staff
+    - boarding gaff
+    - chain spear
+    - chain-hammer
+    - dire flail
+    - hammer, gnome hooked
+    - kama, double-chained
+    - katana, double walking stick
+    - kusarigama
+    - monk’s spade
+    - quarterstaff
+    - spear, weighted
+    - sword, two-bladed
+    - taiaha
+    - urgrosh, dwarven
+- id: Flails
+  name: 链索
+  weapons:
+    - battle poi
+    - cat-o’-nine-tails
+    - chain spear
+    - chain, spiked
+    - dorn-dergar, dwarven
+    - flail
+    - flail, dire
+    - flail, heavy
+    - flying talon
+    - gnome pincher
+    - halfling rope-shot
+    - hammer, meteor
+    - kama, double chained
+    - kusarigama
+    - kyoketsu shoge
+    - morningstar
+    - nine-section whip
+    - nunchaku
+    - sansetsukon
+    - scarf, bladed
+    - urumi
+    - whip
+    - whip, scorpion
+- id: Hammers
+  name: 锤
+  weapons:
+    - aklys
+    - battle aspergillum
+    - chain-hammer
+    - club
+    - club, mere
+    - earth breaker
+    - greatclub
+    - hammer, light
+    - lantern staff
+    - mace, heavy
+    - mace, light
+    - piston maul, gnome
+    - planson
+    - ram hammer, dwarven
+    - sphinx hammer, dwarven
+    - taiaha
+    - tetsubo
+    - wahaika
+    - warhammer
+- id: Monk
+  name: 武僧
+  weapons:
+    - bo staff
+    - brass knuckles
+    - broadsword, nine-ring
+    - cestus
+    - dan bong
+    - double chained kama
+    - double chicken saber
+    - emei piercer
+    - fighting fan
+    - hanbo
+    - jutte
+    - kama
+    - knife, deer horn
+    - kusarigama
+    - kyoketsu shoge
+    - lungshuan tamo
+    - monk’s spade
+    - nine-section whip
+    - nunchaku
+    - quarterstaff
+    - rope dart
+    - sai
+    - sanpkhang
+    - sansetsukon
+    - shang gou
+    - shuriken
+    - siangham
+    - sword, butterfly
+    - sword, seven-branched
+    - sword, temple
+    - sword, tri-point double-edged
+    - tiger fork
+    - tonfa
+    - traveling kettle
+    - unarmed strike
+    - urumi
+    - wushu dart
+- id: Polearms
+  name: 长柄
+  weapons:
+    - bardiche
+    - bec de corbin
+    - bill
+    - boarding gaff
+    - crook
+    - fauchard
+    - giant-sticker, dwarven
+    - glaive
+    - glaive-guisarme
+    - guisarme
+    - halberd
+    - hammer, lucerne
+    - hooked lance
+    - horsechopper
+    - mancatcher
+    - monk’s spade
+    - naginata
+    - nodachi
+    - ogre hook
+    - ranseur
+    - rhomphaia
+    - ripsaw glaive, gnome
+    - tepoztopilli
+    - tiger fork
+- id: Spears
+  name: 矛
+  weapons:
+    - amentum
+    - chain spear
+    - double spear
+    - elven branched spear
+    - harpoon
+    - javelin
+    - javelin, stormshaft
+    - lance
+    - longspear
+    - orc skull ram
+    - pilum
+    - planson
+    - shortspear
+    - sibat
+    - spear
+    - spear, boar
+    - spear, weighted
+    - tiger fork
+    - trident
+- id: Thrown
+  name: 投掷
+  weapons:
+    - aklys
+    - amentum
+    - atlatl
+    - blowgun
+    - bola
+    - boomerang
+    - bola, brutal
+    - chain-hammer
+    - chakram
+    - club
+    - dagger
+    - dart
+    - knife, deer horn
+    - dagger, dueling
+    - flask thrower
+    - sling staff, halfling
+    - harpoon
+    - hunga munga
+    - javelin
+    - kestros
+    - lasso
+    - hammer, light
+    - net
+    - pilum
+    - poisoned sand tube
+    - ram hammer, dwarven
+    - rope dart
+    - shortspear
+    - shuriken
+    - sibat
+    - sling
+    - sling glove
+    - snag net
+    - spear
+    - sphinx hammer, dwarven
+    - starknife
+    - javelin, stormshaft
+    - axe, throwing
+    - shield, throwing
+    - trident
+    - wushu dart
