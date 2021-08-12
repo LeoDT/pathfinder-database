@@ -1,16 +1,19 @@
 - id: Exotic Weapon Proficiency
+  multipleTimes: true
   effects:
     - type: gainSelectedWeaponProficiency
       args:
         training:
           - exotic
 - id: Martial Weapon Proficiency
+  multipleTimes: true
   effects:
     - type: gainSelectedWeaponProficiency
       args:
         training:
           - martial
 - id: Simple Weapon Proficiency
+  multipleTimes: true
   effects:
     - type: gainProficiency
       args:
@@ -106,13 +109,15 @@
       args:
         ability: dex
 - id: Skill Focus
+  multipleTimes: true
   effects:
-    - type: gainSkill
+    - type: gainSelectedSkill
       args:
         bonus:
           type: untyped
           amountFormula: IF(currentSkillRank >= 10, 6, 3)
 - id: Spell Focus
+  multipleTimes: true
   effects:
     - type: gainSchoolSpellDC
       args:
@@ -120,9 +125,42 @@
           type: untyped
           amount: 1
 - id: Greater Spell Focus
+  multipleTimes: true
   effects:
     - type: gainSchoolSpellDC
       args:
         bonus:
           type: untyped
           amount: 1
+- id: Weapon Focus
+  multipleTimes: true
+  effects:
+    - type: gainWeaponBonus
+      args:
+        attackBonus:
+          type: untyped
+          amount: 1
+- id: Greater Weapon Focus
+  multipleTimes: true
+  effects:
+    - type: gainWeaponBonus
+      args:
+        attackBonus:
+          type: untyped
+          amount: 1
+- id: Weapons Specialization
+  multipleTimes: true
+  effects:
+    - type: gainWeaponBonus
+      args:
+        damageBonus:
+          type: untyped
+          amount: 2
+- id: Greater Weapons Specialization
+  multipleTimes: true
+  effects:
+    - type: gainWeaponBonus
+      args:
+        damageBonus:
+          type: untyped
+          amount: 2
